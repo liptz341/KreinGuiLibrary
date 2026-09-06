@@ -1392,12 +1392,15 @@ local _pool = {}
              valBox.TextColor3 = C.SliderFill; valBox.Font = F.Bold; valBox.TextSize = 11
              valBox.TextXAlignment = Enum.TextXAlignment.Center; valBox.ClearTextOnFocus = true; valBox.Parent = valBg
              valBox.Focused:Connect(function() valStroke.Color = C.SliderFill; valStroke.Transparency = 0.1; tw(valBg,{BackgroundColor3=Color3.fromRGB(28,30,48)},0.14) end)
+             
+             -- FIX: Change Frame to TextButton for guaranteed mobile touch capture
              local bar = Instance.new("TextButton")
              bar.Size = UDim2.new(1,-26,0,6); bar.Position = UDim2.new(0,14,0,40)
              bar.BackgroundColor3 = C.SliderBg; bar.BorderSizePixel = 0; bar.ClipsDescendants = true; bar.Parent = f
              bar.Text = ""
              bar.AutoButtonColor = false
              corner(bar, 3)
+             
              local fPct = (def-mn)/(mx-mn)
              local fill = Instance.new("Frame")
              fill.Size = UDim2.new(fPct,0,1,0); fill.BackgroundColor3 = C.SliderFill; fill.BorderSizePixel = 0; fill.Parent = bar
@@ -1419,7 +1422,7 @@ local _pool = {}
                  _v = math.clamp(roundToStep(mn+(mx-mn)*pct), mn, mx)
                  fill.Size = UDim2.new(pct,0,1,0); knob.Position = UDim2.new(pct,-8,0,-5)
                  valBox.Text = fmtVal(_v)
-                 safeCall(cb, _v)
+                 safeCall(cb, _v) -- FIX: Safe callback execution
              end
              valBox.FocusLost:Connect(function()
                  valStroke.Color = C.CompStroke; valStroke.Transparency = 0.3
@@ -1438,6 +1441,7 @@ local _pool = {}
                  if _globalSliderDragging then return end
                  _globalSliderDragging = true
                  
+                 -- FIX: Disable ScrollingFrame to prevent touch stealing
                  local sf = bar:FindFirstAncestorOfClass("ScrollingFrame")
                  local sfWasEnabled = sf and sf.ScrollingEnabled
                  if sf then sf.ScrollingEnabled = false end
