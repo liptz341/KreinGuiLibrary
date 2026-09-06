@@ -1514,9 +1514,10 @@ function KreinHub:CreateWindow(cfg)
                 valBox.TextColor3 = C.SliderFill; valBox.Font = F.Bold; valBox.TextSize = 11
                 valBox.TextXAlignment = Enum.TextXAlignment.Center; valBox.ClearTextOnFocus = true; valBox.Parent = valBg
                 valBox.Focused:Connect(function() valStroke.Color = C.SliderFill; valStroke.Transparency = 0.1; tw(valBg,{BackgroundColor3=Color3.fromRGB(28,30,48)},0.14) end)
-                local bar = Instance.new("Frame")
+                local bar = Instance.new("TextButton")
                 bar.Size = UDim2.new(1,-26,0,6); bar.Position = UDim2.new(0,14,0,40)
                 bar.BackgroundColor3 = C.SliderBg; bar.BorderSizePixel = 0; bar.ClipsDescendants = true; bar.Parent = f
+                bar.Text = ""; bar.AutoButtonColor = false
                 corner(bar, 3)
                 local fPct = (def-mn)/(mx-mn)
                 local fill = Instance.new("Frame")
@@ -1553,47 +1554,47 @@ function KreinHub:CreateWindow(cfg)
                 end)
                 local _sliderDragging = false
                 local function drag(inp)
-                if _sliderDragging then return end
-                _sliderDragging = true
-                tw(knob, {Size = UDim2.new(0,20,0,20)}, 0.1)
-                local isTouch = inp.UserInputType == Enum.UserInputType.Touch
+                    if _sliderDragging then return end
+                    _sliderDragging = true
+                    tw(knob, {Size = UDim2.new(0,20,0,20)}, 0.1)
+                    local isTouch = inp.UserInputType == Enum.UserInputType.Touch
+                
+                    -- FIX: Cari ScrollingFrame induk & matiin scrollnya biar gak nyuri touch
+                    local parentSF = bar:FindFirstAncestorOfClass("ScrollingFrame")
+                    if parentSF then parentSF.ScrollingEnabled = false end
 
-                -- FIX: Matikan scroll ScrollingFrame biar touch gak dicuri di mobile
-                local parentScroll = bar:FindFirstAncestorOfClass("ScrollingFrame")
-                if parentScroll then parentScroll.ScrollingEnabled = false end
+                    local function calcPct(pos)
+                        local bx = bar.AbsoluteSize.X
+                        if bx <= 0 then return end -- FIX: Guard biar gak error division by zero
+                        setPct((pos.X - bar.AbsolutePosition.X) / bx)
+                    end
 
-                local function calcPct(pos)
-                    local bx = bar.AbsoluteSize.X
-                    if bx <= 0 then return end
-                    setPct((pos.X - bar.AbsolutePosition.X) / bx)
+                    calcPct(inp.Position)
+
+                    local mc, ec
+                    mc = UIS.InputChanged:Connect(function(mi)
+                        if isTouch then
+                            if mi.UserInputType == Enum.UserInputType.Touch then
+                                calcPct(mi.Position)
+                            end
+                        else
+                            if mi.UserInputType == Enum.UserInputType.MouseMovement then
+                                calcPct(mi.Position)
+                            end
+                        end
+                    end)
+                    ec = UIS.InputEnded:Connect(function(ei)
+                        local ended = (isTouch and ei.UserInputType == Enum.UserInputType.Touch)
+                            or (not isTouch and ei.UserInputType == Enum.UserInputType.MouseButton1)
+                        if ended then
+                            _sliderDragging = false
+                            tw(knob, {Size = UDim2.new(0,16,0,16)}, 0.1)
+                            -- FIX: Nyalain lagi scroll ScrollingFrame pas drag selesai
+                            if parentSF then parentSF.ScrollingEnabled = true end
+                            mc:Disconnect(); ec:Disconnect()
+                        end
+                    end)
                 end
-
-                calcPct(inp.Position)
-
-                local mc, ec
-                mc = UIS.InputChanged:Connect(function(mi)
-                    if isTouch then
-                        if mi.UserInputType == Enum.UserInputType.Touch then
-                            calcPct(mi.Position)
-                        end
-                    else
-                        if mi.UserInputType == Enum.UserInputType.MouseMovement then
-                            calcPct(mi.Position)
-                        end
-                    end
-                end)
-                ec = UIS.InputEnded:Connect(function(ei)
-                    local ended = (isTouch and ei.UserInputType == Enum.UserInputType.Touch)
-                        or (not isTouch and ei.UserInputType == Enum.UserInputType.MouseButton1)
-                    if ended then
-                        _sliderDragging = false
-                        tw(knob, {Size = UDim2.new(0,16,0,16)}, 0.1)
-                        -- FIX: Nyalain lagi scroll ScrollingFrame
-                        if parentScroll then parentScroll.ScrollingEnabled = true end
-                        mc:Disconnect(); ec:Disconnect()
-                    end
-                end)
-            end
                 knob.InputBegan:Connect(function(i)
                     if i.UserInputType == Enum.UserInputType.MouseButton1 or i.UserInputType == Enum.UserInputType.Touch then
                         drag(i)
