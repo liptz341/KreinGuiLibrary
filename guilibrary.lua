@@ -367,7 +367,6 @@ local _pool = {}
  TypewriterLabel.ZIndex = 10000
  TypewriterLabel.Visible = false
  TypewriterLabel.Parent = ScreenGui
- -- ResetFrame: hidden saat loading, muncul setelah selesai
  local ResetFrame = Instance.new("Frame")
  ResetFrame.Name = "KreinResetFrame"
  ResetFrame.Size = UDim2.new(0, 50, 0, 50)
@@ -1284,6 +1283,7 @@ local _pool = {}
          function SObj:CreateToggle(text, default, cb)
              default = default == true
              local _v = default
+             cb = cb or function() end
              local f = bf(44)
              local lbl = Instance.new("TextLabel")
              lbl.Size = UDim2.new(1, -76, 1, 0)
@@ -1337,9 +1337,9 @@ local _pool = {}
                      trackStroke.Transparency = v and 0.5 or 0.2
                  end
              end
-             hb.MouseButton1Click:Connect(function() _v = not _v; apply(_v, true); cb(_v) end)
+             hb.MouseButton1Click:Connect(function() _v = not _v; apply(_v, true); pcall(cb, _v) end)
              local obj = {}
-             function obj:SetValue(v) _v = v==true; apply(_v, true); cb(_v) end
+             function obj:SetValue(v) _v = v==true; apply(_v, true); pcall(cb, _v) end
              function obj:GetValue() return _v end
              function obj:SetEnabled(e) hb.Active = e; f.BackgroundTransparency = e and 0.03 or 0.5 end
              function obj:SetVisible(v) f.Visible = v; recalcHeight() end
@@ -1351,6 +1351,7 @@ local _pool = {}
              mn = mn or 0; mx = mx or 100
              if mn == mx then mx = mn + 1 end
              def = math.clamp(def or mn, mn, mx); float = float or false
+             cb = cb or function() end -- SAFEGUARD
              local _v = def
              local f = bf(62)
              local lbl = Instance.new("TextLabel")
@@ -1379,7 +1380,6 @@ local _pool = {}
              valBox.TextXAlignment = Enum.TextXAlignment.Center; valBox.ClearTextOnFocus = true; valBox.Parent = valBg
              valBox.Focused:Connect(function() valStroke.Color = C.SliderFill; valStroke.Transparency = 0.1; tw(valBg,{BackgroundColor3=Color3.fromRGB(28,30,48)},0.14) end)
              
-             -- FIX: Change Frame to TextButton for better mobile touch capture
              local bar = Instance.new("TextButton")
              bar.Size = UDim2.new(1,-26,0,6); bar.Position = UDim2.new(0,14,0,40)
              bar.BackgroundColor3 = C.SliderBg; bar.BorderSizePixel = 0; bar.ClipsDescendants = true; bar.Parent = f
@@ -1407,7 +1407,8 @@ local _pool = {}
                  pct = math.clamp(pct,0,1)
                  _v = math.clamp(roundToStep(mn+(mx-mn)*pct), mn, mx)
                  fill.Size = UDim2.new(pct,0,1,0); knob.Position = UDim2.new(pct,-8,0,-5)
-                 valBox.Text = fmtVal(_v); cb(_v)
+                 valBox.Text = fmtVal(_v)
+                 pcall(cb, _v) -- SAFEGUARD
              end
              valBox.FocusLost:Connect(function()
                  valStroke.Color = C.CompStroke; valStroke.Transparency = 0.3
@@ -1417,56 +1418,58 @@ local _pool = {}
                      _v = math.clamp(roundToStep(typed), mn, mx)
                      local p = (_v-mn)/(mx-mn)
                      fill.Size=UDim2.new(p,0,1,0); knob.Position=UDim2.new(p,-8,0,-5)
-                     valBox.Text=fmtVal(_v); cb(_v)
+                     valBox.Text=fmtVal(_v); pcall(cb, _v)
                  else valBox.Text=fmtVal(_v) end
              end)
              
-             -- FIX: Robust Drag Logic for Mobile & PC
              local _sliderDragging = false
-             local _sfToRestore = nil
-
-             local function updateSlider(pos)
-                 local bx = bar.AbsoluteSize.X
-                 if bx <= 0 then return end -- Prevent division by zero
-                 local pct = (pos.X - bar.AbsolutePosition.X) / bx
-                 setPct(pct)
-             end
-
              local function drag(inp)
                  if inp.UserInputType ~= Enum.UserInputType.MouseButton1 and inp.UserInputType ~= Enum.UserInputType.Touch then return end
                  if _sliderDragging then return end
                  _sliderDragging = true
                  
-                 -- Disable ScrollingFrame to prevent it from stealing touch input on mobile
                  local sf = bar:FindFirstAncestorOfClass("ScrollingFrame")
-                 if sf then
-                     _sfToRestore = sf
-                     sf.ScrollingEnabled = false
+                 local sfWasEnabled = sf and sf.ScrollingEnabled
+                 if sf then sf.ScrollingEnabled = false end
+
+                 local isTouch = inp.UserInputType == Enum.UserInputType.Touch
+                 local cleanedUp = false
+                 
+                 local function cleanup()
+                     if cleanedUp then return end
+                     cleanedUp = true
+                     _sliderDragging = false
+                     if sf then sf.ScrollingEnabled = sfWasEnabled end
+                     if mc then mc:Disconnect() end
+                     if ec then ec:Disconnect() end
+                     tw(knob, {Size = UDim2.new(0,16,0,16)}, 0.1)
                  end
 
-                 tw(knob, {Size = UDim2.new(0,20,0,20)}, 0.1)
-                 updateSlider(inp.Position)
+                 local function update(pos)
+                     local bx = bar.AbsoluteSize.X
+                     if bx > 0 then
+                         local pct = (pos.X - bar.AbsolutePosition.X) / bx
+                         pct = math.clamp(pct, 0, 1)
+                         pcall(function() setPct(pct) end)
+                     end
+                 end
 
-                 local mc, ec
-                 mc = UIS.InputChanged:Connect(function(mi)
-                     local isTouch = inp.UserInputType == Enum.UserInputType.Touch
-                     if (isTouch and mi.UserInputType == Enum.UserInputType.Touch) or (not isTouch and mi.UserInputType == Enum.UserInputType.MouseMovement) then
-                         updateSlider(mi.Position)
+                 update(inp.Position)
+                 tw(knob, {Size = UDim2.new(0,20,0,20)}, 0.1)
+
+                 local mc = UIS.InputChanged:Connect(function(mi)
+                     if isTouch then
+                         if mi.UserInputType == Enum.UserInputType.Touch then update(mi.Position) end
+                     else
+                         if mi.UserInputType == Enum.UserInputType.MouseMovement then update(mi.Position) end
                      end
                  end)
 
-                 ec = UIS.InputEnded:Connect(function(ei)
-                     local isTouch = inp.UserInputType == Enum.UserInputType.Touch
-                     local ended = (isTouch and ei.UserInputType == Enum.UserInputType.Touch) or (not isTouch and ei.UserInputType == Enum.UserInputType.MouseButton1)
-                     if ended then
-                         _sliderDragging = false
-                         tw(knob, {Size = UDim2.new(0,16,0,16)}, 0.1)
-                         if _sfToRestore then
-                             _sfToRestore.ScrollingEnabled = true
-                             _sfToRestore = nil
-                         end
-                         if mc then mc:Disconnect() end
-                         if ec then ec:Disconnect() end
+                 local ec = UIS.InputEnded:Connect(function(ei)
+                     if isTouch then
+                         if ei.UserInputType == Enum.UserInputType.Touch then cleanup() end
+                     else
+                         if ei.UserInputType == Enum.UserInputType.MouseButton1 then cleanup() end
                      end
                  end)
              end
@@ -1478,7 +1481,7 @@ local _pool = {}
              function obj:SetValue(v)
                  _v=math.clamp(roundToStep(v),mn,mx)
                  local p=(_v-mn)/(mx-mn); fill.Size=UDim2.new(p,0,1,0); knob.Position=UDim2.new(p,-8,0,-5)
-                 valBox.Text=fmtVal(_v); cb(_v)
+                 valBox.Text=fmtVal(_v); pcall(cb, _v)
              end
              function obj:GetValue() return _v end
              function obj:SetEnabled(e) knob.Active=e; f.BackgroundTransparency=e and 0.03 or 0.5 end
@@ -1571,8 +1574,8 @@ local _pool = {}
                          if multi then
                              _sel[opt]=not _sel[opt]; tw(ob,{BackgroundColor3=_sel[opt] and C.SliderFill or C.OptionBg},0.12)
                              updateSelText(); local sel={}
-                             for o,v in pairs(_sel) do if v then table.insert(sel,o) end end; cb(_sel,sel)
-                         else _sel=opt; selLbl.Text=opt; closeDropdown(); cb(opt) end
+                             for o,v in pairs(_sel) do if v then table.insert(sel,o) end end; pcall(cb, _sel, sel)
+                         else _sel=opt; selLbl.Text=opt; closeDropdown(); pcall(cb, opt) end
                      end)
                  end
              end
@@ -1596,8 +1599,8 @@ local _pool = {}
                  if multi then
                      if type(v)=="table" then _sel=v else _sel[v]=not _sel[v] end
                      updateSelText(); buildOpts(opts)
-                     local sel={}; for o,val in pairs(_sel) do if val then table.insert(sel,o) end end; cb(_sel,sel)
-                 else if table.find(opts,v) then _sel=v; selLbl.Text=v; cb(v) end end
+                     local sel={}; for o,val in pairs(_sel) do if val then table.insert(sel,o) end end; pcall(cb, _sel, sel)
+                 else if table.find(opts,v) then _sel=v; selLbl.Text=v; pcall(cb, v) end end
              end
              function obj:GetValue()
                  if multi then local sel={}; for o,v in pairs(_sel) do if v then table.insert(sel,o) end end; return _sel,sel
@@ -1617,6 +1620,7 @@ local _pool = {}
          end
          function SObj:CreateKeybind(text, defKey, cb)
              defKey=defKey or Enum.KeyCode.F
+             cb = cb or function() end
              local _key=defKey; local _bind=false; local _kconn=nil
              local f=bf(44)
              local lbl=Instance.new("TextLabel"); lbl.Size=UDim2.new(1,-96,1,0); lbl.Position=UDim2.new(0,14,0,0)
@@ -1635,12 +1639,12 @@ local _pool = {}
                      if not _bind then return end; if gp then return end
                      if inp.KeyCode==Enum.KeyCode.Unknown then return end
                      _key=inp.KeyCode; kBtn.Text=_key.Name; _bind=false
-                     tw(kBtn,{BackgroundColor3=C.KeybindBg},0.12); stopBind(); cb(_key)
+                     tw(kBtn,{BackgroundColor3=C.KeybindBg},0.12); stopBind(); pcall(cb, _key)
                  end)
                  reg(_kconn)
              end)
              local obj={}
-             function obj:SetValue(k) _key=k; kBtn.Text=k.Name; cb(k) end
+             function obj:SetValue(k) _key=k; kBtn.Text=k.Name; pcall(cb, k) end
              function obj:GetValue() return _key end
              function obj:SetEnabled(e) kBtn.Active=e; f.BackgroundTransparency=e and 0.03 or 0.5 end
              function obj:SetVisible(v) f.Visible=v; recalcHeight() end
@@ -1648,9 +1652,9 @@ local _pool = {}
              function obj:UpdateCallback(newCb) cb=newCb end
              return obj
          end
-         -- GRADIENT COLOR PICKER (replaces old RGB slider picker)
          function SObj:CreateColorPicker(text, defColor, cb)
              defColor = defColor or Color3.fromRGB(255, 255, 255)
+             cb = cb or function() end
              local _h, _s, _v2 = Color3.toHSV(defColor)
              local _open = false
              local PANEL_H = 198
@@ -1689,7 +1693,6 @@ local _pool = {}
              panelSep.Size = UDim2.new(1, 0, 0, 1); panelSep.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
              panelSep.BackgroundTransparency = 0.88; panelSep.BorderSizePixel = 0
              panelSep.ZIndex = 4; panelSep.Parent = panel
-             -- SV grid
              local SV_H = 120
              local svFrame = Instance.new("Frame")
              svFrame.Size = UDim2.new(1, -16, 0, SV_H); svFrame.Position = UDim2.new(0, 8, 0, 8)
@@ -1716,7 +1719,6 @@ local _pool = {}
              local svBtn = Instance.new("TextButton")
              svBtn.Size = UDim2.new(1, 0, 1, 0); svBtn.BackgroundTransparency = 1
              svBtn.Text = ""; svBtn.ZIndex = 9; svBtn.Parent = svFrame
-             -- Hue bar
              local hueBarH = 14
              local hueBar = Instance.new("Frame")
              hueBar.Size = UDim2.new(1, -16, 0, hueBarH); hueBar.Position = UDim2.new(0, 8, 0, SV_H + 14)
@@ -1741,7 +1743,6 @@ local _pool = {}
              local hueBtn = Instance.new("TextButton")
              hueBtn.Size = UDim2.new(1, 0, 1, 0); hueBtn.BackgroundTransparency = 1
              hueBtn.Text = ""; hueBtn.ZIndex = 8; hueBtn.Parent = hueBar
-             -- Hex input
              local hexY = SV_H + 14 + hueBarH + 10
              local hexBg = Instance.new("Frame")
              hexBg.Size = UDim2.new(1, -16, 0, 28); hexBg.Position = UDim2.new(0, 8, 0, hexY)
@@ -1770,7 +1771,7 @@ local _pool = {}
                  svKnob.Position = UDim2.new(_s, 0, 1 - _v2, 0)
                  hueKnob.Position = UDim2.new(_h, 0, 0.5, 0)
                  if not skipHex then hexBox.Text = colorToHex(c) end
-                 cb(c)
+                 pcall(cb, c)
              end
              local function dragSV(inp)
                  _s = math.clamp((inp.Position.X - svFrame.AbsolutePosition.X) / svFrame.AbsoluteSize.X, 0, 1)
@@ -1873,6 +1874,7 @@ local _pool = {}
          end
          function SObj:CreateTextBox(labelText, ph, cb, config)
              config=config or {}
+             cb = cb or function() end
              local maxLen=config.MaxLength or 200; local numOnly=config.NumberOnly or false; local realTime=config.RealTime or false
              local f=bf(44)
              local lbl=Instance.new("TextLabel"); lbl.Size=UDim2.new(1,-168,1,0); lbl.Position=UDim2.new(0,14,0,0)
@@ -1892,12 +1894,12 @@ local _pool = {}
                  local t=inp.Text
                  if numOnly then local cleaned=t:match("^%-?%d*%.?%d*") or ""; if cleaned~=t then t=cleaned; inp.Text=t end end
                  if #t>maxLen then t=t:sub(1,maxLen); inp.Text=t end
-                 _filtering=false; if realTime then cb(inp.Text) end
+                 _filtering=false; if realTime then pcall(cb, inp.Text) end
              end)
              inp.Focused:Connect(function() tw(ih,{BackgroundColor3=Color3.fromRGB(28,30,48)},0.14); ihStroke.Color=C.SliderFill; ihStroke.Transparency=0.1 end)
              inp.FocusLost:Connect(function(enterPressed)
                  tw(ih,{BackgroundColor3=C.InputBg},0.14); ihStroke.Color=C.InputStroke; ihStroke.Transparency=0.24
-                 if not realTime or enterPressed then cb(inp.Text) end
+                 if not realTime or enterPressed then pcall(cb, inp.Text) end
              end)
              local obj={}
              function obj:SetValue(v) inp.Text=tostring(v) end
@@ -1981,7 +1983,7 @@ local _pool = {}
                          _buttons[i].dot.Visible=isSel
                          local selectedOpts={}
                          for idx,sel in pairs(_selected) do if sel then table.insert(selectedOpts,options[idx]) end end
-                         cb(_selected,selectedOpts)
+                         pcall(cb, _selected, selectedOpts)
                      else
                          _selected=i
                          for j,data in ipairs(_buttons) do
@@ -1989,7 +1991,7 @@ local _pool = {}
                              tw(data.circle,{BackgroundColor3=isSel and C.SliderFill or C.ToggleOff},0.18)
                              data.dot.Visible=isSel
                          end
-                         cb(i,options[i])
+                         pcall(cb, i, options[i])
                      end
                  end)
                  table.insert(_buttons,{circle=circle,dot=dot})
@@ -2003,13 +2005,13 @@ local _pool = {}
                      end
                      local selectedOpts={}
                      for idx,sel in pairs(_selected) do if sel then table.insert(selectedOpts,options[idx]) end end
-                     cb(_selected,selectedOpts)
+                     pcall(cb, _selected, selectedOpts)
                  else
                      _selected=index
                      for i,data in ipairs(_buttons) do
                          local isSel=(i==index); tw(data.circle,{BackgroundColor3=isSel and C.SliderFill or C.ToggleOff},0.18); data.dot.Visible=isSel
                      end
-                     cb(index,options[index])
+                     pcall(cb, index, options[index])
                  end
              end
              function obj:GetValue() return _selected end
