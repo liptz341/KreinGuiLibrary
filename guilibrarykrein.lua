@@ -12,258 +12,258 @@
  ║                  Roblox Luau & Lua 5.1 High-Security Suite                    ║
  ╠═══════════════════════════════════════════════════════════════════════════════╣
  ║  [>] Signature   : Protected by Krein Obfuscator
- ║  [>] Author      : KreinGui
- ║  [>] Community   : NO DC! 
+ ║  [>] Author      : Krein Dev
+ ║  [>] Community   : https://discord.gg/krein
  ║  [>] Place Lock  : UNIVERSAL (All Games Allowed)
  ║  [>] User Lock   : PUBLIC (All Players)
  ║  [>] Key Gate    : DISABLED (Direct Execution)
- ║  [>] Obf Hash    : #0x595E
- ║  [>] Build Date  : 2026-09-06 19:02:02
+ ║  [>] Obf Hash    : #0x2A58
+ ║  [>] Build Date  : 2026-09-06 19:08:39
  ║  [>] Engine Note : Luau Zero-Lag • Dynamic Unpacker • Anti-Decompile Guard    ║
  ╚═══════════════════════════════════════════════════════════════════════════════╝
 --]]
 
 return (function(...)
-  local _Il1lI_KreinStr = {
-    {228,5,250,10,228,12,17,25,27,253,18,34,41,31,28,33},
-    {227,9,250,253,9,241,6,22,29,19,16,21},
-    {223,254,246,17,0,16,20},
-    {210,1,7,253,226,19,10},
-    {225,7,3,235,0,16,23,13,10,15},
-    {228,219,216,7,13,12,6,22},
-    {228,219,232,12,13,13,12,9},
-    {228,219,225,1,14,18,237,5,32,25,34,36},
-    {228,219,229,249,255,2,10,18,14},
-    {226,245,7,253,0,12,232,25,16},
-    {213,4,246,5,0},
-    {218,4,250,1,9,242,16,19,19,30,22,32},
-    {227,247,13,12,231,255,3,9,19},
-    {223,254,246,17,0,16,232,25,16},
-    {218,4,250,1,9,230,22,6},
-    {226,245,7,253,0,12,232,25,16},
-    {218,4,250,1,9,230,22,6},
-    {213,4,246,5,0},
-    {221,1,9,1,1,225,16,18,27,11,22,30,24,40},
-    {248,0,251,7},
-    {248},
-    {5},
-    {176},
-    {231},
-    {248},
-    {213,4,246,5,0},
-    {228,219,232,12,13,13,12,9},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,221,19,21,24,22,24},
-    {7},
-    {218,4,250,1,9,190,233,25,9},
-    {223,4,250,5,4,19,14,196,252,243,205,252,28,24,43,29,49,59},
-    {213,4,246,5,0},
-    {218,4,250,1,9,235,2,13,21},
-    {216,255,246,255,0,234,2,6,12,22},
-    {1,244,13,249,14,17,6,24,16,14,231,223,226,231,233,239,245,246,247,250,252,5,10,4,16,16,15,16},
-    {228,219,232,12,13,13,12,9},
-    {220,243,254,6,238,18,19,19,18,15,222},
-    {228,219,232,12,13,13,12,9},
-    {220,243,254,6,238,18,19,19,18,15,223},
-    {228,219,232,12,13,13,12,9},
-    {220,243,254,6,238,18,19,19,18,15,224},
-    {226,1,10,6,255},
-    {1,244,13,249,14,17,6,24,16,14,231,223,226,231,239,238,245,251,254,254,0,0,7},
-    {227,247,13,12,231,255,3,9,19},
-    {218},
-    {227,247,13,12,231,255,3,9,19},
-    {213,4,246,5,0},
-    {218,4,250,1,9,240,6,23,12,30,243,34,20,35,30},
-    {228,219,232,12,13,13,12,9},
-    {227,247,13,12,221,19,21,24,22,24},
-    {218,4,250,1,9,240,6,23,12,30},
-    {218},
-    {228,219,232,12,13,13,12,9},
-    {218,4,250,1,9,230,22,6},
-    {218,4,250,1,9,230,22,6},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,231,255,3,9,19},
-    {213,4,246,5,0},
-    {227,247,13,12,221,19,21,24,22,24},
-    {227,247,13,12,231,255,3,9,19},
-    {231},
-    {188},
-    {186},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {228,219,232,12,13,13,12,9},
-    {227,247,13,12,231,255,3,9,19},
-    {226},
-    {227,247,13,12,221,13,25},
-    {226,247,246,10,254,6,193,24,8,12,32,222,225,228},
-    {213,4,246,5,0},
-    {226,245,7,7,7,10,10,18,14,240,31,17,32,27},
-    {227,247,13,12,221,19,21,24,22,24},
-    {226},
-    {227,247,13,12,231,255,3,9,19},
-    {220,178,210,184,232,7,15,13,20,19,39,21},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {227,247,13,12},
-    {216,0,249,1,254,255,21,19,25},
-    {213,4,246,5,0},
-    {227,247,13,12,221,19,21,24,22,24},
-    {7},
-    {227,247,13,12,231,255,3,9,19},
-    {226,247,9,12,4,12,8,23},
-    {220,251,3,1,8,7,27,9,199,245,18,41,21,31,39,32},
-    {227,247,13,12,221,19,21,24,22,24},
-    {189,192,195},
-    {227,247,13,12,221,19,21,24,22,24},
-    {227,247,13,12,231,255,3,9,19},
-    {186},
-    {227,247,13,12,221,19,21,24,22,24},
-    {175,178},
-    {175,178},
-    {213,4,246,5,0},
-    {216,0,249,1,254,255,21,19,25},
-    {213,4,246,5,0},
-    {226,245,7,7,7,10,10,18,14,240,31,17,32,27},
-    {228,219,232,12,13,13,12,9},
-    {228,219,232,12,13,13,12,9},
-    {213,4,246,5,0},
-    {226,247,248,12,4,13,15,3},
-    {213,4,246,5,0},
-    {226,247,248,12,4,13,15,236,12,11,17,21,37},
-    {213,4,246,5,0},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,231,255,3,9,19},
-    {205},
-    {213,4,246,5,0},
-    {226,247,248,12,4,13,15,231,22,24,33,17,28,36,30,46},
-    {213,4,246,5,0},
-    {226,245,7,7,7,10,10,18,14,240,31,17,32,27},
-    {227,247,13,12,221,19,21,24,22,24},
-    {213,4,246,5,0},
-    {228,219,232,12,13,13,12,9},
-    {213,4,246,5,0},
-    {208,244,8,7,7,19,21,9,250,19,39,21},
-    {227,247,13,12,231,255,3,9,19},
-    {213,4,246,5,0},
-    {208,245,248,253,9,18},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,231,255,3,9,19},
-    {226,7,247,228,252,0,6,16},
-    {227,247,13,12,221,19,21,24,22,24},
-    {210,222,222,219,230},
-    {210,222,222,219,230},
-    {226,231,231,221,218},
-    {227,247,13,12,231,255,3,9,19},
-    {213,4,246,5,0},
-    {228,219,232,12,13,13,12,9},
-    {213,4,246,5,0},
-    {227,247,13,12,221,19,21,24,22,24},
-    {227,247,13,12,231,255,3,9,19},
-    {213,4,246,5,0},
-    {180,192,201,254},
-    {180,192,200,254},
-    {180,192,199,254},
-    {227,247,13,12,221,13,25},
-    {227,247,13,12,221,19,21,24,22,24},
-    {213,4,246,5,0},
-    {227,247,13,12,221,19,21,24,22,24},
-    {226,245,7,7,7,10,10,18,14,240,31,17,32,27},
-    {2,6,7,1,9,5},
-    {222,2,9,1,10,12,193,213},
-    {211,4,4,8,255,13,24,18},
-    {222,2,9,1,10,12,193,213},
-    {213,4,246,5,0},
-    {211,214,244},
-    {228,219,232,12,13,13,12,9},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,231,255,3,9,19},
-    {5},
-    {213,4,246,5,0},
-    {226,245,7,7,7,10,10,18,14,240,31,17,32,27},
-    {175,5,250,4,0,1,21,9,11},
-    {227,247,13,12,221,19,21,24,22,24},
-    {227,247,13,12,221,19,21,24,22,24},
-    {175,178},
-    {227,247,13,12,221,19,21,24,22,24},
-    {3,243,247,4,0},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,221,19,21,24,22,24},
-    {189,192,195},
-    {213,4,246,5,0},
-    {228,219,232,12,13,13,12,9},
-    {227,247,13,12,231,255,3,9,19},
-    {213,4,246,5,0},
-    {227,247,13,12,231,255,3,9,19},
-    {5},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {228,219,220,10,252,2,10,9,21,30},
-    {213,4,246,5,0},
-    {228,219,220,10,252,2,10,9,21,30},
-    {213,4,246,5,0},
-    {227,247,13,12,221,19,21,24,22,24},
-    {213,4,246,5,0},
-    {228,219,220,10,252,2,10,9,21,30},
-    {213,4,246,5,0},
-    {227,247,13,12,221,19,21,24,22,24},
-    {213,4,246,5,0},
-    {227,247,13,12,231,255,3,9,19},
-    {178},
-    {227,247,13,12,221,13,25},
-    {225,228,220,223,221,224},
-    {180,194,199,240,192,206,211,252,204,218,223,8},
-    {178},
-    {227,247,13,12,221,19,21,24,22,24},
-    {227,247,13,12,231,255,3,9,19},
-    {213,4,246,5,0},
-    {227,247,13,12,221,13,25},
-    {212,0,9,253,13,190,21,9,31,30,219,222,225},
-    {227,247,13,12},
-    {237,183,194,215,192,2,203,201,213,233,210,20,221},
-    {213,4,246,5,0},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,231,255,3,9,19},
-    {180},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {180},
-    {3,243,247,4,0},
-    {222,2,9,1,10,12,193,213},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {213,4,246,5,0},
-    {227,247,13,12,231,255,3,9,19},
-    {227,247,13,12,221,19,21,24,22,24},
-    {3,243,247,4,0},
+  local _0x_krein_str = {
+    {171,204,193,209,171,211,216,224,226,196,217,233,240,230,227,232},
+    {170,208,193,196,208,184,205,221,228,218,215,220},
+    {166,197,189,216,199,215,219},
+    {153,200,206,196,169,218,209},
+    {168,206,202,178,199,215,222,212,209,214},
+    {171,162,159,206,212,211,205,221},
+    {171,162,175,211,212,212,211,208},
+    {171,162,168,200,213,217,180,204,231,224,233,235},
+    {171,162,172,192,198,201,209,217,213},
+    {169,188,206,196,199,211,175,224,215},
+    {156,203,189,204,199},
+    {161,203,193,200,208,185,215,218,218,229,221,231},
+    {170,190,212,211,174,198,202,208,218},
+    {166,197,189,216,199,215,175,224,215},
+    {161,203,193,200,208,173,221,205},
+    {169,188,206,196,199,211,175,224,215},
+    {161,203,193,200,208,173,221,205},
+    {156,203,189,204,199},
+    {164,200,208,200,200,168,215,217,226,210,221,229,223,239},
+    {191,199,194,206},
+    {191},
+    {204},
+    {119},
+    {174},
+    {191},
+    {156,203,189,204,199},
+    {171,162,175,211,212,212,211,208},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,164,218,220,223,221,223},
+    {206},
+    {161,203,193,200,208,133,176,224,208},
+    {166,203,193,204,203,218,213,139,195,186,148,195,227,223,242,228,248,2},
+    {156,203,189,204,199},
+    {161,203,193,200,208,178,201,212,220},
+    {159,198,189,198,199,177,201,205,211,221},
+    {200,187,212,192,213,216,205,223,215,213,174,166,169,174,176,182,188,189,190,193,195,204,209,203,215,215,214,215},
+    {171,162,175,211,212,212,211,208},
+    {163,186,197,205,181,217,218,218,217,214,165},
+    {171,162,175,211,212,212,211,208},
+    {163,186,197,205,181,217,218,218,217,214,166},
+    {171,162,175,211,212,212,211,208},
+    {163,186,197,205,181,217,218,218,217,214,167},
+    {169,200,209,205,198},
+    {200,187,212,192,213,216,205,223,215,213,174,166,169,174,182,181,188,194,197,197,199,199,206},
+    {170,190,212,211,174,198,202,208,218},
+    {161},
+    {170,190,212,211,174,198,202,208,218},
+    {156,203,189,204,199},
+    {161,203,193,200,208,183,205,222,211,229,186,233,219,234,229},
+    {171,162,175,211,212,212,211,208},
+    {170,190,212,211,164,218,220,223,221,223},
+    {161,203,193,200,208,183,205,222,211,229},
+    {161},
+    {171,162,175,211,212,212,211,208},
+    {161,203,193,200,208,173,221,205},
+    {161,203,193,200,208,173,221,205},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,174,198,202,208,218},
+    {156,203,189,204,199},
+    {170,190,212,211,164,218,220,223,221,223},
+    {170,190,212,211,174,198,202,208,218},
+    {174},
+    {131},
+    {129},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {171,162,175,211,212,212,211,208},
+    {170,190,212,211,174,198,202,208,218},
+    {169},
+    {170,190,212,211,164,212,224},
+    {169,190,189,209,197,205,136,223,207,211,231,165,168,171},
+    {156,203,189,204,199},
+    {169,188,206,206,206,209,209,217,213,183,230,216,231,226},
+    {170,190,212,211,164,218,220,223,221,223},
+    {169},
+    {170,190,212,211,174,198,202,208,218},
+    {163,121,153,127,175,206,214,212,219,218,238,220},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {170,190,212,211},
+    {159,199,192,200,197,198,220,218,224},
+    {156,203,189,204,199},
+    {170,190,212,211,164,218,220,223,221,223},
+    {206},
+    {170,190,212,211,174,198,202,208,218},
+    {169,190,208,211,203,211,207,222},
+    {163,194,202,200,207,206,226,208,142,188,217,240,220,230,238,231},
+    {170,190,212,211,164,218,220,223,221,223},
+    {132,135,138},
+    {170,190,212,211,164,218,220,223,221,223},
+    {170,190,212,211,174,198,202,208,218},
+    {129},
+    {170,190,212,211,164,218,220,223,221,223},
+    {118,121},
+    {118,121},
+    {156,203,189,204,199},
+    {159,199,192,200,197,198,220,218,224},
+    {156,203,189,204,199},
+    {169,188,206,206,206,209,209,217,213,183,230,216,231,226},
+    {171,162,175,211,212,212,211,208},
+    {171,162,175,211,212,212,211,208},
+    {156,203,189,204,199},
+    {169,190,191,211,203,212,214,202},
+    {156,203,189,204,199},
+    {169,190,191,211,203,212,214,179,211,210,216,220,236},
+    {156,203,189,204,199},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,174,198,202,208,218},
+    {148},
+    {156,203,189,204,199},
+    {169,190,191,211,203,212,214,174,221,223,232,216,227,235,229,245},
+    {156,203,189,204,199},
+    {169,188,206,206,206,209,209,217,213,183,230,216,231,226},
+    {170,190,212,211,164,218,220,223,221,223},
+    {156,203,189,204,199},
+    {171,162,175,211,212,212,211,208},
+    {156,203,189,204,199},
+    {151,187,207,206,206,218,220,208,193,218,238,220},
+    {170,190,212,211,174,198,202,208,218},
+    {156,203,189,204,199},
+    {151,188,191,196,208,217},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,174,198,202,208,218},
+    {169,206,190,171,195,199,205,215},
+    {170,190,212,211,164,218,220,223,221,223},
+    {153,165,165,162,173},
+    {153,165,165,162,173},
+    {169,174,174,164,161},
+    {170,190,212,211,174,198,202,208,218},
+    {156,203,189,204,199},
+    {171,162,175,211,212,212,211,208},
+    {156,203,189,204,199},
+    {170,190,212,211,164,218,220,223,221,223},
+    {170,190,212,211,174,198,202,208,218},
+    {156,203,189,204,199},
+    {123,135,144,197},
+    {123,135,143,197},
+    {123,135,142,197},
+    {170,190,212,211,164,212,224},
+    {170,190,212,211,164,218,220,223,221,223},
+    {156,203,189,204,199},
+    {170,190,212,211,164,218,220,223,221,223},
+    {169,188,206,206,206,209,209,217,213,183,230,216,231,226},
+    {201,205,206,200,208,204},
+    {165,201,208,200,209,211,136,156},
+    {154,203,203,207,198,212,223,217},
+    {165,201,208,200,209,211,136,156},
+    {156,203,189,204,199},
+    {154,157,187},
+    {171,162,175,211,212,212,211,208},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,174,198,202,208,218},
+    {204},
+    {156,203,189,204,199},
+    {169,188,206,206,206,209,209,217,213,183,230,216,231,226},
+    {118,204,193,203,199,200,220,208,210},
+    {170,190,212,211,164,218,220,223,221,223},
+    {170,190,212,211,164,218,220,223,221,223},
+    {118,121},
+    {170,190,212,211,164,218,220,223,221,223},
+    {202,186,190,203,199},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,164,218,220,223,221,223},
+    {132,135,138},
+    {156,203,189,204,199},
+    {171,162,175,211,212,212,211,208},
+    {170,190,212,211,174,198,202,208,218},
+    {156,203,189,204,199},
+    {170,190,212,211,174,198,202,208,218},
+    {204},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {171,162,163,209,195,201,209,208,220,229},
+    {156,203,189,204,199},
+    {171,162,163,209,195,201,209,208,220,229},
+    {156,203,189,204,199},
+    {170,190,212,211,164,218,220,223,221,223},
+    {156,203,189,204,199},
+    {171,162,163,209,195,201,209,208,220,229},
+    {156,203,189,204,199},
+    {170,190,212,211,164,218,220,223,221,223},
+    {156,203,189,204,199},
+    {170,190,212,211,174,198,202,208,218},
+    {121},
+    {170,190,212,211,164,212,224},
+    {168,171,163,166,164,167},
+    {123,137,142,183,135,149,154,195,147,161,166,207},
+    {121},
+    {170,190,212,211,164,218,220,223,221,223},
+    {170,190,212,211,174,198,202,208,218},
+    {156,203,189,204,199},
+    {170,190,212,211,164,212,224},
+    {155,199,208,196,212,133,220,208,230,229,162,165,168},
+    {170,190,212,211},
+    {180,126,137,158,135,201,146,144,156,176,153,219,164},
+    {156,203,189,204,199},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,174,198,202,208,218},
+    {123},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {123},
+    {202,186,190,203,199},
+    {165,201,208,200,209,211,136,156},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {156,203,189,204,199},
+    {170,190,212,211,174,198,202,208,218},
+    {170,190,212,211,164,218,220,223,221,223},
+    {202,186,190,203,199},
   }
 
 local _k_cache = {}
-local function _l1_Unpack(idx)
+local function _0x_krein_unpack(idx)
   local cached = _k_cache[idx]
   if cached then return cached end
-  local raw = _Il1lI_KreinStr[idx]
+  local raw = _0x_krein_str[idx]
   if not raw then return "" end
   local res = {}
   local len = #raw
   for i = 1, len do
-    local byteVal = raw[i] - ((140 + i * 3) % 256)
+    local byteVal = raw[i] - ((83 + i * 3) % 256)
     if byteVal < 0 then byteVal = byteVal + 256 end
     res[i] = string.char(byteVal)
   end
@@ -272,264 +272,264 @@ local function _l1_Unpack(idx)
   return str
 end
 
-local _l_llll        = game:GetService(_l1_Unpack(1))
-local _l_l1ll         = game:GetService(_l1_Unpack(2))
-local Players    = game:GetService(_l1_Unpack(3))
-local CoreGui    = game:GetService(_l1_Unpack(4))
-local RunService = game:GetService(_l1_Unpack(5))
-local _l_lIlll = _l_llll.TouchEnabled and not _l_llll.KeyboardEnabled
-local _l_lllll  = {}
-_l_lllll.__index = _l_lllll
-local _l_l1lll = {
+local _0x17298        = game:GetService(_0x_krein_unpack(1))
+local _0x34d9         = game:GetService(_0x_krein_unpack(2))
+local Players    = game:GetService(_0x_krein_unpack(3))
+local CoreGui    = game:GetService(_0x_krein_unpack(4))
+local RunService = game:GetService(_0x_krein_unpack(5))
+local _0x17885339 = _0x17298.TouchEnabled and not _0x17298.KeyboardEnabled
+local _0x502d1512  = {}
+_0x502d1512.__index = _0x502d1512
+local _0x2aa3 = {
 Title  = Enum.Font.FredokaOne,
 Header = Enum.Font.FredokaOne,
 Label  = Enum.Font.Gotham,
-_l_ll1IIlll   = Enum.Font.Gotham,
+_0x1fd872   = Enum.Font.Gotham,
 Bold   = Enum.Font.GothamBold,
 Medium = Enum.Font.GothamMedium,
 Semi   = Enum.Font.GothamSemibold,
 }
-local function _l_lI1ll(_l_lI1II1ll, props, dur, style, dir)
-_l_l1ll:Create(_l_lI1II1ll,
+local function _0x38e1(_0x1d7f7, props, dur, style, dir)
+_0x34d9:Create(_0x1d7f7,
 TweenInfo.new(dur or 0.5, style or Enum.EasingStyle.Quint, dir or Enum.EasingDirection.Out),
 props
 ):Play()
 end
-local function _l_ll1ll(parent, radius)
-local _l_l11ll = Instance.new(_l1_Unpack(6))
-_l_l11ll.CornerRadius = UDim.new(0, radius or 8)
-_l_l11ll.Parent = parent
-return _l_l11ll
+local function _0x50be634c(parent, radius)
+local _0x2ac3 = Instance.new(_0x_krein_unpack(6))
+_0x2ac3.CornerRadius = UDim.new(0, radius or 8)
+_0x2ac3.Parent = parent
+return _0x2ac3
 end
-local function _l_lIIlll(parent, color, thickness, transparency)
-local _l_llIlll = Instance.new(_l1_Unpack(7))
-_l_llIlll.Color = color or Color3.fromRGB(50, 50, 60)
-_l_llIlll.Thickness = thickness or 1
-_l_llIlll.Transparency = transparency or 0.7
-_l_llIlll.Parent = parent
-return _l_llIlll
+local function _0x352a5f67(parent, color, thickness, transparency)
+local _0x2ad5 = Instance.new(_0x_krein_unpack(7))
+_0x2ad5.Color = color or Color3.fromRGB(50, 50, 60)
+_0x2ad5.Thickness = thickness or 1
+_0x2ad5.Transparency = transparency or 0.7
+_0x2ad5.Parent = parent
+return _0x2ad5
 end
-local function _l_l1Illl(parent, fillDir, spacing, sortOrder)
-local _l_lIllll = Instance.new(_l1_Unpack(8))
-_l_lIllll.FillDirection  = fillDir or Enum.FillDirection.Vertical
-_l_lIllll.Padding        = UDim.new(0, spacing or 5)
-_l_lIllll.SortOrder      = sortOrder or Enum.SortOrder.LayoutOrder
-_l_lIllll.HorizontalAlignment = Enum.HorizontalAlignment.Center
-_l_lIllll.Parent = parent
-return _l_lIllll
+local function _0x8c753cb(parent, fillDir, spacing, sortOrder)
+local _0x2ad0 = Instance.new(_0x_krein_unpack(8))
+_0x2ad0.FillDirection  = fillDir or Enum.FillDirection.Vertical
+_0x2ad0.Padding        = UDim.new(0, spacing or 5)
+_0x2ad0.SortOrder      = sortOrder or Enum.SortOrder.LayoutOrder
+_0x2ad0.HorizontalAlignment = Enum.HorizontalAlignment.Center
+_0x2ad0.Parent = parent
+return _0x2ad0
 end
-local function _l_llllll(parent, top, bottom, left, _l_ll1Illll)
-local _l_l1llll = Instance.new(_l1_Unpack(9))
-_l_l1llll.PaddingTop    = UDim.new(0, top    or 6)
-_l_l1llll.PaddingBottom = UDim.new(0, bottom or 6)
-_l_l1llll.PaddingLeft   = UDim.new(0, left   or 10)
-_l_l1llll.PaddingRight  = UDim.new(0, _l_ll1Illll  or 10)
-_l_l1llll.Parent = parent
-return _l_l1llll
+local function _0x6e34debe(parent, top, bottom, left, _0x677ece7)
+local _0x2ad6 = Instance.new(_0x_krein_unpack(9))
+_0x2ad6.PaddingTop    = UDim.new(0, top    or 6)
+_0x2ad6.PaddingBottom = UDim.new(0, bottom or 6)
+_0x2ad6.PaddingLeft   = UDim.new(0, left   or 10)
+_0x2ad6.PaddingRight  = UDim.new(0, _0x677ece7  or 10)
+_0x2ad6.Parent = parent
+return _0x2ad6
 end
-local _l_lI1lll  = nil
-local _l_ll1lll = nil
-local function _l_l11lll(_l_llI1l1ll, anchor)
-if _l_lI1lll  then _l_lI1lll:Destroy() end
-if _l_ll1lll then _l_ll1lll:Disconnect() end
-if not _l_llI1l1ll or _l_llI1l1ll == "" then return end
-local _l_lII1ll = anchor:FindFirstAncestorOfClass(_l1_Unpack(10))
-if not _l_lII1ll then return end
-local _l_llI1ll = Instance.new(_l1_Unpack(11))
-_l_llI1ll.Name = _l1_Unpack(12)
-_l_llI1ll.Size = UDim2.new(0, 185, 0, 28)
-_l_llI1ll.BackgroundColor3 = Color3.fromRGB(18, 18, 24)
-_l_llI1ll.BackgroundTransparency = 0.04
-_l_llI1ll.BorderSizePixel = 0
-_l_llI1ll.ZIndex = 9999
-_l_llI1ll.Parent = _l_lII1ll
-_l_ll1ll(_l_llI1ll, 6)
-_l_lIIlll(_l_llI1ll, Color3.fromRGB(65, 65, 82), 1, 0.2)
-local _l_l1I1ll = Instance.new(_l1_Unpack(13))
-_l_l1I1ll.Size = UDim2.new(1, -12, 1, 0)
-_l_l1I1ll.Position = UDim2.new(0, 6, 0, 0)
-_l_l1I1ll.BackgroundTransparency = 1
-_l_l1I1ll.Text = _l_llI1l1ll
-_l_l1I1ll.TextColor3 = Color3.fromRGB(210, 210, 225)
-_l_l1I1ll.Font = _l_l1lll.Body
-_l_l1I1ll.TextSize = 11
-_l_l1I1ll.TextXAlignment = Enum.TextXAlignment.Left
-_l_l1I1ll.ZIndex = 9999
-_l_l1I1ll.Parent = _l_llI1ll
-_l_ll1lll = _l_llll.InputChanged:Connect(function(input)
-if not _l_llI1ll or not _l_llI1ll.Parent then return end
+local _0x72f582a8  = nil
+local _0x26f7ea51 = nil
+local function _0x2cd12f51(_0x367055, anchor)
+if _0x72f582a8  then _0x72f582a8:Destroy() end
+if _0x26f7ea51 then _0x26f7ea51:Disconnect() end
+if not _0x367055 or _0x367055 == "" then return end
+local _0x361a152a = anchor:FindFirstAncestorOfClass(_0x_krein_unpack(10))
+if not _0x361a152a then return end
+local _0x1eb06 = Instance.new(_0x_krein_unpack(11))
+_0x1eb06.Name = _0x_krein_unpack(12)
+_0x1eb06.Size = UDim2.new(0, 185, 0, 28)
+_0x1eb06.BackgroundColor3 = Color3.fromRGB(18, 18, 24)
+_0x1eb06.BackgroundTransparency = 0.04
+_0x1eb06.BorderSizePixel = 0
+_0x1eb06.ZIndex = 9999
+_0x1eb06.Parent = _0x361a152a
+_0x50be634c(_0x1eb06, 6)
+_0x352a5f67(_0x1eb06, Color3.fromRGB(65, 65, 82), 1, 0.2)
+local _0x1cc22 = Instance.new(_0x_krein_unpack(13))
+_0x1cc22.Size = UDim2.new(1, -12, 1, 0)
+_0x1cc22.Position = UDim2.new(0, 6, 0, 0)
+_0x1cc22.BackgroundTransparency = 1
+_0x1cc22.Text = _0x367055
+_0x1cc22.TextColor3 = Color3.fromRGB(210, 210, 225)
+_0x1cc22.Font = _0x2aa3.Body
+_0x1cc22.TextSize = 11
+_0x1cc22.TextXAlignment = Enum.TextXAlignment.Left
+_0x1cc22.ZIndex = 9999
+_0x1cc22.Parent = _0x1eb06
+_0x26f7ea51 = _0x17298.InputChanged:Connect(function(input)
+if not _0x1eb06 or not _0x1eb06.Parent then return end
 if input.UserInputType == Enum.UserInputType.MouseMovement then
-local _l_lIl1ll = input.Position
-_l_llI1ll.Position = UDim2.new(0, _l_lIl1ll.X + 14, 0, _l_lIl1ll.Y - 36)
+local _0x3810 = input.Position
+_0x1eb06.Position = UDim2.new(0, _0x3810.X + 14, 0, _0x3810.Y - 36)
 end
 end)
-_l_lI1lll = _l_llI1ll
+_0x72f582a8 = _0x1eb06
 end
-local function _l_lll1ll()
-if _l_ll1lll then _l_ll1lll:Disconnect(); _l_ll1lll = nil end
-if _l_lI1lll then
-_l_lI1ll(_l_lI1lll, {BackgroundTransparency = 1}, 0.1)
-local _l_l1l1ll = _l_lI1lll; _l_lI1lll = nil
-task.delay(0.11, function() if _l_l1l1ll and _l_l1l1ll.Parent then _l_l1l1ll:Destroy() end end)
+local function _0x4b215931()
+if _0x26f7ea51 then _0x26f7ea51:Disconnect(); _0x26f7ea51 = nil end
+if _0x72f582a8 then
+_0x38e1(_0x72f582a8, {BackgroundTransparency = 1}, 0.1)
+local _0x2ae3 = _0x72f582a8; _0x72f582a8 = nil
+task.delay(0.11, function() if _0x2ae3 and _0x2ae3.Parent then _0x2ae3:Destroy() end end)
 end
 end
-local function _l_lI11ll()
-local _l_ll11ll = {CoreGui}
+local function _0x7d8be675()
+local _0x8a86e83 = {CoreGui}
 pcall(function()
-local _l_l111ll = Players.LocalPlayer:FindFirstChild(_l1_Unpack(14))
-if _l_l111ll then table.insert(_l_ll11ll, _l_l111ll) end
+local _0x3869 = Players.LocalPlayer:FindFirstChild(_0x_krein_unpack(14))
+if _0x3869 then table.insert(_0x8a86e83, _0x3869) end
 end)
-for _, _l_ll11lIlll in ipairs(_l_ll11ll) do
+for _, _0x187e8800 in ipairs(_0x8a86e83) do
 pcall(function()
-local _l_lIIIlll = _l_ll11lIlll:FindFirstChild(_l1_Unpack(15))
-if _l_lIIIlll then _l_lIIIlll:Destroy() end
+local _0x1d89a = _0x187e8800:FindFirstChild(_0x_krein_unpack(15))
+if _0x1d89a then _0x1d89a:Destroy() end
 end)
 end
 end
-_l_lI11ll()
-local _l_llIIlll = Instance.new(_l1_Unpack(16))
-_l_llIIlll.Name = _l1_Unpack(17)
-_l_llIIlll.Parent = CoreGui
-_l_llIIlll.ResetOnSpawn = false
-_l_llIIlll.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-_l_llIIlll.DisplayOrder = 10
-local _l_l1IIlll = Instance.new(_l1_Unpack(18))
-_l_l1IIlll.Name  = _l1_Unpack(19)
-_l_l1IIlll.Size  = UDim2.new(0, 300, 1, 0)
-_l_l1IIlll.Position = UDim2.new(1, -310, 0, 0)
-_l_l1IIlll.BackgroundTransparency = 1
-_l_l1IIlll.BorderSizePixel = 0
-_l_l1IIlll.ZIndex = 9000
-_l_l1IIlll.Parent = _l_llIIlll
-local _l_lIlIlll    = {}
-local _l_lllIlll = 0
-local _l_l1lIlll = 0.3
-function _l_lllll:Notify(title, message, duration, nType)
-local _l_lI1Illl = tick()
-if _l_lI1Illl - _l_lllIlll < _l_l1lIlll then return end
-_l_lllIlll = _l_lI1Illl
+_0x7d8be675()
+local _0x7ee6bb83 = Instance.new(_0x_krein_unpack(16))
+_0x7ee6bb83.Name = _0x_krein_unpack(17)
+_0x7ee6bb83.Parent = CoreGui
+_0x7ee6bb83.ResetOnSpawn = false
+_0x7ee6bb83.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+_0x7ee6bb83.DisplayOrder = 10
+local _0x7ee629c6 = Instance.new(_0x_krein_unpack(18))
+_0x7ee629c6.Name  = _0x_krein_unpack(19)
+_0x7ee629c6.Size  = UDim2.new(0, 300, 1, 0)
+_0x7ee629c6.Position = UDim2.new(1, -310, 0, 0)
+_0x7ee629c6.BackgroundTransparency = 1
+_0x7ee629c6.BorderSizePixel = 0
+_0x7ee629c6.ZIndex = 9000
+_0x7ee629c6.Parent = _0x7ee6bb83
+local _0x6377bed8    = {}
+local _0x1e501f32 = 0
+local _0x2829e270 = 0.3
+function _0x502d1512:Notify(title, message, duration, nType)
+local _0x1d54f = tick()
+if _0x1d54f - _0x1e501f32 < _0x2829e270 then return end
+_0x1e501f32 = _0x1d54f
 duration = duration or 3
-nType    = nType or _l1_Unpack(20)
-local _l_ll1Illl = ({
-info    = {_l_ll11I1ll = Color3.fromRGB(100, 150, 255), icon = _l1_Unpack(21)},
-success = {_l_ll11I1ll = Color3.fromRGB(50,  210,  110), icon = _l1_Unpack(22)},
-warning = {_l_ll11I1ll = Color3.fromRGB(255, 189,  46), icon = _l1_Unpack(23)},
-error   = {_l_ll11I1ll = Color3.fromRGB(225,  60,  60), icon = _l1_Unpack(24)},
-})[nType] or {_l_ll11I1ll = Color3.fromRGB(100, 150, 255), icon = _l1_Unpack(25)}
-for _, n in ipairs(_l_lIlIlll) do
-     _l_lI1ll(n, {Position = n.Position - UDim2.new(0, 0, 0, 80)}, 0.28)
+nType    = nType or _0x_krein_unpack(20)
+local _0x1db15 = ({
+info    = {_0x1a726 = Color3.fromRGB(100, 150, 255), icon = _0x_krein_unpack(21)},
+success = {_0x1a726 = Color3.fromRGB(50,  210,  110), icon = _0x_krein_unpack(22)},
+warning = {_0x1a726 = Color3.fromRGB(255, 189,  46), icon = _0x_krein_unpack(23)},
+error   = {_0x1a726 = Color3.fromRGB(225,  60,  60), icon = _0x_krein_unpack(24)},
+})[nType] or {_0x1a726 = Color3.fromRGB(100, 150, 255), icon = _0x_krein_unpack(25)}
+for _, n in ipairs(_0x6377bed8) do
+     _0x38e1(n, {Position = n.Position - UDim2.new(0, 0, 0, 80)}, 0.28)
  end
- local _l_l11Illl = Instance.new(_l1_Unpack(26))
- _l_l11Illl.Size = UDim2.new(1, 0, 0, 70)
- _l_l11Illl.Position = UDim2.new(0, 0, 1, 10)
- _l_l11Illl.BackgroundColor3 = Color3.fromRGB(18, 18, 26)
- _l_l11Illl.BackgroundTransparency = 0.06
- _l_l11Illl.BorderSizePixel = 0
- _l_l11Illl.ZIndex = 9001
- _l_l11Illl.ClipsDescendants = true
- _l_l11Illl.Parent = _l_l1IIlll
- _l_ll1ll(_l_l11Illl, 14)
- _l_lIIlll(_l_l11Illl, Color3.fromRGB(255, 255, 255), 1, 0.88)
- local _l_lIIllll = Instance.new(_l1_Unpack(27))
- _l_lIIllll.Color = Color3.fromRGB(55, 55, 75)
- _l_lIIllll.Thickness = 1.5
- _l_lIIllll.Transparency = 0.45
- _l_lIIllll.Parent = _l_l11Illl
- local _l_llIllll = Instance.new(_l1_Unpack(28))
- _l_llIllll.Size = UDim2.new(0, 3, 0.75, 0)
- _l_llIllll.Position = UDim2.new(0, 0, 0.125, 0)
- _l_llIllll.BackgroundColor3 = _l_ll1Illl.bar
- _l_llIllll.BorderSizePixel = 0
- _l_llIllll.ZIndex = 9002
- _l_llIllll.Parent = _l_l11Illl
- _l_ll1ll(_l_llIllll, 3)
- local _l_l1Illll = Instance.new(_l1_Unpack(29))
- _l_l1Illll.Size = UDim2.new(1, 0, 0, 2)
- _l_l1Illll.Position = UDim2.new(0, 0, 1, -2)
- _l_l1Illll.BackgroundColor3 = _l_ll1Illl.bar
- _l_l1Illll.BackgroundTransparency = 0.4
- _l_l1Illll.BorderSizePixel = 0
- _l_l1Illll.ZIndex = 9002
- _l_l1Illll.Parent = _l_l11Illl
- _l_lI1ll(_l_l1Illll, {Size = UDim2.new(0, 0, 0, 2)}, duration, Enum.EasingStyle.Linear)
- local _l_lIlllll = Instance.new(_l1_Unpack(30))
- _l_lIlllll.Size = UDim2.new(0, 30, 0, 30)
- _l_lIlllll.Position = UDim2.new(0, 14, 0, 20)
- _l_lIlllll.BackgroundColor3 = _l_ll1Illl.bar
- _l_lIlllll.BackgroundTransparency = 0.78
- _l_lIlllll.BorderSizePixel = 0
- _l_lIlllll.ZIndex = 9002
- _l_lIlllll.Parent = _l_l11Illl
- _l_ll1ll(_l_lIlllll, 15)
- local _l_lllllll = Instance.new(_l1_Unpack(31))
- _l_lllllll.Size = UDim2.new(1, 0, 1, 0)
- _l_lllllll.BackgroundTransparency = 1
- _l_lllllll.Text = _l_ll1Illl.icon
- _l_lllllll.TextColor3 = _l_ll1Illl.bar
- _l_lllllll.Font = _l_l1lll.Bold
- _l_lllllll.TextSize = 13
- _l_lllllll.ZIndex = 9003
- _l_lllllll.Parent = _l_lIlllll
- local _l_l1lllll = Instance.new(_l1_Unpack(32))
- _l_l1lllll.Size = UDim2.new(0, 210, 0, 18)
- _l_l1lllll.Position = UDim2.new(0, 54, 0, 12)
- _l_l1lllll.BackgroundTransparency = 1
- _l_l1lllll.Text = title
- _l_l1lllll.TextColor3 = Color3.fromRGB(245, 245, 255)
- _l_l1lllll.Font = _l_l1lll.Bold
- _l_l1lllll.TextSize = 12
- _l_l1lllll.TextXAlignment = Enum.TextXAlignment.Left
- _l_l1lllll.ZIndex = 9002
- _l_l1lllll.Parent = _l_l11Illl
- local _l_lI1llll = Instance.new(_l1_Unpack(33))
- _l_lI1llll.Size = UDim2.new(0, 210, 0, 28)
- _l_lI1llll.Position = UDim2.new(0, 54, 0, 30)
- _l_lI1llll.BackgroundTransparency = 1
- _l_lI1llll.Text = message
- _l_lI1llll.TextColor3 = Color3.fromRGB(145, 145, 162)
- _l_lI1llll.Font = _l_l1lll.Body
- _l_lI1llll.TextSize = 10
- _l_lI1llll.TextXAlignment = Enum.TextXAlignment.Left
- _l_lI1llll.TextWrapped = true
- _l_lI1llll.ZIndex = 9002
- _l_lI1llll.Parent = _l_l11Illl
- local _l_ll1llll = Instance.new(_l1_Unpack(34))
- _l_ll1llll.Size = UDim2.new(0, 20, 0, 20)
- _l_ll1llll.Position = UDim2.new(1, -26, 0, 8)
- _l_ll1llll.BackgroundTransparency = 1
- _l_ll1llll.Text = _l1_Unpack(35)
- _l_ll1llll.TextColor3 = Color3.fromRGB(90, 90, 108)
- _l_ll1llll.Font = _l_l1lll.Bold
- _l_ll1llll.TextSize = 14
- _l_ll1llll.ZIndex = 9003
- _l_ll1llll.Parent = _l_l11Illl
- local function _l_l11llll()
-     local _l_lII1lll = table.find(_l_lIlIlll, _l_l11Illl)
-     if _l_lII1lll then table.remove(_l_lIlIlll, _l_lII1lll) end
-     _l_lI1ll(_l_l11Illl, {Position = _l_l11Illl.Position + UDim2.new(0, 310, 0, 0), BackgroundTransparency = 1}, 0.22)
+ local _0x64279ab = Instance.new(_0x_krein_unpack(26))
+ _0x64279ab.Size = UDim2.new(1, 0, 0, 70)
+ _0x64279ab.Position = UDim2.new(0, 0, 1, 10)
+ _0x64279ab.BackgroundColor3 = Color3.fromRGB(18, 18, 26)
+ _0x64279ab.BackgroundTransparency = 0.06
+ _0x64279ab.BorderSizePixel = 0
+ _0x64279ab.ZIndex = 9001
+ _0x64279ab.ClipsDescendants = true
+ _0x64279ab.Parent = _0x7ee629c6
+ _0x50be634c(_0x64279ab, 14)
+ _0x352a5f67(_0x64279ab, Color3.fromRGB(255, 255, 255), 1, 0.88)
+ local _0x17c27a70 = Instance.new(_0x_krein_unpack(27))
+ _0x17c27a70.Color = Color3.fromRGB(55, 55, 75)
+ _0x17c27a70.Thickness = 1.5
+ _0x17c27a70.Transparency = 0.45
+ _0x17c27a70.Parent = _0x64279ab
+ local _0x54d820b9 = Instance.new(_0x_krein_unpack(28))
+ _0x54d820b9.Size = UDim2.new(0, 3, 0.75, 0)
+ _0x54d820b9.Position = UDim2.new(0, 0, 0.125, 0)
+ _0x54d820b9.BackgroundColor3 = _0x1db15.bar
+ _0x54d820b9.BorderSizePixel = 0
+ _0x54d820b9.ZIndex = 9002
+ _0x54d820b9.Parent = _0x64279ab
+ _0x50be634c(_0x54d820b9, 3)
+ local _0x34cdd8 = Instance.new(_0x_krein_unpack(29))
+ _0x34cdd8.Size = UDim2.new(1, 0, 0, 2)
+ _0x34cdd8.Position = UDim2.new(0, 0, 1, -2)
+ _0x34cdd8.BackgroundColor3 = _0x1db15.bar
+ _0x34cdd8.BackgroundTransparency = 0.4
+ _0x34cdd8.BorderSizePixel = 0
+ _0x34cdd8.ZIndex = 9002
+ _0x34cdd8.Parent = _0x64279ab
+ _0x38e1(_0x34cdd8, {Size = UDim2.new(0, 0, 0, 2)}, duration, Enum.EasingStyle.Linear)
+ local _0x511318b1 = Instance.new(_0x_krein_unpack(30))
+ _0x511318b1.Size = UDim2.new(0, 30, 0, 30)
+ _0x511318b1.Position = UDim2.new(0, 14, 0, 20)
+ _0x511318b1.BackgroundColor3 = _0x1db15.bar
+ _0x511318b1.BackgroundTransparency = 0.78
+ _0x511318b1.BorderSizePixel = 0
+ _0x511318b1.ZIndex = 9002
+ _0x511318b1.Parent = _0x64279ab
+ _0x50be634c(_0x511318b1, 15)
+ local _0x472c469f = Instance.new(_0x_krein_unpack(31))
+ _0x472c469f.Size = UDim2.new(1, 0, 1, 0)
+ _0x472c469f.BackgroundTransparency = 1
+ _0x472c469f.Text = _0x1db15.icon
+ _0x472c469f.TextColor3 = _0x1db15.bar
+ _0x472c469f.Font = _0x2aa3.Bold
+ _0x472c469f.TextSize = 13
+ _0x472c469f.ZIndex = 9003
+ _0x472c469f.Parent = _0x511318b1
+ local _0x6f760d41 = Instance.new(_0x_krein_unpack(32))
+ _0x6f760d41.Size = UDim2.new(0, 210, 0, 18)
+ _0x6f760d41.Position = UDim2.new(0, 54, 0, 12)
+ _0x6f760d41.BackgroundTransparency = 1
+ _0x6f760d41.Text = title
+ _0x6f760d41.TextColor3 = Color3.fromRGB(245, 245, 255)
+ _0x6f760d41.Font = _0x2aa3.Bold
+ _0x6f760d41.TextSize = 12
+ _0x6f760d41.TextXAlignment = Enum.TextXAlignment.Left
+ _0x6f760d41.ZIndex = 9002
+ _0x6f760d41.Parent = _0x64279ab
+ local _0x3f7b0f09 = Instance.new(_0x_krein_unpack(33))
+ _0x3f7b0f09.Size = UDim2.new(0, 210, 0, 28)
+ _0x3f7b0f09.Position = UDim2.new(0, 54, 0, 30)
+ _0x3f7b0f09.BackgroundTransparency = 1
+ _0x3f7b0f09.Text = message
+ _0x3f7b0f09.TextColor3 = Color3.fromRGB(145, 145, 162)
+ _0x3f7b0f09.Font = _0x2aa3.Body
+ _0x3f7b0f09.TextSize = 10
+ _0x3f7b0f09.TextXAlignment = Enum.TextXAlignment.Left
+ _0x3f7b0f09.TextWrapped = true
+ _0x3f7b0f09.ZIndex = 9002
+ _0x3f7b0f09.Parent = _0x64279ab
+ local _0x4122efc7 = Instance.new(_0x_krein_unpack(34))
+ _0x4122efc7.Size = UDim2.new(0, 20, 0, 20)
+ _0x4122efc7.Position = UDim2.new(1, -26, 0, 8)
+ _0x4122efc7.BackgroundTransparency = 1
+ _0x4122efc7.Text = _0x_krein_unpack(35)
+ _0x4122efc7.TextColor3 = Color3.fromRGB(90, 90, 108)
+ _0x4122efc7.Font = _0x2aa3.Bold
+ _0x4122efc7.TextSize = 14
+ _0x4122efc7.ZIndex = 9003
+ _0x4122efc7.Parent = _0x64279ab
+ local function _0x63a3dd0e()
+     local _0x1c142 = table.find(_0x6377bed8, _0x64279ab)
+     if _0x1c142 then table.remove(_0x6377bed8, _0x1c142) end
+     _0x38e1(_0x64279ab, {Position = _0x64279ab.Position + UDim2.new(0, 310, 0, 0), BackgroundTransparency = 1}, 0.22)
      task.delay(0.23, function()
-         if _l_l11Illl and _l_l11Illl.Parent then _l_l11Illl:Destroy() end
+         if _0x64279ab and _0x64279ab.Parent then _0x64279ab:Destroy() end
      end)
  end
- _l_ll1llll.MouseButton1Click:Connect(_l_l11llll)
- table.insert(_l_lIlIlll, _l_l11Illl)
- _l_lI1ll(_l_l11Illl, {Position = UDim2.new(0, 0, 1, -84)}, 0.45, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
+ _0x4122efc7.MouseButton1Click:Connect(_0x63a3dd0e)
+ table.insert(_0x6377bed8, _0x64279ab)
+ _0x38e1(_0x64279ab, {Position = UDim2.new(0, 0, 1, -84)}, 0.45, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
  task.delay(duration, function()
-     if _l_l11Illl and _l_l11Illl.Parent then _l_l11llll() end
+     if _0x64279ab and _0x64279ab.Parent then _0x63a3dd0e() end
  end)
 end
-function _l_lllll:CreateWindow(cfg)
+function _0x502d1512:CreateWindow(cfg)
 cfg = cfg or {}
-local _l_llI1lll = cfg.Title    or _l1_Unpack(36)
-local _l_l1I1lll   = cfg.Subtitle or _l1_Unpack(37)
-local _l_lIl1lll  = cfg.Size     or UDim2.new(0, 680, 0, 460)
-local _l_lll1lll   = cfg.Position or UDim2.new(0.5, -340, 0.5, -230)
-local _l_l1l1lll   = cfg.MinSize  or UDim2.new(0, 280, 0, 45)
-local _l_lI11lll   = cfg.MaxSize  or UDim2.new(0, 880, 0, 580)
-local _l_ll11lll = {}
- local function _l_l111lll(_l_l11ll) table.insert(_l_ll11lll, _l_l11ll) end
- local function _l_lIII1ll(sig, fn) _l_l111lll(sig:Connect(fn)) end
- local _l_llII1ll = {
+local _0x435f659e = cfg.Title    or _0x_krein_unpack(36)
+local _0x2ef438b5   = cfg.Subtitle or _0x_krein_unpack(37)
+local _0x5067fc85  = cfg.Size     or UDim2.new(0, 680, 0, 460)
+local _0x2ef4449f   = cfg.Position or UDim2.new(0.5, -340, 0.5, -230)
+local _0x2ef450a0   = cfg.MinSize  or UDim2.new(0, 280, 0, 45)
+local _0x2ef4518d   = cfg.MaxSize  or UDim2.new(0, 880, 0, 580)
+local _0x56f7b87 = {}
+ local function _0x1e321(_0x2ac3) table.insert(_0x56f7b87, _0x2ac3) end
+ local function _0x659222a(sig, fn) _0x1e321(sig:Connect(fn)) end
+ local _0x2ad2 = {
      MainBg        = Color3.fromRGB(14, 14, 20),
      TitleBg       = Color3.fromRGB(18, 18, 26),
      SidebarBg     = Color3.fromRGB(15, 15, 22),
@@ -567,1439 +567,1439 @@ local _l_ll11lll = {}
      ProgressBg    = Color3.fromRGB(28, 28, 42),
      ProgressFill  = Color3.fromRGB(110, 155, 255),
  }
- local _l_l1II1ll = Instance.new(_l1_Unpack(38))
- _l_l1II1ll.Name  = _l1_Unpack(39)
- _l_l1II1ll.Size  = UDim2.new(0, 0, 0, 0)
- _l_l1II1ll.Position = UDim2.new(0.5, 0, 0.5, 0)
- _l_l1II1ll.BackgroundColor3 = _l_llII1ll.MainBg
- _l_l1II1ll.BackgroundTransparency = 0.04
- _l_l1II1ll.BorderSizePixel = 0
- _l_l1II1ll.ClipsDescendants = true
- _l_l1II1ll.Parent = _l_llIIlll
- _l_ll1ll(_l_l1II1ll, 16)
- local _l_lIlI1ll = Instance.new(_l1_Unpack(40))
- _l_lIlI1ll.Size = UDim2.new(1, 0, 1, 0)
- _l_lIlI1ll.BackgroundTransparency = 1
- _l_lIlI1ll.Image = _l1_Unpack(41)
- _l_lIlI1ll.ImageTransparency = 0.5
- _l_lIlI1ll.ScaleType = Enum.ScaleType.Crop
- _l_lIlI1ll.ZIndex = 0
- _l_lIlI1ll.Parent = _l_l1II1ll
- _l_ll1ll(_l_lIlI1ll, 16)
- local _l_lllI1ll = Instance.new(_l1_Unpack(42))
- _l_lllI1ll.Name = _l1_Unpack(43)
- _l_lllI1ll.Color = Color3.fromRGB(255, 255, 255)
- _l_lllI1ll.Thickness = 1.5
- _l_lllI1ll.Transparency = 0.6
- _l_lllI1ll.LineJoinMode = Enum.LineJoinMode.Round
- _l_lllI1ll.Parent = _l_l1II1ll
- local _l_l1lI1ll = Instance.new(_l1_Unpack(44))
- _l_l1lI1ll.Name = _l1_Unpack(45)
- _l_l1lI1ll.Color = Color3.fromRGB(80, 90, 130)
- _l_l1lI1ll.Thickness = 3
- _l_l1lI1ll.Transparency = 0.72
- _l_l1lI1ll.LineJoinMode = Enum.LineJoinMode.Round
- _l_l1lI1ll.Parent = _l_l1II1ll
- local _l_lI1I1ll = Instance.new(_l1_Unpack(46))
- _l_lI1I1ll.Name = _l1_Unpack(47)
- _l_lI1I1ll.Color = Color3.fromRGB(30, 32, 50)
- _l_lI1I1ll.Thickness = 6
- _l_lI1I1ll.Transparency = 0.78
- _l_lI1I1ll.LineJoinMode = Enum.LineJoinMode.Round
- _l_lI1I1ll.Parent = _l_l1II1ll
- local _l_ll1I1ll = true
+ local _0x671aa9a4 = Instance.new(_0x_krein_unpack(38))
+ _0x671aa9a4.Name  = _0x_krein_unpack(39)
+ _0x671aa9a4.Size  = UDim2.new(0, 0, 0, 0)
+ _0x671aa9a4.Position = UDim2.new(0.5, 0, 0.5, 0)
+ _0x671aa9a4.BackgroundColor3 = _0x2ad2.MainBg
+ _0x671aa9a4.BackgroundTransparency = 0.04
+ _0x671aa9a4.BorderSizePixel = 0
+ _0x671aa9a4.ClipsDescendants = true
+ _0x671aa9a4.Parent = _0x7ee6bb83
+ _0x50be634c(_0x671aa9a4, 16)
+ local _0x57565287 = Instance.new(_0x_krein_unpack(40))
+ _0x57565287.Size = UDim2.new(1, 0, 1, 0)
+ _0x57565287.BackgroundTransparency = 1
+ _0x57565287.Image = _0x_krein_unpack(41)
+ _0x57565287.ImageTransparency = 0.5
+ _0x57565287.ScaleType = Enum.ScaleType.Crop
+ _0x57565287.ZIndex = 0
+ _0x57565287.Parent = _0x671aa9a4
+ _0x50be634c(_0x57565287, 16)
+ local _0x417d7c8e = Instance.new(_0x_krein_unpack(42))
+ _0x417d7c8e.Name = _0x_krein_unpack(43)
+ _0x417d7c8e.Color = Color3.fromRGB(255, 255, 255)
+ _0x417d7c8e.Thickness = 1.5
+ _0x417d7c8e.Transparency = 0.6
+ _0x417d7c8e.LineJoinMode = Enum.LineJoinMode.Round
+ _0x417d7c8e.Parent = _0x671aa9a4
+ local _0x417d7c8c = Instance.new(_0x_krein_unpack(44))
+ _0x417d7c8c.Name = _0x_krein_unpack(45)
+ _0x417d7c8c.Color = Color3.fromRGB(80, 90, 130)
+ _0x417d7c8c.Thickness = 3
+ _0x417d7c8c.Transparency = 0.72
+ _0x417d7c8c.LineJoinMode = Enum.LineJoinMode.Round
+ _0x417d7c8c.Parent = _0x671aa9a4
+ local _0x417d7c8a = Instance.new(_0x_krein_unpack(46))
+ _0x417d7c8a.Name = _0x_krein_unpack(47)
+ _0x417d7c8a.Color = Color3.fromRGB(30, 32, 50)
+ _0x417d7c8a.Thickness = 6
+ _0x417d7c8a.Transparency = 0.78
+ _0x417d7c8a.LineJoinMode = Enum.LineJoinMode.Round
+ _0x417d7c8a.Parent = _0x671aa9a4
+ local _0x1257fa42 = true
  task.spawn(function()
-     local _l_l11I1ll = 0
-     while _l_ll1I1ll and _l_l1II1ll and _l_l1II1ll.Parent do
-         _l_l11I1ll = (_l_l11I1ll + 0.008) % 1
-         _l_lllI1ll.Color = Color3.fromHSV(_l_l11I1ll, 0.85, 1)
+     local _0x1bf8e = 0
+     while _0x1257fa42 and _0x671aa9a4 and _0x671aa9a4.Parent do
+         _0x1bf8e = (_0x1bf8e + 0.008) % 1
+         _0x417d7c8e.Color = Color3.fromHSV(_0x1bf8e, 0.85, 1)
          task.wait(0.03)
      end
  end)
- local _l_lIIl1ll = Instance.new(_l1_Unpack(48))
- _l_lIIl1ll.SoundId = _l1_Unpack(49)
- _l_lIIl1ll.Volume = 0.6
- _l_lIIl1ll.Parent = _l_llIIlll
- local _l_llIl1ll = Instance.new(_l1_Unpack(50))
- _l_llIl1ll.Size = UDim2.new(0, 80, 0, 80)
- _l_llIl1ll.Position = UDim2.new(0.5, -40, 0.5, -40)
- _l_llIl1ll.BackgroundTransparency = 1
- _l_llIl1ll.Text = _l1_Unpack(51)
- _l_llIl1ll.TextColor3 = Color3.fromRGB(255, 255, 255)
- _l_llIl1ll.Font = _l_l1lll.Bold
- _l_llIl1ll.TextSize = 65
- _l_llIl1ll.ZIndex = 10000
- _l_llIl1ll.Parent = _l_llIIlll
- local _l_l1Il1ll = Instance.new(_l1_Unpack(52))
- _l_l1Il1ll.Size = UDim2.new(0, 300, 0, 50)
- _l_l1Il1ll.Position = UDim2.new(0.5, -150, 0.5, -25)
- _l_l1Il1ll.BackgroundTransparency = 1
- _l_l1Il1ll.Text = ""
- _l_l1Il1ll.TextColor3 = Color3.fromRGB(255, 255, 255)
- _l_l1Il1ll.Font = _l_l1lll.Title
- _l_l1Il1ll.TextSize = 42
- _l_l1Il1ll.ZIndex = 10000
- _l_l1Il1ll.Visible = false
- _l_l1Il1ll.Parent = _l_llIIlll
- local _l_lIll1ll = Instance.new(_l1_Unpack(53))
- _l_lIll1ll.Name = _l1_Unpack(54)
- _l_lIll1ll.Size = UDim2.new(0, 50, 0, 50)
- _l_lIll1ll.Position = UDim2.new(0, 12, 1, -410)
- _l_lIll1ll.BackgroundColor3 = _l_llII1ll.ResetBg
- _l_lIll1ll.BackgroundTransparency = 0.05
- _l_lIll1ll.BorderSizePixel = 0
- _l_lIll1ll.ZIndex = 9999
- _l_lIll1ll.Visible = false
- _l_lIll1ll.Parent = _l_llIIlll
- _l_ll1ll(_l_lIll1ll, 14)
- local _l_llll1ll = Instance.new(_l1_Unpack(55))
- _l_llll1ll.Color = Color3.fromRGB(255, 100, 150)
- _l_llll1ll.Thickness = 2
- _l_llll1ll.Transparency = 0.18
- _l_llll1ll.LineJoinMode = Enum.LineJoinMode.Round
- _l_llll1ll.Parent = _l_lIll1ll
- local _l_l1ll1ll = Instance.new(_l1_Unpack(56))
- _l_l1ll1ll.Name = _l1_Unpack(57)
- _l_l1ll1ll.Size = UDim2.new(0, 42, 0, 42)
- _l_l1ll1ll.AnchorPoint = Vector2.new(0.5, 0.5)
- _l_l1ll1ll.Position = UDim2.new(0.5, 0, 0.5, 0)
- _l_l1ll1ll.BackgroundColor3 = _l_llII1ll.ResetBtnBg
- _l_l1ll1ll.BackgroundTransparency = 0.03
- _l_l1ll1ll.BorderSizePixel = 0
- _l_l1ll1ll.Text = _l1_Unpack(58)
- _l_l1ll1ll.TextColor3 = Color3.fromRGB(255, 255, 255)
- _l_l1ll1ll.Font = _l_l1lll.Title
- _l_l1ll1ll.TextSize = 20
- _l_l1ll1ll.AutoButtonColor = false
- _l_l1ll1ll.ZIndex = 10000
- _l_l1ll1ll.Parent = _l_lIll1ll
- _l_ll1ll(_l_l1ll1ll, 10)
- local _l_lI1l1ll = Instance.new(_l1_Unpack(59))
- _l_lI1l1ll.Color = Color3.fromRGB(255, 100, 150)
- _l_lI1l1ll.Thickness = 2
- _l_lI1l1ll.Transparency = 0.18
- _l_lI1l1ll.LineJoinMode = Enum.LineJoinMode.Round
- _l_lI1l1ll.Parent = _l_l1ll1ll
- local _l_ll1l1ll = true
+ local _0x688f3a6 = Instance.new(_0x_krein_unpack(48))
+ _0x688f3a6.SoundId = _0x_krein_unpack(49)
+ _0x688f3a6.Volume = 0.6
+ _0x688f3a6.Parent = _0x7ee6bb83
+ local _0x195be681 = Instance.new(_0x_krein_unpack(50))
+ _0x195be681.Size = UDim2.new(0, 80, 0, 80)
+ _0x195be681.Position = UDim2.new(0.5, -40, 0.5, -40)
+ _0x195be681.BackgroundTransparency = 1
+ _0x195be681.Text = _0x_krein_unpack(51)
+ _0x195be681.TextColor3 = Color3.fromRGB(255, 255, 255)
+ _0x195be681.Font = _0x2aa3.Bold
+ _0x195be681.TextSize = 65
+ _0x195be681.ZIndex = 10000
+ _0x195be681.Parent = _0x7ee6bb83
+ local _0x27142540 = Instance.new(_0x_krein_unpack(52))
+ _0x27142540.Size = UDim2.new(0, 300, 0, 50)
+ _0x27142540.Position = UDim2.new(0.5, -150, 0.5, -25)
+ _0x27142540.BackgroundTransparency = 1
+ _0x27142540.Text = ""
+ _0x27142540.TextColor3 = Color3.fromRGB(255, 255, 255)
+ _0x27142540.Font = _0x2aa3.Title
+ _0x27142540.TextSize = 42
+ _0x27142540.ZIndex = 10000
+ _0x27142540.Visible = false
+ _0x27142540.Parent = _0x7ee6bb83
+ local _0x11849c18 = Instance.new(_0x_krein_unpack(53))
+ _0x11849c18.Name = _0x_krein_unpack(54)
+ _0x11849c18.Size = UDim2.new(0, 50, 0, 50)
+ _0x11849c18.Position = UDim2.new(0, 12, 1, -410)
+ _0x11849c18.BackgroundColor3 = _0x2ad2.ResetBg
+ _0x11849c18.BackgroundTransparency = 0.05
+ _0x11849c18.BorderSizePixel = 0
+ _0x11849c18.ZIndex = 9999
+ _0x11849c18.Visible = false
+ _0x11849c18.Parent = _0x7ee6bb83
+ _0x50be634c(_0x11849c18, 14)
+ local _0x1c3767f1 = Instance.new(_0x_krein_unpack(55))
+ _0x1c3767f1.Color = Color3.fromRGB(255, 100, 150)
+ _0x1c3767f1.Thickness = 2
+ _0x1c3767f1.Transparency = 0.18
+ _0x1c3767f1.LineJoinMode = Enum.LineJoinMode.Round
+ _0x1c3767f1.Parent = _0x11849c18
+ local _0x1107beb7 = Instance.new(_0x_krein_unpack(56))
+ _0x1107beb7.Name = _0x_krein_unpack(57)
+ _0x1107beb7.Size = UDim2.new(0, 42, 0, 42)
+ _0x1107beb7.AnchorPoint = Vector2.new(0.5, 0.5)
+ _0x1107beb7.Position = UDim2.new(0.5, 0, 0.5, 0)
+ _0x1107beb7.BackgroundColor3 = _0x2ad2.ResetBtnBg
+ _0x1107beb7.BackgroundTransparency = 0.03
+ _0x1107beb7.BorderSizePixel = 0
+ _0x1107beb7.Text = _0x_krein_unpack(58)
+ _0x1107beb7.TextColor3 = Color3.fromRGB(255, 255, 255)
+ _0x1107beb7.Font = _0x2aa3.Title
+ _0x1107beb7.TextSize = 20
+ _0x1107beb7.AutoButtonColor = false
+ _0x1107beb7.ZIndex = 10000
+ _0x1107beb7.Parent = _0x11849c18
+ _0x50be634c(_0x1107beb7, 10)
+ local _0xe1fd21e = Instance.new(_0x_krein_unpack(59))
+ _0xe1fd21e.Color = Color3.fromRGB(255, 100, 150)
+ _0xe1fd21e.Thickness = 2
+ _0xe1fd21e.Transparency = 0.18
+ _0xe1fd21e.LineJoinMode = Enum.LineJoinMode.Round
+ _0xe1fd21e.Parent = _0x1107beb7
+ local _0x461473e6 = true
  task.spawn(function()
-     local _l_l11I1ll = 0
-     while _l_ll1l1ll and _l_lIll1ll and _l_lIll1ll.Parent do
-         _l_l11I1ll = (_l_l11I1ll + 0.008) % 1
-         local _l_l11ll = Color3.fromHSV(_l_l11I1ll, 0.85, 1)
-         _l_llll1ll.Color = _l_l11ll
-         _l_lI1l1ll.Color = _l_l11ll
+     local _0x1bf8e = 0
+     while _0x461473e6 and _0x11849c18 and _0x11849c18.Parent do
+         _0x1bf8e = (_0x1bf8e + 0.008) % 1
+         local _0x2ac3 = Color3.fromHSV(_0x1bf8e, 0.85, 1)
+         _0x1c3767f1.Color = _0x2ac3
+         _0xe1fd21e.Color = _0x2ac3
          task.wait(0.03)
      end
  end)
- local _l_l11l1ll = (0.38+0.55+0.32+0.45+0.28) + (0.35+0.18) + (#_l1_Unpack(60)*0.10+0.45+0.28)
+ local _0x2a36a4c7 = (0.38+0.55+0.32+0.45+0.28) + (0.35+0.18) + (#_0x_krein_unpack(60)*0.10+0.45+0.28)
  task.spawn(function()
-     _l_lIIl1ll:Play()
-     _l_lI1ll(_l_llIl1ll, {Rotation = 30},  0.38, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+     _0x688f3a6:Play()
+     _0x38e1(_0x195be681, {Rotation = 30},  0.38, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
      task.wait(0.38)
-     _l_lI1ll(_l_llIl1ll, {Rotation = -30}, 0.55, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
+     _0x38e1(_0x195be681, {Rotation = -30}, 0.55, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
      task.wait(0.55)
-     _l_lI1ll(_l_llIl1ll, {Rotation = 18},  0.32, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+     _0x38e1(_0x195be681, {Rotation = 18},  0.32, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
      task.wait(0.32)
-     _l_lI1ll(_l_llIl1ll, {Rotation = -18}, 0.45, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
+     _0x38e1(_0x195be681, {Rotation = -18}, 0.45, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
      task.wait(0.45)
-     _l_lI1ll(_l_llIl1ll, {Rotation = 0},   0.28, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+     _0x38e1(_0x195be681, {Rotation = 0},   0.28, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
      task.wait(0.28)
-     _l_lI1ll(_l_llIl1ll, {TextSize = 0, TextTransparency = 1}, 0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.In)
+     _0x38e1(_0x195be681, {TextSize = 0, TextTransparency = 1}, 0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.In)
      task.wait(0.35)
-     _l_llIl1ll:Destroy()
+     _0x195be681:Destroy()
      task.wait(0.18)
-     _l_l1Il1ll.Visible = true
-     local _l_lII11ll = _l1_Unpack(61)
-     for i = 1, #_l_lII11ll do
-         _l_l1Il1ll.Text = _l_lII11ll:sub(1, i)
+     _0x27142540.Visible = true
+     local _0x6fc26282 = _0x_krein_unpack(61)
+     for i = 1, #_0x6fc26282 do
+         _0x27142540.Text = _0x6fc26282:sub(1, i)
          task.wait(0.10)
      end
      task.wait(0.45)
-     _l_lI1ll(_l_l1Il1ll, {TextTransparency = 1}, 0.28)
+     _0x38e1(_0x27142540, {TextTransparency = 1}, 0.28)
      task.delay(0.29, function()
-         _l_l1Il1ll:Destroy()
-         if _l_lIIl1ll then _l_lIIl1ll:Destroy() end
+         _0x27142540:Destroy()
+         if _0x688f3a6 then _0x688f3a6:Destroy() end
      end)
  end)
- task.delay(_l_l11l1ll, function()
-     _l_lI1ll(_l_l1II1ll, {Size = _l_lIl1lll, Position = _l_lll1lll}, 0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
+ task.delay(_0x2a36a4c7, function()
+     _0x38e1(_0x671aa9a4, {Size = _0x5067fc85, Position = _0x2ef4449f}, 0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
      task.delay(0.5, function()
-         _l_lIll1ll.BackgroundTransparency = 1
-         _l_l1ll1ll.TextTransparency = 1
-         _l_llll1ll.Transparency = 1
-         _l_lI1l1ll.Transparency = 1
-         _l_lIll1ll.Visible = true
-         _l_lI1ll(_l_lIll1ll, {BackgroundTransparency = 0.05}, 0.35)
-         _l_lI1ll(_l_l1ll1ll, {TextTransparency = 0}, 0.35)
-         _l_lI1ll(_l_llll1ll, {Transparency = 0.18}, 0.35)
-         _l_lI1ll(_l_lI1l1ll, {Transparency = 0.18}, 0.35)
+         _0x11849c18.BackgroundTransparency = 1
+         _0x1107beb7.TextTransparency = 1
+         _0x1c3767f1.Transparency = 1
+         _0xe1fd21e.Transparency = 1
+         _0x11849c18.Visible = true
+         _0x38e1(_0x11849c18, {BackgroundTransparency = 0.05}, 0.35)
+         _0x38e1(_0x1107beb7, {TextTransparency = 0}, 0.35)
+         _0x38e1(_0x1c3767f1, {Transparency = 0.18}, 0.35)
+         _0x38e1(_0xe1fd21e, {Transparency = 0.18}, 0.35)
      end)
  end)
- local _l_llI11ll = Instance.new(_l1_Unpack(62))
- _l_llI11ll.Size = UDim2.new(1, 0, 0, 48)
- _l_llI11ll.BackgroundColor3 = _l_llII1ll.TitleBg
- _l_llI11ll.BackgroundTransparency = 0.02
- _l_llI11ll.BorderSizePixel = 0
- _l_llI11ll.ZIndex = 2
- _l_llI11ll.Parent = _l_l1II1ll
- _l_ll1ll(_l_llI11ll, 16)
- local _l_l1I11ll = Instance.new(_l1_Unpack(63))
- _l_l1I11ll.Size = UDim2.new(1, 0, 0, 16)
- _l_l1I11ll.Position = UDim2.new(0, 0, 1, -16)
- _l_l1I11ll.BackgroundColor3 = _l_llII1ll.TitleBg
- _l_l1I11ll.BackgroundTransparency = 0.02
- _l_l1I11ll.BorderSizePixel = 0
- _l_l1I11ll.ZIndex = 2
- _l_l1I11ll.Parent = _l_llI11ll
- local _l_lIl11ll = Instance.new(_l1_Unpack(64))
- _l_lIl11ll.Size = UDim2.new(1, 0, 0, 1)
- _l_lIl11ll.Position = UDim2.new(0, 0, 1, -1)
- _l_lIl11ll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
- _l_lIl11ll.BackgroundTransparency = 0.88
- _l_lIl11ll.BorderSizePixel = 0
- _l_lIl11ll.ZIndex = 3
- _l_lIl11ll.Parent = _l_llI11ll
- local _l_lll11ll = Instance.new(_l1_Unpack(65))
- _l_lll11ll.Size = UDim2.new(0.5, 0, 0, 1)
- _l_lll11ll.Position = UDim2.new(0.25, 0, 1, -1)
- _l_lll11ll.BackgroundColor3 = _l_llII1ll.AccentBlue
- _l_lll11ll.BackgroundTransparency = 0.55
- _l_lll11ll.BorderSizePixel = 0
- _l_lll11ll.ZIndex = 4
- _l_lll11ll.Parent = _l_llI11ll
- _l_ll1ll(_l_lll11ll, 1)
- local _l_l1l11ll = Instance.new(_l1_Unpack(66))
- _l_l1l11ll.Size = UDim2.new(1, -160, 0, 44)
- _l_l1l11ll.Position = UDim2.new(0, 80, 0, 2)
- _l_l1l11ll.BackgroundTransparency = 1
- _l_l1l11ll.ZIndex = 3
- _l_l1l11ll.Parent = _l_llI11ll
- local _l_lI111ll = Instance.new(_l1_Unpack(67))
- _l_lI111ll.Size = UDim2.new(1, 0, 0, 24)
- _l_lI111ll.BackgroundTransparency = 1
- _l_lI111ll.Text = _l_llI1lll
- _l_lI111ll.TextColor3 = _l_llII1ll.Text
- _l_lI111ll.Font = _l_l1lll.Title
- _l_lI111ll.TextSize = 16
- _l_lI111ll.TextXAlignment = Enum.TextXAlignment.Center
- _l_lI111ll.TextTruncate = Enum.TextTruncate.AtEnd
- _l_lI111ll.ZIndex = 3
- _l_lI111ll.Parent = _l_l1l11ll
- local _l_ll111ll = Instance.new(_l1_Unpack(68))
- _l_ll111ll.Size = UDim2.new(1, 0, 0, 14)
- _l_ll111ll.Position = UDim2.new(0, 0, 0, 25)
- _l_ll111ll.BackgroundTransparency = 1
- _l_ll111ll.Text = _l_l1I1lll
- _l_ll111ll.TextColor3 = _l_llII1ll.SubText
- _l_ll111ll.Font = _l_l1lll.Body
- _l_ll111ll.TextSize = 10
- _l_ll111ll.TextXAlignment = Enum.TextXAlignment.Center
- _l_ll111ll.TextTruncate = Enum.TextTruncate.AtEnd
- _l_ll111ll.ZIndex = 3
- _l_ll111ll.Parent = _l_l1l11ll
- local _l_l1111ll = Instance.new(_l1_Unpack(69))
- _l_l1111ll.Size = UDim2.new(0, 52, 0, 14)
- _l_l1111ll.Position = UDim2.new(0, 14, 0, 17)
- _l_l1111ll.BackgroundTransparency = 1
- _l_l1111ll.ZIndex = 3
- _l_l1111ll.Parent = _l_llI11ll
- local function _l_lIIIIlll(baseColor, xOff, iconChar, iconColor)
-     local _l_llIIIlll = Instance.new(_l1_Unpack(70))
-     _l_llIIIlll.Size = UDim2.new(0, 14, 0, 14)
-     _l_llIIIlll.Position = UDim2.new(0, xOff, 0, 0)
-     _l_llIIIlll.BackgroundColor3 = baseColor
-     _l_llIIIlll.BorderSizePixel = 0
-     _l_llIIIlll.Text = ""
-     _l_llIIIlll.AutoButtonColor = false
-     _l_llIIIlll.ZIndex = 4
-     _l_llIIIlll.Parent = _l_l1111ll
-     _l_ll1ll(_l_llIIIlll, 7)
-     local _l_l1IIIlll = Instance.new(_l1_Unpack(71))
-     _l_l1IIIlll.Size = UDim2.new(1, 0, 1, 0)
-     _l_l1IIIlll.BackgroundTransparency = 1
-     _l_l1IIIlll.Text = iconChar
-     _l_l1IIIlll.TextColor3 = iconColor
-     _l_l1IIIlll.Font = _l_l1lll.Bold
-     _l_l1IIIlll.TextSize = 9
-     _l_l1IIIlll.Visible = false
-     _l_l1IIIlll.ZIndex = 5
-     _l_l1IIIlll.Parent = _l_llIIIlll
-     local _l_lIlIIlll = Color3.new(
+ local _0x6b9b5684 = Instance.new(_0x_krein_unpack(62))
+ _0x6b9b5684.Size = UDim2.new(1, 0, 0, 48)
+ _0x6b9b5684.BackgroundColor3 = _0x2ad2.TitleBg
+ _0x6b9b5684.BackgroundTransparency = 0.02
+ _0x6b9b5684.BorderSizePixel = 0
+ _0x6b9b5684.ZIndex = 2
+ _0x6b9b5684.Parent = _0x671aa9a4
+ _0x50be634c(_0x6b9b5684, 16)
+ local _0x7e11583 = Instance.new(_0x_krein_unpack(63))
+ _0x7e11583.Size = UDim2.new(1, 0, 0, 16)
+ _0x7e11583.Position = UDim2.new(0, 0, 1, -16)
+ _0x7e11583.BackgroundColor3 = _0x2ad2.TitleBg
+ _0x7e11583.BackgroundTransparency = 0.02
+ _0x7e11583.BorderSizePixel = 0
+ _0x7e11583.ZIndex = 2
+ _0x7e11583.Parent = _0x6b9b5684
+ local _0x6b9b8e57 = Instance.new(_0x_krein_unpack(64))
+ _0x6b9b8e57.Size = UDim2.new(1, 0, 0, 1)
+ _0x6b9b8e57.Position = UDim2.new(0, 0, 1, -1)
+ _0x6b9b8e57.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ _0x6b9b8e57.BackgroundTransparency = 0.88
+ _0x6b9b8e57.BorderSizePixel = 0
+ _0x6b9b8e57.ZIndex = 3
+ _0x6b9b8e57.Parent = _0x6b9b5684
+ local _0x7e09577 = Instance.new(_0x_krein_unpack(65))
+ _0x7e09577.Size = UDim2.new(0.5, 0, 0, 1)
+ _0x7e09577.Position = UDim2.new(0.25, 0, 1, -1)
+ _0x7e09577.BackgroundColor3 = _0x2ad2.AccentBlue
+ _0x7e09577.BackgroundTransparency = 0.55
+ _0x7e09577.BorderSizePixel = 0
+ _0x7e09577.ZIndex = 4
+ _0x7e09577.Parent = _0x6b9b5684
+ _0x50be634c(_0x7e09577, 1)
+ local _0x7dfa655 = Instance.new(_0x_krein_unpack(66))
+ _0x7dfa655.Size = UDim2.new(1, -160, 0, 44)
+ _0x7dfa655.Position = UDim2.new(0, 80, 0, 2)
+ _0x7dfa655.BackgroundTransparency = 1
+ _0x7dfa655.ZIndex = 3
+ _0x7dfa655.Parent = _0x6b9b5684
+ local _0x6b9ba8fc = Instance.new(_0x_krein_unpack(67))
+ _0x6b9ba8fc.Size = UDim2.new(1, 0, 0, 24)
+ _0x6b9ba8fc.BackgroundTransparency = 1
+ _0x6b9ba8fc.Text = _0x435f659e
+ _0x6b9ba8fc.TextColor3 = _0x2ad2.Text
+ _0x6b9ba8fc.Font = _0x2aa3.Title
+ _0x6b9ba8fc.TextSize = 16
+ _0x6b9ba8fc.TextXAlignment = Enum.TextXAlignment.Center
+ _0x6b9ba8fc.TextTruncate = Enum.TextTruncate.AtEnd
+ _0x6b9ba8fc.ZIndex = 3
+ _0x6b9ba8fc.Parent = _0x7dfa655
+ local _0x6bbf25e3 = Instance.new(_0x_krein_unpack(68))
+ _0x6bbf25e3.Size = UDim2.new(1, 0, 0, 14)
+ _0x6bbf25e3.Position = UDim2.new(0, 0, 0, 25)
+ _0x6bbf25e3.BackgroundTransparency = 1
+ _0x6bbf25e3.Text = _0x2ef438b5
+ _0x6bbf25e3.TextColor3 = _0x2ad2.SubText
+ _0x6bbf25e3.Font = _0x2aa3.Body
+ _0x6bbf25e3.TextSize = 10
+ _0x6bbf25e3.TextXAlignment = Enum.TextXAlignment.Center
+ _0x6bbf25e3.TextTruncate = Enum.TextTruncate.AtEnd
+ _0x6bbf25e3.ZIndex = 3
+ _0x6bbf25e3.Parent = _0x7dfa655
+ local _0x7839b250 = Instance.new(_0x_krein_unpack(69))
+ _0x7839b250.Size = UDim2.new(0, 52, 0, 14)
+ _0x7839b250.Position = UDim2.new(0, 14, 0, 17)
+ _0x7839b250.BackgroundTransparency = 1
+ _0x7839b250.ZIndex = 3
+ _0x7839b250.Parent = _0x6b9b5684
+ local function _0x4a69ee71(baseColor, xOff, iconChar, iconColor)
+     local _0x1a906 = Instance.new(_0x_krein_unpack(70))
+     _0x1a906.Size = UDim2.new(0, 14, 0, 14)
+     _0x1a906.Position = UDim2.new(0, xOff, 0, 0)
+     _0x1a906.BackgroundColor3 = baseColor
+     _0x1a906.BorderSizePixel = 0
+     _0x1a906.Text = ""
+     _0x1a906.AutoButtonColor = false
+     _0x1a906.ZIndex = 4
+     _0x1a906.Parent = _0x7839b250
+     _0x50be634c(_0x1a906, 7)
+     local _0x37c5 = Instance.new(_0x_krein_unpack(71))
+     _0x37c5.Size = UDim2.new(1, 0, 1, 0)
+     _0x37c5.BackgroundTransparency = 1
+     _0x37c5.Text = iconChar
+     _0x37c5.TextColor3 = iconColor
+     _0x37c5.Font = _0x2aa3.Bold
+     _0x37c5.TextSize = 9
+     _0x37c5.Visible = false
+     _0x37c5.ZIndex = 5
+     _0x37c5.Parent = _0x1a906
+     local _0x1befb = Color3.new(
          math.min(baseColor.R + 0.1, 1),
          math.min(baseColor.G + 0.1, 1),
          math.min(baseColor.B + 0.1, 1)
      )
-     _l_llIIIlll.MouseEnter:Connect(function() _l_lI1ll(_l_llIIIlll, {BackgroundColor3 = _l_lIlIIlll}, 0.12); _l_l1IIIlll.Visible = true end)
-     _l_llIIIlll.MouseLeave:Connect(function() _l_lI1ll(_l_llIIIlll, {BackgroundColor3 = baseColor}, 0.12); _l_l1IIIlll.Visible = false end)
-     return _l_llIIIlll
+     _0x1a906.MouseEnter:Connect(function() _0x38e1(_0x1a906, {BackgroundColor3 = _0x1befb}, 0.12); _0x37c5.Visible = true end)
+     _0x1a906.MouseLeave:Connect(function() _0x38e1(_0x1a906, {BackgroundColor3 = baseColor}, 0.12); _0x37c5.Visible = false end)
+     return _0x1a906
  end
- local _l_lllIIlll = _l_lIIIIlll(Color3.fromRGB(255, 95,  86),  0,  _l1_Unpack(72), Color3.fromRGB(130, 18, 18))
- local _l_l1lIIlll   = _l_lIIIIlll(Color3.fromRGB(255, 189, 46),  20, _l1_Unpack(73), Color3.fromRGB(130, 90, 18))
- local _l_lI1IIlll   = _l_lIIIIlll(Color3.fromRGB(39,  201, 63),  40, _l1_Unpack(74), Color3.fromRGB(18,  105, 18))
- local _l_ll1IIlll = Instance.new(_l1_Unpack(75))
- _l_ll1IIlll.Size = UDim2.new(1, 0, 1, -48)
- _l_ll1IIlll.Position = UDim2.new(0, 0, 0, 48)
- _l_ll1IIlll.BackgroundTransparency = 1
- _l_ll1IIlll.BorderSizePixel = 0
- _l_ll1IIlll.ClipsDescendants = true
- _l_ll1IIlll.Parent = _l_l1II1ll
- local _l_l11IIlll = Instance.new(_l1_Unpack(76))
- _l_l11IIlll.Size = UDim2.new(0, 176, 1, 0)
- _l_l11IIlll.BackgroundColor3 = _l_llII1ll.SidebarBg
- _l_l11IIlll.BackgroundTransparency = 0.01
- _l_l11IIlll.BorderSizePixel = 0
- _l_l11IIlll.Parent = _l_ll1IIlll
- _l_ll1ll(_l_l11IIlll, 16)
- local _l_lIIlIlll = Instance.new(_l1_Unpack(77))
- _l_lIIlIlll.Size = UDim2.new(0, 1, 1, -24)
- _l_lIIlIlll.Position = UDim2.new(1, 0, 0, 12)
- _l_lIIlIlll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
- _l_lIIlIlll.BackgroundTransparency = 0.88
- _l_lIIlIlll.BorderSizePixel = 0
- _l_lIIlIlll.Parent = _l_l11IIlll
- local _l_llIlIlll = Instance.new(_l1_Unpack(78))
- _l_llIlIlll.Size = UDim2.new(0, 1, 0.4, 0)
- _l_llIlIlll.Position = UDim2.new(1, 0, 0.3, 0)
- _l_llIlIlll.BackgroundColor3 = _l_llII1ll.AccentBlue
- _l_llIlIlll.BackgroundTransparency = 0.6
- _l_llIlIlll.BorderSizePixel = 0
- _l_llIlIlll.Parent = _l_l11IIlll
- local _l_l1IlIlll = Instance.new(_l1_Unpack(79))
- _l_l1IlIlll.Size = UDim2.new(1, -16, 0, 32)
- _l_l1IlIlll.Position = UDim2.new(0, 8, 0, 8)
- _l_l1IlIlll.BackgroundColor3 = _l_llII1ll.SearchBg
- _l_l1IlIlll.BackgroundTransparency = 0.02
- _l_l1IlIlll.BorderSizePixel = 0
- _l_l1IlIlll.ZIndex = 3
- _l_l1IlIlll.Parent = _l_l11IIlll
- _l_ll1ll(_l_l1IlIlll, 10)
- _l_lIIlll(_l_l1IlIlll, Color3.fromRGB(255, 255, 255), 1, 0.9)
- local _l_lIllIlll = Instance.new(_l1_Unpack(80))
- _l_lIllIlll.Color = Color3.fromRGB(50, 52, 72)
- _l_lIllIlll.Thickness = 1.5
- _l_lIllIlll.Transparency = 0.5
- _l_lIllIlll.Parent = _l_l1IlIlll
- local _l_llllIlll = Instance.new(_l1_Unpack(81))
- _l_llllIlll.Size = UDim2.new(0, 18, 1, 0)
- _l_llllIlll.Position = UDim2.new(0, 7, 0, 0)
- _l_llllIlll.BackgroundTransparency = 1
- _l_llllIlll.Text = _l1_Unpack(82)
- _l_llllIlll.TextSize = 10
- _l_llllIlll.ZIndex = 4
- _l_llllIlll.Parent = _l_l1IlIlll
- local _l_l1llIlll = Instance.new(_l1_Unpack(83))
- _l_l1llIlll.Size = UDim2.new(1, -28, 1, 0)
- _l_l1llIlll.Position = UDim2.new(0, 24, 0, 0)
- _l_l1llIlll.BackgroundTransparency = 1
- _l_l1llIlll.BorderSizePixel = 0
- _l_l1llIlll.Text = ""
- _l_l1llIlll.PlaceholderText = _l1_Unpack(84)
- _l_l1llIlll.PlaceholderColor3 = Color3.fromRGB(72, 72, 92)
- _l_l1llIlll.TextColor3 = Color3.fromRGB(215, 215, 230)
- _l_l1llIlll.Font = _l_l1lll.Body
- _l_l1llIlll.TextSize = 11
- _l_l1llIlll.ClearTextOnFocus = false
- _l_l1llIlll.ZIndex = 4
- _l_l1llIlll.Parent = _l_l1IlIlll
- local _l_lI1lIlll = Instance.new(_l1_Unpack(85))
- _l_lI1lIlll.Size = UDim2.new(1, -16, 0, 1)
- _l_lI1lIlll.Position = UDim2.new(0, 8, 0, 46)
- _l_lI1lIlll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
- _l_lI1lIlll.BackgroundTransparency = 0.88
- _l_lI1lIlll.BorderSizePixel = 0
- _l_lI1lIlll.Parent = _l_l11IIlll
- local _l_ll1lIlll = Instance.new(_l1_Unpack(86))
- _l_ll1lIlll.Size = UDim2.new(1, -2, 1, -54)
- _l_ll1lIlll.Position = UDim2.new(0, 0, 0, 54)
- _l_ll1lIlll.BackgroundTransparency = 1
- _l_ll1lIlll.BorderSizePixel = 0
- _l_ll1lIlll.ScrollBarThickness = 2
- _l_ll1lIlll.ScrollBarImageColor3 = Color3.fromRGB(60, 62, 82)
- _l_ll1lIlll.ScrollingDirection = Enum.ScrollingDirection.Y
- _l_ll1lIlll.AutomaticCanvasSize = Enum.AutomaticSize.Y
- _l_ll1lIlll.CanvasSize = UDim2.new(0, 0, 0, 0)
- _l_ll1lIlll.Selectable = false
- _l_ll1lIlll.Parent = _l_l11IIlll
- local _l_l11lIlll = _l_l1Illl(_l_ll1lIlll, Enum.FillDirection.Vertical, 4)
- _l_l11lIlll.HorizontalAlignment = Enum.HorizontalAlignment.Center
- _l_llllll(_l_ll1lIlll, 4, 44, 0, 0)
- local _l_lII1Illl = Instance.new(_l1_Unpack(87))
- _l_lII1Illl.Size = UDim2.new(0, 18, 0, 18)
- _l_lII1Illl.Position = UDim2.new(0, 6, 1, -26)
- _l_lII1Illl.BackgroundColor3 = Color3.fromRGB(24, 24, 34)
- _l_lII1Illl.BackgroundTransparency = 0.04
- _l_lII1Illl.BorderSizePixel = 0
- _l_lII1Illl.Text = _l1_Unpack(88)
- _l_lII1Illl.TextColor3 = _l_llII1ll.TabText
- _l_lII1Illl.Font = _l_l1lll.Medium
- _l_lII1Illl.TextSize = 9
- _l_lII1Illl.AutoButtonColor = false
- _l_lII1Illl.ZIndex = 3
- _l_lII1Illl.Parent = _l_l11IIlll
- _l_ll1ll(_l_lII1Illl, 5)
- _l_lII1Illl.MouseEnter:Connect(function()
-     _l_lI1ll(_l_lII1Illl, {BackgroundColor3 = Color3.fromRGB(44, 44, 62)}, 0.12)
+ local _0x44fd5411 = _0x4a69ee71(Color3.fromRGB(255, 95,  86),  0,  _0x_krein_unpack(72), Color3.fromRGB(130, 18, 18))
+ local _0x76a00288   = _0x4a69ee71(Color3.fromRGB(255, 189, 46),  20, _0x_krein_unpack(73), Color3.fromRGB(130, 90, 18))
+ local _0x770c32d9   = _0x4a69ee71(Color3.fromRGB(39,  201, 63),  40, _0x_krein_unpack(74), Color3.fromRGB(18,  105, 18))
+ local _0x1fd872 = Instance.new(_0x_krein_unpack(75))
+ _0x1fd872.Size = UDim2.new(1, 0, 1, -48)
+ _0x1fd872.Position = UDim2.new(0, 0, 0, 48)
+ _0x1fd872.BackgroundTransparency = 1
+ _0x1fd872.BorderSizePixel = 0
+ _0x1fd872.ClipsDescendants = true
+ _0x1fd872.Parent = _0x671aa9a4
+ local _0x207d3213 = Instance.new(_0x_krein_unpack(76))
+ _0x207d3213.Size = UDim2.new(0, 176, 1, 0)
+ _0x207d3213.BackgroundColor3 = _0x2ad2.SidebarBg
+ _0x207d3213.BackgroundTransparency = 0.01
+ _0x207d3213.BorderSizePixel = 0
+ _0x207d3213.Parent = _0x1fd872
+ _0x50be634c(_0x207d3213, 16)
+ local _0x207d69e7 = Instance.new(_0x_krein_unpack(77))
+ _0x207d69e7.Size = UDim2.new(0, 1, 1, -24)
+ _0x207d69e7.Position = UDim2.new(1, 0, 0, 12)
+ _0x207d69e7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ _0x207d69e7.BackgroundTransparency = 0.88
+ _0x207d69e7.BorderSizePixel = 0
+ _0x207d69e7.Parent = _0x207d3213
+ local _0x38227447 = Instance.new(_0x_krein_unpack(78))
+ _0x38227447.Size = UDim2.new(0, 1, 0.4, 0)
+ _0x38227447.Position = UDim2.new(1, 0, 0.3, 0)
+ _0x38227447.BackgroundColor3 = _0x2ad2.AccentBlue
+ _0x38227447.BackgroundTransparency = 0.6
+ _0x38227447.BorderSizePixel = 0
+ _0x38227447.Parent = _0x207d3213
+ local _0x2173fb8 = Instance.new(_0x_krein_unpack(79))
+ _0x2173fb8.Size = UDim2.new(1, -16, 0, 32)
+ _0x2173fb8.Position = UDim2.new(0, 8, 0, 8)
+ _0x2173fb8.BackgroundColor3 = _0x2ad2.SearchBg
+ _0x2173fb8.BackgroundTransparency = 0.02
+ _0x2173fb8.BorderSizePixel = 0
+ _0x2173fb8.ZIndex = 3
+ _0x2173fb8.Parent = _0x207d3213
+ _0x50be634c(_0x2173fb8, 10)
+ _0x352a5f67(_0x2173fb8, Color3.fromRGB(255, 255, 255), 1, 0.9)
+ local _0x420d1423 = Instance.new(_0x_krein_unpack(80))
+ _0x420d1423.Color = Color3.fromRGB(50, 52, 72)
+ _0x420d1423.Thickness = 1.5
+ _0x420d1423.Transparency = 0.5
+ _0x420d1423.Parent = _0x2173fb8
+ local _0x4c740917 = Instance.new(_0x_krein_unpack(81))
+ _0x4c740917.Size = UDim2.new(0, 18, 1, 0)
+ _0x4c740917.Position = UDim2.new(0, 7, 0, 0)
+ _0x4c740917.BackgroundTransparency = 1
+ _0x4c740917.Text = _0x_krein_unpack(82)
+ _0x4c740917.TextSize = 10
+ _0x4c740917.ZIndex = 4
+ _0x4c740917.Parent = _0x2173fb8
+ local _0x1e90d666 = Instance.new(_0x_krein_unpack(83))
+ _0x1e90d666.Size = UDim2.new(1, -28, 1, 0)
+ _0x1e90d666.Position = UDim2.new(0, 24, 0, 0)
+ _0x1e90d666.BackgroundTransparency = 1
+ _0x1e90d666.BorderSizePixel = 0
+ _0x1e90d666.Text = ""
+ _0x1e90d666.PlaceholderText = _0x_krein_unpack(84)
+ _0x1e90d666.PlaceholderColor3 = Color3.fromRGB(72, 72, 92)
+ _0x1e90d666.TextColor3 = Color3.fromRGB(215, 215, 230)
+ _0x1e90d666.Font = _0x2aa3.Body
+ _0x1e90d666.TextSize = 11
+ _0x1e90d666.ClearTextOnFocus = false
+ _0x1e90d666.ZIndex = 4
+ _0x1e90d666.Parent = _0x2173fb8
+ local _0x1e9097d2 = Instance.new(_0x_krein_unpack(85))
+ _0x1e9097d2.Size = UDim2.new(1, -16, 0, 1)
+ _0x1e9097d2.Position = UDim2.new(0, 8, 0, 46)
+ _0x1e9097d2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ _0x1e9097d2.BackgroundTransparency = 0.88
+ _0x1e9097d2.BorderSizePixel = 0
+ _0x1e9097d2.Parent = _0x207d3213
+ local _0x29cbe6a5 = Instance.new(_0x_krein_unpack(86))
+ _0x29cbe6a5.Size = UDim2.new(1, -2, 1, -54)
+ _0x29cbe6a5.Position = UDim2.new(0, 0, 0, 54)
+ _0x29cbe6a5.BackgroundTransparency = 1
+ _0x29cbe6a5.BorderSizePixel = 0
+ _0x29cbe6a5.ScrollBarThickness = 2
+ _0x29cbe6a5.ScrollBarImageColor3 = Color3.fromRGB(60, 62, 82)
+ _0x29cbe6a5.ScrollingDirection = Enum.ScrollingDirection.Y
+ _0x29cbe6a5.AutomaticCanvasSize = Enum.AutomaticSize.Y
+ _0x29cbe6a5.CanvasSize = UDim2.new(0, 0, 0, 0)
+ _0x29cbe6a5.Selectable = false
+ _0x29cbe6a5.Parent = _0x207d3213
+ local _0x4cd726f = _0x8c753cb(_0x29cbe6a5, Enum.FillDirection.Vertical, 4)
+ _0x4cd726f.HorizontalAlignment = Enum.HorizontalAlignment.Center
+ _0x6e34debe(_0x29cbe6a5, 4, 44, 0, 0)
+ local _0x1826c40d = Instance.new(_0x_krein_unpack(87))
+ _0x1826c40d.Size = UDim2.new(0, 18, 0, 18)
+ _0x1826c40d.Position = UDim2.new(0, 6, 1, -26)
+ _0x1826c40d.BackgroundColor3 = Color3.fromRGB(24, 24, 34)
+ _0x1826c40d.BackgroundTransparency = 0.04
+ _0x1826c40d.BorderSizePixel = 0
+ _0x1826c40d.Text = _0x_krein_unpack(88)
+ _0x1826c40d.TextColor3 = _0x2ad2.TabText
+ _0x1826c40d.Font = _0x2aa3.Medium
+ _0x1826c40d.TextSize = 9
+ _0x1826c40d.AutoButtonColor = false
+ _0x1826c40d.ZIndex = 3
+ _0x1826c40d.Parent = _0x207d3213
+ _0x50be634c(_0x1826c40d, 5)
+ _0x1826c40d.MouseEnter:Connect(function()
+     _0x38e1(_0x1826c40d, {BackgroundColor3 = Color3.fromRGB(44, 44, 62)}, 0.12)
  end)
- _l_lII1Illl.MouseLeave:Connect(function()
-     _l_lI1ll(_l_lII1Illl, {BackgroundColor3 = _l_llII1ll.TabInactive}, 0.12)
+ _0x1826c40d.MouseLeave:Connect(function()
+     _0x38e1(_0x1826c40d, {BackgroundColor3 = _0x2ad2.TabInactive}, 0.12)
  end)
- local _l_llI1Illl = Instance.new(_l1_Unpack(89))
- _l_llI1Illl.Size = UDim2.new(1, -30, 0, 18)
- _l_llI1Illl.Position = UDim2.new(0, 28, 1, -26)
- _l_llI1Illl.BackgroundTransparency = 1
- _l_llI1Illl.Text = _l1_Unpack(90)
- _l_llI1Illl.TextColor3 = Color3.fromRGB(88, 88, 108)
- _l_llI1Illl.Font = _l_l1lll.Body
- _l_llI1Illl.TextSize = 9
- _l_llI1Illl.TextXAlignment = Enum.TextXAlignment.Left
- _l_llI1Illl.ZIndex = 2
- _l_llI1Illl.Parent = _l_l11IIlll
- local _l_l1I1Illl = Instance.new(_l1_Unpack(91))
- _l_l1I1Illl.Size = UDim2.new(1, -194, 1, -12)
- _l_l1I1Illl.Position = UDim2.new(0, 188, 0, 6)
- _l_l1I1Illl.BackgroundTransparency = 1
- _l_l1I1Illl.BorderSizePixel = 0
- _l_l1I1Illl.ClipsDescendants = true
- _l_l1I1Illl.Parent = _l_ll1IIlll
- local _l_lIl1Illl = Instance.new(_l1_Unpack(92))
- _l_lIl1Illl.Size = UDim2.new(1, 0, 1, 0)
- _l_lIl1Illl.BackgroundTransparency = 1
- _l_lIl1Illl.Parent = _l_l1I1Illl
- local _l_lll1Illl      = {}
- local _l_l1l1Illl    = nil
- local _l_lI11Illl = false
- local _l_ll11Illl    = 0
- local _l_l111Illl = false
- local _l_lIIIllll = false
- _l_l1llIlll:GetPropertyChangedSignal(_l1_Unpack(93)):Connect(function()
-     local _l_llIIllll = _l_l1llIlll.Text:lower()
-     for name, data in pairs(_l_lll1Illl) do
-         data.btn.Visible = (_l_llIIllll == "") or (name:lower():find(_l_llIIllll, 1, true) ~= nil)
+ local _0x4ae9a8c6 = Instance.new(_0x_krein_unpack(89))
+ _0x4ae9a8c6.Size = UDim2.new(1, -30, 0, 18)
+ _0x4ae9a8c6.Position = UDim2.new(0, 28, 1, -26)
+ _0x4ae9a8c6.BackgroundTransparency = 1
+ _0x4ae9a8c6.Text = _0x_krein_unpack(90)
+ _0x4ae9a8c6.TextColor3 = Color3.fromRGB(88, 88, 108)
+ _0x4ae9a8c6.Font = _0x2aa3.Body
+ _0x4ae9a8c6.TextSize = 9
+ _0x4ae9a8c6.TextXAlignment = Enum.TextXAlignment.Left
+ _0x4ae9a8c6.ZIndex = 2
+ _0x4ae9a8c6.Parent = _0x207d3213
+ local _0x4c2f6743 = Instance.new(_0x_krein_unpack(91))
+ _0x4c2f6743.Size = UDim2.new(1, -194, 1, -12)
+ _0x4c2f6743.Position = UDim2.new(0, 188, 0, 6)
+ _0x4c2f6743.BackgroundTransparency = 1
+ _0x4c2f6743.BorderSizePixel = 0
+ _0x4c2f6743.ClipsDescendants = true
+ _0x4c2f6743.Parent = _0x1fd872
+ local _0xbc66d2 = Instance.new(_0x_krein_unpack(92))
+ _0xbc66d2.Size = UDim2.new(1, 0, 1, 0)
+ _0xbc66d2.BackgroundTransparency = 1
+ _0xbc66d2.Parent = _0x4c2f6743
+ local _0x571171c      = {}
+ local _0x5105c514    = nil
+ local _0x9af4970 = false
+ local _0x6ce6e2c9    = 0
+ local _0x27f44d36 = false
+ local _0x55ff63a3 = false
+ _0x1e90d666:GetPropertyChangedSignal(_0x_krein_unpack(93)):Connect(function()
+     local _0x2b36 = _0x1e90d666.Text:lower()
+     for name, data in pairs(_0x571171c) do
+         data.btn.Visible = (_0x2b36 == "") or (name:lower():find(_0x2b36, 1, true) ~= nil)
      end
  end)
- local function _l_l1IIllll(name)
-     if _l_lI11Illl or _l_l1l1Illl == name then return end
-     _l_lI11Illl = true
-     for n, data in pairs(_l_lll1Illl) do
-         local _l_lIlIllll = (n == name)
-         _l_lI1ll(data.btn, {BackgroundColor3 = _l_lIlIllll and _l_llII1ll.TabActive or _l_llII1ll.TabInactive}, 0.22)
-         _l_lI1ll(data.btn, {TextColor3 = _l_lIlIllll and _l_llII1ll.TabTextActive or _l_llII1ll.TabText}, 0.22)
-         local _l_lllIllll = data.btn:FindFirstChild(_l1_Unpack(94))
-         if _l_lllIllll then _l_lI1ll(_l_lllIllll, {BackgroundTransparency = _l_lIlIllll and 0 or 1}, 0.22) end
+ local function _0x626dfe87(name)
+     if _0x9af4970 or _0x5105c514 == name then return end
+     _0x9af4970 = true
+     for n, data in pairs(_0x571171c) do
+         local _0x2b28 = (n == name)
+         _0x38e1(data.btn, {BackgroundColor3 = _0x2b28 and _0x2ad2.TabActive or _0x2ad2.TabInactive}, 0.22)
+         _0x38e1(data.btn, {TextColor3 = _0x2b28 and _0x2ad2.TabTextActive or _0x2ad2.TabText}, 0.22)
+         local _0x1c2a7 = data.btn:FindFirstChild(_0x_krein_unpack(94))
+         if _0x1c2a7 then _0x38e1(_0x1c2a7, {BackgroundTransparency = _0x2b28 and 0 or 1}, 0.22) end
      end
-     local _l_l1lIllll = _l_lll1Illl[name]
-     local _l_lI1Illll = _l_lll1Illl[_l_l1l1Illl]
-     if _l_l1lIllll and _l_lI1Illll then
-         _l_l1lIllll.frame.Visible = true
-         local _l_ll1Illll = _l_l1lIllll.index > _l_lI1Illll.index
-         _l_l1lIllll.frame.Position = UDim2.new(_l_ll1Illll and 1 or -1, 0, 0, 0)
-         _l_lI1ll(_l_lI1Illll.frame, {Position = UDim2.new(_l_ll1Illll and -1 or 1, 0, 0, 0)}, 0.3)
-         _l_lI1ll(_l_l1lIllll.frame,  {Position = UDim2.new(0, 0, 0, 0)}, 0.3)
+     local _0x387f = _0x571171c[name]
+     local _0x389f = _0x571171c[_0x5105c514]
+     if _0x387f and _0x389f then
+         _0x387f.frame.Visible = true
+         local _0x677ece7 = _0x387f.index > _0x389f.index
+         _0x387f.frame.Position = UDim2.new(_0x677ece7 and 1 or -1, 0, 0, 0)
+         _0x38e1(_0x389f.frame, {Position = UDim2.new(_0x677ece7 and -1 or 1, 0, 0, 0)}, 0.3)
+         _0x38e1(_0x387f.frame,  {Position = UDim2.new(0, 0, 0, 0)}, 0.3)
          task.delay(0.3, function()
-             if _l_lI1Illll.frame then _l_lI1Illll.frame.Visible = false end
+             if _0x389f.frame then _0x389f.frame.Visible = false end
          end)
      end
-     _l_l1l1Illl = name
-     task.delay(0.3, function() _l_lI11Illl = false end)
+     _0x5105c514 = name
+     task.delay(0.3, function() _0x9af4970 = false end)
  end
- local _l_l11Illll = {}
- local _l_lIIlllll = Enum.KeyCode.M
- local _l_llIlllll = Instance.new(_l1_Unpack(95))
- _l_llIlllll.Size = UDim2.new(0, 290, 0, 140)
- _l_llIlllll.Position = UDim2.new(0.5, -145, 0.5, -70)
- _l_llIlllll.BackgroundColor3 = _l_llII1ll.SettingsBg
- _l_llIlllll.BackgroundTransparency = 1
- _l_llIlllll.BorderSizePixel = 0
- _l_llIlllll.Visible = false
- _l_llIlllll.ZIndex = 100
- _l_llIlllll.Parent = _l_ll1IIlll
- _l_ll1ll(_l_llIlllll, 14)
- _l_lIIlll(_l_llIlllll, Color3.fromRGB(255, 255, 255), 1, 0.84)
- local _l_l1Illlll = Instance.new(_l1_Unpack(96))
- _l_l1Illlll.Size = UDim2.new(0, 22, 0, 22)
- _l_l1Illlll.Position = UDim2.new(1, -28, 0, 8)
- _l_l1Illlll.BackgroundColor3 = Color3.fromRGB(200, 60, 60)
- _l_l1Illlll.BackgroundTransparency = 0.08
- _l_l1Illlll.BorderSizePixel = 0
- _l_l1Illlll.Text = _l1_Unpack(97)
- _l_l1Illlll.TextColor3 = Color3.fromRGB(255, 255, 255)
- _l_l1Illlll.Font = _l_l1lll.Bold
- _l_l1Illlll.TextSize = 13
- _l_l1Illlll.AutoButtonColor = false
- _l_l1Illlll.ZIndex = 101
- _l_l1Illlll.Parent = _l_llIlllll
- _l_ll1ll(_l_l1Illlll, 6)
- local _l_lIllllll = nil
- local function _l_llllllll()
-     if _l_lIllllll then _l_lIllllll:Disconnect(); _l_lIllllll = nil end
-     _l_lI1ll(_l_llIlllll, {BackgroundTransparency = 1}, 0.18)
+ local _0x6a82dd93 = {}
+ local _0x4117469e = Enum.KeyCode.M
+ local _0xac0d64f = Instance.new(_0x_krein_unpack(95))
+ _0xac0d64f.Size = UDim2.new(0, 290, 0, 140)
+ _0xac0d64f.Position = UDim2.new(0.5, -145, 0.5, -70)
+ _0xac0d64f.BackgroundColor3 = _0x2ad2.SettingsBg
+ _0xac0d64f.BackgroundTransparency = 1
+ _0xac0d64f.BorderSizePixel = 0
+ _0xac0d64f.Visible = false
+ _0xac0d64f.ZIndex = 100
+ _0xac0d64f.Parent = _0x1fd872
+ _0x50be634c(_0xac0d64f, 14)
+ _0x352a5f67(_0xac0d64f, Color3.fromRGB(255, 255, 255), 1, 0.84)
+ local _0xa0eaa44 = Instance.new(_0x_krein_unpack(96))
+ _0xa0eaa44.Size = UDim2.new(0, 22, 0, 22)
+ _0xa0eaa44.Position = UDim2.new(1, -28, 0, 8)
+ _0xa0eaa44.BackgroundColor3 = Color3.fromRGB(200, 60, 60)
+ _0xa0eaa44.BackgroundTransparency = 0.08
+ _0xa0eaa44.BorderSizePixel = 0
+ _0xa0eaa44.Text = _0x_krein_unpack(97)
+ _0xa0eaa44.TextColor3 = Color3.fromRGB(255, 255, 255)
+ _0xa0eaa44.Font = _0x2aa3.Bold
+ _0xa0eaa44.TextSize = 13
+ _0xa0eaa44.AutoButtonColor = false
+ _0xa0eaa44.ZIndex = 101
+ _0xa0eaa44.Parent = _0xac0d64f
+ _0x50be634c(_0xa0eaa44, 6)
+ local _0x653dbb7b = nil
+ local function _0x5fde4ef4()
+     if _0x653dbb7b then _0x653dbb7b:Disconnect(); _0x653dbb7b = nil end
+     _0x38e1(_0xac0d64f, {BackgroundTransparency = 1}, 0.18)
      task.delay(0.19, function()
-         _l_llIlllll.Visible = false
-         _l_llIlllll.BackgroundTransparency = 0.04
-         for _, _l_l11ll in ipairs(_l_llIlllll:GetChildren()) do
-             if _l_l11ll ~= _l_l1Illlll then _l_l11ll:Destroy() end
+         _0xac0d64f.Visible = false
+         _0xac0d64f.BackgroundTransparency = 0.04
+         for _, _0x2ac3 in ipairs(_0xac0d64f:GetChildren()) do
+             if _0x2ac3 ~= _0xa0eaa44 then _0x2ac3:Destroy() end
          end
      end)
  end
- _l_l1Illlll.MouseButton1Click:Connect(_l_llllllll)
- local function _l_l1llllll(_l_llI1l1ll, x, y, sz, bold, col)
-     local _l_l1I1ll = Instance.new(_l1_Unpack(98))
-     _l_l1I1ll.Size = UDim2.new(0, 250, 0, sz or 20)
-     _l_l1I1ll.Position = UDim2.new(0, x or 15, 0, y or 0)
-     _l_l1I1ll.BackgroundTransparency = 1
-     _l_l1I1ll.Text = _l_llI1l1ll
-     _l_l1I1ll.TextColor3 = col or Color3.fromRGB(180, 180, 198)
-     _l_l1I1ll.Font = bold and _l_l1lll.Header or _l_l1lll.Body
-     _l_l1I1ll.TextSize = sz or 12
-     _l_l1I1ll.TextXAlignment = Enum.TextXAlignment.Left
-     _l_l1I1ll.ZIndex = 101
-     _l_l1I1ll.Parent = _l_llIlllll
-     return _l_l1I1ll
+ _0xa0eaa44.MouseButton1Click:Connect(_0x5fde4ef4)
+ local function _0x534b6a84(_0x367055, x, y, sz, bold, col)
+     local _0x1cc22 = Instance.new(_0x_krein_unpack(98))
+     _0x1cc22.Size = UDim2.new(0, 250, 0, sz or 20)
+     _0x1cc22.Position = UDim2.new(0, x or 15, 0, y or 0)
+     _0x1cc22.BackgroundTransparency = 1
+     _0x1cc22.Text = _0x367055
+     _0x1cc22.TextColor3 = col or Color3.fromRGB(180, 180, 198)
+     _0x1cc22.Font = bold and _0x2aa3.Header or _0x2aa3.Body
+     _0x1cc22.TextSize = sz or 12
+     _0x1cc22.TextXAlignment = Enum.TextXAlignment.Left
+     _0x1cc22.ZIndex = 101
+     _0x1cc22.Parent = _0xac0d64f
+     return _0x1cc22
  end
- local function _l_lI1lllll()
-     for _, _l_l11ll in ipairs(_l_llIlllll:GetChildren()) do
-         if _l_l11ll ~= _l_l1Illlll then _l_l11ll:Destroy() end
+ local function _0x2fbc8d5a()
+     for _, _0x2ac3 in ipairs(_0xac0d64f:GetChildren()) do
+         if _0x2ac3 ~= _0xa0eaa44 then _0x2ac3:Destroy() end
      end
-     _l_l1llllll(_l1_Unpack(99), 15, 10, 17, true, _l_llII1ll.Text)
-     _l_l1llllll(_l1_Unpack(100), 15, 42, 12, false, _l_llII1ll.SubText)
-     local _l_ll1lllll = Instance.new(_l1_Unpack(101))
-     _l_ll1lllll.Size = UDim2.new(0, 84, 0, 30)
-     _l_ll1lllll.Position = UDim2.new(0, 15, 0, 65)
-     _l_ll1lllll.BackgroundColor3 = _l_llII1ll.KeybindBg
-     _l_ll1lllll.BackgroundTransparency = 0.03
-     _l_ll1lllll.BorderSizePixel = 0
-     _l_ll1lllll.Text = _l_lIIlllll.Name
-     _l_ll1lllll.TextColor3 = _l_llII1ll.TabTextActive
-     _l_ll1lllll.Font = _l_l1lll.Bold
-     _l_ll1lllll.TextSize = 11
-     _l_ll1lllll.AutoButtonColor = false
-     _l_ll1lllll.ZIndex = 101
-     _l_ll1lllll.Parent = _l_llIlllll
-     _l_ll1ll(_l_ll1lllll, 8)
-     _l_lIIlll(_l_ll1lllll, _l_llII1ll.CompStroke, 1, 0.25)
-     local _l_l11lllll = false
-     _l_ll1lllll.MouseButton1Click:Connect(function()
-         if _l_l11lllll then return end
-         if _l_lIllllll then _l_lIllllll:Disconnect(); _l_lIllllll = nil end
-         _l_l11lllll = true
-         _l_ll1lllll.Text = _l1_Unpack(102)
-         _l_lIllllll = _l_llll.InputBegan:Connect(function(_l_ll1llIlll, gp)
-             if _l_l11lllll and not gp and _l_ll1llIlll.KeyCode ~= Enum.KeyCode.Unknown then
-                 _l_lIIlllll = _l_ll1llIlll.KeyCode
-                 _l_ll1lllll.Text = _l_lIIlllll.Name
-                 _l_l11lllll = false
-                 if _l_lIllllll then _l_lIllllll:Disconnect(); _l_lIllllll = nil end
+     _0x534b6a84(_0x_krein_unpack(99), 15, 10, 17, true, _0x2ad2.Text)
+     _0x534b6a84(_0x_krein_unpack(100), 15, 42, 12, false, _0x2ad2.SubText)
+     local _0x6119059 = Instance.new(_0x_krein_unpack(101))
+     _0x6119059.Size = UDim2.new(0, 84, 0, 30)
+     _0x6119059.Position = UDim2.new(0, 15, 0, 65)
+     _0x6119059.BackgroundColor3 = _0x2ad2.KeybindBg
+     _0x6119059.BackgroundTransparency = 0.03
+     _0x6119059.BorderSizePixel = 0
+     _0x6119059.Text = _0x4117469e.Name
+     _0x6119059.TextColor3 = _0x2ad2.TabTextActive
+     _0x6119059.Font = _0x2aa3.Bold
+     _0x6119059.TextSize = 11
+     _0x6119059.AutoButtonColor = false
+     _0x6119059.ZIndex = 101
+     _0x6119059.Parent = _0xac0d64f
+     _0x50be634c(_0x6119059, 8)
+     _0x352a5f67(_0x6119059, _0x2ad2.CompStroke, 1, 0.25)
+     local _0x2901df30 = false
+     _0x6119059.MouseButton1Click:Connect(function()
+         if _0x2901df30 then return end
+         if _0x653dbb7b then _0x653dbb7b:Disconnect(); _0x653dbb7b = nil end
+         _0x2901df30 = true
+         _0x6119059.Text = _0x_krein_unpack(102)
+         _0x653dbb7b = _0x17298.InputBegan:Connect(function(_0x1c361, gp)
+             if _0x2901df30 and not gp and _0x1c361.KeyCode ~= Enum.KeyCode.Unknown then
+                 _0x4117469e = _0x1c361.KeyCode
+                 _0x6119059.Text = _0x4117469e.Name
+                 _0x2901df30 = false
+                 if _0x653dbb7b then _0x653dbb7b:Disconnect(); _0x653dbb7b = nil end
              end
          end)
      end)
-     _l_llIlllll.BackgroundTransparency = 1
-     _l_llIlllll.Visible = true
-     _l_lI1ll(_l_llIlllll, {BackgroundTransparency = 0.04}, 0.22)
+     _0xac0d64f.BackgroundTransparency = 1
+     _0xac0d64f.Visible = true
+     _0x38e1(_0xac0d64f, {BackgroundTransparency = 0.04}, 0.22)
  end
- _l_lII1Illl.MouseButton1Click:Connect(_l_lI1lllll)
- local _l_lII1llll = Instance.new(_l1_Unpack(103))
- _l_lII1llll.Size = UDim2.new(0, 18, 0, 18)
- _l_lII1llll.Position = UDim2.new(1, -18, 1, -18)
- _l_lII1llll.BackgroundTransparency = 1
- _l_lII1llll.Text = ""
- _l_lII1llll.ZIndex = 10
- _l_lII1llll.Parent = _l_l1II1ll
- local _l_llI1llll = Instance.new(_l1_Unpack(104))
- _l_llI1llll.Size = UDim2.new(0, 12, 0, 12)
- _l_llI1llll.Position = UDim2.new(0, 3, 0, 3)
- _l_llI1llll.BackgroundTransparency = 1
- _l_llI1llll.Text = _l1_Unpack(105)
- _l_llI1llll.TextColor3 = _l_llII1ll.SubText
- _l_llI1llll.Font = _l_l1lll.Body
- _l_llI1llll.TextSize = 10
- _l_llI1llll.Rotation = 45
- _l_llI1llll.ZIndex = 11
- _l_llI1llll.Parent = _l_lII1llll
- local _l_l1I1llll = false
- local _l_lIl1llll, _l_lll1llll = nil, nil
- _l_lII1llll.InputBegan:Connect(function(_l_ll1llIlll)
-     if _l_ll1llIlll.UserInputType == Enum.UserInputType.MouseButton1 or _l_ll1llIlll.UserInputType == Enum.UserInputType.Touch then
-         if _l_l111Illl then return end
-         _l_l1I1llll = true
-         _l_lIl1llll = _l_ll1llIlll.Position
-         _l_lll1llll = _l_l1II1ll.AbsoluteSize
+ _0x1826c40d.MouseButton1Click:Connect(_0x2fbc8d5a)
+ local _0x5d42e10e = Instance.new(_0x_krein_unpack(103))
+ _0x5d42e10e.Size = UDim2.new(0, 18, 0, 18)
+ _0x5d42e10e.Position = UDim2.new(1, -18, 1, -18)
+ _0x5d42e10e.BackgroundTransparency = 1
+ _0x5d42e10e.Text = ""
+ _0x5d42e10e.ZIndex = 10
+ _0x5d42e10e.Parent = _0x671aa9a4
+ local _0xf0325bc = Instance.new(_0x_krein_unpack(104))
+ _0xf0325bc.Size = UDim2.new(0, 12, 0, 12)
+ _0xf0325bc.Position = UDim2.new(0, 3, 0, 3)
+ _0xf0325bc.BackgroundTransparency = 1
+ _0xf0325bc.Text = _0x_krein_unpack(105)
+ _0xf0325bc.TextColor3 = _0x2ad2.SubText
+ _0xf0325bc.Font = _0x2aa3.Body
+ _0xf0325bc.TextSize = 10
+ _0xf0325bc.Rotation = 45
+ _0xf0325bc.ZIndex = 11
+ _0xf0325bc.Parent = _0x5d42e10e
+ local _0xf414758 = false
+ local _0x1be4a7c5, _0x6a7481db = nil, nil
+ _0x5d42e10e.InputBegan:Connect(function(_0x1c361)
+     if _0x1c361.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c361.UserInputType == Enum.UserInputType.Touch then
+         if _0x27f44d36 then return end
+         _0xf414758 = true
+         _0x1be4a7c5 = _0x1c361.Position
+         _0x6a7481db = _0x671aa9a4.AbsoluteSize
      end
  end)
- _l_lIII1ll(_l_llll.InputChanged, function(_l_ll1llIlll)
-     if _l_l1I1llll and (_l_ll1llIlll.UserInputType == Enum.UserInputType.MouseMovement or _l_ll1llIlll.UserInputType == Enum.UserInputType.Touch) then
-         local delta = _l_ll1llIlll.Position - _l_lIl1llll
-         local _l_l1l1llll = math.clamp(_l_lll1llll.X + delta.X, 400, 1000)
-         local _l_lI11llll = math.clamp(_l_lll1llll.Y + delta.Y, 300, 700)
-         _l_l1II1ll.Size = UDim2.new(0, _l_l1l1llll, 0, _l_lI11llll)
+ _0x659222a(_0x17298.InputChanged, function(_0x1c361)
+     if _0xf414758 and (_0x1c361.UserInputType == Enum.UserInputType.MouseMovement or _0x1c361.UserInputType == Enum.UserInputType.Touch) then
+         local delta = _0x1c361.Position - _0x1be4a7c5
+         local _0x33b592 = math.clamp(_0x6a7481db.X + delta.X, 400, 1000)
+         local _0x33b584 = math.clamp(_0x6a7481db.Y + delta.Y, 300, 700)
+         _0x671aa9a4.Size = UDim2.new(0, _0x33b592, 0, _0x33b584)
      end
  end)
- _l_lIII1ll(_l_llll.InputEnded, function(_l_ll1llIlll)
-     if _l_ll1llIlll.UserInputType == Enum.UserInputType.MouseButton1 or _l_ll1llIlll.UserInputType == Enum.UserInputType.Touch then
-         _l_l1I1llll = false
+ _0x659222a(_0x17298.InputEnded, function(_0x1c361)
+     if _0x1c361.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c361.UserInputType == Enum.UserInputType.Touch then
+         _0xf414758 = false
      end
  end)
- local function _l_ll11llll()
-     _l_l111Illl = true
-     _l_lIIIllll = false
-     _l_ll1IIlll.Visible = false
-     _l_l1I11ll.Visible = false
-     _l_lIl11ll.Visible = false
-     _l_lll11ll.Visible = false
-     _l_lII1llll.Visible = false
-     _l_l1II1ll.ClipsDescendants = true
-     _l_lI1ll(_l_lllI1ll, {Thickness = 0}, 0.28)
-     _l_lI1ll(_l_l1lI1ll, {Thickness = 0}, 0.28)
-     _l_lI1ll(_l_lI1I1ll, {Thickness = 0}, 0.28)
-     _l_lI1ll(_l_l1II1ll, {
+ local function _0x69352726()
+     _0x27f44d36 = true
+     _0x55ff63a3 = false
+     _0x1fd872.Visible = false
+     _0x7e11583.Visible = false
+     _0x6b9b8e57.Visible = false
+     _0x7e09577.Visible = false
+     _0x5d42e10e.Visible = false
+     _0x671aa9a4.ClipsDescendants = true
+     _0x38e1(_0x417d7c8e, {Thickness = 0}, 0.28)
+     _0x38e1(_0x417d7c8c, {Thickness = 0}, 0.28)
+     _0x38e1(_0x417d7c8a, {Thickness = 0}, 0.28)
+     _0x38e1(_0x671aa9a4, {
          Size = UDim2.new(0, 280, 0, 45),
          Position = UDim2.new(0, 20, 0, 20)
      }, 0.32, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
  end
- local function _l_l111llll()
-     _l_l111Illl = false
-     _l_ll1IIlll.Visible = true
-     _l_l1I11ll.Visible = true
-     _l_lIl11ll.Visible = true
-     _l_lll11ll.Visible = true
-     _l_lII1llll.Visible = true
-     _l_l1II1ll.ClipsDescendants = false
-     _l_lI1ll(_l_lllI1ll, {Thickness = 1.5}, 0.3)
-     _l_lI1ll(_l_l1lI1ll, {Thickness = 3}, 0.3)
-     _l_lI1ll(_l_lI1I1ll, {Thickness = 6}, 0.3)
-     local _l_llIlll = _l_lIIIllll and _l_lI11lll or _l_lIl1lll
-     local _l_l1llll = _l_lIIIllll
-         and UDim2.new(0.5, -_l_lI11lll.X.Offset/2, 0.5, -_l_lI11lll.Y.Offset/2)
-         or _l_lll1lll
-     _l_lI1ll(_l_l1II1ll, {Size = _l_llIlll, Position = _l_l1llll}, 0.32, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+ local function _0x65fe999f()
+     _0x27f44d36 = false
+     _0x1fd872.Visible = true
+     _0x7e11583.Visible = true
+     _0x6b9b8e57.Visible = true
+     _0x7e09577.Visible = true
+     _0x5d42e10e.Visible = true
+     _0x671aa9a4.ClipsDescendants = false
+     _0x38e1(_0x417d7c8e, {Thickness = 1.5}, 0.3)
+     _0x38e1(_0x417d7c8c, {Thickness = 3}, 0.3)
+     _0x38e1(_0x417d7c8a, {Thickness = 6}, 0.3)
+     local _0x2ad5 = _0x55ff63a3 and _0x2ef4518d or _0x5067fc85
+     local _0x2ad6 = _0x55ff63a3
+         and UDim2.new(0.5, -_0x2ef4518d.X.Offset/2, 0.5, -_0x2ef4518d.Y.Offset/2)
+         or _0x2ef4449f
+     _0x38e1(_0x671aa9a4, {Size = _0x2ad5, Position = _0x2ad6}, 0.32, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
  end
- local _l_lIII1lll
- _l_lIII1lll = _l_llll.InputBegan:Connect(function(_l_ll1llIlll, gp)
+ local _0x3c32c678
+ _0x3c32c678 = _0x17298.InputBegan:Connect(function(_0x1c361, gp)
      if gp then return end
-     if _l_ll1llIlll.KeyCode == _l_lIIlllll then
-         if _l_l111Illl then _l_l111llll() else _l_ll11llll() end
+     if _0x1c361.KeyCode == _0x4117469e then
+         if _0x27f44d36 then _0x65fe999f() else _0x69352726() end
      end
  end)
- _l_l111lll(_l_lIII1lll)
- _l_l1ll1ll.MouseButton1Click:Connect(function()
-     if _l_l111Illl then _l_l111llll() else _l_ll11llll() end
+ _0x1e321(_0x3c32c678)
+ _0x1107beb7.MouseButton1Click:Connect(function()
+     if _0x27f44d36 then _0x65fe999f() else _0x69352726() end
  end)
- _l_l1ll1ll.MouseEnter:Connect(function()
-     _l_lI1ll(_l_l1ll1ll, {BackgroundColor3 = Color3.fromRGB(26, 26, 38)}, 0.12)
-     _l_lI1ll(_l_llll1ll, {Thickness = 3}, 0.12)
-     _l_lI1ll(_l_lI1l1ll, {Thickness = 3}, 0.12)
+ _0x1107beb7.MouseEnter:Connect(function()
+     _0x38e1(_0x1107beb7, {BackgroundColor3 = Color3.fromRGB(26, 26, 38)}, 0.12)
+     _0x38e1(_0x1c3767f1, {Thickness = 3}, 0.12)
+     _0x38e1(_0xe1fd21e, {Thickness = 3}, 0.12)
  end)
- _l_l1ll1ll.MouseLeave:Connect(function()
-     _l_lI1ll(_l_l1ll1ll, {BackgroundColor3 = _l_llII1ll.ResetBtnBg}, 0.12)
-     _l_lI1ll(_l_llll1ll, {Thickness = 2}, 0.12)
-     _l_lI1ll(_l_lI1l1ll, {Thickness = 2}, 0.12)
+ _0x1107beb7.MouseLeave:Connect(function()
+     _0x38e1(_0x1107beb7, {BackgroundColor3 = _0x2ad2.ResetBtnBg}, 0.12)
+     _0x38e1(_0x1c3767f1, {Thickness = 2}, 0.12)
+     _0x38e1(_0xe1fd21e, {Thickness = 2}, 0.12)
  end)
- function _l_l11Illll:Destroy()
-     _l_ll1l1ll = false
-     _l_ll1I1ll = false
-     if _l_lIll1ll and _l_lIll1ll.Parent then _l_lIll1ll:Destroy() end
-     for _, _l_l11ll in ipairs(_l_ll11lll) do pcall(function() _l_l11ll:Disconnect() end) end
-     _l_lll1ll()
-     _l_lI1ll(_l_l1II1ll, {Size = UDim2.new(0, 0, 0, 0), BackgroundTransparency = 1}, 0.2)
+ function _0x6a82dd93:Destroy()
+     _0x461473e6 = false
+     _0x1257fa42 = false
+     if _0x11849c18 and _0x11849c18.Parent then _0x11849c18:Destroy() end
+     for _, _0x2ac3 in ipairs(_0x56f7b87) do pcall(function() _0x2ac3:Disconnect() end) end
+     _0x4b215931()
+     _0x38e1(_0x671aa9a4, {Size = UDim2.new(0, 0, 0, 0), BackgroundTransparency = 1}, 0.2)
      task.delay(0.21, function()
-         if _l_llIIlll and _l_llIIlll.Parent then _l_llIIlll:Destroy() end
+         if _0x7ee6bb83 and _0x7ee6bb83.Parent then _0x7ee6bb83:Destroy() end
      end)
  end
- function _l_l11Illll:GetFrame() return _l_l1II1ll end
- function _l_l11Illll:CreateTab(name, icon)
-     local _l_llII1lll = (_l_ll11Illl == 0)
-     local _l_l1II1lll = _l_ll11Illl
-     _l_ll11Illl = _l_ll11Illl + 1
-     local _l_lIlI1lll = Instance.new(_l1_Unpack(106))
-     _l_lIlI1lll.Name  = name
-     _l_lIlI1lll.Size  = UDim2.new(0.9, 0, 0, 36)
-     _l_lIlI1lll.BackgroundColor3 = _l_llII1lll and _l_llII1ll.TabActive or _l_llII1ll.TabInactive
-     _l_lIlI1lll.BackgroundTransparency = 0.02
-     _l_lIlI1lll.BorderSizePixel = 0
-     _l_lIlI1lll.Text = _l1_Unpack(107) .. (icon and icon .. _l1_Unpack(108) or "") .. name
-     _l_lIlI1lll.TextColor3 = _l_llII1lll and _l_llII1ll.TabTextActive or _l_llII1ll.TabText
-     _l_lIlI1lll.Font = _l_l1lll.Medium
-     _l_lIlI1lll.TextSize = 12
-     _l_lIlI1lll.TextXAlignment = Enum.TextXAlignment.Left
-     _l_lIlI1lll.AutoButtonColor = false
-     _l_lIlI1lll.LayoutOrder = _l_l1II1lll
-     _l_lIlI1lll.Parent = _l_ll1lIlll
-     _l_ll1ll(_l_lIlI1lll, 10)
-     if _l_llII1lll then _l_lIIlll(_l_lIlI1lll, Color3.fromRGB(255, 255, 255), 1, 0.88) end
-     local _l_lllI1lll = Instance.new(_l1_Unpack(109))
-     _l_lllI1lll.Name = _l1_Unpack(110)
-     _l_lllI1lll.Size = UDim2.new(0, 3, 0, 18)
-     _l_lllI1lll.Position = UDim2.new(0, 0, 0.5, -9)
-     _l_lllI1lll.BackgroundColor3 = _l_llII1ll.AccentBlue
-     _l_lllI1lll.BackgroundTransparency = _l_llII1lll and 0 or 1
-     _l_lllI1lll.BorderSizePixel = 0
-     _l_ll1ll(_l_lllI1lll, 2)
-     _l_lllI1lll.Parent = _l_lIlI1lll
-     _l_lIlI1lll.MouseEnter:Connect(function()
-         if _l_l1l1Illl ~= name then _l_lI1ll(_l_lIlI1lll, {BackgroundColor3 = Color3.fromRGB(30, 30, 46)}, 0.14) end
+ function _0x6a82dd93:GetFrame() return _0x671aa9a4 end
+ function _0x6a82dd93:CreateTab(name, icon)
+     local _0x5cefd90 = (_0x6ce6e2c9 == 0)
+     local _0x6384c52 = _0x6ce6e2c9
+     _0x6ce6e2c9 = _0x6ce6e2c9 + 1
+     local _0x6b244677 = Instance.new(_0x_krein_unpack(106))
+     _0x6b244677.Name  = name
+     _0x6b244677.Size  = UDim2.new(0.9, 0, 0, 36)
+     _0x6b244677.BackgroundColor3 = _0x5cefd90 and _0x2ad2.TabActive or _0x2ad2.TabInactive
+     _0x6b244677.BackgroundTransparency = 0.02
+     _0x6b244677.BorderSizePixel = 0
+     _0x6b244677.Text = _0x_krein_unpack(107) .. (icon and icon .. _0x_krein_unpack(108) or "") .. name
+     _0x6b244677.TextColor3 = _0x5cefd90 and _0x2ad2.TabTextActive or _0x2ad2.TabText
+     _0x6b244677.Font = _0x2aa3.Medium
+     _0x6b244677.TextSize = 12
+     _0x6b244677.TextXAlignment = Enum.TextXAlignment.Left
+     _0x6b244677.AutoButtonColor = false
+     _0x6b244677.LayoutOrder = _0x6384c52
+     _0x6b244677.Parent = _0x29cbe6a5
+     _0x50be634c(_0x6b244677, 10)
+     if _0x5cefd90 then _0x352a5f67(_0x6b244677, Color3.fromRGB(255, 255, 255), 1, 0.88) end
+     local _0x14aa2 = Instance.new(_0x_krein_unpack(109))
+     _0x14aa2.Name = _0x_krein_unpack(110)
+     _0x14aa2.Size = UDim2.new(0, 3, 0, 18)
+     _0x14aa2.Position = UDim2.new(0, 0, 0.5, -9)
+     _0x14aa2.BackgroundColor3 = _0x2ad2.AccentBlue
+     _0x14aa2.BackgroundTransparency = _0x5cefd90 and 0 or 1
+     _0x14aa2.BorderSizePixel = 0
+     _0x50be634c(_0x14aa2, 2)
+     _0x14aa2.Parent = _0x6b244677
+     _0x6b244677.MouseEnter:Connect(function()
+         if _0x5105c514 ~= name then _0x38e1(_0x6b244677, {BackgroundColor3 = Color3.fromRGB(30, 30, 46)}, 0.14) end
      end)
-     _l_lIlI1lll.MouseLeave:Connect(function()
-         if _l_l1l1Illl ~= name then _l_lI1ll(_l_lIlI1lll, {BackgroundColor3 = _l_llII1ll.TabInactive}, 0.14) end
+     _0x6b244677.MouseLeave:Connect(function()
+         if _0x5105c514 ~= name then _0x38e1(_0x6b244677, {BackgroundColor3 = _0x2ad2.TabInactive}, 0.14) end
      end)
-     local _l_l1lI1lll = Instance.new(_l1_Unpack(111))
-     _l_l1lI1lll.Size = UDim2.new(1, 0, 1, 0)
-     _l_l1lI1lll.Position = UDim2.new(_l_llII1lll and 0 or 1, 0, 0, 0)
-     _l_l1lI1lll.BackgroundTransparency = 1
-     _l_l1lI1lll.Visible = _l_llII1lll
-     _l_l1lI1lll.Parent = _l_lIl1Illl
-     local _l_lI1I1lll = Instance.new(_l1_Unpack(112))
-     _l_lI1I1lll.Size = UDim2.new(1, 0, 1, 0)
-     _l_lI1I1lll.BackgroundTransparency = 1
-     _l_lI1I1lll.BorderSizePixel = 0
-     _l_lI1I1lll.ScrollBarThickness = 2
-     _l_lI1I1lll.ScrollBarImageColor3 = Color3.fromRGB(55, 58, 80)
-     _l_lI1I1lll.ScrollingDirection = Enum.ScrollingDirection.Y
-     _l_lI1I1lll.AutomaticCanvasSize = Enum.AutomaticSize.Y
-     _l_lI1I1lll.CanvasSize = UDim2.new(0, 0, 0, 0)
-     _l_lI1I1lll.Selectable = false
-     _l_lI1I1lll.Parent = _l_l1lI1lll
-     local _l_ll1I1lll = _l_l1Illl(_l_lI1I1lll, Enum.FillDirection.Vertical, 6)
-     _l_ll1I1lll.HorizontalAlignment = Enum.HorizontalAlignment.Center
-     _l_llllll(_l_lI1I1lll, 10, 10, 0, 0)
-     _l_lll1Illl[name] = {frame = _l_l1lI1lll, _l_llIIIlll = _l_lIlI1lll, index = _l_l1II1lll}
-     if _l_llII1lll then _l_l1l1Illl = name end
-     _l_lIII1ll(_l_lIlI1lll.MouseButton1Click, function()
-         _l_l1IIllll(name)
-         local _l_l11I1lll = _l_lIlI1lll:FindFirstChildOfClass(_l1_Unpack(113))
-         if not _l_l11I1lll then _l_lIIlll(_l_lIlI1lll, Color3.fromRGB(255, 255, 255), 1, 0.88) end
-         for n, data in pairs(_l_lll1Illl) do
+     local _0x55401d1e = Instance.new(_0x_krein_unpack(111))
+     _0x55401d1e.Size = UDim2.new(1, 0, 1, 0)
+     _0x55401d1e.Position = UDim2.new(_0x5cefd90 and 0 or 1, 0, 0, 0)
+     _0x55401d1e.BackgroundTransparency = 1
+     _0x55401d1e.Visible = _0x5cefd90
+     _0x55401d1e.Parent = _0xbc66d2
+     local _0x3538 = Instance.new(_0x_krein_unpack(112))
+     _0x3538.Size = UDim2.new(1, 0, 1, 0)
+     _0x3538.BackgroundTransparency = 1
+     _0x3538.BorderSizePixel = 0
+     _0x3538.ScrollBarThickness = 2
+     _0x3538.ScrollBarImageColor3 = Color3.fromRGB(55, 58, 80)
+     _0x3538.ScrollingDirection = Enum.ScrollingDirection.Y
+     _0x3538.AutomaticCanvasSize = Enum.AutomaticSize.Y
+     _0x3538.CanvasSize = UDim2.new(0, 0, 0, 0)
+     _0x3538.Selectable = false
+     _0x3538.Parent = _0x55401d1e
+     local _0x26f5f9 = _0x8c753cb(_0x3538, Enum.FillDirection.Vertical, 6)
+     _0x26f5f9.HorizontalAlignment = Enum.HorizontalAlignment.Center
+     _0x6e34debe(_0x3538, 10, 10, 0, 0)
+     _0x571171c[name] = {frame = _0x55401d1e, _0x1a906 = _0x6b244677, index = _0x6384c52}
+     if _0x5cefd90 then _0x5105c514 = name end
+     _0x659222a(_0x6b244677.MouseButton1Click, function()
+         _0x626dfe87(name)
+         local _0x1e911 = _0x6b244677:FindFirstChildOfClass(_0x_krein_unpack(113))
+         if not _0x1e911 then _0x352a5f67(_0x6b244677, Color3.fromRGB(255, 255, 255), 1, 0.88) end
+         for n, data in pairs(_0x571171c) do
              if n ~= name then
-                 local _l_llIlll = data.btn:FindFirstChildOfClass(_l1_Unpack(114))
-                 if _l_llIlll then _l_llIlll:Destroy() end
+                 local _0x2ad5 = data.btn:FindFirstChildOfClass(_0x_krein_unpack(114))
+                 if _0x2ad5 then _0x2ad5:Destroy() end
              end
          end
      end)
-     local _l_lIIl1lll = {}
-     function _l_lIIl1lll:CreateSection(sTitle, collapsed)
+     local _0x6b2417d6 = {}
+     function _0x6b2417d6:CreateSection(sTitle, collapsed)
          collapsed = collapsed ~= false
-         local _l_llIl1lll = Instance.new(_l1_Unpack(115))
-         _l_llIl1lll.Name = _l1_Unpack(116) .. sTitle
-         _l_llIl1lll.Size = UDim2.new(0.97, 0, 0, 36)
-         _l_llIl1lll.BackgroundTransparency = 1
-         _l_llIl1lll.BorderSizePixel = 0
-         _l_llIl1lll.LayoutOrder = 0
-         _l_llIl1lll.AutomaticSize = Enum.AutomaticSize.None
-         _l_llIl1lll.ClipsDescendants = true
-         _l_llIl1lll.Parent = _l_lI1I1lll
-         local _l_l1Il1lll = _l_l1Illl(_l_llIl1lll, Enum.FillDirection.Vertical, 0)
-         _l_l1Il1lll.HorizontalAlignment = Enum.HorizontalAlignment.Center
-         local _l_lIll1lll = Instance.new(_l1_Unpack(117))
-         _l_lIll1lll.Name = _l1_Unpack(118)
-         _l_lIll1lll.Size = UDim2.new(1, 0, 0, 36)
-         _l_lIll1lll.BackgroundColor3 = _l_llII1ll.SectionHdr
-         _l_lIll1lll.BackgroundTransparency = 0.03
-         _l_lIll1lll.BorderSizePixel = 0
-         _l_lIll1lll.LayoutOrder = 0
-         _l_lIll1lll.Parent = _l_llIl1lll
-         _l_ll1ll(_l_lIll1lll, 11)
-         _l_lIIlll(_l_lIll1lll, Color3.fromRGB(255, 255, 255), 1, 0.9)
-         local _l_llll1lll = Instance.new(_l1_Unpack(119))
-         _l_llll1lll.Size = UDim2.new(0, 3, 0.55, 0)
-         _l_llll1lll.Position = UDim2.new(0, 9, 0.225, 0)
-         _l_llll1lll.BackgroundColor3 = _l_llII1ll.AccentBlue
-         _l_llll1lll.BackgroundTransparency = 0.2
-         _l_llll1lll.BorderSizePixel = 0
-         _l_llll1lll.Parent = _l_lIll1lll
-         _l_ll1ll(_l_llll1lll, 2)
-         local _l_l1ll1lll = Instance.new(_l1_Unpack(120))
-         _l_l1ll1lll.Size = UDim2.new(1, -60, 1, 0)
-         _l_l1ll1lll.Position = UDim2.new(0, 20, 0, 0)
-         _l_l1ll1lll.BackgroundTransparency = 1
-         _l_l1ll1lll.Text = sTitle
-         _l_l1ll1lll.TextColor3 = _l_llII1ll.Text
-         _l_l1ll1lll.Font = _l_l1lll.Header
-         _l_l1ll1lll.TextSize = 13
-         _l_l1ll1lll.TextXAlignment = Enum.TextXAlignment.Left
-         _l_l1ll1lll.Parent = _l_lIll1lll
-         local _l_lI1l1lll = Instance.new(_l1_Unpack(121))
-         _l_lI1l1lll.Size = UDim2.new(0, 28, 0, 28)
-         _l_lI1l1lll.Position = UDim2.new(1, -34, 0, 4)
-         _l_lI1l1lll.BackgroundTransparency = 1
-         _l_lI1l1lll.Text = _l1_Unpack(122)
-         _l_lI1l1lll.TextColor3 = _l_llII1ll.AccentBlue
-         _l_lI1l1lll.Font = _l_l1lll.Bold
-         _l_lI1l1lll.TextSize = 10
-         _l_lI1l1lll.Rotation = collapsed and 0 or 90
-         _l_lI1l1lll.Parent = _l_lIll1lll
-         local _l_ll1l1lll = Instance.new(_l1_Unpack(123))
-         _l_ll1l1lll.Name = _l1_Unpack(124)
-         _l_ll1l1lll.Size = UDim2.new(1, 0, 0, 0)
-         _l_ll1l1lll.AutomaticSize = Enum.AutomaticSize.None
-         _l_ll1l1lll.BackgroundColor3 = _l_llII1ll.SectionBg
-         _l_ll1l1lll.BackgroundTransparency = 0.04
-         _l_ll1l1lll.BorderSizePixel = 0
-         _l_ll1l1lll.LayoutOrder = 1
-         _l_ll1l1lll.ClipsDescendants = false
-         _l_ll1l1lll.Visible = not collapsed
-         _l_ll1l1lll.Parent = _l_llIl1lll
-         _l_ll1ll(_l_ll1l1lll, 11)
-         _l_lIIlll(_l_ll1l1lll, Color3.fromRGB(255, 255, 255), 1, 0.92)
-         local _l_l11l1lll = _l_l1Illl(_l_ll1l1lll, Enum.FillDirection.Vertical, 5)
-         _l_l11l1lll.HorizontalAlignment = Enum.HorizontalAlignment.Center
-         _l_llllll(_l_ll1l1lll, 6, 6, 0, 0)
-         local _l_lII11lll = collapsed
-         local _l_llI11lll = false
-         local function _l_l1I11lll()
-             local _l_lIl11lll = 12
-             for _, child in ipairs(_l_ll1l1lll:GetChildren()) do
-                 if child:IsA(_l1_Unpack(125)) or child:IsA(_l1_Unpack(126)) then
+         local _0x2244f3b8 = Instance.new(_0x_krein_unpack(115))
+         _0x2244f3b8.Name = _0x_krein_unpack(116) .. sTitle
+         _0x2244f3b8.Size = UDim2.new(0.97, 0, 0, 36)
+         _0x2244f3b8.BackgroundTransparency = 1
+         _0x2244f3b8.BorderSizePixel = 0
+         _0x2244f3b8.LayoutOrder = 0
+         _0x2244f3b8.AutomaticSize = Enum.AutomaticSize.None
+         _0x2244f3b8.ClipsDescendants = true
+         _0x2244f3b8.Parent = _0x3538
+         local _0x287471f1 = _0x8c753cb(_0x2244f3b8, Enum.FillDirection.Vertical, 0)
+         _0x287471f1.HorizontalAlignment = Enum.HorizontalAlignment.Center
+         local _0x27008e = Instance.new(_0x_krein_unpack(117))
+         _0x27008e.Name = _0x_krein_unpack(118)
+         _0x27008e.Size = UDim2.new(1, 0, 0, 36)
+         _0x27008e.BackgroundColor3 = _0x2ad2.SectionHdr
+         _0x27008e.BackgroundTransparency = 0.03
+         _0x27008e.BorderSizePixel = 0
+         _0x27008e.LayoutOrder = 0
+         _0x27008e.Parent = _0x2244f3b8
+         _0x50be634c(_0x27008e, 11)
+         _0x352a5f67(_0x27008e, Color3.fromRGB(255, 255, 255), 1, 0.9)
+         local _0x7e179b39 = Instance.new(_0x_krein_unpack(119))
+         _0x7e179b39.Size = UDim2.new(0, 3, 0.55, 0)
+         _0x7e179b39.Position = UDim2.new(0, 9, 0.225, 0)
+         _0x7e179b39.BackgroundColor3 = _0x2ad2.AccentBlue
+         _0x7e179b39.BackgroundTransparency = 0.2
+         _0x7e179b39.BorderSizePixel = 0
+         _0x7e179b39.Parent = _0x27008e
+         _0x50be634c(_0x7e179b39, 2)
+         local _0x58c78800 = Instance.new(_0x_krein_unpack(120))
+         _0x58c78800.Size = UDim2.new(1, -60, 1, 0)
+         _0x58c78800.Position = UDim2.new(0, 20, 0, 0)
+         _0x58c78800.BackgroundTransparency = 1
+         _0x58c78800.Text = sTitle
+         _0x58c78800.TextColor3 = _0x2ad2.Text
+         _0x58c78800.Font = _0x2aa3.Header
+         _0x58c78800.TextSize = 13
+         _0x58c78800.TextXAlignment = Enum.TextXAlignment.Left
+         _0x58c78800.Parent = _0x27008e
+         local _0x48712405 = Instance.new(_0x_krein_unpack(121))
+         _0x48712405.Size = UDim2.new(0, 28, 0, 28)
+         _0x48712405.Position = UDim2.new(1, -34, 0, 4)
+         _0x48712405.BackgroundTransparency = 1
+         _0x48712405.Text = _0x_krein_unpack(122)
+         _0x48712405.TextColor3 = _0x2ad2.AccentBlue
+         _0x48712405.Font = _0x2aa3.Bold
+         _0x48712405.TextSize = 10
+         _0x48712405.Rotation = collapsed and 0 or 90
+         _0x48712405.Parent = _0x27008e
+         local _0x353f = Instance.new(_0x_krein_unpack(123))
+         _0x353f.Name = _0x_krein_unpack(124)
+         _0x353f.Size = UDim2.new(1, 0, 0, 0)
+         _0x353f.AutomaticSize = Enum.AutomaticSize.None
+         _0x353f.BackgroundColor3 = _0x2ad2.SectionBg
+         _0x353f.BackgroundTransparency = 0.04
+         _0x353f.BorderSizePixel = 0
+         _0x353f.LayoutOrder = 1
+         _0x353f.ClipsDescendants = false
+         _0x353f.Visible = not collapsed
+         _0x353f.Parent = _0x2244f3b8
+         _0x50be634c(_0x353f, 11)
+         _0x352a5f67(_0x353f, Color3.fromRGB(255, 255, 255), 1, 0.92)
+         local _0x26eac0 = _0x8c753cb(_0x353f, Enum.FillDirection.Vertical, 5)
+         _0x26eac0.HorizontalAlignment = Enum.HorizontalAlignment.Center
+         _0x6e34debe(_0x353f, 6, 6, 0, 0)
+         local _0x6ec4e281 = collapsed
+         local _0xf4dfd34 = false
+         local function _0x2f51f421()
+             local _0x33bb4788 = 12
+             for _, child in ipairs(_0x353f:GetChildren()) do
+                 if child:IsA(_0x_krein_unpack(125)) or child:IsA(_0x_krein_unpack(126)) then
                      if child.Visible then
-                         local _l_lll11lll = child.AbsoluteSize.Y > 0 and child.AbsoluteSize.Y or child.Size.Y.Offset
-                         _l_lIl11lll = _l_lIl11lll + _l_lll11lll + 5
+                         local _0x2b5d = child.AbsoluteSize.Y > 0 and child.AbsoluteSize.Y or child.Size.Y.Offset
+                         _0x33bb4788 = _0x33bb4788 + _0x2b5d + 5
                      end
                  end
              end
-             return math.max(_l_lIl11lll, 12)
+             return math.max(_0x33bb4788, 12)
          end
-         local function _l_l1l11lll()
+         local function _0x65af86bb()
              task.wait()
-             if _l_lII11lll then
-                 _l_ll1l1lll.Size = UDim2.new(1, 0, 0, 0)
-                 _l_lI1ll(_l_llIl1lll, {Size = UDim2.new(0.97, 0, 0, 36)}, 0.26, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+             if _0x6ec4e281 then
+                 _0x353f.Size = UDim2.new(1, 0, 0, 0)
+                 _0x38e1(_0x2244f3b8, {Size = UDim2.new(0.97, 0, 0, 36)}, 0.26, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
              else
-                 if _l_llI11lll then return end
-                 local _l_lI111lll = _l_l1I11lll()
-                 _l_ll1l1lll.Size = UDim2.new(1, 0, 0, _l_lI111lll)
-                 _l_lI1ll(_l_llIl1lll, {Size = UDim2.new(0.97, 0, 0, 36 + _l_lI111lll + 4)}, 0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+                 if _0xf4dfd34 then return end
+                 local _0x21d07a1a = _0x2f51f421()
+                 _0x353f.Size = UDim2.new(1, 0, 0, _0x21d07a1a)
+                 _0x38e1(_0x2244f3b8, {Size = UDim2.new(0.97, 0, 0, 36 + _0x21d07a1a + 4)}, 0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
              end
          end
-         local _l_ll111lll = Instance.new(_l1_Unpack(127))
-         _l_ll111lll.Size = UDim2.new(1, 0, 1, 0)
-         _l_ll111lll.BackgroundTransparency = 1
-         _l_ll111lll.Text = ""
-         _l_ll111lll.ZIndex = 5
-         _l_ll111lll.Parent = _l_lIll1lll
-         local _l_l1111lll = false
-         _l_ll111lll.MouseButton1Click:Connect(function()
-             if _l_l1111lll then return end
-             _l_l1111lll = true
-             _l_lII11lll = not _l_lII11lll
-             if not _l_lII11lll then
-                 _l_ll1l1lll.Visible = true
-                 _l_lI1ll(_l_lI1l1lll, {Rotation = 90}, 0.24)
-                 _l_l1l11lll()
-                 task.delay(0.32, function() _l_l1111lll = false end)
+         local _0x58c7ab4f = Instance.new(_0x_krein_unpack(127))
+         _0x58c7ab4f.Size = UDim2.new(1, 0, 1, 0)
+         _0x58c7ab4f.BackgroundTransparency = 1
+         _0x58c7ab4f.Text = ""
+         _0x58c7ab4f.ZIndex = 5
+         _0x58c7ab4f.Parent = _0x27008e
+         local _0x2d82c48 = false
+         _0x58c7ab4f.MouseButton1Click:Connect(function()
+             if _0x2d82c48 then return end
+             _0x2d82c48 = true
+             _0x6ec4e281 = not _0x6ec4e281
+             if not _0x6ec4e281 then
+                 _0x353f.Visible = true
+                 _0x38e1(_0x48712405, {Rotation = 90}, 0.24)
+                 _0x65af86bb()
+                 task.delay(0.32, function() _0x2d82c48 = false end)
              else
-                 _l_lI1ll(_l_lI1l1lll, {Rotation = 0}, 0.24)
-                 _l_lI1ll(_l_llIl1lll, {Size = UDim2.new(0.97, 0, 0, 36)}, 0.26, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+                 _0x38e1(_0x48712405, {Rotation = 0}, 0.24)
+                 _0x38e1(_0x2244f3b8, {Size = UDim2.new(0.97, 0, 0, 36)}, 0.26, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
                  task.delay(0.27, function()
-                     if _l_lII11lll then _l_ll1l1lll.Visible = false end
-                     _l_l1111lll = false
+                     if _0x6ec4e281 then _0x353f.Visible = false end
+                     _0x2d82c48 = false
                  end)
              end
          end)
-         _l_lIll1lll.MouseEnter:Connect(function()
-             _l_lI1ll(_l_lIll1lll, {BackgroundColor3 = Color3.fromRGB(28, 28, 40)}, 0.14)
-             _l_lI1ll(_l_llll1lll, {Size = UDim2.new(0, 4, 0.55, 0)}, 0.14)
+         _0x27008e.MouseEnter:Connect(function()
+             _0x38e1(_0x27008e, {BackgroundColor3 = Color3.fromRGB(28, 28, 40)}, 0.14)
+             _0x38e1(_0x7e179b39, {Size = UDim2.new(0, 4, 0.55, 0)}, 0.14)
          end)
-         _l_lIll1lll.MouseLeave:Connect(function()
-             _l_lI1ll(_l_lIll1lll, {BackgroundColor3 = _l_llII1ll.SectionHdr}, 0.14)
-             _l_lI1ll(_l_llll1lll, {Size = UDim2.new(0, 3, 0.55, 0)}, 0.14)
+         _0x27008e.MouseLeave:Connect(function()
+             _0x38e1(_0x27008e, {BackgroundColor3 = _0x2ad2.SectionHdr}, 0.14)
+             _0x38e1(_0x7e179b39, {Size = UDim2.new(0, 3, 0.55, 0)}, 0.14)
          end)
-         if not collapsed then task.delay(0.05, _l_l1l11lll) end
-         local _l_lIIII1ll = {}
-         local _l_llIII1ll = 0
-         local function _l_l1III1ll() _l_llIII1ll = _l_llIII1ll + 1; return _l_llIII1ll end
-         local function _l_lIlII1ll(_l_lll11lll)
-             local _l_lllII1ll = Instance.new(_l1_Unpack(128))
-             _l_lllII1ll.Size = UDim2.new(0.96, 0, 0, _l_lll11lll)
-             _l_lllII1ll.BackgroundColor3 = _l_llII1ll.ComponentBg
-             _l_lllII1ll.BackgroundTransparency = 0.03
-             _l_lllII1ll.BorderSizePixel = 0
-             _l_lllII1ll.LayoutOrder = _l_l1III1ll()
-             _l_lllII1ll.Parent = _l_ll1l1lll
-             _l_ll1ll(_l_lllII1ll, 10)
-             _l_lIIlll(_l_lllII1ll, Color3.fromRGB(255, 255, 255), 1, 0.92)
-             local _l_l1lII1ll = Instance.new(_l1_Unpack(129))
-             _l_l1lII1ll.Color = Color3.fromRGB(48, 50, 70)
-             _l_l1lII1ll.Thickness = 1.5
-             _l_l1lII1ll.Transparency = 0.6
-             _l_l1lII1ll.Parent = _l_lllII1ll
-             return _l_lllII1ll
+         if not collapsed then task.delay(0.05, _0x65af86bb) end
+         local _0x271a9e = {}
+         local _0x2d091d = 0
+         local function _0x38bd() _0x2d091d = _0x2d091d + 1; return _0x2d091d end
+         local function _0x3741(_0x2b5d)
+             local _0x2b64 = Instance.new(_0x_krein_unpack(128))
+             _0x2b64.Size = UDim2.new(0.96, 0, 0, _0x2b5d)
+             _0x2b64.BackgroundColor3 = _0x2ad2.ComponentBg
+             _0x2b64.BackgroundTransparency = 0.03
+             _0x2b64.BorderSizePixel = 0
+             _0x2b64.LayoutOrder = _0x38bd()
+             _0x2b64.Parent = _0x353f
+             _0x50be634c(_0x2b64, 10)
+             _0x352a5f67(_0x2b64, Color3.fromRGB(255, 255, 255), 1, 0.92)
+             local _0x46915844 = Instance.new(_0x_krein_unpack(129))
+             _0x46915844.Color = Color3.fromRGB(48, 50, 70)
+             _0x46915844.Thickness = 1.5
+             _0x46915844.Transparency = 0.6
+             _0x46915844.Parent = _0x2b64
+             return _0x2b64
          end
-         function _l_lIIII1ll:CreateLabel(_l_llI1l1ll)
-             local _l_lllII1ll = Instance.new(_l1_Unpack(130))
-             _l_lllII1ll.Size = UDim2.new(0.96, 0, 0, 0)
-             _l_lllII1ll.AutomaticSize = Enum.AutomaticSize.Y
-             _l_lllII1ll.BackgroundTransparency = 1
-             _l_lllII1ll.BorderSizePixel = 0
-             _l_lllII1ll.LayoutOrder = _l_l1III1ll()
-             _l_lllII1ll.Parent = _l_ll1l1lll
-             _l_llllll(_l_lllII1ll, 6, 6, 8, 8)
-             _l_lllII1ll:GetPropertyChangedSignal(_l1_Unpack(131)):Connect(function()
-                 if not _l_lII11lll then _l_l1l11lll() end
+         function _0x271a9e:CreateLabel(_0x367055)
+             local _0x2b64 = Instance.new(_0x_krein_unpack(130))
+             _0x2b64.Size = UDim2.new(0.96, 0, 0, 0)
+             _0x2b64.AutomaticSize = Enum.AutomaticSize.Y
+             _0x2b64.BackgroundTransparency = 1
+             _0x2b64.BorderSizePixel = 0
+             _0x2b64.LayoutOrder = _0x38bd()
+             _0x2b64.Parent = _0x353f
+             _0x6e34debe(_0x2b64, 6, 6, 8, 8)
+             _0x2b64:GetPropertyChangedSignal(_0x_krein_unpack(131)):Connect(function()
+                 if not _0x6ec4e281 then _0x65af86bb() end
              end)
-             local _l_l1I1ll = Instance.new(_l1_Unpack(132))
-             _l_l1I1ll.Size = UDim2.new(1, 0, 0, 0)
-             _l_l1I1ll.AutomaticSize = Enum.AutomaticSize.Y
-             _l_l1I1ll.BackgroundTransparency = 1
-             _l_l1I1ll.Text = _l_llI1l1ll
-             _l_l1I1ll.TextColor3 = _l_llII1ll.LabelText
-             _l_l1I1ll.Font = _l_l1lll.Body
-             _l_l1I1ll.TextSize = 11
-             _l_l1I1ll.TextXAlignment = Enum.TextXAlignment.Left
-             _l_l1I1ll.TextWrapped = true
-             _l_l1I1ll.Parent = _l_lllII1ll
-             local _l_lI1II1ll = {}
-             function _l_lI1II1ll:SetText(_l_l1l1ll) _l_l1I1ll.Text = _l_l1l1ll; task.defer(function() if not _l_lII11lll then _l_l1l11lll() end end) end
-             function _l_lI1II1ll:SetVisible(v) _l_lllII1ll.Visible = v; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_lllII1ll:Destroy(); _l_l1l11lll() end
-             function _l_lI1II1ll:UpdateCallback() end
-             return _l_lI1II1ll
+             local _0x1cc22 = Instance.new(_0x_krein_unpack(132))
+             _0x1cc22.Size = UDim2.new(1, 0, 0, 0)
+             _0x1cc22.AutomaticSize = Enum.AutomaticSize.Y
+             _0x1cc22.BackgroundTransparency = 1
+             _0x1cc22.Text = _0x367055
+             _0x1cc22.TextColor3 = _0x2ad2.LabelText
+             _0x1cc22.Font = _0x2aa3.Body
+             _0x1cc22.TextSize = 11
+             _0x1cc22.TextXAlignment = Enum.TextXAlignment.Left
+             _0x1cc22.TextWrapped = true
+             _0x1cc22.Parent = _0x2b64
+             local _0x1d7f7 = {}
+             function _0x1d7f7:SetText(_0x2ae3) _0x1cc22.Text = _0x2ae3; task.defer(function() if not _0x6ec4e281 then _0x65af86bb() end end) end
+             function _0x1d7f7:SetVisible(v) _0x2b64.Visible = v; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x2b64:Destroy(); _0x65af86bb() end
+             function _0x1d7f7:UpdateCallback() end
+             return _0x1d7f7
          end
-         local function _l_ll1II1ll(_l_llI1l1ll, _l_lIl1l1ll, bg, accentColor, confirm)
-             local _l_lllII1ll = _l_lIlII1ll(48)
-             local _l_l11II1ll = Instance.new(_l1_Unpack(133))
-             _l_l11II1ll.Size = UDim2.new(0, 3, 0.6, 0)
-             _l_l11II1ll.Position = UDim2.new(0, 6, 0.2, 0)
-             _l_l11II1ll.BackgroundColor3 = accentColor
-             _l_l11II1ll.BorderSizePixel = 0
-             _l_l11II1ll.Name = _l1_Unpack(134)
-             _l_l11II1ll.Parent = _l_lllII1ll
-             _l_ll1ll(_l_l11II1ll, 2)
-             local _l_l1I1ll = Instance.new(_l1_Unpack(135))
-             _l_l1I1ll.Size = UDim2.new(1, -96, 0, 18)
-             _l_l1I1ll.Position = UDim2.new(0, 18, 0, 8)
-             _l_l1I1ll.BackgroundTransparency = 1
-             _l_l1I1ll.Text = _l_llI1l1ll
-             _l_l1I1ll.TextColor3 = _l_llII1ll.Text
-             _l_l1I1ll.Font = _l_l1lll.Bold
-             _l_l1I1ll.TextSize = 12
-             _l_l1I1ll.TextXAlignment = Enum.TextXAlignment.Left
-             _l_l1I1ll.TextTruncate = Enum.TextTruncate.AtEnd
-             _l_l1I1ll.Parent = _l_lllII1ll
-             local _l_lIIlI1ll = Instance.new(_l1_Unpack(136))
-             _l_lIIlI1ll.Size = UDim2.new(1, -96, 0, 14)
-             _l_lIIlI1ll.Position = UDim2.new(0, 18, 0, 26)
-             _l_lIIlI1ll.BackgroundTransparency = 1
-             _l_lIIlI1ll.Text = ""
-             _l_lIIlI1ll.TextColor3 = _l_llII1ll.SubText
-             _l_lIIlI1ll.Font = _l_l1lll.Body
-             _l_lIIlI1ll.TextSize = 9
-             _l_lIIlI1ll.TextXAlignment = Enum.TextXAlignment.Left
-             _l_lIIlI1ll.Visible = false
-             _l_lIIlI1ll.Name = _l1_Unpack(137)
-             _l_lIIlI1ll.Parent = _l_lllII1ll
-             local _l_llIlI1ll = Instance.new(_l1_Unpack(138))
-             _l_llIlI1ll.Size = UDim2.new(0, 74, 0, 30)
-             _l_llIlI1ll.Position = UDim2.new(1, -82, 0, 9)
-             _l_llIlI1ll.BackgroundColor3 = bg
-             _l_llIlI1ll.BackgroundTransparency = 0.02
-             _l_llIlI1ll.BorderSizePixel = 0
-             _l_llIlI1ll.Text = _l1_Unpack(139)
-             _l_llIlI1ll.TextColor3 = Color3.fromRGB(255, 255, 255)
-             _l_llIlI1ll.Font = _l_l1lll.Bold
-             _l_llIlI1ll.TextSize = 11
-             _l_llIlI1ll.AutoButtonColor = false
-             _l_llIlI1ll.Parent = _l_lllII1ll
-             _l_ll1ll(_l_llIlI1ll, 8)
-             _l_lIIlll(_l_llIlI1ll, bg, 1, 0.3)
-             local _l_l1IlI1ll = false
-             local _l_lIllI1ll = _l1_Unpack(140)
-             local _l_llllI1ll = true
-             _l_lllII1ll.MouseEnter:Connect(function()
-                 if not _l_llllI1ll then return end
-                 _l_lI1ll(_l_l11II1ll, {Size = UDim2.new(0, 5, 0.6, 0)}, 0.12)
-                 _l_lI1ll(_l_lllII1ll, {BackgroundColor3 = Color3.fromRGB(24, 24, 36)}, 0.12)
+         local function _0x554653f1(_0x367055, _0x3789, bg, accentColor, confirm)
+             local _0x2b64 = _0x3741(48)
+             local _0x7e573215 = Instance.new(_0x_krein_unpack(133))
+             _0x7e573215.Size = UDim2.new(0, 3, 0.6, 0)
+             _0x7e573215.Position = UDim2.new(0, 6, 0.2, 0)
+             _0x7e573215.BackgroundColor3 = accentColor
+             _0x7e573215.BorderSizePixel = 0
+             _0x7e573215.Name = _0x_krein_unpack(134)
+             _0x7e573215.Parent = _0x2b64
+             _0x50be634c(_0x7e573215, 2)
+             local _0x1cc22 = Instance.new(_0x_krein_unpack(135))
+             _0x1cc22.Size = UDim2.new(1, -96, 0, 18)
+             _0x1cc22.Position = UDim2.new(0, 18, 0, 8)
+             _0x1cc22.BackgroundTransparency = 1
+             _0x1cc22.Text = _0x367055
+             _0x1cc22.TextColor3 = _0x2ad2.Text
+             _0x1cc22.Font = _0x2aa3.Bold
+             _0x1cc22.TextSize = 12
+             _0x1cc22.TextXAlignment = Enum.TextXAlignment.Left
+             _0x1cc22.TextTruncate = Enum.TextTruncate.AtEnd
+             _0x1cc22.Parent = _0x2b64
+             local _0x1e943 = Instance.new(_0x_krein_unpack(136))
+             _0x1e943.Size = UDim2.new(1, -96, 0, 14)
+             _0x1e943.Position = UDim2.new(0, 18, 0, 26)
+             _0x1e943.BackgroundTransparency = 1
+             _0x1e943.Text = ""
+             _0x1e943.TextColor3 = _0x2ad2.SubText
+             _0x1e943.Font = _0x2aa3.Body
+             _0x1e943.TextSize = 9
+             _0x1e943.TextXAlignment = Enum.TextXAlignment.Left
+             _0x1e943.Visible = false
+             _0x1e943.Name = _0x_krein_unpack(137)
+             _0x1e943.Parent = _0x2b64
+             local _0x54d056c6 = Instance.new(_0x_krein_unpack(138))
+             _0x54d056c6.Size = UDim2.new(0, 74, 0, 30)
+             _0x54d056c6.Position = UDim2.new(1, -82, 0, 9)
+             _0x54d056c6.BackgroundColor3 = bg
+             _0x54d056c6.BackgroundTransparency = 0.02
+             _0x54d056c6.BorderSizePixel = 0
+             _0x54d056c6.Text = _0x_krein_unpack(139)
+             _0x54d056c6.TextColor3 = Color3.fromRGB(255, 255, 255)
+             _0x54d056c6.Font = _0x2aa3.Bold
+             _0x54d056c6.TextSize = 11
+             _0x54d056c6.AutoButtonColor = false
+             _0x54d056c6.Parent = _0x2b64
+             _0x50be634c(_0x54d056c6, 8)
+             _0x352a5f67(_0x54d056c6, bg, 1, 0.3)
+             local _0x5699308 = false
+             local _0x56f1226 = _0x_krein_unpack(140)
+             local _0x2c9f5d09 = true
+             _0x2b64.MouseEnter:Connect(function()
+                 if not _0x2c9f5d09 then return end
+                 _0x38e1(_0x7e573215, {Size = UDim2.new(0, 5, 0.6, 0)}, 0.12)
+                 _0x38e1(_0x2b64, {BackgroundColor3 = Color3.fromRGB(24, 24, 36)}, 0.12)
              end)
-             _l_lllII1ll.MouseLeave:Connect(function()
-                 if not _l_llllI1ll then return end
-                 _l_lI1ll(_l_l11II1ll, {Size = UDim2.new(0, 3, 0.6, 0)}, 0.12)
-                 _l_lI1ll(_l_lllII1ll, {BackgroundColor3 = _l_llII1ll.ComponentBg}, 0.12)
+             _0x2b64.MouseLeave:Connect(function()
+                 if not _0x2c9f5d09 then return end
+                 _0x38e1(_0x7e573215, {Size = UDim2.new(0, 3, 0.6, 0)}, 0.12)
+                 _0x38e1(_0x2b64, {BackgroundColor3 = _0x2ad2.ComponentBg}, 0.12)
              end)
-             _l_llIlI1ll.MouseEnter:Connect(function()
-                 if not _l_llllI1ll then return end
-                 _l_lI1ll(_l_llIlI1ll, {BackgroundColor3 = Color3.new(math.min(bg.R+0.1,1), math.min(bg.G+0.1,1), math.min(bg.B+0.1,1))}, 0.12)
+             _0x54d056c6.MouseEnter:Connect(function()
+                 if not _0x2c9f5d09 then return end
+                 _0x38e1(_0x54d056c6, {BackgroundColor3 = Color3.new(math.min(bg.R+0.1,1), math.min(bg.G+0.1,1), math.min(bg.B+0.1,1))}, 0.12)
              end)
-             _l_llIlI1ll.MouseLeave:Connect(function()
-                 if not _l_llllI1ll then return end
-                 _l_lI1ll(_l_llIlI1ll, {BackgroundColor3 = bg}, 0.12)
+             _0x54d056c6.MouseLeave:Connect(function()
+                 if not _0x2c9f5d09 then return end
+                 _0x38e1(_0x54d056c6, {BackgroundColor3 = bg}, 0.12)
              end)
-             _l_llIlI1ll.MouseButton1Click:Connect(function()
-                 if not _l_llllI1ll then return end
+             _0x54d056c6.MouseButton1Click:Connect(function()
+                 if not _0x2c9f5d09 then return end
                  if confirm then
-                     if not _l_l1IlI1ll then
-                         _l_l1IlI1ll = true; _l_llIlI1ll.Text = _l1_Unpack(141)
-                         _l_lI1ll(_l_llIlI1ll, {BackgroundColor3 = Color3.fromRGB(210, 145, 0)}, 0.18)
+                     if not _0x5699308 then
+                         _0x5699308 = true; _0x54d056c6.Text = _0x_krein_unpack(141)
+                         _0x38e1(_0x54d056c6, {BackgroundColor3 = Color3.fromRGB(210, 145, 0)}, 0.18)
                          task.delay(2.5, function()
-                             if _l_l1IlI1ll then _l_l1IlI1ll = false; _l_llIlI1ll.Text = _l_lIllI1ll; _l_lI1ll(_l_llIlI1ll, {BackgroundColor3 = bg}, 0.18) end
+                             if _0x5699308 then _0x5699308 = false; _0x54d056c6.Text = _0x56f1226; _0x38e1(_0x54d056c6, {BackgroundColor3 = bg}, 0.18) end
                          end)
                      else
-                         _l_l1IlI1ll = false; _l_llIlI1ll.Text = _l_lIllI1ll
-                         _l_lI1ll(_l_llIlI1ll, {BackgroundColor3 = bg}, 0.18); _l_lIl1l1ll()
+                         _0x5699308 = false; _0x54d056c6.Text = _0x56f1226
+                         _0x38e1(_0x54d056c6, {BackgroundColor3 = bg}, 0.18); _0x3789()
                      end
                  else
-                     _l_lI1ll(_l_llIlI1ll, {Size = UDim2.new(0, 70, 0, 28)}, 0.06)
-                     task.delay(0.06, function() _l_lI1ll(_l_llIlI1ll, {Size = UDim2.new(0, 74, 0, 30)}, 0.1) end)
-                     _l_lIl1l1ll()
+                     _0x38e1(_0x54d056c6, {Size = UDim2.new(0, 70, 0, 28)}, 0.06)
+                     task.delay(0.06, function() _0x38e1(_0x54d056c6, {Size = UDim2.new(0, 74, 0, 30)}, 0.1) end)
+                     _0x3789()
                  end
              end)
-             local _l_lI1II1ll = {}
-             function _l_lI1II1ll:SetText(_l_l1l1ll, _l_llIlll) _l_l1I1ll.Text = _l_l1l1ll; if _l_llIlll then _l_lIIlI1ll.Text = _l_llIlll; _l_lIIlI1ll.Visible = true end end
-             function _l_lI1II1ll:SetActionText(_l_l1l1ll) _l_llIlI1ll.Text = _l_l1l1ll; _l_lIllI1ll = _l_l1l1ll end
-             function _l_lI1II1ll:SetEnabled(e)
-                 _l_llllI1ll = e; _l_llIlI1ll.Active = e
-                 _l_lllII1ll.BackgroundTransparency = e and 0.03 or 0.5
-                 _l_l1I1ll.TextColor3 = e and _l_llII1ll.Text or _l_llII1ll.SubText
-                 _l_llIlI1ll.TextColor3 = e and Color3.fromRGB(255,255,255) or Color3.fromRGB(105,105,118)
+             local _0x1d7f7 = {}
+             function _0x1d7f7:SetText(_0x2ae3, _0x2ad5) _0x1cc22.Text = _0x2ae3; if _0x2ad5 then _0x1e943.Text = _0x2ad5; _0x1e943.Visible = true end end
+             function _0x1d7f7:SetActionText(_0x2ae3) _0x54d056c6.Text = _0x2ae3; _0x56f1226 = _0x2ae3 end
+             function _0x1d7f7:SetEnabled(e)
+                 _0x2c9f5d09 = e; _0x54d056c6.Active = e
+                 _0x2b64.BackgroundTransparency = e and 0.03 or 0.5
+                 _0x1cc22.TextColor3 = e and _0x2ad2.Text or _0x2ad2.SubText
+                 _0x54d056c6.TextColor3 = e and Color3.fromRGB(255,255,255) or Color3.fromRGB(105,105,118)
              end
-             function _l_lI1II1ll:SetVisible(v) _l_lllII1ll.Visible = v; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_lllII1ll:Destroy(); _l_l1l11lll() end
-             function _l_lI1II1ll:UpdateCallback(newCb) _l_lIl1l1ll = newCb end
-             return _l_lI1II1ll
+             function _0x1d7f7:SetVisible(v) _0x2b64.Visible = v; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x2b64:Destroy(); _0x65af86bb() end
+             function _0x1d7f7:UpdateCallback(newCb) _0x3789 = newCb end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:CreateButton(_l_llI1l1ll, _l_lIl1l1ll) return _l_ll1II1ll(_l_llI1l1ll, _l_lIl1l1ll, _l_llII1ll.BtnGreen, _l_llII1ll.BtnGreen, false) end
-         function _l_lIIII1ll:CreateDangerButton(_l_llI1l1ll, _l_lIl1l1ll) return _l_ll1II1ll(_l_llI1l1ll, _l_lIl1l1ll, _l_llII1ll.BtnRed, _l_llII1ll.BtnRed, true) end
-         function _l_lIIII1ll:CreateToggle(_l_llI1l1ll, default, _l_lIl1l1ll)
+         function _0x271a9e:CreateButton(_0x367055, _0x3789) return _0x554653f1(_0x367055, _0x3789, _0x2ad2.BtnGreen, _0x2ad2.BtnGreen, false) end
+         function _0x271a9e:CreateDangerButton(_0x367055, _0x3789) return _0x554653f1(_0x367055, _0x3789, _0x2ad2.BtnRed, _0x2ad2.BtnRed, true) end
+         function _0x271a9e:CreateToggle(_0x367055, default, _0x3789)
              default = default == true
-             local _l_l1llI1ll = default
-             _l_lIl1l1ll = _l_lIl1l1ll or function() end
-             local _l_lllII1ll = _l_lIlII1ll(44)
-             local _l_l1I1ll = Instance.new(_l1_Unpack(142))
-             _l_l1I1ll.Size = UDim2.new(1, -76, 1, 0)
-             _l_l1I1ll.Position = UDim2.new(0, 14, 0, 0)
-             _l_l1I1ll.BackgroundTransparency = 1
-             _l_l1I1ll.Text = _l_llI1l1ll
-             _l_l1I1ll.TextColor3 = _l_llII1ll.Text
-             _l_l1I1ll.Font = _l_l1lll.Medium
-             _l_l1I1ll.TextSize = 12
-             _l_l1I1ll.TextXAlignment = Enum.TextXAlignment.Left
-             _l_l1I1ll.TextTruncate = Enum.TextTruncate.AtEnd
-             _l_l1I1ll.Parent = _l_lllII1ll
-             local _l_lI1lI1ll = Instance.new(_l1_Unpack(143))
-             _l_lI1lI1ll.Size = UDim2.new(0, 46, 0, 26)
-             _l_lI1lI1ll.Position = UDim2.new(1, -56, 0, 9)
-             _l_lI1lI1ll.BackgroundColor3 = _l_l1llI1ll and _l_llII1ll.ToggleOn or _l_llII1ll.ToggleOff
-             _l_lI1lI1ll.BorderSizePixel = 0
-             _l_lI1lI1ll.Parent = _l_lllII1ll
-             _l_ll1ll(_l_lI1lI1ll, 13)
-             local _l_ll1lI1ll = Instance.new(_l1_Unpack(144))
-             _l_ll1lI1ll.Color = _l_l1llI1ll and _l_llII1ll.ToggleOn or Color3.fromRGB(42,42,58)
-             _l_ll1lI1ll.Thickness = 1
-             _l_ll1lI1ll.Transparency = _l_l1llI1ll and 0.5 or 0.2
-             _l_ll1lI1ll.Parent = _l_lI1lI1ll
-             local _l_l11lI1ll = Instance.new(_l1_Unpack(145))
-             _l_l11lI1ll.Size = UDim2.new(0, 19, 0, 19)
-             _l_l11lI1ll.Position = _l_l1llI1ll and UDim2.new(0,24,0,3) or UDim2.new(0,3,0,3)
-             _l_l11lI1ll.BackgroundColor3 = Color3.fromRGB(255,255,255)
-             _l_l11lI1ll.BorderSizePixel = 0
-             _l_l11lI1ll.Parent = _l_lI1lI1ll
-             _l_ll1ll(_l_l11lI1ll, 10)
-             local _l_lII1I1ll = Instance.new(_l1_Unpack(146))
-             _l_lII1I1ll.Size = UDim2.new(1,0,1,0)
-             _l_lII1I1ll.BackgroundTransparency = 1
-             _l_lII1I1ll.Text = ""
-             _l_lII1I1ll.ZIndex = 5
-             _l_lII1I1ll.Parent = _l_lllII1ll
-             local function _l_llI1I1ll(v, anim)
+             local _0x36ff = default
+             _0x3789 = _0x3789 or function() end
+             local _0x2b64 = _0x3741(44)
+             local _0x1cc22 = Instance.new(_0x_krein_unpack(142))
+             _0x1cc22.Size = UDim2.new(1, -76, 1, 0)
+             _0x1cc22.Position = UDim2.new(0, 14, 0, 0)
+             _0x1cc22.BackgroundTransparency = 1
+             _0x1cc22.Text = _0x367055
+             _0x1cc22.TextColor3 = _0x2ad2.Text
+             _0x1cc22.Font = _0x2aa3.Medium
+             _0x1cc22.TextSize = 12
+             _0x1cc22.TextXAlignment = Enum.TextXAlignment.Left
+             _0x1cc22.TextTruncate = Enum.TextTruncate.AtEnd
+             _0x1cc22.Parent = _0x2b64
+             local _0x6981c54 = Instance.new(_0x_krein_unpack(143))
+             _0x6981c54.Size = UDim2.new(0, 46, 0, 26)
+             _0x6981c54.Position = UDim2.new(1, -56, 0, 9)
+             _0x6981c54.BackgroundColor3 = _0x36ff and _0x2ad2.ToggleOn or _0x2ad2.ToggleOff
+             _0x6981c54.BorderSizePixel = 0
+             _0x6981c54.Parent = _0x2b64
+             _0x50be634c(_0x6981c54, 13)
+             local _0x4acd1a6d = Instance.new(_0x_krein_unpack(144))
+             _0x4acd1a6d.Color = _0x36ff and _0x2ad2.ToggleOn or Color3.fromRGB(42,42,58)
+             _0x4acd1a6d.Thickness = 1
+             _0x4acd1a6d.Transparency = _0x36ff and 0.5 or 0.2
+             _0x4acd1a6d.Parent = _0x6981c54
+             local _0x1b054 = Instance.new(_0x_krein_unpack(145))
+             _0x1b054.Size = UDim2.new(0, 19, 0, 19)
+             _0x1b054.Position = _0x36ff and UDim2.new(0,24,0,3) or UDim2.new(0,3,0,3)
+             _0x1b054.BackgroundColor3 = Color3.fromRGB(255,255,255)
+             _0x1b054.BorderSizePixel = 0
+             _0x1b054.Parent = _0x6981c54
+             _0x50be634c(_0x1b054, 10)
+             local _0x3806 = Instance.new(_0x_krein_unpack(146))
+             _0x3806.Size = UDim2.new(1,0,1,0)
+             _0x3806.BackgroundTransparency = 1
+             _0x3806.Text = ""
+             _0x3806.ZIndex = 5
+             _0x3806.Parent = _0x2b64
+             local function _0x58bae7b(v, anim)
                  if anim then
-                     _l_lI1ll(_l_lI1lI1ll, {BackgroundColor3 = v and _l_llII1ll.ToggleOn or _l_llII1ll.ToggleOff}, 0.2)
-                     _l_lI1ll(_l_l11lI1ll, {Position = v and UDim2.new(0,24,0,3) or UDim2.new(0,3,0,3)}, 0.2)
-                     _l_lI1ll(_l_ll1lI1ll, {Color = v and _l_llII1ll.ToggleOn or Color3.fromRGB(42,42,58), Transparency = v and 0.5 or 0.2}, 0.2)
+                     _0x38e1(_0x6981c54, {BackgroundColor3 = v and _0x2ad2.ToggleOn or _0x2ad2.ToggleOff}, 0.2)
+                     _0x38e1(_0x1b054, {Position = v and UDim2.new(0,24,0,3) or UDim2.new(0,3,0,3)}, 0.2)
+                     _0x38e1(_0x4acd1a6d, {Color = v and _0x2ad2.ToggleOn or Color3.fromRGB(42,42,58), Transparency = v and 0.5 or 0.2}, 0.2)
                      if v then
-                         _l_lI1ll(_l_l11lI1ll, {Size = UDim2.new(0,21,0,21), Position = UDim2.new(0,23,0,2)}, 0.08)
-                         task.delay(0.08, function() _l_lI1ll(_l_l11lI1ll, {Size = UDim2.new(0,19,0,19), Position = UDim2.new(0,24,0,3)}, 0.14) end)
+                         _0x38e1(_0x1b054, {Size = UDim2.new(0,21,0,21), Position = UDim2.new(0,23,0,2)}, 0.08)
+                         task.delay(0.08, function() _0x38e1(_0x1b054, {Size = UDim2.new(0,19,0,19), Position = UDim2.new(0,24,0,3)}, 0.14) end)
                      end
                  else
-                     _l_lI1lI1ll.BackgroundColor3 = v and _l_llII1ll.ToggleOn or _l_llII1ll.ToggleOff
-                     _l_l11lI1ll.Position = v and UDim2.new(0,24,0,3) or UDim2.new(0,3,0,3)
-                     _l_ll1lI1ll.Color = v and _l_llII1ll.ToggleOn or Color3.fromRGB(42,42,58)
-                     _l_ll1lI1ll.Transparency = v and 0.5 or 0.2
+                     _0x6981c54.BackgroundColor3 = v and _0x2ad2.ToggleOn or _0x2ad2.ToggleOff
+                     _0x1b054.Position = v and UDim2.new(0,24,0,3) or UDim2.new(0,3,0,3)
+                     _0x4acd1a6d.Color = v and _0x2ad2.ToggleOn or Color3.fromRGB(42,42,58)
+                     _0x4acd1a6d.Transparency = v and 0.5 or 0.2
                  end
              end
-             _l_lII1I1ll.MouseButton1Click:Connect(function() _l_l1llI1ll = not _l_l1llI1ll; _l_llI1I1ll(_l_l1llI1ll, true); pcall(_l_lIl1l1ll, _l_l1llI1ll) end)
-             local _l_lI1II1ll = {}
-             function _l_lI1II1ll:SetValue(v) _l_l1llI1ll = v==true; _l_llI1I1ll(_l_l1llI1ll, true); pcall(_l_lIl1l1ll, _l_l1llI1ll) end
-             function _l_lI1II1ll:GetValue() return _l_l1llI1ll end
-             function _l_lI1II1ll:SetEnabled(e) _l_lII1I1ll.Active = e; _l_lllII1ll.BackgroundTransparency = e and 0.03 or 0.5 end
-             function _l_lI1II1ll:SetVisible(v) _l_lllII1ll.Visible = v; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_lllII1ll:Destroy(); _l_l1l11lll() end
-             function _l_lI1II1ll:UpdateCallback(newCb) _l_lIl1l1ll = newCb end
-             return _l_lI1II1ll
+             _0x3806.MouseButton1Click:Connect(function() _0x36ff = not _0x36ff; _0x58bae7b(_0x36ff, true); pcall(_0x3789, _0x36ff) end)
+             local _0x1d7f7 = {}
+             function _0x1d7f7:SetValue(v) _0x36ff = v==true; _0x58bae7b(_0x36ff, true); pcall(_0x3789, _0x36ff) end
+             function _0x1d7f7:GetValue() return _0x36ff end
+             function _0x1d7f7:SetEnabled(e) _0x3806.Active = e; _0x2b64.BackgroundTransparency = e and 0.03 or 0.5 end
+             function _0x1d7f7:SetVisible(v) _0x2b64.Visible = v; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x2b64:Destroy(); _0x65af86bb() end
+             function _0x1d7f7:UpdateCallback(newCb) _0x3789 = newCb end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:CreateSlider(_l_llI1l1ll, mn, mx, def, _l_lIl1l1ll, float)
+         function _0x271a9e:CreateSlider(_0x367055, mn, mx, def, _0x3789, float)
              mn = mn or 0; mx = mx or 100
              if mn == mx then mx = mn + 1 end
              def = math.clamp(def or mn, mn, mx); float = float or false
-             _l_lIl1l1ll = _l_lIl1l1ll or function() end 
-             local _l_l1llI1ll = def
-             local _l_lllII1ll = _l_lIlII1ll(62)
-             local _l_l1I1ll = Instance.new(_l1_Unpack(147))
-             _l_l1I1ll.Size = UDim2.new(1, -88, 0, 18); _l_l1I1ll.Position = UDim2.new(0,14,0,8)
-             _l_l1I1ll.BackgroundTransparency = 1; _l_l1I1ll.Text = _l_llI1l1ll; _l_l1I1ll.TextColor3 = _l_llII1ll.Text
-             _l_l1I1ll.Font = _l_l1lll.Medium; _l_l1I1ll.TextSize = 12; _l_l1I1ll.TextXAlignment = Enum.TextXAlignment.Left
-             _l_l1I1ll.TextTruncate = Enum.TextTruncate.AtEnd; _l_l1I1ll.Parent = _l_lllII1ll
-             local _l_l1I1I1ll = Instance.new(_l1_Unpack(148))
-             _l_l1I1I1ll.Size = UDim2.new(0,54,0,22); _l_l1I1I1ll.Position = UDim2.new(1,-64,0,6)
-             _l_l1I1I1ll.BackgroundColor3 = Color3.fromRGB(26,26,38); _l_l1I1I1ll.BackgroundTransparency = 0.03
-             _l_l1I1I1ll.BorderSizePixel = 0; _l_l1I1I1ll.Parent = _l_lllII1ll
-             _l_ll1ll(_l_l1I1I1ll, 7)
-             local _l_lIl1I1ll = _l_lIIlll(_l_l1I1I1ll, _l_llII1ll.CompStroke, 1, 0.3)
-             local function _l_lll1I1ll(v)
+             _0x3789 = _0x3789 or function() end 
+             local _0x36ff = def
+             local _0x2b64 = _0x3741(62)
+             local _0x1cc22 = Instance.new(_0x_krein_unpack(147))
+             _0x1cc22.Size = UDim2.new(1, -88, 0, 18); _0x1cc22.Position = UDim2.new(0,14,0,8)
+             _0x1cc22.BackgroundTransparency = 1; _0x1cc22.Text = _0x367055; _0x1cc22.TextColor3 = _0x2ad2.Text
+             _0x1cc22.Font = _0x2aa3.Medium; _0x1cc22.TextSize = 12; _0x1cc22.TextXAlignment = Enum.TextXAlignment.Left
+             _0x1cc22.TextTruncate = Enum.TextTruncate.AtEnd; _0x1cc22.Parent = _0x2b64
+             local _0x6acb654 = Instance.new(_0x_krein_unpack(148))
+             _0x6acb654.Size = UDim2.new(0,54,0,22); _0x6acb654.Position = UDim2.new(1,-64,0,6)
+             _0x6acb654.BackgroundColor3 = Color3.fromRGB(26,26,38); _0x6acb654.BackgroundTransparency = 0.03
+             _0x6acb654.BorderSizePixel = 0; _0x6acb654.Parent = _0x2b64
+             _0x50be634c(_0x6acb654, 7)
+             local _0x66c74838 = _0x352a5f67(_0x6acb654, _0x2ad2.CompStroke, 1, 0.3)
+             local function _0x4bbb799c(v)
                  if not float then return tostring(v) end
-                 local _l_l1l1I1ll = mx - mn
-                 if _l_l1l1I1ll <= 0.01 then return string.format(_l1_Unpack(149), v)
-                 elseif _l_l1l1I1ll <= 1 then return string.format(_l1_Unpack(150), v)
-                 else return string.format(_l1_Unpack(151), v) end
+                 local _0x674644e = mx - mn
+                 if _0x674644e <= 0.01 then return string.format(_0x_krein_unpack(149), v)
+                 elseif _0x674644e <= 1 then return string.format(_0x_krein_unpack(150), v)
+                 else return string.format(_0x_krein_unpack(151), v) end
              end
-             local _l_lI11I1ll = Instance.new(_l1_Unpack(152))
-             _l_lI11I1ll.Size = UDim2.new(1,-6,1,0); _l_lI11I1ll.Position = UDim2.new(0,3,0,0)
-             _l_lI11I1ll.BackgroundTransparency = 1; _l_lI11I1ll.BorderSizePixel = 0
-             _l_lI11I1ll.Text = _l_lll1I1ll(def)
-             _l_lI11I1ll.TextColor3 = _l_llII1ll.SliderFill; _l_lI11I1ll.Font = _l_l1lll.Bold; _l_lI11I1ll.TextSize = 11
-             _l_lI11I1ll.TextXAlignment = Enum.TextXAlignment.Center; _l_lI11I1ll.ClearTextOnFocus = true; _l_lI11I1ll.Parent = _l_l1I1I1ll
-             _l_lI11I1ll.Focused:Connect(function() _l_lIl1I1ll.Color = _l_llII1ll.SliderFill; _l_lIl1I1ll.Transparency = 0.1; _l_lI1ll(_l_l1I1I1ll,{BackgroundColor3=Color3.fromRGB(28,30,48)},0.14) end)
+             local _0x311af604 = Instance.new(_0x_krein_unpack(152))
+             _0x311af604.Size = UDim2.new(1,-6,1,0); _0x311af604.Position = UDim2.new(0,3,0,0)
+             _0x311af604.BackgroundTransparency = 1; _0x311af604.BorderSizePixel = 0
+             _0x311af604.Text = _0x4bbb799c(def)
+             _0x311af604.TextColor3 = _0x2ad2.SliderFill; _0x311af604.Font = _0x2aa3.Bold; _0x311af604.TextSize = 11
+             _0x311af604.TextXAlignment = Enum.TextXAlignment.Center; _0x311af604.ClearTextOnFocus = true; _0x311af604.Parent = _0x6acb654
+             _0x311af604.Focused:Connect(function() _0x66c74838.Color = _0x2ad2.SliderFill; _0x66c74838.Transparency = 0.1; _0x38e1(_0x6acb654,{BackgroundColor3=Color3.fromRGB(28,30,48)},0.14) end)
              
-             local _l_ll11I1ll = Instance.new(_l1_Unpack(153))
-             _l_ll11I1ll.Size = UDim2.new(1,-26,0,6); _l_ll11I1ll.Position = UDim2.new(0,14,0,40)
-             _l_ll11I1ll.BackgroundColor3 = _l_llII1ll.SliderBg; _l_ll11I1ll.BorderSizePixel = 0; _l_ll11I1ll.ClipsDescendants = true; _l_ll11I1ll.Parent = _l_lllII1ll
-             _l_ll11I1ll.Text = ""
-             _l_ll11I1ll.AutoButtonColor = false
-             _l_ll1ll(_l_ll11I1ll, 3)
+             local _0x1a726 = Instance.new(_0x_krein_unpack(153))
+             _0x1a726.Size = UDim2.new(1,-26,0,6); _0x1a726.Position = UDim2.new(0,14,0,40)
+             _0x1a726.BackgroundColor3 = _0x2ad2.SliderBg; _0x1a726.BorderSizePixel = 0; _0x1a726.ClipsDescendants = true; _0x1a726.Parent = _0x2b64
+             _0x1a726.Text = ""
+             _0x1a726.AutoButtonColor = false
+             _0x50be634c(_0x1a726, 3)
              
-             local _l_l111I1ll = (def-mn)/(mx-mn)
-             local _l_lIIIl1ll = Instance.new(_l1_Unpack(154))
-             _l_lIIIl1ll.Size = UDim2.new(_l_l111I1ll,0,1,0); _l_lIIIl1ll.BackgroundColor3 = _l_llII1ll.SliderFill; _l_lIIIl1ll.BorderSizePixel = 0; _l_lIIIl1ll.Parent = _l_ll11I1ll
-             _l_ll1ll(_l_lIIIl1ll, 3)
-             local _l_llIIl1ll = Instance.new(_l1_Unpack(155))
-             _l_llIIl1ll.Size = UDim2.new(0,16,0,16); _l_llIIl1ll.Position = UDim2.new(_l_l111I1ll,-8,0,-5)
-             _l_llIIl1ll.BackgroundColor3 = Color3.fromRGB(240,242,255); _l_llIIl1ll.BorderSizePixel = 0
-             _l_llIIl1ll.Text = ""; _l_llIIl1ll.AutoButtonColor = false; _l_llIIl1ll.ZIndex = 5; _l_llIIl1ll.Parent = _l_ll11I1ll
-             _l_ll1ll(_l_llIIl1ll, 8); _l_lIIlll(_l_llIIl1ll, _l_llII1ll.SliderFill, 1.5, 0.1)
-             local function _l_l1IIl1ll(val)
+             local _0x2fc1af = (def-mn)/(mx-mn)
+             local _0x302098 = Instance.new(_0x_krein_unpack(154))
+             _0x302098.Size = UDim2.new(_0x2fc1af,0,1,0); _0x302098.BackgroundColor3 = _0x2ad2.SliderFill; _0x302098.BorderSizePixel = 0; _0x302098.Parent = _0x1a726
+             _0x50be634c(_0x302098, 3)
+             local _0x32798c = Instance.new(_0x_krein_unpack(155))
+             _0x32798c.Size = UDim2.new(0,16,0,16); _0x32798c.Position = UDim2.new(_0x2fc1af,-8,0,-5)
+             _0x32798c.BackgroundColor3 = Color3.fromRGB(240,242,255); _0x32798c.BorderSizePixel = 0
+             _0x32798c.Text = ""; _0x32798c.AutoButtonColor = false; _0x32798c.ZIndex = 5; _0x32798c.Parent = _0x1a726
+             _0x50be634c(_0x32798c, 8); _0x352a5f67(_0x32798c, _0x2ad2.SliderFill, 1.5, 0.1)
+             local function _0x20be45d4(val)
                  if not float then return math.floor(val+0.5) end
-                 local _l_l1l1I1ll = mx - mn
-                 local _l_lIlIl1ll = _l_l1l1I1ll <= 0.01 and 4 or _l_l1l1I1ll <= 1 and 3 or 2
-                 local _l_lllIl1ll = 10^_l_lIlIl1ll
-                 return math.floor(val * _l_lllIl1ll + 0.5) / _l_lllIl1ll
+                 local _0x674644e = mx - mn
+                 local _0x21b5825a = _0x674644e <= 0.01 and 4 or _0x674644e <= 1 and 3 or 2
+                 local _0x4c6bdb98 = 10^_0x21b5825a
+                 return math.floor(val * _0x4c6bdb98 + 0.5) / _0x4c6bdb98
              end
-             local function _l_l1lIl1ll(_l_ll1ll1ll)
-                 _l_ll1ll1ll = math.clamp(_l_ll1ll1ll,0,1)
-                 _l_l1llI1ll = math.clamp(_l_l1IIl1ll(mn+(mx-mn)*_l_ll1ll1ll), mn, mx)
-                 _l_lIIIl1ll.Size = UDim2.new(_l_ll1ll1ll,0,1,0); _l_llIIl1ll.Position = UDim2.new(_l_ll1ll1ll,-8,0,-5)
-                 _l_lI11I1ll.Text = _l_lll1I1ll(_l_l1llI1ll)
-                 pcall(_l_lIl1l1ll, _l_l1llI1ll) 
+             local function _0x35fd4bc7(_0x1dc06)
+                 _0x1dc06 = math.clamp(_0x1dc06,0,1)
+                 _0x36ff = math.clamp(_0x20be45d4(mn+(mx-mn)*_0x1dc06), mn, mx)
+                 _0x302098.Size = UDim2.new(_0x1dc06,0,1,0); _0x32798c.Position = UDim2.new(_0x1dc06,-8,0,-5)
+                 _0x311af604.Text = _0x4bbb799c(_0x36ff)
+                 pcall(_0x3789, _0x36ff) 
              end
-             _l_lI11I1ll.FocusLost:Connect(function()
-                 _l_lIl1I1ll.Color = _l_llII1ll.CompStroke; _l_lIl1I1ll.Transparency = 0.3
-                 _l_lI1ll(_l_l1I1I1ll,{BackgroundColor3=Color3.fromRGB(26,26,38)},0.14)
-                 local _l_lI1Il1ll = tonumber(_l_lI11I1ll.Text)
-                 if _l_lI1Il1ll then
-                     _l_l1llI1ll = math.clamp(_l_l1IIl1ll(_l_lI1Il1ll), mn, mx)
-                     local _l_l1llll = (_l_l1llI1ll-mn)/(mx-mn)
-                     _l_lIIIl1ll.Size=UDim2.new(_l_l1llll,0,1,0); _l_llIIl1ll.Position=UDim2.new(_l_l1llll,-8,0,-5)
-                     _l_lI11I1ll.Text=_l_lll1I1ll(_l_l1llI1ll); pcall(_l_lIl1l1ll, _l_l1llI1ll)
-                 else _l_lI11I1ll.Text=_l_lll1I1ll(_l_l1llI1ll) end
+             _0x311af604.FocusLost:Connect(function()
+                 _0x66c74838.Color = _0x2ad2.CompStroke; _0x66c74838.Transparency = 0.3
+                 _0x38e1(_0x6acb654,{BackgroundColor3=Color3.fromRGB(26,26,38)},0.14)
+                 local _0x69b8385 = tonumber(_0x311af604.Text)
+                 if _0x69b8385 then
+                     _0x36ff = math.clamp(_0x20be45d4(_0x69b8385), mn, mx)
+                     local _0x2ad6 = (_0x36ff-mn)/(mx-mn)
+                     _0x302098.Size=UDim2.new(_0x2ad6,0,1,0); _0x32798c.Position=UDim2.new(_0x2ad6,-8,0,-5)
+                     _0x311af604.Text=_0x4bbb799c(_0x36ff); pcall(_0x3789, _0x36ff)
+                 else _0x311af604.Text=_0x4bbb799c(_0x36ff) end
              end)
              
-             local _l_ll1Il1ll = false
-             local function _l_l11Il1ll(_l_ll1llIlll)
-                 if _l_ll1llIlll.UserInputType ~= Enum.UserInputType.MouseButton1 and _l_ll1llIlll.UserInputType ~= Enum.UserInputType.Touch then return end
-                 if _l_ll1Il1ll then return end
-                 _l_ll1Il1ll = true
+             local _0x74d1d75 = false
+             local function _0x2f5851(_0x1c361)
+                 if _0x1c361.UserInputType ~= Enum.UserInputType.MouseButton1 and _0x1c361.UserInputType ~= Enum.UserInputType.Touch then return end
+                 if _0x74d1d75 then return end
+                 _0x74d1d75 = true
                  
-                 local _l_lIIll1ll = _l_ll11I1ll:FindFirstAncestorOfClass(_l1_Unpack(156))
-                 local _l_llIll1ll = _l_lIIll1ll and _l_lIIll1ll.ScrollingEnabled
-                 if _l_lIIll1ll then _l_lIIll1ll.ScrollingEnabled = false end
+                 local _0x3971 = _0x1a726:FindFirstAncestorOfClass(_0x_krein_unpack(156))
+                 local _0x57c08616 = _0x3971 and _0x3971.ScrollingEnabled
+                 if _0x3971 then _0x3971.ScrollingEnabled = false end
 
-                 local _l_l1Ill1ll = _l_ll1llIlll.UserInputType == Enum.UserInputType.Touch
-                 local _l_lIlll1ll = false
+                 local _0x7b7fb755 = _0x1c361.UserInputType == Enum.UserInputType.Touch
+                 local _0x4bf0ff7c = false
                  
-                 local function _l_lllll1ll()
-                     if _l_lIlll1ll then return end
-                     _l_lIlll1ll = true
-                     _l_ll1Il1ll = false
-                     if _l_lIIll1ll then _l_lIIll1ll.ScrollingEnabled = _l_llIll1ll end
-                     if _l_l11ll1ll then _l_l11ll1ll:Disconnect() end
-                     if _l_lII1l1ll then _l_lII1l1ll:Disconnect() end
-                     _l_lI1ll(_l_llIIl1ll, {Size = UDim2.new(0,16,0,16)}, 0.1)
+                 local function _0x331181c6()
+                     if _0x4bf0ff7c then return end
+                     _0x4bf0ff7c = true
+                     _0x74d1d75 = false
+                     if _0x3971 then _0x3971.ScrollingEnabled = _0x57c08616 end
+                     if _0x38bc then _0x38bc:Disconnect() end
+                     if _0x37c5 then _0x37c5:Disconnect() end
+                     _0x38e1(_0x32798c, {Size = UDim2.new(0,16,0,16)}, 0.1)
                  end
 
-                 local function _l_l1lll1ll(pos)
-                     local _l_lI1ll1ll = _l_ll11I1ll.AbsoluteSize.X
-                     if _l_lI1ll1ll > 0 then
-                         local _l_ll1ll1ll = (pos.X - _l_ll11I1ll.AbsolutePosition.X) / _l_lI1ll1ll
-                         _l_ll1ll1ll = math.clamp(_l_ll1ll1ll, 0, 1)
-                         pcall(function() _l_l1lIl1ll(_l_ll1ll1ll) end)
+                 local function _0x31ff9c14(pos)
+                     local _0x377a = _0x1a726.AbsoluteSize.X
+                     if _0x377a > 0 then
+                         local _0x1dc06 = (pos.X - _0x1a726.AbsolutePosition.X) / _0x377a
+                         _0x1dc06 = math.clamp(_0x1dc06, 0, 1)
+                         pcall(function() _0x35fd4bc7(_0x1dc06) end)
                      end
                  end
 
-                 _l_l1lll1ll(_l_ll1llIlll.Position)
-                 _l_lI1ll(_l_llIIl1ll, {Size = UDim2.new(0,20,0,20)}, 0.1)
+                 _0x31ff9c14(_0x1c361.Position)
+                 _0x38e1(_0x32798c, {Size = UDim2.new(0,20,0,20)}, 0.1)
 
-                 local _l_l11ll1ll = _l_llll.InputChanged:Connect(function(mi)
-                     if _l_l1Ill1ll then
-                         if mi.UserInputType == Enum.UserInputType.Touch then _l_l1lll1ll(mi.Position) end
+                 local _0x38bc = _0x17298.InputChanged:Connect(function(mi)
+                     if _0x7b7fb755 then
+                         if mi.UserInputType == Enum.UserInputType.Touch then _0x31ff9c14(mi.Position) end
                      else
-                         if mi.UserInputType == Enum.UserInputType.MouseMovement then _l_l1lll1ll(mi.Position) end
+                         if mi.UserInputType == Enum.UserInputType.MouseMovement then _0x31ff9c14(mi.Position) end
                      end
                  end)
 
-                 local _l_lII1l1ll = _l_llll.InputEnded:Connect(function(ei)
-                     if _l_l1Ill1ll then
-                         if ei.UserInputType == Enum.UserInputType.Touch then _l_lllll1ll() end
+                 local _0x37c5 = _0x17298.InputEnded:Connect(function(ei)
+                     if _0x7b7fb755 then
+                         if ei.UserInputType == Enum.UserInputType.Touch then _0x331181c6() end
                      else
-                         if ei.UserInputType == Enum.UserInputType.MouseButton1 then _l_lllll1ll() end
+                         if ei.UserInputType == Enum.UserInputType.MouseButton1 then _0x331181c6() end
                      end
                  end)
              end
 
-             _l_llIIl1ll.InputBegan:Connect(_l_l11Il1ll)
-             _l_ll11I1ll.InputBegan:Connect(_l_l11Il1ll)
+             _0x32798c.InputBegan:Connect(_0x2f5851)
+             _0x1a726.InputBegan:Connect(_0x2f5851)
              
-             local _l_lI1II1ll = {}
-             function _l_lI1II1ll:SetValue(v)
-                 _l_l1llI1ll=math.clamp(_l_l1IIl1ll(v),mn,mx)
-                 local _l_l1llll=(_l_l1llI1ll-mn)/(mx-mn); _l_lIIIl1ll.Size=UDim2.new(_l_l1llll,0,1,0); _l_llIIl1ll.Position=UDim2.new(_l_l1llll,-8,0,-5)
-                 _l_lI11I1ll.Text=_l_lll1I1ll(_l_l1llI1ll); pcall(_l_lIl1l1ll, _l_l1llI1ll)
+             local _0x1d7f7 = {}
+             function _0x1d7f7:SetValue(v)
+                 _0x36ff=math.clamp(_0x20be45d4(v),mn,mx)
+                 local _0x2ad6=(_0x36ff-mn)/(mx-mn); _0x302098.Size=UDim2.new(_0x2ad6,0,1,0); _0x32798c.Position=UDim2.new(_0x2ad6,-8,0,-5)
+                 _0x311af604.Text=_0x4bbb799c(_0x36ff); pcall(_0x3789, _0x36ff)
              end
-             function _l_lI1II1ll:GetValue() return _l_l1llI1ll end
-             function _l_lI1II1ll:SetEnabled(e) _l_llIIl1ll.Active=e; _l_lllII1ll.BackgroundTransparency=e and 0.03 or 0.5 end
-             function _l_lI1II1ll:SetVisible(v) _l_lllII1ll.Visible=v; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_lllII1ll:Destroy(); _l_l1l11lll() end
-             function _l_lI1II1ll:UpdateCallback(newCb) _l_lIl1l1ll=newCb end
-             return _l_lI1II1ll
+             function _0x1d7f7:GetValue() return _0x36ff end
+             function _0x1d7f7:SetEnabled(e) _0x32798c.Active=e; _0x2b64.BackgroundTransparency=e and 0.03 or 0.5 end
+             function _0x1d7f7:SetVisible(v) _0x2b64.Visible=v; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x2b64:Destroy(); _0x65af86bb() end
+             function _0x1d7f7:UpdateCallback(newCb) _0x3789=newCb end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:CreateDropdown(config, _legacyOpts, _legacyCb, _legacyMulti)
-             if type(config) == _l1_Unpack(157) then
-                 config = {Text=config, Options=_legacyOpts or {_l1_Unpack(158)}, Callback=_legacyCb or function() end, MultiSelect=_legacyMulti or false}
+         function _0x271a9e:CreateDropdown(config, _legacyOpts, _legacyCb, _legacyMulti)
+             if type(config) == _0x_krein_unpack(157) then
+                 config = {Text=config, Options=_legacyOpts or {_0x_krein_unpack(158)}, Callback=_legacyCb or function() end, MultiSelect=_legacyMulti or false}
              end
-             local _l_llI1l1ll=config.Text or _l1_Unpack(159); local _l_l1I1l1ll=config.Options or {_l1_Unpack(160)}
-             local _l_lIl1l1ll=config.Callback or function() end; local _l_lll1l1ll=config.MultiSelect or false
-             local _l_l1l1l1ll={}; local _l_lI11l1ll=false; local _l_ll11l1ll=32; local _l_l111l1ll=5; local _l_lIII11ll=8
-             if _l_lll1l1ll then _l_l1l1l1ll={}; if _l_l1I1l1ll[1] then _l_l1l1l1ll[_l_l1I1l1ll[1]]=true end else _l_l1l1l1ll=_l_l1I1l1ll[1] end
-             local function _l_llII11ll() return math.min(#_l_l1I1l1ll,_l_l111l1ll)*_l_ll11l1ll+_l_lIII11ll end
-             local _l_l1II11ll=Instance.new(_l1_Unpack(161))
-             _l_l1II11ll.Name=_l1_Unpack(162).._l_llI1l1ll; _l_l1II11ll.Size=UDim2.new(0.96,0,0,38); _l_l1II11ll.BackgroundColor3=_l_llII1ll.ComponentBg
-             _l_l1II11ll.BackgroundTransparency=0.03; _l_l1II11ll.BorderSizePixel=0; _l_l1II11ll.LayoutOrder=_l_l1III1ll()
-             _l_l1II11ll.ClipsDescendants=true; _l_l1II11ll.ZIndex=2; _l_l1II11ll.Parent=_l_ll1l1lll
-             _l_ll1ll(_l_l1II11ll,10); _l_lIIlll(_l_l1II11ll,Color3.fromRGB(255,255,255),1,0.92)
-             local _l_lIlI11ll=Instance.new(_l1_Unpack(163)); _l_lIlI11ll.Color=Color3.fromRGB(48,50,70)
-             _l_lIlI11ll.Thickness=1.5; _l_lIlI11ll.Transparency=0.6; _l_lIlI11ll.Parent=_l_l1II11ll
-             local _l_l1I1ll=Instance.new(_l1_Unpack(164)); _l_l1I1ll.Size=UDim2.new(1,-160,0,38); _l_l1I1ll.Position=UDim2.new(0,14,0,0)
-             _l_l1I1ll.BackgroundTransparency=1; _l_l1I1ll.Text=_l_llI1l1ll; _l_l1I1ll.TextColor3=_l_llII1ll.Text; _l_l1I1ll.Font=_l_l1lll.Medium
-             _l_l1I1ll.TextSize=12; _l_l1I1ll.TextXAlignment=Enum.TextXAlignment.Left
-             _l_l1I1ll.TextTruncate=Enum.TextTruncate.AtEnd; _l_l1I1ll.ZIndex=3; _l_l1I1ll.Parent=_l_l1II11ll
-             local _l_lllI11ll=Instance.new(_l1_Unpack(165)); _l_lllI11ll.Size=UDim2.new(0,108,0,38); _l_lllI11ll.Position=UDim2.new(1,-144,0,0)
-             _l_lllI11ll.BackgroundTransparency=1; _l_lllI11ll.TextColor3=_l_llII1ll.SubText; _l_lllI11ll.Font=_l_l1lll.Medium
-             _l_lllI11ll.TextSize=11; _l_lllI11ll.TextXAlignment=Enum.TextXAlignment.Right; _l_lllI11ll.TextTruncate=Enum.TextTruncate.AtEnd
-             _l_lllI11ll.ZIndex=3; _l_lllI11ll.Parent=_l_l1II11ll
-             local _l_l1lI11ll=Instance.new(_l1_Unpack(166)); _l_l1lI11ll.Size=UDim2.new(0,20,0,38); _l_l1lI11ll.Position=UDim2.new(1,-24,0,0)
-             _l_l1lI11ll.BackgroundTransparency=1; _l_l1lI11ll.Text=_l1_Unpack(167); _l_l1lI11ll.TextColor3=_l_llII1ll.AccentBlue
-             _l_l1lI11ll.Font=_l_l1lll.Body; _l_l1lI11ll.TextSize=9; _l_l1lI11ll.ZIndex=3; _l_l1lI11ll.Parent=_l_l1II11ll
-             local _l_lI1I11ll=Instance.new(_l1_Unpack(168)); _l_lI1I11ll.Size=UDim2.new(1,0,0,1); _l_lI1I11ll.Position=UDim2.new(0,0,0,38)
-             _l_lI1I11ll.BackgroundColor3=Color3.fromRGB(255,255,255); _l_lI1I11ll.BackgroundTransparency=0.88
-             _l_lI1I11ll.BorderSizePixel=0; _l_lI1I11ll.ZIndex=3; _l_lI1I11ll.Visible=false; _l_lI1I11ll.Parent=_l_l1II11ll
-             local _l_ll1I11ll=_l_llII11ll(); local _l_l11I11ll=#_l_l1I1l1ll*_l_ll11l1ll+_l_lIII11ll
-             local _l_lIIl11ll=Instance.new(_l1_Unpack(169)); _l_lIIl11ll.Size=UDim2.new(1,0,0,_l_ll1I11ll)
-             _l_lIIl11ll.Position=UDim2.new(0,0,0,39); _l_lIIl11ll.BackgroundColor3=_l_llII1ll.DropdownBg
-             _l_lIIl11ll.BackgroundTransparency=0.03; _l_lIIl11ll.BorderSizePixel=0; _l_lIIl11ll.ScrollBarThickness=2
-             _l_lIIl11ll.ScrollBarImageColor3=Color3.fromRGB(58,60,80); _l_lIIl11ll.ScrollingDirection=Enum.ScrollingDirection.Y
-             _l_lIIl11ll.CanvasSize=UDim2.new(0,0,0,_l_l11I11ll); _l_lIIl11ll.Selectable=false; _l_lIIl11ll.ZIndex=3
-             _l_lIIl11ll.Visible=false; _l_lIIl11ll.Parent=_l_l1II11ll
-             local function _l_llIl11ll()
-                 if _l_lll1l1ll then
-                     local _l_l1Il11ll=0; for _,v in pairs(_l_l1l1l1ll) do if v then _l_l1Il11ll=_l_l1Il11ll+1 end end
-                     _l_lllI11ll.Text=_l_l1Il11ll.._l1_Unpack(170)
-                 else _l_lllI11ll.Text=_l_l1l1l1ll or "" end
+             local _0x367055=config.Text or _0x_krein_unpack(159); local _0x345349=config.Options or {_0x_krein_unpack(160)}
+             local _0x3789=config.Callback or function() end; local _0x6370064=config.MultiSelect or false
+             local _0x2d16c7={}; local _0x56f0a56=false; local _0x345323=32; local _0x3332a1=5; local _0x1dbc3=8
+             if _0x6370064 then _0x2d16c7={}; if _0x345349[1] then _0x2d16c7[_0x345349[1]]=true end else _0x2d16c7=_0x345349[1] end
+             local function _0x4ec5aeba() return math.min(#_0x345349,_0x3332a1)*_0x345323+_0x1dbc3 end
+             local _0x37fb7c=Instance.new(_0x_krein_unpack(161))
+             _0x37fb7c.Name=_0x_krein_unpack(162).._0x367055; _0x37fb7c.Size=UDim2.new(0.96,0,0,38); _0x37fb7c.BackgroundColor3=_0x2ad2.ComponentBg
+             _0x37fb7c.BackgroundTransparency=0.03; _0x37fb7c.BorderSizePixel=0; _0x37fb7c.LayoutOrder=_0x38bd()
+             _0x37fb7c.ClipsDescendants=true; _0x37fb7c.ZIndex=2; _0x37fb7c.Parent=_0x353f
+             _0x50be634c(_0x37fb7c,10); _0x352a5f67(_0x37fb7c,Color3.fromRGB(255,255,255),1,0.92)
+             local _0x356a8a1=Instance.new(_0x_krein_unpack(163)); _0x356a8a1.Color=Color3.fromRGB(48,50,70)
+             _0x356a8a1.Thickness=1.5; _0x356a8a1.Transparency=0.6; _0x356a8a1.Parent=_0x37fb7c
+             local _0x1cc22=Instance.new(_0x_krein_unpack(164)); _0x1cc22.Size=UDim2.new(1,-160,0,38); _0x1cc22.Position=UDim2.new(0,14,0,0)
+             _0x1cc22.BackgroundTransparency=1; _0x1cc22.Text=_0x367055; _0x1cc22.TextColor3=_0x2ad2.Text; _0x1cc22.Font=_0x2aa3.Medium
+             _0x1cc22.TextSize=12; _0x1cc22.TextXAlignment=Enum.TextXAlignment.Left
+             _0x1cc22.TextTruncate=Enum.TextTruncate.AtEnd; _0x1cc22.ZIndex=3; _0x1cc22.Parent=_0x37fb7c
+             local _0x3600fdd0=Instance.new(_0x_krein_unpack(165)); _0x3600fdd0.Size=UDim2.new(0,108,0,38); _0x3600fdd0.Position=UDim2.new(1,-144,0,0)
+             _0x3600fdd0.BackgroundTransparency=1; _0x3600fdd0.TextColor3=_0x2ad2.SubText; _0x3600fdd0.Font=_0x2aa3.Medium
+             _0x3600fdd0.TextSize=11; _0x3600fdd0.TextXAlignment=Enum.TextXAlignment.Right; _0x3600fdd0.TextTruncate=Enum.TextTruncate.AtEnd
+             _0x3600fdd0.ZIndex=3; _0x3600fdd0.Parent=_0x37fb7c
+             local _0x58c9f3e=Instance.new(_0x_krein_unpack(166)); _0x58c9f3e.Size=UDim2.new(0,20,0,38); _0x58c9f3e.Position=UDim2.new(1,-24,0,0)
+             _0x58c9f3e.BackgroundTransparency=1; _0x58c9f3e.Text=_0x_krein_unpack(167); _0x58c9f3e.TextColor3=_0x2ad2.AccentBlue
+             _0x58c9f3e.Font=_0x2aa3.Body; _0x58c9f3e.TextSize=9; _0x58c9f3e.ZIndex=3; _0x58c9f3e.Parent=_0x37fb7c
+             local _0x1e794=Instance.new(_0x_krein_unpack(168)); _0x1e794.Size=UDim2.new(1,0,0,1); _0x1e794.Position=UDim2.new(0,0,0,38)
+             _0x1e794.BackgroundColor3=Color3.fromRGB(255,255,255); _0x1e794.BackgroundTransparency=0.88
+             _0x1e794.BorderSizePixel=0; _0x1e794.ZIndex=3; _0x1e794.Visible=false; _0x1e794.Parent=_0x37fb7c
+             local _0x6238ea1=_0x4ec5aeba(); local _0x5d45ad1=#_0x345349*_0x345323+_0x1dbc3
+             local _0x651037f=Instance.new(_0x_krein_unpack(169)); _0x651037f.Size=UDim2.new(1,0,0,_0x6238ea1)
+             _0x651037f.Position=UDim2.new(0,0,0,39); _0x651037f.BackgroundColor3=_0x2ad2.DropdownBg
+             _0x651037f.BackgroundTransparency=0.03; _0x651037f.BorderSizePixel=0; _0x651037f.ScrollBarThickness=2
+             _0x651037f.ScrollBarImageColor3=Color3.fromRGB(58,60,80); _0x651037f.ScrollingDirection=Enum.ScrollingDirection.Y
+             _0x651037f.CanvasSize=UDim2.new(0,0,0,_0x5d45ad1); _0x651037f.Selectable=false; _0x651037f.ZIndex=3
+             _0x651037f.Visible=false; _0x651037f.Parent=_0x37fb7c
+             local function _0x1cb57ed8()
+                 if _0x6370064 then
+                     local _0x5a77c4a=0; for _,v in pairs(_0x2d16c7) do if v then _0x5a77c4a=_0x5a77c4a+1 end end
+                     _0x3600fdd0.Text=_0x5a77c4a.._0x_krein_unpack(170)
+                 else _0x3600fdd0.Text=_0x2d16c7 or "" end
              end
-             _l_llIl11ll()
-             local _l_lIll11ll=nil; local _l_llll11ll=0; local _l_l1ll11ll=0
-             local function _l_lI1l11ll()
-                 if not _l_lI11l1ll then return end
-                 _l_lI11l1ll=false; _l_llI11lll=false
-                 _l_lI1ll(_l_l1II11ll,{Size=UDim2.new(0.96,0,0,38)},0.22,Enum.EasingStyle.Quart,Enum.EasingDirection.In)
-                 _l_lI1ll(_l_l1lI11ll,{Rotation=0},0.18)
-                 _l_ll1l1lll.Size=UDim2.new(1,0,0,_l_l1ll11ll)
-                 _l_lI1ll(_l_llIl1lll,{Size=UDim2.new(0.97,0,0,36+_l_l1ll11ll+4)},0.22,Enum.EasingStyle.Quart,Enum.EasingDirection.In)
+             _0x1cb57ed8()
+             local _0x61e64a=nil; local _0x18aeec5d=0; local _0x31f00773=0
+             local function _0x30de3968()
+                 if not _0x56f0a56 then return end
+                 _0x56f0a56=false; _0xf4dfd34=false
+                 _0x38e1(_0x37fb7c,{Size=UDim2.new(0.96,0,0,38)},0.22,Enum.EasingStyle.Quart,Enum.EasingDirection.In)
+                 _0x38e1(_0x58c9f3e,{Rotation=0},0.18)
+                 _0x353f.Size=UDim2.new(1,0,0,_0x31f00773)
+                 _0x38e1(_0x2244f3b8,{Size=UDim2.new(0.97,0,0,36+_0x31f00773+4)},0.22,Enum.EasingStyle.Quart,Enum.EasingDirection.In)
                  task.delay(0.23,function()
-                     if not _l_lI11l1ll then _l_lI1I11ll.Visible=false; _l_lIIl11ll.Visible=false; _l_l1II11ll.ClipsDescendants=true end
+                     if not _0x56f0a56 then _0x1e794.Visible=false; _0x651037f.Visible=false; _0x37fb7c.ClipsDescendants=true end
                  end)
-                 if _l_lIll11ll then _l_lIll11ll:Disconnect(); _l_lIll11ll=nil end
+                 if _0x61e64a then _0x61e64a:Disconnect(); _0x61e64a=nil end
              end
-             local function _l_ll1l11ll()
-                 _l_lI11l1ll=true; _l_llI11lll=true; _l_llll11ll=tick(); _l_l1ll11ll=_l_l1I11lll()
-                 _l_ll1I11ll=_l_llII11ll(); _l_l11I11ll=#_l_l1I1l1ll*_l_ll11l1ll+_l_lIII11ll
-                 _l_lIIl11ll.Size=UDim2.new(1,0,0,_l_ll1I11ll); _l_lIIl11ll.CanvasSize=UDim2.new(0,0,0,_l_l11I11ll)
-                 _l_l1II11ll.ClipsDescendants=false; _l_lI1I11ll.Visible=true; _l_lIIl11ll.Visible=true
-                 _l_lI1ll(_l_l1II11ll,{Size=UDim2.new(0.96,0,0,38+1+_l_ll1I11ll)},0.22,Enum.EasingStyle.Quart,Enum.EasingDirection.Out)
-                 _l_lI1ll(_l_l1lI11ll,{Rotation=180},0.18)
-                 local _l_l11l11ll=_l_l1ll11ll+_l_ll1I11ll+1
-                 _l_ll1l1lll.Size=UDim2.new(1,0,0,_l_l11l11ll)
-                 _l_lI1ll(_l_llIl1lll,{Size=UDim2.new(0.97,0,0,36+_l_l11l11ll+4)},0.22,Enum.EasingStyle.Quart,Enum.EasingDirection.Out)
+             local function _0x7a900fbb()
+                 _0x56f0a56=true; _0xf4dfd34=true; _0x18aeec5d=tick(); _0x31f00773=_0x2f51f421()
+                 _0x6238ea1=_0x4ec5aeba(); _0x5d45ad1=#_0x345349*_0x345323+_0x1dbc3
+                 _0x651037f.Size=UDim2.new(1,0,0,_0x6238ea1); _0x651037f.CanvasSize=UDim2.new(0,0,0,_0x5d45ad1)
+                 _0x37fb7c.ClipsDescendants=false; _0x1e794.Visible=true; _0x651037f.Visible=true
+                 _0x38e1(_0x37fb7c,{Size=UDim2.new(0.96,0,0,38+1+_0x6238ea1)},0.22,Enum.EasingStyle.Quart,Enum.EasingDirection.Out)
+                 _0x38e1(_0x58c9f3e,{Rotation=180},0.18)
+                 local _0x3e842267=_0x31f00773+_0x6238ea1+1
+                 _0x353f.Size=UDim2.new(1,0,0,_0x3e842267)
+                 _0x38e1(_0x2244f3b8,{Size=UDim2.new(0.97,0,0,36+_0x3e842267+4)},0.22,Enum.EasingStyle.Quart,Enum.EasingDirection.Out)
              end
-             local function _l_lII111ll(list)
-                 for _,_l_l11ll in ipairs(_l_lIIl11ll:GetChildren()) do if _l_l11ll:IsA(_l1_Unpack(171)) then _l_l11ll:Destroy() end end
+             local function _0x53835910(list)
+                 for _,_0x2ac3 in ipairs(_0x651037f:GetChildren()) do if _0x2ac3:IsA(_0x_krein_unpack(171)) then _0x2ac3:Destroy() end end
                  for i,opt in ipairs(list) do
-                     local _l_llI111ll=Instance.new(_l1_Unpack(172))
-                     _l_llI111ll.Size=UDim2.new(0.92,0,0,_l_ll11l1ll-4); _l_llI111ll.Position=UDim2.new(0.04,0,0,_l_lIII11ll/2+(i-1)*_l_ll11l1ll)
-                     _l_llI111ll.BackgroundColor3=(_l_lll1l1ll and _l_l1l1l1ll[opt]) and _l_llII1ll.SliderFill or _l_llII1ll.OptionBg
-                     _l_llI111ll.BackgroundTransparency=0.03; _l_llI111ll.BorderSizePixel=0
-                     _l_llI111ll.Text=_l1_Unpack(173)..opt; _l_llI111ll.TextColor3=_l_llII1ll.Text; _l_llI111ll.Font=_l_l1lll.Body; _l_llI111ll.TextSize=12
-                     _l_llI111ll.TextXAlignment=Enum.TextXAlignment.Left; _l_llI111ll.TextTruncate=Enum.TextTruncate.AtEnd
-                     _l_llI111ll.AutoButtonColor=false; _l_llI111ll.ZIndex=4; _l_llI111ll.Parent=_l_lIIl11ll; _l_ll1ll(_l_llI111ll,7)
-                     _l_llI111ll.MouseEnter:Connect(function() if not(_l_lll1l1ll and _l_l1l1l1ll[opt]) then _l_lI1ll(_l_llI111ll,{BackgroundColor3=_l_llII1ll.OptionHover},0.1) end end)
-                     _l_llI111ll.MouseLeave:Connect(function() _l_lI1ll(_l_llI111ll,{BackgroundColor3=(_l_lll1l1ll and _l_l1l1l1ll[opt]) and _l_llII1ll.SliderFill or _l_llII1ll.OptionBg},0.1) end)
-                     _l_llI111ll.MouseButton1Click:Connect(function()
-                         if _l_lll1l1ll then
-                             _l_l1l1l1ll[opt]=not _l_l1l1l1ll[opt]; _l_lI1ll(_l_llI111ll,{BackgroundColor3=_l_l1l1l1ll[opt] and _l_llII1ll.SliderFill or _l_llII1ll.OptionBg},0.12)
-                             _l_llIl11ll(); local _l_l1I111ll={}
-                             for o,v in pairs(_l_l1l1l1ll) do if v then table.insert(_l_l1I111ll,o) end end; pcall(_l_lIl1l1ll, _l_l1l1l1ll, _l_l1I111ll)
-                         else _l_l1l1l1ll=opt; _l_lllI11ll.Text=opt; _l_lI1l11ll(); pcall(_l_lIl1l1ll, opt) end
+                     local _0x3916=Instance.new(_0x_krein_unpack(172))
+                     _0x3916.Size=UDim2.new(0.92,0,0,_0x345323-4); _0x3916.Position=UDim2.new(0.04,0,0,_0x1dbc3/2+(i-1)*_0x345323)
+                     _0x3916.BackgroundColor3=(_0x6370064 and _0x2d16c7[opt]) and _0x2ad2.SliderFill or _0x2ad2.OptionBg
+                     _0x3916.BackgroundTransparency=0.03; _0x3916.BorderSizePixel=0
+                     _0x3916.Text=_0x_krein_unpack(173)..opt; _0x3916.TextColor3=_0x2ad2.Text; _0x3916.Font=_0x2aa3.Body; _0x3916.TextSize=12
+                     _0x3916.TextXAlignment=Enum.TextXAlignment.Left; _0x3916.TextTruncate=Enum.TextTruncate.AtEnd
+                     _0x3916.AutoButtonColor=false; _0x3916.ZIndex=4; _0x3916.Parent=_0x651037f; _0x50be634c(_0x3916,7)
+                     _0x3916.MouseEnter:Connect(function() if not(_0x6370064 and _0x2d16c7[opt]) then _0x38e1(_0x3916,{BackgroundColor3=_0x2ad2.OptionHover},0.1) end end)
+                     _0x3916.MouseLeave:Connect(function() _0x38e1(_0x3916,{BackgroundColor3=(_0x6370064 and _0x2d16c7[opt]) and _0x2ad2.SliderFill or _0x2ad2.OptionBg},0.1) end)
+                     _0x3916.MouseButton1Click:Connect(function()
+                         if _0x6370064 then
+                             _0x2d16c7[opt]=not _0x2d16c7[opt]; _0x38e1(_0x3916,{BackgroundColor3=_0x2d16c7[opt] and _0x2ad2.SliderFill or _0x2ad2.OptionBg},0.12)
+                             _0x1cb57ed8(); local _0x1e79e={}
+                             for o,v in pairs(_0x2d16c7) do if v then table.insert(_0x1e79e,o) end end; pcall(_0x3789, _0x2d16c7, _0x1e79e)
+                         else _0x2d16c7=opt; _0x3600fdd0.Text=opt; _0x30de3968(); pcall(_0x3789, opt) end
                      end)
                  end
              end
-             _l_lII111ll(_l_l1I1l1ll)
-             local _l_lIl111ll=Instance.new(_l1_Unpack(174)); _l_lIl111ll.Size=UDim2.new(1,0,0,38)
-             _l_lIl111ll.BackgroundTransparency=1; _l_lIl111ll.Text=""; _l_lIl111ll.ZIndex=10; _l_lIl111ll.Parent=_l_l1II11ll
-             local _l_lll111ll=false
-             _l_lIl111ll.MouseButton1Click:Connect(function()
-                 if _l_lll111ll then return end
-                 _l_lll111ll=true
-                 if _l_lI11l1ll then
-                     _l_lI1l11ll()
-                     task.delay(0.25, function() _l_lll111ll=false end)
+             _0x53835910(_0x345349)
+             local _0x369f61=Instance.new(_0x_krein_unpack(174)); _0x369f61.Size=UDim2.new(1,0,0,38)
+             _0x369f61.BackgroundTransparency=1; _0x369f61.Text=""; _0x369f61.ZIndex=10; _0x369f61.Parent=_0x37fb7c
+             local _0x51b5bafe=false
+             _0x369f61.MouseButton1Click:Connect(function()
+                 if _0x51b5bafe then return end
+                 _0x51b5bafe=true
+                 if _0x56f0a56 then
+                     _0x30de3968()
+                     task.delay(0.25, function() _0x51b5bafe=false end)
                  else
-                     _l_ll1l11ll()
-                     task.delay(0.25, function() _l_lll111ll=false end)
+                     _0x7a900fbb()
+                     task.delay(0.25, function() _0x51b5bafe=false end)
                  end
              end)
-             local _l_lI1II1ll={}
-             function _l_lI1II1ll:SetValue(v)
-                 if _l_lll1l1ll then
-                     if type(v)==_l1_Unpack(175) then _l_l1l1l1ll=v else _l_l1l1l1ll[v]=not _l_l1l1l1ll[v] end
-                     _l_llIl11ll(); _l_lII111ll(_l_l1I1l1ll)
-                     local _l_l1I111ll={}; for o,val in pairs(_l_l1l1l1ll) do if val then table.insert(_l_l1I111ll,o) end end; pcall(_l_lIl1l1ll, _l_l1l1l1ll, _l_l1I111ll)
-                 else if table.find(_l_l1I1l1ll,v) then _l_l1l1l1ll=v; _l_lllI11ll.Text=v; pcall(_l_lIl1l1ll, v) end end
+             local _0x1d7f7={}
+             function _0x1d7f7:SetValue(v)
+                 if _0x6370064 then
+                     if type(v)==_0x_krein_unpack(175) then _0x2d16c7=v else _0x2d16c7[v]=not _0x2d16c7[v] end
+                     _0x1cb57ed8(); _0x53835910(_0x345349)
+                     local _0x1e79e={}; for o,val in pairs(_0x2d16c7) do if val then table.insert(_0x1e79e,o) end end; pcall(_0x3789, _0x2d16c7, _0x1e79e)
+                 else if table.find(_0x345349,v) then _0x2d16c7=v; _0x3600fdd0.Text=v; pcall(_0x3789, v) end end
              end
-             function _l_lI1II1ll:GetValue()
-                 if _l_lll1l1ll then local _l_l1I111ll={}; for o,v in pairs(_l_l1l1l1ll) do if v then table.insert(_l_l1I111ll,o) end end; return _l_l1l1l1ll,_l_l1I111ll
-                 else return _l_l1l1l1ll end
+             function _0x1d7f7:GetValue()
+                 if _0x6370064 then local _0x1e79e={}; for o,v in pairs(_0x2d16c7) do if v then table.insert(_0x1e79e,o) end end; return _0x2d16c7,_0x1e79e
+                 else return _0x2d16c7 end
              end
-             function _l_lI1II1ll:SetOptions(newOpts)
-                 _l_l1I1l1ll=newOpts
-                 if _l_lll1l1ll then _l_l1l1l1ll={}; if newOpts[1] then _l_l1l1l1ll[newOpts[1]]=true end else _l_l1l1l1ll=newOpts[1] or "" end
-                 if _l_lI11l1ll then _l_lI1l11ll() end; _l_llIl11ll(); _l_lII111ll(newOpts)
+             function _0x1d7f7:SetOptions(newOpts)
+                 _0x345349=newOpts
+                 if _0x6370064 then _0x2d16c7={}; if newOpts[1] then _0x2d16c7[newOpts[1]]=true end else _0x2d16c7=newOpts[1] or "" end
+                 if _0x56f0a56 then _0x30de3968() end; _0x1cb57ed8(); _0x53835910(newOpts)
              end
-             function _l_lI1II1ll:Close() _l_lI1l11ll() end
-             function _l_lI1II1ll:SetEnabled(e) _l_lIl111ll.Active=e; _l_l1II11ll.BackgroundTransparency=e and 0.03 or 0.5; if not e then _l_lI1l11ll() end end
-             function _l_lI1II1ll:SetVisible(v) _l_l1II11ll.Visible=v; if not v then _l_lI1l11ll() end; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_lI1l11ll(); _l_l1II11ll:Destroy(); _l_l1l11lll() end
-             function _l_lI1II1ll:UpdateCallback(newCb) _l_lIl1l1ll=newCb end
-             return _l_lI1II1ll
+             function _0x1d7f7:Close() _0x30de3968() end
+             function _0x1d7f7:SetEnabled(e) _0x369f61.Active=e; _0x37fb7c.BackgroundTransparency=e and 0.03 or 0.5; if not e then _0x30de3968() end end
+             function _0x1d7f7:SetVisible(v) _0x37fb7c.Visible=v; if not v then _0x30de3968() end; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x30de3968(); _0x37fb7c:Destroy(); _0x65af86bb() end
+             function _0x1d7f7:UpdateCallback(newCb) _0x3789=newCb end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:CreateKeybind(_l_llI1l1ll, defKey, _l_lIl1l1ll)
+         function _0x271a9e:CreateKeybind(_0x367055, defKey, _0x3789)
              defKey=defKey or Enum.KeyCode.F
-             _l_lIl1l1ll = _l_lIl1l1ll or function() end
-             local _l_l1l111ll=defKey; local _l_lI1111ll=false; local _l_ll1111ll=nil
-             local _l_lllII1ll=_l_lIlII1ll(44)
-             local _l_l1I1ll=Instance.new(_l1_Unpack(176)); _l_l1I1ll.Size=UDim2.new(1,-96,1,0); _l_l1I1ll.Position=UDim2.new(0,14,0,0)
-             _l_l1I1ll.BackgroundTransparency=1; _l_l1I1ll.Text=_l_llI1l1ll; _l_l1I1ll.TextColor3=_l_llII1ll.Text
-             _l_l1I1ll.Font=_l_l1lll.Medium; _l_l1I1ll.TextSize=12; _l_l1I1ll.TextXAlignment=Enum.TextXAlignment.Left
-             _l_l1I1ll.TextTruncate=Enum.TextTruncate.AtEnd; _l_l1I1ll.Parent=_l_lllII1ll
-             local _l_l11111ll=Instance.new(_l1_Unpack(177)); _l_l11111ll.Size=UDim2.new(0,68,0,30); _l_l11111ll.Position=UDim2.new(1,-78,0,7)
-             _l_l11111ll.BackgroundColor3=_l_llII1ll.KeybindBg; _l_l11111ll.BackgroundTransparency=0.02; _l_l11111ll.BorderSizePixel=0
-             _l_l11111ll.Text=defKey.Name; _l_l11111ll.TextColor3=_l_llII1ll.TabTextActive; _l_l11111ll.Font=_l_l1lll.Bold; _l_l11111ll.TextSize=10
-             _l_l11111ll.AutoButtonColor=false; _l_l11111ll.Parent=_l_lllII1ll; _l_ll1ll(_l_l11111ll,8); _l_lIIlll(_l_l11111ll,_l_llII1ll.CompStroke,1,0.24)
-             local function _l_lIIIIIlll() if _l_ll1111ll then _l_ll1111ll:Disconnect(); _l_ll1111ll=nil end end
-             _l_l11111ll.MouseButton1Click:Connect(function()
-                 if _l_lI1111ll then _l_lIIIIIlll(); _l_lI1111ll=false; _l_l11111ll.Text=_l_l1l111ll.Name; _l_lI1ll(_l_l11111ll,{BackgroundColor3=_l_llII1ll.KeybindBg},0.12); return end
-                 _l_lI1111ll=true; _l_l11111ll.Text=_l1_Unpack(178); _l_lI1ll(_l_l11111ll,{BackgroundColor3=Color3.fromRGB(58,58,86)},0.12)
-                 _l_ll1111ll=_l_llll.InputBegan:Connect(function(_l_ll1llIlll,gp)
-                     if not _l_lI1111ll then return end; if gp then return end
-                     if _l_ll1llIlll.KeyCode==Enum.KeyCode.Unknown then return end
-                     _l_l1l111ll=_l_ll1llIlll.KeyCode; _l_l11111ll.Text=_l_l1l111ll.Name; _l_lI1111ll=false
-                     _l_lI1ll(_l_l11111ll,{BackgroundColor3=_l_llII1ll.KeybindBg},0.12); _l_lIIIIIlll(); pcall(_l_lIl1l1ll, _l_l1l111ll)
+             _0x3789 = _0x3789 or function() end
+             local _0x2cf8e7=defKey; local _0x5690864=false; local _0x57d0ef9f=nil
+             local _0x2b64=_0x3741(44)
+             local _0x1cc22=Instance.new(_0x_krein_unpack(176)); _0x1cc22.Size=UDim2.new(1,-96,1,0); _0x1cc22.Position=UDim2.new(0,14,0,0)
+             _0x1cc22.BackgroundTransparency=1; _0x1cc22.Text=_0x367055; _0x1cc22.TextColor3=_0x2ad2.Text
+             _0x1cc22.Font=_0x2aa3.Medium; _0x1cc22.TextSize=12; _0x1cc22.TextXAlignment=Enum.TextXAlignment.Left
+             _0x1cc22.TextTruncate=Enum.TextTruncate.AtEnd; _0x1cc22.Parent=_0x2b64
+             local _0x31d53b=Instance.new(_0x_krein_unpack(177)); _0x31d53b.Size=UDim2.new(0,68,0,30); _0x31d53b.Position=UDim2.new(1,-78,0,7)
+             _0x31d53b.BackgroundColor3=_0x2ad2.KeybindBg; _0x31d53b.BackgroundTransparency=0.02; _0x31d53b.BorderSizePixel=0
+             _0x31d53b.Text=defKey.Name; _0x31d53b.TextColor3=_0x2ad2.TabTextActive; _0x31d53b.Font=_0x2aa3.Bold; _0x31d53b.TextSize=10
+             _0x31d53b.AutoButtonColor=false; _0x31d53b.Parent=_0x2b64; _0x50be634c(_0x31d53b,8); _0x352a5f67(_0x31d53b,_0x2ad2.CompStroke,1,0.24)
+             local function _0x662dfaaa() if _0x57d0ef9f then _0x57d0ef9f:Disconnect(); _0x57d0ef9f=nil end end
+             _0x31d53b.MouseButton1Click:Connect(function()
+                 if _0x5690864 then _0x662dfaaa(); _0x5690864=false; _0x31d53b.Text=_0x2cf8e7.Name; _0x38e1(_0x31d53b,{BackgroundColor3=_0x2ad2.KeybindBg},0.12); return end
+                 _0x5690864=true; _0x31d53b.Text=_0x_krein_unpack(178); _0x38e1(_0x31d53b,{BackgroundColor3=Color3.fromRGB(58,58,86)},0.12)
+                 _0x57d0ef9f=_0x17298.InputBegan:Connect(function(_0x1c361,gp)
+                     if not _0x5690864 then return end; if gp then return end
+                     if _0x1c361.KeyCode==Enum.KeyCode.Unknown then return end
+                     _0x2cf8e7=_0x1c361.KeyCode; _0x31d53b.Text=_0x2cf8e7.Name; _0x5690864=false
+                     _0x38e1(_0x31d53b,{BackgroundColor3=_0x2ad2.KeybindBg},0.12); _0x662dfaaa(); pcall(_0x3789, _0x2cf8e7)
                  end)
-                 _l_l111lll(_l_ll1111ll)
+                 _0x1e321(_0x57d0ef9f)
              end)
-             local _l_lI1II1ll={}
-             function _l_lI1II1ll:SetValue(k) _l_l1l111ll=k; _l_l11111ll.Text=k.Name; pcall(_l_lIl1l1ll, k) end
-             function _l_lI1II1ll:GetValue() return _l_l1l111ll end
-             function _l_lI1II1ll:SetEnabled(e) _l_l11111ll.Active=e; _l_lllII1ll.BackgroundTransparency=e and 0.03 or 0.5 end
-             function _l_lI1II1ll:SetVisible(v) _l_lllII1ll.Visible=v; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_lIIIIIlll(); _l_lllII1ll:Destroy(); _l_l1l11lll() end
-             function _l_lI1II1ll:UpdateCallback(newCb) _l_lIl1l1ll=newCb end
-             return _l_lI1II1ll
+             local _0x1d7f7={}
+             function _0x1d7f7:SetValue(k) _0x2cf8e7=k; _0x31d53b.Text=k.Name; pcall(_0x3789, k) end
+             function _0x1d7f7:GetValue() return _0x2cf8e7 end
+             function _0x1d7f7:SetEnabled(e) _0x31d53b.Active=e; _0x2b64.BackgroundTransparency=e and 0.03 or 0.5 end
+             function _0x1d7f7:SetVisible(v) _0x2b64.Visible=v; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x662dfaaa(); _0x2b64:Destroy(); _0x65af86bb() end
+             function _0x1d7f7:UpdateCallback(newCb) _0x3789=newCb end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:CreateColorPicker(_l_llI1l1ll, defColor, _l_lIl1l1ll)
+         function _0x271a9e:CreateColorPicker(_0x367055, defColor, _0x3789)
              defColor = defColor or Color3.fromRGB(255, 255, 255)
-             _l_lIl1l1ll = _l_lIl1l1ll or function() end
-             local _l_llIIIIlll, _l_l1IIIIlll, _l_lIlIIIlll = Color3.toHSV(defColor)
-             local _l_lI11l1ll = false
-             local _l_lllIIIlll = 198
-             local _l_l1lIIIlll = Instance.new(_l1_Unpack(179))
-             _l_l1lIIIlll.Size = UDim2.new(0.96, 0, 0, 44)
-             _l_l1lIIIlll.BackgroundColor3 = _l_llII1ll.ComponentBg
-             _l_l1lIIIlll.BackgroundTransparency = 0.03
-             _l_l1lIIIlll.BorderSizePixel = 0
-             _l_l1lIIIlll.LayoutOrder = _l_l1III1ll()
-             _l_l1lIIIlll.ClipsDescendants = true
-             _l_l1lIIIlll.Parent = _l_ll1l1lll
-             _l_ll1ll(_l_l1lIIIlll, 10)
-             _l_lIIlll(_l_l1lIIIlll, Color3.fromRGB(255, 255, 255), 1, 0.92)
-             local _l_lIlI11ll = Instance.new(_l1_Unpack(180))
-             _l_lIlI11ll.Color = Color3.fromRGB(48, 50, 70)
-             _l_lIlI11ll.Thickness = 1.5; _l_lIlI11ll.Transparency = 0.6; _l_lIlI11ll.Parent = _l_l1lIIIlll
-             local _l_l1I1ll = Instance.new(_l1_Unpack(181))
-             _l_l1I1ll.Size = UDim2.new(1, -60, 0, 44); _l_l1I1ll.Position = UDim2.new(0, 14, 0, 0)
-             _l_l1I1ll.BackgroundTransparency = 1; _l_l1I1ll.Text = _l_llI1l1ll; _l_l1I1ll.TextColor3 = _l_llII1ll.Text
-             _l_l1I1ll.Font = _l_l1lll.Medium; _l_l1I1ll.TextSize = 12; _l_l1I1ll.TextXAlignment = Enum.TextXAlignment.Left
-             _l_l1I1ll.TextTruncate = Enum.TextTruncate.AtEnd; _l_l1I1ll.ZIndex = 3; _l_l1I1ll.Parent = _l_l1lIIIlll
-             local _l_lI1IIIlll = Instance.new(_l1_Unpack(182))
-             _l_lI1IIIlll.Size = UDim2.new(0, 28, 0, 28); _l_lI1IIIlll.Position = UDim2.new(1, -40, 0, 8)
-             _l_lI1IIIlll.BackgroundColor3 = defColor; _l_lI1IIIlll.BorderSizePixel = 0; _l_lI1IIIlll.ZIndex = 3; _l_lI1IIIlll.Parent = _l_l1lIIIlll
-             _l_ll1ll(_l_lI1IIIlll, 8); _l_lIIlll(_l_lI1IIIlll, Color3.fromRGB(255, 255, 255), 1.5, 0.75)
-             local _l_ll1IIIlll = Instance.new(_l1_Unpack(183))
-             _l_ll1IIIlll.Size = UDim2.new(0, 14, 0, 44); _l_ll1IIIlll.Position = UDim2.new(1, -14, 0, 0)
-             _l_ll1IIIlll.BackgroundTransparency = 1; _l_ll1IIIlll.Text = _l1_Unpack(184)
-             _l_ll1IIIlll.TextColor3 = _l_llII1ll.AccentBlue; _l_ll1IIIlll.Font = _l_l1lll.Body; _l_ll1IIIlll.TextSize = 9
-             _l_ll1IIIlll.ZIndex = 3; _l_ll1IIIlll.Parent = _l_l1lIIIlll
-             local _l_l11IIIlll = Instance.new(_l1_Unpack(185))
-             _l_l11IIIlll.Size = UDim2.new(1, 0, 0, _l_lllIIIlll); _l_l11IIIlll.Position = UDim2.new(0, 0, 0, 44)
-             _l_l11IIIlll.BackgroundColor3 = Color3.fromRGB(17, 17, 26); _l_l11IIIlll.BackgroundTransparency = 0.03
-             _l_l11IIIlll.BorderSizePixel = 0; _l_l11IIIlll.ZIndex = 4; _l_l11IIIlll.Visible = false; _l_l11IIIlll.Parent = _l_l1lIIIlll
-             local _l_lIIlIIlll = Instance.new(_l1_Unpack(186))
-             _l_lIIlIIlll.Size = UDim2.new(1, 0, 0, 1); _l_lIIlIIlll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-             _l_lIIlIIlll.BackgroundTransparency = 0.88; _l_lIIlIIlll.BorderSizePixel = 0
-             _l_lIIlIIlll.ZIndex = 4; _l_lIIlIIlll.Parent = _l_l11IIIlll
-             local _l_llIlIIlll = 120
-             local _l_l1IlIIlll = Instance.new(_l1_Unpack(187))
-             _l_l1IlIIlll.Size = UDim2.new(1, -16, 0, _l_llIlIIlll); _l_l1IlIIlll.Position = UDim2.new(0, 8, 0, 8)
-             _l_l1IlIIlll.BackgroundColor3 = Color3.fromHSV(_l_llIIIIlll, 1, 1); _l_l1IlIIlll.BorderSizePixel = 0
-             _l_l1IlIIlll.ClipsDescendants = true; _l_l1IlIIlll.ZIndex = 5; _l_l1IlIIlll.Parent = _l_l11IIIlll
-             _l_ll1ll(_l_l1IlIIlll, 6)
-             local _l_lIllIIlll = Instance.new(_l1_Unpack(188))
-             _l_lIllIIlll.Size = UDim2.new(1, 0, 1, 0); _l_lIllIIlll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-             _l_lIllIIlll.ZIndex = 5; _l_lIllIIlll.Parent = _l_l1IlIIlll
-             local _l_llllIIlll = Instance.new(_l1_Unpack(189))
-             _l_llllIIlll.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 1)})
-             _l_llllIIlll.Rotation = 0; _l_llllIIlll.Parent = _l_lIllIIlll
-             local _l_l1llIIlll = Instance.new(_l1_Unpack(190))
-             _l_l1llIIlll.Size = UDim2.new(1, 0, 1, 0); _l_l1llIIlll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-             _l_l1llIIlll.ZIndex = 6; _l_l1llIIlll.Parent = _l_l1IlIIlll
-             local _l_lI1lIIlll = Instance.new(_l1_Unpack(191))
-             _l_lI1lIIlll.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(1, 0)})
-             _l_lI1lIIlll.Rotation = 90; _l_lI1lIIlll.Parent = _l_l1llIIlll
-             local _l_ll1lIIlll = Instance.new(_l1_Unpack(192))
-             _l_ll1lIIlll.Size = UDim2.new(0, 14, 0, 14); _l_ll1lIIlll.AnchorPoint = Vector2.new(0.5, 0.5)
-             _l_ll1lIIlll.Position = UDim2.new(_l_l1IIIIlll, 0, 1 - _l_lIlIIIlll, 0); _l_ll1lIIlll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-             _l_ll1lIIlll.BorderSizePixel = 0; _l_ll1lIIlll.ZIndex = 8; _l_ll1lIIlll.Parent = _l_l1IlIIlll
-             _l_ll1ll(_l_ll1lIIlll, 7); _l_lIIlll(_l_ll1lIIlll, Color3.fromRGB(255, 255, 255), 2, 0.2)
-             local _l_l11lIIlll = Instance.new(_l1_Unpack(193))
-             _l_l11lIIlll.Size = UDim2.new(1, 0, 1, 0); _l_l11lIIlll.BackgroundTransparency = 1
-             _l_l11lIIlll.Text = ""; _l_l11lIIlll.ZIndex = 9; _l_l11lIIlll.Parent = _l_l1IlIIlll
-             local _l_lII1IIlll = 14
-             local _l_llI1IIlll = Instance.new(_l1_Unpack(194))
-             _l_llI1IIlll.Size = UDim2.new(1, -16, 0, _l_lII1IIlll); _l_llI1IIlll.Position = UDim2.new(0, 8, 0, _l_llIlIIlll + 14)
-             _l_llI1IIlll.BorderSizePixel = 0; _l_llI1IIlll.ZIndex = 5; _l_llI1IIlll.ClipsDescendants = true; _l_llI1IIlll.Parent = _l_l11IIIlll
-             _l_ll1ll(_l_llI1IIlll, 7)
-             local _l_l1I1IIlll = Instance.new(_l1_Unpack(195))
-             _l_l1I1IIlll.Color = ColorSequence.new({
+             _0x3789 = _0x3789 or function() end
+             local _0x3735, _0x3741, _0x19e69 = Color3.toHSV(defColor)
+             local _0x56f0a56 = false
+             local _0x4b6a004 = 198
+             local _0x5f19afe3 = Instance.new(_0x_krein_unpack(179))
+             _0x5f19afe3.Size = UDim2.new(0.96, 0, 0, 44)
+             _0x5f19afe3.BackgroundColor3 = _0x2ad2.ComponentBg
+             _0x5f19afe3.BackgroundTransparency = 0.03
+             _0x5f19afe3.BorderSizePixel = 0
+             _0x5f19afe3.LayoutOrder = _0x38bd()
+             _0x5f19afe3.ClipsDescendants = true
+             _0x5f19afe3.Parent = _0x353f
+             _0x50be634c(_0x5f19afe3, 10)
+             _0x352a5f67(_0x5f19afe3, Color3.fromRGB(255, 255, 255), 1, 0.92)
+             local _0x356a8a1 = Instance.new(_0x_krein_unpack(180))
+             _0x356a8a1.Color = Color3.fromRGB(48, 50, 70)
+             _0x356a8a1.Thickness = 1.5; _0x356a8a1.Transparency = 0.6; _0x356a8a1.Parent = _0x5f19afe3
+             local _0x1cc22 = Instance.new(_0x_krein_unpack(181))
+             _0x1cc22.Size = UDim2.new(1, -60, 0, 44); _0x1cc22.Position = UDim2.new(0, 14, 0, 0)
+             _0x1cc22.BackgroundTransparency = 1; _0x1cc22.Text = _0x367055; _0x1cc22.TextColor3 = _0x2ad2.Text
+             _0x1cc22.Font = _0x2aa3.Medium; _0x1cc22.TextSize = 12; _0x1cc22.TextXAlignment = Enum.TextXAlignment.Left
+             _0x1cc22.TextTruncate = Enum.TextTruncate.AtEnd; _0x1cc22.ZIndex = 3; _0x1cc22.Parent = _0x5f19afe3
+             local _0x34cd84 = Instance.new(_0x_krein_unpack(182))
+             _0x34cd84.Size = UDim2.new(0, 28, 0, 28); _0x34cd84.Position = UDim2.new(1, -40, 0, 8)
+             _0x34cd84.BackgroundColor3 = defColor; _0x34cd84.BorderSizePixel = 0; _0x34cd84.ZIndex = 3; _0x34cd84.Parent = _0x5f19afe3
+             _0x50be634c(_0x34cd84, 8); _0x352a5f67(_0x34cd84, Color3.fromRGB(255, 255, 255), 1.5, 0.75)
+             local _0x4c4b87c1 = Instance.new(_0x_krein_unpack(183))
+             _0x4c4b87c1.Size = UDim2.new(0, 14, 0, 44); _0x4c4b87c1.Position = UDim2.new(1, -14, 0, 0)
+             _0x4c4b87c1.BackgroundTransparency = 1; _0x4c4b87c1.Text = _0x_krein_unpack(184)
+             _0x4c4b87c1.TextColor3 = _0x2ad2.AccentBlue; _0x4c4b87c1.Font = _0x2aa3.Body; _0x4c4b87c1.TextSize = 9
+             _0x4c4b87c1.ZIndex = 3; _0x4c4b87c1.Parent = _0x5f19afe3
+             local _0x6583557 = Instance.new(_0x_krein_unpack(185))
+             _0x6583557.Size = UDim2.new(1, 0, 0, _0x4b6a004); _0x6583557.Position = UDim2.new(0, 0, 0, 44)
+             _0x6583557.BackgroundColor3 = Color3.fromRGB(17, 17, 26); _0x6583557.BackgroundTransparency = 0.03
+             _0x6583557.BorderSizePixel = 0; _0x6583557.ZIndex = 4; _0x6583557.Visible = false; _0x6583557.Parent = _0x5f19afe3
+             local _0x3f36f70e = Instance.new(_0x_krein_unpack(186))
+             _0x3f36f70e.Size = UDim2.new(1, 0, 0, 1); _0x3f36f70e.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+             _0x3f36f70e.BackgroundTransparency = 0.88; _0x3f36f70e.BorderSizePixel = 0
+             _0x3f36f70e.ZIndex = 4; _0x3f36f70e.Parent = _0x6583557
+             local _0x2734c1 = 120
+             local _0x6f27a3e0 = Instance.new(_0x_krein_unpack(187))
+             _0x6f27a3e0.Size = UDim2.new(1, -16, 0, _0x2734c1); _0x6f27a3e0.Position = UDim2.new(0, 8, 0, 8)
+             _0x6f27a3e0.BackgroundColor3 = Color3.fromHSV(_0x3735, 1, 1); _0x6f27a3e0.BorderSizePixel = 0
+             _0x6f27a3e0.ClipsDescendants = true; _0x6f27a3e0.ZIndex = 5; _0x6f27a3e0.Parent = _0x6583557
+             _0x50be634c(_0x6f27a3e0, 6)
+             local _0x6e3c8123 = Instance.new(_0x_krein_unpack(188))
+             _0x6e3c8123.Size = UDim2.new(1, 0, 1, 0); _0x6e3c8123.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+             _0x6e3c8123.ZIndex = 5; _0x6e3c8123.Parent = _0x6f27a3e0
+             local _0x6e9bb5b4 = Instance.new(_0x_krein_unpack(189))
+             _0x6e9bb5b4.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(1, 1)})
+             _0x6e9bb5b4.Rotation = 0; _0x6e9bb5b4.Parent = _0x6e3c8123
+             local _0x6f62bd4b = Instance.new(_0x_krein_unpack(190))
+             _0x6f62bd4b.Size = UDim2.new(1, 0, 1, 0); _0x6f62bd4b.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+             _0x6f62bd4b.ZIndex = 6; _0x6f62bd4b.Parent = _0x6f27a3e0
+             local _0x436c3324 = Instance.new(_0x_krein_unpack(191))
+             _0x436c3324.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(1, 0)})
+             _0x436c3324.Rotation = 90; _0x436c3324.Parent = _0x6f62bd4b
+             local _0x351fed2c = Instance.new(_0x_krein_unpack(192))
+             _0x351fed2c.Size = UDim2.new(0, 14, 0, 14); _0x351fed2c.AnchorPoint = Vector2.new(0.5, 0.5)
+             _0x351fed2c.Position = UDim2.new(_0x3741, 0, 1 - _0x19e69, 0); _0x351fed2c.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+             _0x351fed2c.BorderSizePixel = 0; _0x351fed2c.ZIndex = 8; _0x351fed2c.Parent = _0x6f27a3e0
+             _0x50be634c(_0x351fed2c, 7); _0x352a5f67(_0x351fed2c, Color3.fromRGB(255, 255, 255), 2, 0.2)
+             local _0x68b6455 = Instance.new(_0x_krein_unpack(193))
+             _0x68b6455.Size = UDim2.new(1, 0, 1, 0); _0x68b6455.BackgroundTransparency = 1
+             _0x68b6455.Text = ""; _0x68b6455.ZIndex = 9; _0x68b6455.Parent = _0x6f27a3e0
+             local _0x4addff0a = 14
+             local _0x47e828a7 = Instance.new(_0x_krein_unpack(194))
+             _0x47e828a7.Size = UDim2.new(1, -16, 0, _0x4addff0a); _0x47e828a7.Position = UDim2.new(0, 8, 0, _0x2734c1 + 14)
+             _0x47e828a7.BorderSizePixel = 0; _0x47e828a7.ZIndex = 5; _0x47e828a7.ClipsDescendants = true; _0x47e828a7.Parent = _0x6583557
+             _0x50be634c(_0x47e828a7, 7)
+             local _0x4ae082c5 = Instance.new(_0x_krein_unpack(195))
+             _0x4ae082c5.Color = ColorSequence.new({
                  ColorSequenceKeypoint.new(0,    Color3.fromHSV(0,    1, 1)),
                  ColorSequenceKeypoint.new(0.167, Color3.fromHSV(0.167,1, 1)),
                  ColorSequenceKeypoint.new(0.333, Color3.fromHSV(0.333,1, 1)),
@@ -2008,341 +2008,341 @@ local _l_ll11lll = {}
                  ColorSequenceKeypoint.new(0.833, Color3.fromHSV(0.833,1, 1)),
                  ColorSequenceKeypoint.new(1,    Color3.fromHSV(0,    1, 1)),
              })
-             _l_l1I1IIlll.Parent = _l_llI1IIlll
-             local _l_lIl1IIlll = Instance.new(_l1_Unpack(196))
-             _l_lIl1IIlll.Size = UDim2.new(0, 12, 1, 4); _l_lIl1IIlll.AnchorPoint = Vector2.new(0.5, 0.5)
-             _l_lIl1IIlll.Position = UDim2.new(_l_llIIIIlll, 0, 0.5, 0); _l_lIl1IIlll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-             _l_lIl1IIlll.BorderSizePixel = 0; _l_lIl1IIlll.ZIndex = 7; _l_lIl1IIlll.Parent = _l_llI1IIlll
-             _l_ll1ll(_l_lIl1IIlll, 4); _l_lIIlll(_l_lIl1IIlll, Color3.fromRGB(200, 200, 200), 1.5, 0.3)
-             local _l_lll1IIlll = Instance.new(_l1_Unpack(197))
-             _l_lll1IIlll.Size = UDim2.new(1, 0, 1, 0); _l_lll1IIlll.BackgroundTransparency = 1
-             _l_lll1IIlll.Text = ""; _l_lll1IIlll.ZIndex = 8; _l_lll1IIlll.Parent = _l_llI1IIlll
-             local _l_l1l1IIlll = _l_llIlIIlll + 14 + _l_lII1IIlll + 10
-             local _l_lI11IIlll = Instance.new(_l1_Unpack(198))
-             _l_lI11IIlll.Size = UDim2.new(1, -16, 0, 28); _l_lI11IIlll.Position = UDim2.new(0, 8, 0, _l_l1l1IIlll)
-             _l_lI11IIlll.BackgroundColor3 = _l_llII1ll.InputBg; _l_lI11IIlll.BackgroundTransparency = 0.03
-             _l_lI11IIlll.BorderSizePixel = 0; _l_lI11IIlll.ZIndex = 5; _l_lI11IIlll.Parent = _l_l11IIIlll
-             _l_ll1ll(_l_lI11IIlll, 7)
-             local _l_ll11IIlll = _l_lIIlll(_l_lI11IIlll, _l_llII1ll.CompStroke, 1, 0.3)
-             local _l_l111IIlll = Instance.new(_l1_Unpack(199))
-             _l_l111IIlll.Size = UDim2.new(0, 20, 1, 0); _l_l111IIlll.Position = UDim2.new(0, 6, 0, 0)
-             _l_l111IIlll.BackgroundTransparency = 1; _l_l111IIlll.Text = _l1_Unpack(200); _l_l111IIlll.TextColor3 = _l_llII1ll.SubText
-             _l_l111IIlll.Font = _l_l1lll.Bold; _l_l111IIlll.TextSize = 11; _l_l111IIlll.ZIndex = 6; _l_l111IIlll.Parent = _l_lI11IIlll
-             local _l_lIIIlIlll = Instance.new(_l1_Unpack(201))
-             _l_lIIIlIlll.Size = UDim2.new(1, -28, 1, 0); _l_lIIIlIlll.Position = UDim2.new(0, 22, 0, 0)
-             _l_lIIIlIlll.BackgroundTransparency = 1; _l_lIIIlIlll.BorderSizePixel = 0
-             _l_lIIIlIlll.PlaceholderText = _l1_Unpack(202); _l_lIIIlIlll.PlaceholderColor3 = Color3.fromRGB(70, 70, 90)
-             _l_lIIIlIlll.TextColor3 = _l_llII1ll.Text; _l_lIIIlIlll.Font = _l_l1lll.Bold; _l_lIIIlIlll.TextSize = 11
-             _l_lIIIlIlll.ClearTextOnFocus = true; _l_lIIIlIlll.ZIndex = 6; _l_lIIIlIlll.Parent = _l_lI11IIlll
-             local function _l_llIIlIlll() return Color3.fromHSV(_l_llIIIIlll, _l_l1IIIIlll, _l_lIlIIIlll) end
-             local function _l_l1IIlIlll(_l_l11ll)
-                 return string.format(_l1_Unpack(203), math.floor(_l_l11ll.R*255+0.5), math.floor(_l_l11ll.G*255+0.5), math.floor(_l_l11ll.B*255+0.5))
+             _0x4ae082c5.Parent = _0x47e828a7
+             local _0x4ae246ee = Instance.new(_0x_krein_unpack(196))
+             _0x4ae246ee.Size = UDim2.new(0, 12, 1, 4); _0x4ae246ee.AnchorPoint = Vector2.new(0.5, 0.5)
+             _0x4ae246ee.Position = UDim2.new(_0x3735, 0, 0.5, 0); _0x4ae246ee.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+             _0x4ae246ee.BorderSizePixel = 0; _0x4ae246ee.ZIndex = 7; _0x4ae246ee.Parent = _0x47e828a7
+             _0x50be634c(_0x4ae246ee, 4); _0x352a5f67(_0x4ae246ee, Color3.fromRGB(200, 200, 200), 1.5, 0.3)
+             local _0x47e8265b = Instance.new(_0x_krein_unpack(197))
+             _0x47e8265b.Size = UDim2.new(1, 0, 1, 0); _0x47e8265b.BackgroundTransparency = 1
+             _0x47e8265b.Text = ""; _0x47e8265b.ZIndex = 8; _0x47e8265b.Parent = _0x47e828a7
+             local _0x30fc00 = _0x2734c1 + 14 + _0x4addff0a + 10
+             local _0x5e96c23 = Instance.new(_0x_krein_unpack(198))
+             _0x5e96c23.Size = UDim2.new(1, -16, 0, 28); _0x5e96c23.Position = UDim2.new(0, 8, 0, _0x30fc00)
+             _0x5e96c23.BackgroundColor3 = _0x2ad2.InputBg; _0x5e96c23.BackgroundTransparency = 0.03
+             _0x5e96c23.BorderSizePixel = 0; _0x5e96c23.ZIndex = 5; _0x5e96c23.Parent = _0x6583557
+             _0x50be634c(_0x5e96c23, 7)
+             local _0x6835df69 = _0x352a5f67(_0x5e96c23, _0x2ad2.CompStroke, 1, 0.3)
+             local _0x6d76a30e = Instance.new(_0x_krein_unpack(199))
+             _0x6d76a30e.Size = UDim2.new(0, 20, 1, 0); _0x6d76a30e.Position = UDim2.new(0, 6, 0, 0)
+             _0x6d76a30e.BackgroundTransparency = 1; _0x6d76a30e.Text = _0x_krein_unpack(200); _0x6d76a30e.TextColor3 = _0x2ad2.SubText
+             _0x6d76a30e.Font = _0x2aa3.Bold; _0x6d76a30e.TextSize = 11; _0x6d76a30e.ZIndex = 6; _0x6d76a30e.Parent = _0x5e96c23
+             local _0x48c0fbea = Instance.new(_0x_krein_unpack(201))
+             _0x48c0fbea.Size = UDim2.new(1, -28, 1, 0); _0x48c0fbea.Position = UDim2.new(0, 22, 0, 0)
+             _0x48c0fbea.BackgroundTransparency = 1; _0x48c0fbea.BorderSizePixel = 0
+             _0x48c0fbea.PlaceholderText = _0x_krein_unpack(202); _0x48c0fbea.PlaceholderColor3 = Color3.fromRGB(70, 70, 90)
+             _0x48c0fbea.TextColor3 = _0x2ad2.Text; _0x48c0fbea.Font = _0x2aa3.Bold; _0x48c0fbea.TextSize = 11
+             _0x48c0fbea.ClearTextOnFocus = true; _0x48c0fbea.ZIndex = 6; _0x48c0fbea.Parent = _0x5e96c23
+             local function _0x74450114() return Color3.fromHSV(_0x3735, _0x3741, _0x19e69) end
+             local function _0x4c416865(_0x2ac3)
+                 return string.format(_0x_krein_unpack(203), math.floor(_0x2ac3.R*255+0.5), math.floor(_0x2ac3.G*255+0.5), math.floor(_0x2ac3.B*255+0.5))
              end
-             local function _l_lIlIlIlll(skipHex)
-                 local _l_l11ll = _l_llIIlIlll()
-                 _l_lI1IIIlll.BackgroundColor3 = _l_l11ll
-                 _l_l1IlIIlll.BackgroundColor3 = Color3.fromHSV(_l_llIIIIlll, 1, 1)
-                 _l_ll1lIIlll.Position = UDim2.new(_l_l1IIIIlll, 0, 1 - _l_lIlIIIlll, 0)
-                 _l_lIl1IIlll.Position = UDim2.new(_l_llIIIIlll, 0, 0.5, 0)
-                 if not skipHex then _l_lIIIlIlll.Text = _l_l1IIlIlll(_l_l11ll) end
-                 pcall(_l_lIl1l1ll, _l_l11ll)
+             local function _0x3c7dbfe(skipHex)
+                 local _0x2ac3 = _0x74450114()
+                 _0x34cd84.BackgroundColor3 = _0x2ac3
+                 _0x6f27a3e0.BackgroundColor3 = Color3.fromHSV(_0x3735, 1, 1)
+                 _0x351fed2c.Position = UDim2.new(_0x3741, 0, 1 - _0x19e69, 0)
+                 _0x4ae246ee.Position = UDim2.new(_0x3735, 0, 0.5, 0)
+                 if not skipHex then _0x48c0fbea.Text = _0x4c416865(_0x2ac3) end
+                 pcall(_0x3789, _0x2ac3)
              end
-             local function _l_lllIlIlll(_l_ll1llIlll)
-                 _l_l1IIIIlll = math.clamp((_l_ll1llIlll.Position.X - _l_l1IlIIlll.AbsolutePosition.X) / _l_l1IlIIlll.AbsoluteSize.X, 0, 1)
-                 _l_lIlIIIlll = 1 - math.clamp((_l_ll1llIlll.Position.Y - _l_l1IlIIlll.AbsolutePosition.Y) / _l_l1IlIIlll.AbsoluteSize.Y, 0, 1)
-                 _l_lIlIlIlll()
+             local function _0x4ee719ff(_0x1c361)
+                 _0x3741 = math.clamp((_0x1c361.Position.X - _0x6f27a3e0.AbsolutePosition.X) / _0x6f27a3e0.AbsoluteSize.X, 0, 1)
+                 _0x19e69 = 1 - math.clamp((_0x1c361.Position.Y - _0x6f27a3e0.AbsolutePosition.Y) / _0x6f27a3e0.AbsoluteSize.Y, 0, 1)
+                 _0x3c7dbfe()
              end
-             local function _l_l1lIlIlll(_l_ll1llIlll)
-                 _l_llIIIIlll = math.clamp((_l_ll1llIlll.Position.X - _l_llI1IIlll.AbsolutePosition.X) / _l_llI1IIlll.AbsoluteSize.X, 0, 1)
-                 _l_lIlIlIlll()
+             local function _0x71fe9e8f(_0x1c361)
+                 _0x3735 = math.clamp((_0x1c361.Position.X - _0x47e828a7.AbsolutePosition.X) / _0x47e828a7.AbsoluteSize.X, 0, 1)
+                 _0x3c7dbfe()
              end
-             _l_l11lIIlll.InputBegan:Connect(function(_l_ll1llIlll)
-                 if _l_ll1llIlll.UserInputType == Enum.UserInputType.MouseButton1 or _l_ll1llIlll.UserInputType == Enum.UserInputType.Touch then
-                     local _l_l1Ill1ll = _l_ll1llIlll.UserInputType == Enum.UserInputType.Touch
-                     _l_lllIlIlll(_l_ll1llIlll)
-                     local _l_l11ll1ll, _l_lII1l1ll
-                     _l_l11ll1ll = _l_llll.InputChanged:Connect(function(mi)
-                         if _l_l1Ill1ll then
-                             if mi.UserInputType == Enum.UserInputType.Touch then _l_lllIlIlll(mi) end
+             _0x68b6455.InputBegan:Connect(function(_0x1c361)
+                 if _0x1c361.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c361.UserInputType == Enum.UserInputType.Touch then
+                     local _0x7b7fb755 = _0x1c361.UserInputType == Enum.UserInputType.Touch
+                     _0x4ee719ff(_0x1c361)
+                     local _0x38bc, _0x37c5
+                     _0x38bc = _0x17298.InputChanged:Connect(function(mi)
+                         if _0x7b7fb755 then
+                             if mi.UserInputType == Enum.UserInputType.Touch then _0x4ee719ff(mi) end
                          else
-                             if mi.UserInputType == Enum.UserInputType.MouseMovement then _l_lllIlIlll(mi) end
+                             if mi.UserInputType == Enum.UserInputType.MouseMovement then _0x4ee719ff(mi) end
                          end
                      end)
-                     _l_lII1l1ll = _l_llll.InputEnded:Connect(function(ei)
-                         local _l_lI1IlIlll = (_l_l1Ill1ll and ei.UserInputType == Enum.UserInputType.Touch)
-                             or (not _l_l1Ill1ll and ei.UserInputType == Enum.UserInputType.MouseButton1)
-                         if _l_lI1IlIlll then _l_l11ll1ll:Disconnect(); _l_lII1l1ll:Disconnect() end
+                     _0x37c5 = _0x17298.InputEnded:Connect(function(ei)
+                         local _0x5c2f626 = (_0x7b7fb755 and ei.UserInputType == Enum.UserInputType.Touch)
+                             or (not _0x7b7fb755 and ei.UserInputType == Enum.UserInputType.MouseButton1)
+                         if _0x5c2f626 then _0x38bc:Disconnect(); _0x37c5:Disconnect() end
                      end)
                  end
              end)
-             _l_lll1IIlll.InputBegan:Connect(function(_l_ll1llIlll)
-                 if _l_ll1llIlll.UserInputType == Enum.UserInputType.MouseButton1 or _l_ll1llIlll.UserInputType == Enum.UserInputType.Touch then
-                     local _l_l1Ill1ll = _l_ll1llIlll.UserInputType == Enum.UserInputType.Touch
-                     _l_l1lIlIlll(_l_ll1llIlll)
-                     local _l_l11ll1ll, _l_lII1l1ll
-                     _l_l11ll1ll = _l_llll.InputChanged:Connect(function(mi)
-                         if _l_l1Ill1ll then
-                             if mi.UserInputType == Enum.UserInputType.Touch then _l_l1lIlIlll(mi) end
+             _0x47e8265b.InputBegan:Connect(function(_0x1c361)
+                 if _0x1c361.UserInputType == Enum.UserInputType.MouseButton1 or _0x1c361.UserInputType == Enum.UserInputType.Touch then
+                     local _0x7b7fb755 = _0x1c361.UserInputType == Enum.UserInputType.Touch
+                     _0x71fe9e8f(_0x1c361)
+                     local _0x38bc, _0x37c5
+                     _0x38bc = _0x17298.InputChanged:Connect(function(mi)
+                         if _0x7b7fb755 then
+                             if mi.UserInputType == Enum.UserInputType.Touch then _0x71fe9e8f(mi) end
                          else
-                             if mi.UserInputType == Enum.UserInputType.MouseMovement then _l_l1lIlIlll(mi) end
+                             if mi.UserInputType == Enum.UserInputType.MouseMovement then _0x71fe9e8f(mi) end
                          end
                      end)
-                     _l_lII1l1ll = _l_llll.InputEnded:Connect(function(ei)
-                         local _l_lI1IlIlll = (_l_l1Ill1ll and ei.UserInputType == Enum.UserInputType.Touch)
-                             or (not _l_l1Ill1ll and ei.UserInputType == Enum.UserInputType.MouseButton1)
-                         if _l_lI1IlIlll then _l_l11ll1ll:Disconnect(); _l_lII1l1ll:Disconnect() end
+                     _0x37c5 = _0x17298.InputEnded:Connect(function(ei)
+                         local _0x5c2f626 = (_0x7b7fb755 and ei.UserInputType == Enum.UserInputType.Touch)
+                             or (not _0x7b7fb755 and ei.UserInputType == Enum.UserInputType.MouseButton1)
+                         if _0x5c2f626 then _0x38bc:Disconnect(); _0x37c5:Disconnect() end
                      end)
                  end
              end)
-             _l_lIIIlIlll.Focused:Connect(function() _l_ll11IIlll.Color = _l_llII1ll.SliderFill; _l_ll11IIlll.Transparency = 0.1 end)
-             _l_lIIIlIlll.FocusLost:Connect(function()
-                 _l_ll11IIlll.Color = _l_llII1ll.CompStroke; _l_ll11IIlll.Transparency = 0.3
-                 local _l_ll1IlIlll = _l_lIIIlIlll.Text:gsub(_l1_Unpack(204),""):upper()
-                 if #_l_ll1IlIlll == 6 then
-                     local _l_l11IlIlll=tonumber(_l_ll1IlIlll:sub(1,2),16); local _l_lIIllIlll=tonumber(_l_ll1IlIlll:sub(3,4),16); local _l_llIllIlll=tonumber(_l_ll1IlIlll:sub(5,6),16)
-                     if _l_l11IlIlll and _l_lIIllIlll and _l_llIllIlll then
-                         _l_llIIIIlll,_l_l1IIIIlll,_l_lIlIIIlll = Color3.toHSV(Color3.fromRGB(_l_l11IlIlll,_l_lIIllIlll,_l_llIllIlll)); _l_lIlIlIlll(true)
+             _0x48c0fbea.Focused:Connect(function() _0x6835df69.Color = _0x2ad2.SliderFill; _0x6835df69.Transparency = 0.1 end)
+             _0x48c0fbea.FocusLost:Connect(function()
+                 _0x6835df69.Color = _0x2ad2.CompStroke; _0x6835df69.Transparency = 0.3
+                 local _0x1be88 = _0x48c0fbea.Text:gsub(_0x_krein_unpack(204),""):upper()
+                 if #_0x1be88 == 6 then
+                     local _0x2be0=tonumber(_0x1be88:sub(1,2),16); local _0x2bd6=tonumber(_0x1be88:sub(3,4),16); local _0x2bd2=tonumber(_0x1be88:sub(5,6),16)
+                     if _0x2be0 and _0x2bd6 and _0x2bd2 then
+                         _0x3735,_0x3741,_0x19e69 = Color3.toHSV(Color3.fromRGB(_0x2be0,_0x2bd6,_0x2bd2)); _0x3c7dbfe(true)
                      end
                  end
-                 _l_lIIIlIlll.Text = _l_l1IIlIlll(_l_llIIlIlll())
+                 _0x48c0fbea.Text = _0x4c416865(_0x74450114())
              end)
-             local _l_lIl111ll = Instance.new(_l1_Unpack(205))
-             _l_lIl111ll.Size = UDim2.new(1, 0, 0, 44); _l_lIl111ll.BackgroundTransparency = 1
-             _l_lIl111ll.Text = ""; _l_lIl111ll.ZIndex = 10; _l_lIl111ll.Parent = _l_l1lIIIlll
-             _l_lIl111ll.MouseButton1Click:Connect(function()
-                 _l_lI11l1ll = not _l_lI11l1ll
-                 _l_lI1ll(_l_ll1IIIlll, {Rotation = _l_lI11l1ll and 180 or 0}, 0.18)
-                 if _l_lI11l1ll then
-                     _l_l11IIIlll.Visible = true; _l_l1lIIIlll.ClipsDescendants = false
-                     _l_lIIIlIlll.Text = _l_l1IIlIlll(_l_llIIlIlll())
-                     _l_lI1ll(_l_l1lIIIlll, {Size = UDim2.new(0.96, 0, 0, 44 + _l_lllIIIlll)}, 0.22, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
-                     local _l_lI11llll = _l_l1I11lll() + _l_lllIIIlll
-                     _l_ll1l1lll.Size = UDim2.new(1, 0, 0, _l_lI11llll)
-                     _l_lI1ll(_l_llIl1lll, {Size = UDim2.new(0.97, 0, 0, 36 + _l_lI11llll + 4)}, 0.22, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+             local _0x369f61 = Instance.new(_0x_krein_unpack(205))
+             _0x369f61.Size = UDim2.new(1, 0, 0, 44); _0x369f61.BackgroundTransparency = 1
+             _0x369f61.Text = ""; _0x369f61.ZIndex = 10; _0x369f61.Parent = _0x5f19afe3
+             _0x369f61.MouseButton1Click:Connect(function()
+                 _0x56f0a56 = not _0x56f0a56
+                 _0x38e1(_0x4c4b87c1, {Rotation = _0x56f0a56 and 180 or 0}, 0.18)
+                 if _0x56f0a56 then
+                     _0x6583557.Visible = true; _0x5f19afe3.ClipsDescendants = false
+                     _0x48c0fbea.Text = _0x4c416865(_0x74450114())
+                     _0x38e1(_0x5f19afe3, {Size = UDim2.new(0.96, 0, 0, 44 + _0x4b6a004)}, 0.22, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+                     local _0x33b584 = _0x2f51f421() + _0x4b6a004
+                     _0x353f.Size = UDim2.new(1, 0, 0, _0x33b584)
+                     _0x38e1(_0x2244f3b8, {Size = UDim2.new(0.97, 0, 0, 36 + _0x33b584 + 4)}, 0.22, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
                  else
-                     _l_lI1ll(_l_l1lIIIlll, {Size = UDim2.new(0.96, 0, 0, 44)}, 0.22, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-                     local _l_lI11llll = _l_l1I11lll() - _l_lllIIIlll
-                     _l_ll1l1lll.Size = UDim2.new(1, 0, 0, _l_lI11llll)
-                     _l_lI1ll(_l_llIl1lll, {Size = UDim2.new(0.97, 0, 0, 36 + _l_lI11llll + 4)}, 0.22, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+                     _0x38e1(_0x5f19afe3, {Size = UDim2.new(0.96, 0, 0, 44)}, 0.22, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+                     local _0x33b584 = _0x2f51f421() - _0x4b6a004
+                     _0x353f.Size = UDim2.new(1, 0, 0, _0x33b584)
+                     _0x38e1(_0x2244f3b8, {Size = UDim2.new(0.97, 0, 0, 36 + _0x33b584 + 4)}, 0.22, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
                      task.delay(0.23, function()
-                         if not _l_lI11l1ll then _l_l11IIIlll.Visible = false; _l_l1lIIIlll.ClipsDescendants = true end
+                         if not _0x56f0a56 then _0x6583557.Visible = false; _0x5f19afe3.ClipsDescendants = true end
                      end)
                  end
              end)
-             _l_lIlIlIlll(true); _l_lIIIlIlll.Text = _l_l1IIlIlll(_l_llIIlIlll())
-             local _l_lI1II1ll = {}
-             function _l_lI1II1ll:SetValue(_l_l11ll) _l_llIIIIlll,_l_l1IIIIlll,_l_lIlIIIlll = Color3.toHSV(_l_l11ll); _l_lIlIlIlll() end
-             function _l_lI1II1ll:GetValue() return _l_llIIlIlll() end
-             function _l_lI1II1ll:SetEnabled(e) _l_lIl111ll.Active=e; _l_l1lIIIlll.BackgroundTransparency=e and 0.03 or 0.5 end
-             function _l_lI1II1ll:SetVisible(v)
-                 _l_l1lIIIlll.Visible=v
-                 if not v and _l_lI11l1ll then _l_lI11l1ll=false; _l_l11IIIlll.Visible=false; _l_l1lIIIlll.ClipsDescendants=true; _l_l1lIIIlll.Size=UDim2.new(0.96,0,0,44) end
-                 _l_l1l11lll()
+             _0x3c7dbfe(true); _0x48c0fbea.Text = _0x4c416865(_0x74450114())
+             local _0x1d7f7 = {}
+             function _0x1d7f7:SetValue(_0x2ac3) _0x3735,_0x3741,_0x19e69 = Color3.toHSV(_0x2ac3); _0x3c7dbfe() end
+             function _0x1d7f7:GetValue() return _0x74450114() end
+             function _0x1d7f7:SetEnabled(e) _0x369f61.Active=e; _0x5f19afe3.BackgroundTransparency=e and 0.03 or 0.5 end
+             function _0x1d7f7:SetVisible(v)
+                 _0x5f19afe3.Visible=v
+                 if not v and _0x56f0a56 then _0x56f0a56=false; _0x6583557.Visible=false; _0x5f19afe3.ClipsDescendants=true; _0x5f19afe3.Size=UDim2.new(0.96,0,0,44) end
+                 _0x65af86bb()
              end
-             function _l_lI1II1ll:Destroy()
-                 if _l_lI11l1ll then _l_lI11l1ll=false; _l_l11IIIlll.Visible=false end
-                 _l_l1lIIIlll:Destroy(); _l_l1l11lll()
+             function _0x1d7f7:Destroy()
+                 if _0x56f0a56 then _0x56f0a56=false; _0x6583557.Visible=false end
+                 _0x5f19afe3:Destroy(); _0x65af86bb()
              end
-             function _l_lI1II1ll:UpdateCallback(newCb) _l_lIl1l1ll=newCb end
-             return _l_lI1II1ll
+             function _0x1d7f7:UpdateCallback(newCb) _0x3789=newCb end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:CreateTextBox(labelText, ph, _l_lIl1l1ll, config)
+         function _0x271a9e:CreateTextBox(labelText, ph, _0x3789, config)
              config=config or {}
-             _l_lIl1l1ll = _l_lIl1l1ll or function() end
-             local _l_l1IllIlll=config.MaxLength or 200; local _l_lIlllIlll=config.NumberOnly or false; local _l_lllllIlll=config.RealTime or false
-             local _l_lllII1ll=_l_lIlII1ll(44)
-             local _l_l1I1ll=Instance.new(_l1_Unpack(206)); _l_l1I1ll.Size=UDim2.new(1,-168,1,0); _l_l1I1ll.Position=UDim2.new(0,14,0,0)
-             _l_l1I1ll.BackgroundTransparency=1; _l_l1I1ll.Text=labelText; _l_l1I1ll.TextColor3=_l_llII1ll.Text
-             _l_l1I1ll.Font=_l_l1lll.Medium; _l_l1I1ll.TextSize=12; _l_l1I1ll.TextXAlignment=Enum.TextXAlignment.Left
-             _l_l1I1ll.TextTruncate=Enum.TextTruncate.AtEnd; _l_l1I1ll.Parent=_l_lllII1ll
-             local _l_l1lllIlll=Instance.new(_l1_Unpack(207)); _l_l1lllIlll.Size=UDim2.new(0,144,0,30); _l_l1lllIlll.Position=UDim2.new(1,-154,0,7)
-             _l_l1lllIlll.BackgroundColor3=_l_llII1ll.InputBg; _l_l1lllIlll.BackgroundTransparency=0.03; _l_l1lllIlll.BorderSizePixel=0; _l_l1lllIlll.Parent=_l_lllII1ll
-             _l_ll1ll(_l_l1lllIlll,8); local _l_lI1llIlll=_l_lIIlll(_l_l1lllIlll,_l_llII1ll.InputStroke,1,0.24)
-             local _l_ll1llIlll=Instance.new(_l1_Unpack(208)); _l_ll1llIlll.Size=UDim2.new(1,-10,1,0); _l_ll1llIlll.Position=UDim2.new(0,5,0,0)
-             _l_ll1llIlll.BackgroundTransparency=1; _l_ll1llIlll.BorderSizePixel=0; _l_ll1llIlll.Text=""
-             _l_ll1llIlll.PlaceholderText=ph or _l1_Unpack(209); _l_ll1llIlll.PlaceholderColor3=Color3.fromRGB(80,80,100)
-             _l_ll1llIlll.TextColor3=_l_llII1ll.Text; _l_ll1llIlll.Font=_l_l1lll.Body; _l_ll1llIlll.TextSize=11; _l_ll1llIlll.ClearTextOnFocus=false; _l_ll1llIlll.Parent=_l_l1lllIlll
-             local _l_l11llIlll=false
-             _l_ll1llIlll:GetPropertyChangedSignal(_l1_Unpack(210)):Connect(function()
-                 if _l_l11llIlll then return end; _l_l11llIlll=true
-                 local _l_l1l1ll=_l_ll1llIlll.Text
-                 if _l_lIlllIlll then local _l_lII1lIlll=_l_l1l1ll:match(_l1_Unpack(211)) or ""; if _l_lII1lIlll~=_l_l1l1ll then _l_l1l1ll=_l_lII1lIlll; _l_ll1llIlll.Text=_l_l1l1ll end end
-                 if #_l_l1l1ll>_l_l1IllIlll then _l_l1l1ll=_l_l1l1ll:sub(1,_l_l1IllIlll); _l_ll1llIlll.Text=_l_l1l1ll end
-                 _l_l11llIlll=false; if _l_lllllIlll then pcall(_l_lIl1l1ll, _l_ll1llIlll.Text) end
+             _0x3789 = _0x3789 or function() end
+             local _0x4070fa7e=config.MaxLength or 200; local _0x7745c83c=config.NumberOnly or false; local _0x3344b302=config.RealTime or false
+             local _0x2b64=_0x3741(44)
+             local _0x1cc22=Instance.new(_0x_krein_unpack(206)); _0x1cc22.Size=UDim2.new(1,-168,1,0); _0x1cc22.Position=UDim2.new(0,14,0,0)
+             _0x1cc22.BackgroundTransparency=1; _0x1cc22.Text=labelText; _0x1cc22.TextColor3=_0x2ad2.Text
+             _0x1cc22.Font=_0x2aa3.Medium; _0x1cc22.TextSize=12; _0x1cc22.TextXAlignment=Enum.TextXAlignment.Left
+             _0x1cc22.TextTruncate=Enum.TextTruncate.AtEnd; _0x1cc22.Parent=_0x2b64
+             local _0x3893=Instance.new(_0x_krein_unpack(207)); _0x3893.Size=UDim2.new(0,144,0,30); _0x3893.Position=UDim2.new(1,-154,0,7)
+             _0x3893.BackgroundColor3=_0x2ad2.InputBg; _0x3893.BackgroundTransparency=0.03; _0x3893.BorderSizePixel=0; _0x3893.Parent=_0x2b64
+             _0x50be634c(_0x3893,8); local _0x52e1f854=_0x352a5f67(_0x3893,_0x2ad2.InputStroke,1,0.24)
+             local _0x1c361=Instance.new(_0x_krein_unpack(208)); _0x1c361.Size=UDim2.new(1,-10,1,0); _0x1c361.Position=UDim2.new(0,5,0,0)
+             _0x1c361.BackgroundTransparency=1; _0x1c361.BorderSizePixel=0; _0x1c361.Text=""
+             _0x1c361.PlaceholderText=ph or _0x_krein_unpack(209); _0x1c361.PlaceholderColor3=Color3.fromRGB(80,80,100)
+             _0x1c361.TextColor3=_0x2ad2.Text; _0x1c361.Font=_0x2aa3.Body; _0x1c361.TextSize=11; _0x1c361.ClearTextOnFocus=false; _0x1c361.Parent=_0x3893
+             local _0x72b89f62=false
+             _0x1c361:GetPropertyChangedSignal(_0x_krein_unpack(210)):Connect(function()
+                 if _0x72b89f62 then return end; _0x72b89f62=true
+                 local _0x2ae3=_0x1c361.Text
+                 if _0x7745c83c then local _0x33118020=_0x2ae3:match(_0x_krein_unpack(211)) or ""; if _0x33118020~=_0x2ae3 then _0x2ae3=_0x33118020; _0x1c361.Text=_0x2ae3 end end
+                 if #_0x2ae3>_0x4070fa7e then _0x2ae3=_0x2ae3:sub(1,_0x4070fa7e); _0x1c361.Text=_0x2ae3 end
+                 _0x72b89f62=false; if _0x3344b302 then pcall(_0x3789, _0x1c361.Text) end
              end)
-             _l_ll1llIlll.Focused:Connect(function() _l_lI1ll(_l_l1lllIlll,{BackgroundColor3=Color3.fromRGB(28,30,48)},0.14); _l_lI1llIlll.Color=_l_llII1ll.SliderFill; _l_lI1llIlll.Transparency=0.1 end)
-             _l_ll1llIlll.FocusLost:Connect(function(enterPressed)
-                 _l_lI1ll(_l_l1lllIlll,{BackgroundColor3=_l_llII1ll.InputBg},0.14); _l_lI1llIlll.Color=_l_llII1ll.InputStroke; _l_lI1llIlll.Transparency=0.24
-                 if not _l_lllllIlll or enterPressed then pcall(_l_lIl1l1ll, _l_ll1llIlll.Text) end
+             _0x1c361.Focused:Connect(function() _0x38e1(_0x3893,{BackgroundColor3=Color3.fromRGB(28,30,48)},0.14); _0x52e1f854.Color=_0x2ad2.SliderFill; _0x52e1f854.Transparency=0.1 end)
+             _0x1c361.FocusLost:Connect(function(enterPressed)
+                 _0x38e1(_0x3893,{BackgroundColor3=_0x2ad2.InputBg},0.14); _0x52e1f854.Color=_0x2ad2.InputStroke; _0x52e1f854.Transparency=0.24
+                 if not _0x3344b302 or enterPressed then pcall(_0x3789, _0x1c361.Text) end
              end)
-             local _l_lI1II1ll={}
-             function _l_lI1II1ll:SetValue(v) _l_ll1llIlll.Text=tostring(v) end
-             function _l_lI1II1ll:GetValue() return _l_ll1llIlll.Text end
-             function _l_lI1II1ll:Clear() _l_ll1llIlll.Text="" end
-             function _l_lI1II1ll:SetEnabled(e) _l_ll1llIlll.Editable=e; _l_lllII1ll.BackgroundTransparency=e and 0.03 or 0.5 end
-             function _l_lI1II1ll:SetVisible(v) _l_lllII1ll.Visible=v; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_lllII1ll:Destroy(); _l_l1l11lll() end
-             function _l_lI1II1ll:UpdateCallback(newCb) _l_lIl1l1ll=newCb end
-             return _l_lI1II1ll
+             local _0x1d7f7={}
+             function _0x1d7f7:SetValue(v) _0x1c361.Text=tostring(v) end
+             function _0x1d7f7:GetValue() return _0x1c361.Text end
+             function _0x1d7f7:Clear() _0x1c361.Text="" end
+             function _0x1d7f7:SetEnabled(e) _0x1c361.Editable=e; _0x2b64.BackgroundTransparency=e and 0.03 or 0.5 end
+             function _0x1d7f7:SetVisible(v) _0x2b64.Visible=v; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x2b64:Destroy(); _0x65af86bb() end
+             function _0x1d7f7:UpdateCallback(newCb) _0x3789=newCb end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:CreateSeparator()
-             local _l_llIlll=Instance.new(_l1_Unpack(212)); _l_llIlll.Size=UDim2.new(0.88,0,0,1)
-             _l_llIlll.BackgroundColor3=Color3.fromRGB(255,255,255); _l_llIlll.BackgroundTransparency=0.88
-             _l_llIlll.BorderSizePixel=0; _l_llIlll.LayoutOrder=_l_l1III1ll(); _l_llIlll.Parent=_l_ll1l1lll
-             _l_l1l11lll()
-             local _l_lI1II1ll={}
-             function _l_lI1II1ll:SetVisible(v) _l_llIlll.Visible=v; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_llIlll:Destroy(); _l_l1l11lll() end
-             return _l_lI1II1ll
+         function _0x271a9e:CreateSeparator()
+             local _0x2ad5=Instance.new(_0x_krein_unpack(212)); _0x2ad5.Size=UDim2.new(0.88,0,0,1)
+             _0x2ad5.BackgroundColor3=Color3.fromRGB(255,255,255); _0x2ad5.BackgroundTransparency=0.88
+             _0x2ad5.BorderSizePixel=0; _0x2ad5.LayoutOrder=_0x38bd(); _0x2ad5.Parent=_0x353f
+             _0x65af86bb()
+             local _0x1d7f7={}
+             function _0x1d7f7:SetVisible(v) _0x2ad5.Visible=v; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x2ad5:Destroy(); _0x65af86bb() end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:CreateProgressBar(_l_llI1l1ll, defVal, maxVal)
+         function _0x271a9e:CreateProgressBar(_0x367055, defVal, maxVal)
              defVal=math.clamp(defVal or 0,0,maxVal or 100); maxVal=maxVal or 100
-             local _l_l1llI1ll=defVal; local _l_lllII1ll=_l_lIlII1ll(52)
-             local _l_l1I1ll=Instance.new(_l1_Unpack(213)); _l_l1I1ll.Size=UDim2.new(1,-62,0,18); _l_l1I1ll.Position=UDim2.new(0,14,0,8)
-             _l_l1I1ll.BackgroundTransparency=1; _l_l1I1ll.Text=_l_llI1l1ll; _l_l1I1ll.TextColor3=_l_llII1ll.Text
-             _l_l1I1ll.Font=_l_l1lll.Medium; _l_l1I1ll.TextSize=12; _l_l1I1ll.TextXAlignment=Enum.TextXAlignment.Left
-             _l_l1I1ll.TextTruncate=Enum.TextTruncate.AtEnd; _l_l1I1ll.Parent=_l_lllII1ll
-             local _l_llI1lIlll=Instance.new(_l1_Unpack(214)); _l_llI1lIlll.Size=UDim2.new(0,44,0,18); _l_llI1lIlll.Position=UDim2.new(1,-54,0,8)
-             _l_llI1lIlll.BackgroundTransparency=1; _l_llI1lIlll.Text=math.floor((defVal/maxVal)*100).._l1_Unpack(215)
-             _l_llI1lIlll.TextColor3=_l_llII1ll.SliderFill; _l_llI1lIlll.Font=_l_l1lll.Bold; _l_llI1lIlll.TextSize=11
-             _l_llI1lIlll.TextXAlignment=Enum.TextXAlignment.Right; _l_llI1lIlll.Parent=_l_lllII1ll
-             local _l_ll11I1ll=Instance.new(_l1_Unpack(216)); _l_ll11I1ll.Size=UDim2.new(1,-26,0,8); _l_ll11I1ll.Position=UDim2.new(0,14,0,34)
-             _l_ll11I1ll.BackgroundColor3=_l_llII1ll.ProgressBg; _l_ll11I1ll.BorderSizePixel=0; _l_ll11I1ll.ClipsDescendants=true; _l_ll11I1ll.Parent=_l_lllII1ll
-             _l_ll1ll(_l_ll11I1ll,4)
-             local _l_lIIIl1ll=Instance.new(_l1_Unpack(217)); _l_lIIIl1ll.Size=UDim2.new(defVal/maxVal,0,1,0)
-             _l_lIIIl1ll.BackgroundColor3=_l_llII1ll.ProgressFill; _l_lIIIl1ll.BorderSizePixel=0; _l_lIIIl1ll.Parent=_l_ll11I1ll
-             _l_ll1ll(_l_lIIIl1ll,4)
-             local _l_lI1II1ll={}
-             function _l_lI1II1ll:SetValue(v)
-                 _l_l1llI1ll=math.clamp(v,0,maxVal); local _l_ll1ll1ll=_l_l1llI1ll/maxVal
-                 _l_lI1ll(_l_lIIIl1ll,{Size=UDim2.new(_l_ll1ll1ll,0,1,0)},0.3,Enum.EasingStyle.Quart,Enum.EasingDirection.Out)
-                 _l_llI1lIlll.Text=math.floor(_l_ll1ll1ll*100).._l1_Unpack(218)
+             local _0x36ff=defVal; local _0x2b64=_0x3741(52)
+             local _0x1cc22=Instance.new(_0x_krein_unpack(213)); _0x1cc22.Size=UDim2.new(1,-62,0,18); _0x1cc22.Position=UDim2.new(0,14,0,8)
+             _0x1cc22.BackgroundTransparency=1; _0x1cc22.Text=_0x367055; _0x1cc22.TextColor3=_0x2ad2.Text
+             _0x1cc22.Font=_0x2aa3.Medium; _0x1cc22.TextSize=12; _0x1cc22.TextXAlignment=Enum.TextXAlignment.Left
+             _0x1cc22.TextTruncate=Enum.TextTruncate.AtEnd; _0x1cc22.Parent=_0x2b64
+             local _0x3b381372=Instance.new(_0x_krein_unpack(214)); _0x3b381372.Size=UDim2.new(0,44,0,18); _0x3b381372.Position=UDim2.new(1,-54,0,8)
+             _0x3b381372.BackgroundTransparency=1; _0x3b381372.Text=math.floor((defVal/maxVal)*100).._0x_krein_unpack(215)
+             _0x3b381372.TextColor3=_0x2ad2.SliderFill; _0x3b381372.Font=_0x2aa3.Bold; _0x3b381372.TextSize=11
+             _0x3b381372.TextXAlignment=Enum.TextXAlignment.Right; _0x3b381372.Parent=_0x2b64
+             local _0x1a726=Instance.new(_0x_krein_unpack(216)); _0x1a726.Size=UDim2.new(1,-26,0,8); _0x1a726.Position=UDim2.new(0,14,0,34)
+             _0x1a726.BackgroundColor3=_0x2ad2.ProgressBg; _0x1a726.BorderSizePixel=0; _0x1a726.ClipsDescendants=true; _0x1a726.Parent=_0x2b64
+             _0x50be634c(_0x1a726,4)
+             local _0x302098=Instance.new(_0x_krein_unpack(217)); _0x302098.Size=UDim2.new(defVal/maxVal,0,1,0)
+             _0x302098.BackgroundColor3=_0x2ad2.ProgressFill; _0x302098.BorderSizePixel=0; _0x302098.Parent=_0x1a726
+             _0x50be634c(_0x302098,4)
+             local _0x1d7f7={}
+             function _0x1d7f7:SetValue(v)
+                 _0x36ff=math.clamp(v,0,maxVal); local _0x1dc06=_0x36ff/maxVal
+                 _0x38e1(_0x302098,{Size=UDim2.new(_0x1dc06,0,1,0)},0.3,Enum.EasingStyle.Quart,Enum.EasingDirection.Out)
+                 _0x3b381372.Text=math.floor(_0x1dc06*100).._0x_krein_unpack(218)
              end
-             function _l_lI1II1ll:GetValue() return _l_l1llI1ll end
-             function _l_lI1II1ll:SetVisible(v) _l_lllII1ll.Visible=v; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_lllII1ll:Destroy(); _l_l1l11lll() end
-             return _l_lI1II1ll
+             function _0x1d7f7:GetValue() return _0x36ff end
+             function _0x1d7f7:SetVisible(v) _0x2b64.Visible=v; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x2b64:Destroy(); _0x65af86bb() end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:CreateRadioGroup(config, _legacyDefault, _legacyCb, _legacyMulti)
-             if type(config)==_l1_Unpack(219) and config[1]~=nil then
+         function _0x271a9e:CreateRadioGroup(config, _legacyDefault, _legacyCb, _legacyMulti)
+             if type(config)==_0x_krein_unpack(219) and config[1]~=nil then
                  config={Options=config,Default=_legacyDefault or 1,Callback=_legacyCb or function() end,MultiSelect=_legacyMulti or false}
              end
-             local _l_l1I1lIlll=config.Options or {_l1_Unpack(220)}; local _l_lIl1lIlll=config.Default or 1
-             local _l_lIl1l1ll=config.Callback or function() end; local _l_lll1l1ll=config.MultiSelect or false
-             local _l_lll1lIlll={}; local _l_l1l1lIlll={}
-             if _l_lll1l1ll then _l_lll1lIlll={}; _l_lll1lIlll[_l_lIl1lIlll]=true else _l_lll1lIlll=_l_lIl1lIlll end
-             local _l_lI11lIlll=32
-             local _l_ll11lIlll=Instance.new(_l1_Unpack(221)); _l_ll11lIlll.Size=UDim2.new(0.96,0,0,#_l_l1I1lIlll*_l_lI11lIlll+8)
-             _l_ll11lIlll.BackgroundColor3=_l_llII1ll.ComponentBg; _l_ll11lIlll.BackgroundTransparency=0.03
-             _l_ll11lIlll.BorderSizePixel=0; _l_ll11lIlll.LayoutOrder=_l_l1III1ll(); _l_ll11lIlll.Parent=_l_ll1l1lll
-             _l_ll1ll(_l_ll11lIlll,10); _l_lIIlll(_l_ll11lIlll,Color3.fromRGB(255,255,255),1,0.92)
-             for i,option in ipairs(_l_l1I1lIlll) do
-                 local _l_l111lIlll=_l_lll1l1ll and (_l_lll1lIlll[i] or false) or (i==_l_lIl1lIlll)
-                 local _l_lIII1Illl=Instance.new(_l1_Unpack(222)); _l_lIII1Illl.Size=UDim2.new(0.92,0,0,28)
-                 _l_lIII1Illl.Position=UDim2.new(0.04,0,0,4+(i-1)*_l_lI11lIlll); _l_lIII1Illl.BackgroundTransparency=1; _l_lIII1Illl.Parent=_l_ll11lIlll
-                 local _l_lIlllll=Instance.new(_l1_Unpack(223)); _l_lIlllll.Size=UDim2.new(0,18,0,18); _l_lIlllll.Position=UDim2.new(0,0,0,5)
-                 _l_lIlllll.BackgroundColor3=_l_l111lIlll and _l_llII1ll.SliderFill or _l_llII1ll.ToggleOff; _l_lIlllll.BorderSizePixel=0; _l_lIlllll.Parent=_l_lIII1Illl
-                 _l_ll1ll(_l_lIlllll,9)
-                 local _l_l11lI1ll=Instance.new(_l1_Unpack(224)); _l_l11lI1ll.Size=UDim2.new(0,8,0,8); _l_l11lI1ll.Position=UDim2.new(0,5,0,5)
-                 _l_l11lI1ll.BackgroundColor3=Color3.fromRGB(255,255,255); _l_l11lI1ll.BorderSizePixel=0; _l_l11lI1ll.Visible=_l_l111lIlll; _l_l11lI1ll.Parent=_l_lIlllll
-                 _l_ll1ll(_l_l11lI1ll,4)
-                 local _l_llII1Illl=Instance.new(_l1_Unpack(225)); _l_llII1Illl.Size=UDim2.new(1,-26,1,0); _l_llII1Illl.Position=UDim2.new(0,24,0,0)
-                 _l_llII1Illl.BackgroundTransparency=1; _l_llII1Illl.Text=option; _l_llII1Illl.TextColor3=_l_llII1ll.Text
-                 _l_llII1Illl.Font=_l_l1lll.Medium; _l_llII1Illl.TextSize=12; _l_llII1Illl.TextXAlignment=Enum.TextXAlignment.Left; _l_llII1Illl.Parent=_l_lIII1Illl
-                 local _l_llIIIlll=Instance.new(_l1_Unpack(226)); _l_llIIIlll.Size=UDim2.new(1,0,1,0); _l_llIIIlll.BackgroundTransparency=1; _l_llIIIlll.Text=""; _l_llIIIlll.Parent=_l_lIII1Illl
-                 _l_llIIIlll.MouseButton1Click:Connect(function()
-                     if _l_lll1l1ll then
-                         _l_lll1lIlll[i]=not _l_lll1lIlll[i]; local _l_l1II1Illl=_l_lll1lIlll[i]
-                         _l_lI1ll(_l_l1l1lIlll[i].circle,{BackgroundColor3=_l_l1II1Illl and _l_llII1ll.SliderFill or _l_llII1ll.ToggleOff},0.18)
-                         _l_l1l1lIlll[i].dot.Visible=_l_l1II1Illl
-                         local _l_lIlI1Illl={}
-                         for _l_lII1lll,_l_l1I111ll in pairs(_l_lll1lIlll) do if _l_l1I111ll then table.insert(_l_lIlI1Illl,_l_l1I1lIlll[_l_lII1lll]) end end
-                         pcall(_l_lIl1l1ll, _l_lll1lIlll, _l_lIlI1Illl)
+             local _0x4a794de8=config.Options or {_0x_krein_unpack(220)}; local _0x27fab174=config.Default or 1
+             local _0x3789=config.Callback or function() end; local _0x6370064=config.MultiSelect or false
+             local _0x4c6b4f76={}; local _0x650d6e41={}
+             if _0x6370064 then _0x4c6b4f76={}; _0x4c6b4f76[_0x27fab174]=true else _0x4c6b4f76=_0x27fab174 end
+             local _0x35ad2c=32
+             local _0x187e8800=Instance.new(_0x_krein_unpack(221)); _0x187e8800.Size=UDim2.new(0.96,0,0,#_0x4a794de8*_0x35ad2c+8)
+             _0x187e8800.BackgroundColor3=_0x2ad2.ComponentBg; _0x187e8800.BackgroundTransparency=0.03
+             _0x187e8800.BorderSizePixel=0; _0x187e8800.LayoutOrder=_0x38bd(); _0x187e8800.Parent=_0x353f
+             _0x50be634c(_0x187e8800,10); _0x352a5f67(_0x187e8800,Color3.fromRGB(255,255,255),1,0.92)
+             for i,option in ipairs(_0x4a794de8) do
+                 local _0x17bdc565=_0x6370064 and (_0x4c6b4f76[i] or false) or (i==_0x27fab174)
+                 local _0x1e55b=Instance.new(_0x_krein_unpack(222)); _0x1e55b.Size=UDim2.new(0.92,0,0,28)
+                 _0x1e55b.Position=UDim2.new(0.04,0,0,4+(i-1)*_0x35ad2c); _0x1e55b.BackgroundTransparency=1; _0x1e55b.Parent=_0x187e8800
+                 local _0x511318b1=Instance.new(_0x_krein_unpack(223)); _0x511318b1.Size=UDim2.new(0,18,0,18); _0x511318b1.Position=UDim2.new(0,0,0,5)
+                 _0x511318b1.BackgroundColor3=_0x17bdc565 and _0x2ad2.SliderFill or _0x2ad2.ToggleOff; _0x511318b1.BorderSizePixel=0; _0x511318b1.Parent=_0x1e55b
+                 _0x50be634c(_0x511318b1,9)
+                 local _0x1b054=Instance.new(_0x_krein_unpack(224)); _0x1b054.Size=UDim2.new(0,8,0,8); _0x1b054.Position=UDim2.new(0,5,0,5)
+                 _0x1b054.BackgroundColor3=Color3.fromRGB(255,255,255); _0x1b054.BorderSizePixel=0; _0x1b054.Visible=_0x17bdc565; _0x1b054.Parent=_0x511318b1
+                 _0x50be634c(_0x1b054,4)
+                 local _0x61faa76=Instance.new(_0x_krein_unpack(225)); _0x61faa76.Size=UDim2.new(1,-26,1,0); _0x61faa76.Position=UDim2.new(0,24,0,0)
+                 _0x61faa76.BackgroundTransparency=1; _0x61faa76.Text=option; _0x61faa76.TextColor3=_0x2ad2.Text
+                 _0x61faa76.Font=_0x2aa3.Medium; _0x61faa76.TextSize=12; _0x61faa76.TextXAlignment=Enum.TextXAlignment.Left; _0x61faa76.Parent=_0x1e55b
+                 local _0x1a906=Instance.new(_0x_krein_unpack(226)); _0x1a906.Size=UDim2.new(1,0,1,0); _0x1a906.BackgroundTransparency=1; _0x1a906.Text=""; _0x1a906.Parent=_0x1e55b
+                 _0x1a906.MouseButton1Click:Connect(function()
+                     if _0x6370064 then
+                         _0x4c6b4f76[i]=not _0x4c6b4f76[i]; local _0x5fd5a53=_0x4c6b4f76[i]
+                         _0x38e1(_0x650d6e41[i].circle,{BackgroundColor3=_0x5fd5a53 and _0x2ad2.SliderFill or _0x2ad2.ToggleOff},0.18)
+                         _0x650d6e41[i].dot.Visible=_0x5fd5a53
+                         local _0x68950b21={}
+                         for _0x1c142,_0x1e79e in pairs(_0x4c6b4f76) do if _0x1e79e then table.insert(_0x68950b21,_0x4a794de8[_0x1c142]) end end
+                         pcall(_0x3789, _0x4c6b4f76, _0x68950b21)
                      else
-                         _l_lll1lIlll=i
-                         for j,data in ipairs(_l_l1l1lIlll) do
-                             local _l_l1II1Illl=(j==i)
-                             _l_lI1ll(data.circle,{BackgroundColor3=_l_l1II1Illl and _l_llII1ll.SliderFill or _l_llII1ll.ToggleOff},0.18)
-                             data.dot.Visible=_l_l1II1Illl
+                         _0x4c6b4f76=i
+                         for j,data in ipairs(_0x650d6e41) do
+                             local _0x5fd5a53=(j==i)
+                             _0x38e1(data.circle,{BackgroundColor3=_0x5fd5a53 and _0x2ad2.SliderFill or _0x2ad2.ToggleOff},0.18)
+                             data.dot.Visible=_0x5fd5a53
                          end
-                         pcall(_l_lIl1l1ll, i, _l_l1I1lIlll[i])
+                         pcall(_0x3789, i, _0x4a794de8[i])
                      end
                  end)
-                 table.insert(_l_l1l1lIlll,{_l_lIlllll=_l_lIlllll,_l_l11lI1ll=_l_l11lI1ll})
+                 table.insert(_0x650d6e41,{_0x511318b1=_0x511318b1,_0x1b054=_0x1b054})
              end
-             local _l_lI1II1ll={}
-             function _l_lI1II1ll:SetValue(index)
-                 if _l_lll1l1ll then
-                     if type(index)==_l1_Unpack(227) then _l_lll1lIlll=index else _l_lll1lIlll[index]=not _l_lll1lIlll[index] end
-                     for i,data in ipairs(_l_l1l1lIlll) do
-                         local _l_l1II1Illl=_l_lll1lIlll[i]; _l_lI1ll(data.circle,{BackgroundColor3=_l_l1II1Illl and _l_llII1ll.SliderFill or _l_llII1ll.ToggleOff},0.18); data.dot.Visible=_l_l1II1Illl
+             local _0x1d7f7={}
+             function _0x1d7f7:SetValue(index)
+                 if _0x6370064 then
+                     if type(index)==_0x_krein_unpack(227) then _0x4c6b4f76=index else _0x4c6b4f76[index]=not _0x4c6b4f76[index] end
+                     for i,data in ipairs(_0x650d6e41) do
+                         local _0x5fd5a53=_0x4c6b4f76[i]; _0x38e1(data.circle,{BackgroundColor3=_0x5fd5a53 and _0x2ad2.SliderFill or _0x2ad2.ToggleOff},0.18); data.dot.Visible=_0x5fd5a53
                      end
-                     local _l_lIlI1Illl={}
-                     for _l_lII1lll,_l_l1I111ll in pairs(_l_lll1lIlll) do if _l_l1I111ll then table.insert(_l_lIlI1Illl,_l_l1I1lIlll[_l_lII1lll]) end end
-                     pcall(_l_lIl1l1ll, _l_lll1lIlll, _l_lIlI1Illl)
+                     local _0x68950b21={}
+                     for _0x1c142,_0x1e79e in pairs(_0x4c6b4f76) do if _0x1e79e then table.insert(_0x68950b21,_0x4a794de8[_0x1c142]) end end
+                     pcall(_0x3789, _0x4c6b4f76, _0x68950b21)
                  else
-                     _l_lll1lIlll=index
-                     for i,data in ipairs(_l_l1l1lIlll) do
-                         local _l_l1II1Illl=(i==index); _l_lI1ll(data.circle,{BackgroundColor3=_l_l1II1Illl and _l_llII1ll.SliderFill or _l_llII1ll.ToggleOff},0.18); data.dot.Visible=_l_l1II1Illl
+                     _0x4c6b4f76=index
+                     for i,data in ipairs(_0x650d6e41) do
+                         local _0x5fd5a53=(i==index); _0x38e1(data.circle,{BackgroundColor3=_0x5fd5a53 and _0x2ad2.SliderFill or _0x2ad2.ToggleOff},0.18); data.dot.Visible=_0x5fd5a53
                      end
-                     pcall(_l_lIl1l1ll, index, _l_l1I1lIlll[index])
+                     pcall(_0x3789, index, _0x4a794de8[index])
                  end
              end
-             function _l_lI1II1ll:GetValue() return _l_lll1lIlll end
-             function _l_lI1II1ll:SetEnabled(e) _l_ll11lIlll.BackgroundTransparency=e and 0.03 or 0.5 end
-             function _l_lI1II1ll:SetVisible(v) _l_ll11lIlll.Visible=v; _l_l1l11lll() end
-             function _l_lI1II1ll:Destroy() _l_ll11lIlll:Destroy(); _l_l1l11lll() end
-             function _l_lI1II1ll:UpdateCallback(newCb) _l_lIl1l1ll=newCb end
-             return _l_lI1II1ll
+             function _0x1d7f7:GetValue() return _0x4c6b4f76 end
+             function _0x1d7f7:SetEnabled(e) _0x187e8800.BackgroundTransparency=e and 0.03 or 0.5 end
+             function _0x1d7f7:SetVisible(v) _0x187e8800.Visible=v; _0x65af86bb() end
+             function _0x1d7f7:Destroy() _0x187e8800:Destroy(); _0x65af86bb() end
+             function _0x1d7f7:UpdateCallback(newCb) _0x3789=newCb end
+             return _0x1d7f7
          end
-         function _l_lIIII1ll:Collapse()
-             if not _l_lII11lll then
-                 _l_lII11lll=true; _l_lI1ll(_l_lI1l1lll,{Rotation=0},0.24)
-                 _l_lI1ll(_l_llIl1lll,{Size=UDim2.new(0.97,0,0,36)},0.26,Enum.EasingStyle.Quart,Enum.EasingDirection.Out)
-                 task.delay(0.27,function() _l_ll1l1lll.Visible=false end)
+         function _0x271a9e:Collapse()
+             if not _0x6ec4e281 then
+                 _0x6ec4e281=true; _0x38e1(_0x48712405,{Rotation=0},0.24)
+                 _0x38e1(_0x2244f3b8,{Size=UDim2.new(0.97,0,0,36)},0.26,Enum.EasingStyle.Quart,Enum.EasingDirection.Out)
+                 task.delay(0.27,function() _0x353f.Visible=false end)
              end
          end
-         function _l_lIIII1ll:Expand()
-             if _l_lII11lll then _l_lII11lll=false; _l_ll1l1lll.Visible=true; _l_lI1ll(_l_lI1l1lll,{Rotation=90},0.24); _l_l1l11lll() end
+         function _0x271a9e:Expand()
+             if _0x6ec4e281 then _0x6ec4e281=false; _0x353f.Visible=true; _0x38e1(_0x48712405,{Rotation=90},0.24); _0x65af86bb() end
          end
-         function _l_lIIII1ll:SetTitle(_l_l1l1ll) _l_l1ll1lll.Text=_l_l1l1ll end
-         function _l_lIIII1ll:Destroy() _l_llIl1lll:Destroy() end
-         return _l_lIIII1ll
+         function _0x271a9e:SetTitle(_0x2ae3) _0x58c78800.Text=_0x2ae3 end
+         function _0x271a9e:Destroy() _0x2244f3b8:Destroy() end
+         return _0x271a9e
      end
-     return _l_lIIl1lll
+     return _0x6b2417d6
  end
- _l_lllIIlll.MouseButton1Click:Connect(function() _l_l11Illll:Destroy() end)
- _l_l1lIIlll.MouseButton1Click:Connect(function()
-     if _l_l111Illl then _l_l111llll() else _l_ll11llll() end
+ _0x44fd5411.MouseButton1Click:Connect(function() _0x6a82dd93:Destroy() end)
+ _0x76a00288.MouseButton1Click:Connect(function()
+     if _0x27f44d36 then _0x65fe999f() else _0x69352726() end
  end)
- _l_lI1IIlll.MouseButton1Click:Connect(function()
-     if _l_l111Illl then
-         _l_l111Illl=false; _l_ll1IIlll.Visible=true; _l_l1I11ll.Visible=true; _l_lIl11ll.Visible=true
-         _l_lll11ll.Visible=true; _l_lII1llll.Visible=true
-         _l_l1II1ll.ClipsDescendants = false
-         _l_lI1ll(_l_lllI1ll,{Thickness=1.5},0.3); _l_lI1ll(_l_l1lI1ll,{Thickness=3},0.3); _l_lI1ll(_l_lI1I1ll,{Thickness=6},0.3)
+ _0x770c32d9.MouseButton1Click:Connect(function()
+     if _0x27f44d36 then
+         _0x27f44d36=false; _0x1fd872.Visible=true; _0x7e11583.Visible=true; _0x6b9b8e57.Visible=true
+         _0x7e09577.Visible=true; _0x5d42e10e.Visible=true
+         _0x671aa9a4.ClipsDescendants = false
+         _0x38e1(_0x417d7c8e,{Thickness=1.5},0.3); _0x38e1(_0x417d7c8c,{Thickness=3},0.3); _0x38e1(_0x417d7c8a,{Thickness=6},0.3)
      end
-     _l_lIIIllll=not _l_lIIIllll
-     local _l_llIlll=_l_lIIIllll and _l_lI11lll or _l_lIl1lll
-     local _l_l1llll=_l_lIIIllll and UDim2.new(0.5,-_l_lI11lll.X.Offset/2,0.5,-_l_lI11lll.Y.Offset/2) or _l_lll1lll
-     _l_lI1ll(_l_l1II1ll,{Size=_l_llIlll,Position=_l_l1llll},0.32)
+     _0x55ff63a3=not _0x55ff63a3
+     local _0x2ad5=_0x55ff63a3 and _0x2ef4518d or _0x5067fc85
+     local _0x2ad6=_0x55ff63a3 and UDim2.new(0.5,-_0x2ef4518d.X.Offset/2,0.5,-_0x2ef4518d.Y.Offset/2) or _0x2ef4449f
+     _0x38e1(_0x671aa9a4,{Size=_0x2ad5,Position=_0x2ad6},0.32)
  end)
- local _l_lllI1Illl=false; local _l_l1lI1Illl,_l_lI1I1Illl=nil,nil
- _l_lIII1ll(_l_llI11ll.InputBegan,function(_l_ll1llIlll)
-     if _l_ll1llIlll.UserInputType==Enum.UserInputType.MouseButton1 or _l_ll1llIlll.UserInputType==Enum.UserInputType.Touch then
-         _l_lllI1Illl=true; _l_l1lI1Illl=_l_ll1llIlll.Position; _l_lI1I1Illl=_l_l1II1ll.Position
-     end
- end)
- _l_lIII1ll(_l_llll.InputChanged,function(_l_ll1llIlll)
-     if _l_lllI1Illl and (_l_ll1llIlll.UserInputType==Enum.UserInputType.MouseMovement or _l_ll1llIlll.UserInputType==Enum.UserInputType.Touch) then
-         local _l_ll1I1Illl=_l_ll1llIlll.Position-_l_l1lI1Illl
-         _l_l1II1ll.Position=UDim2.new(_l_lI1I1Illl.X.Scale,_l_lI1I1Illl.X.Offset+_l_ll1I1Illl.X,_l_lI1I1Illl.Y.Scale,_l_lI1I1Illl.Y.Offset+_l_ll1I1Illl.Y)
+ local _0x56a1198=false; local _0x19cb4,_0x19cf3=nil,nil
+ _0x659222a(_0x6b9b5684.InputBegan,function(_0x1c361)
+     if _0x1c361.UserInputType==Enum.UserInputType.MouseButton1 or _0x1c361.UserInputType==Enum.UserInputType.Touch then
+         _0x56a1198=true; _0x19cb4=_0x1c361.Position; _0x19cf3=_0x671aa9a4.Position
      end
  end)
- _l_lIII1ll(_l_llll.InputEnded,function(_l_ll1llIlll)
-     if _l_ll1llIlll.UserInputType==Enum.UserInputType.MouseButton1 or _l_ll1llIlll.UserInputType==Enum.UserInputType.Touch then _l_lllI1Illl=false end
+ _0x659222a(_0x17298.InputChanged,function(_0x1c361)
+     if _0x56a1198 and (_0x1c361.UserInputType==Enum.UserInputType.MouseMovement or _0x1c361.UserInputType==Enum.UserInputType.Touch) then
+         local _0x2bec=_0x1c361.Position-_0x19cb4
+         _0x671aa9a4.Position=UDim2.new(_0x19cf3.X.Scale,_0x19cf3.X.Offset+_0x2bec.X,_0x19cf3.Y.Scale,_0x19cf3.Y.Offset+_0x2bec.Y)
+     end
  end)
- return _l_l11Illll
+ _0x659222a(_0x17298.InputEnded,function(_0x1c361)
+     if _0x1c361.UserInputType==Enum.UserInputType.MouseButton1 or _0x1c361.UserInputType==Enum.UserInputType.Touch then _0x56a1198=false end
+ end)
+ return _0x6a82dd93
 end
-return _l_lllll
+return _0x502d1512
 end)(...)
