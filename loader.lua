@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
---  KREIN LOADER v2.5 — Clean Game List, Auto-Name & No Teleport
+--  KREIN LOADER v3.0 — Premium Animated UI & Clean Look
 -- ═══════════════════════════════════════════════════════════════
 repeat task.wait() until game:IsLoaded()
 
@@ -10,20 +10,18 @@ local Players = game:GetService("Players")
 
 -- ── KONFIG ──
 local BASE    = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs/heads/main/"
-local VERSION = "1.3.0"
+local VERSION = "1.4.0"
 local CREATOR = "liptz341"
 
--- ✏️ CARA NAMBAH GAME BARU:
--- [PlaceId] = "Path/File.lua"
+-- ✏️ CARA NAMBAH GAME BARU: [PlaceId] = "Path/File.lua"
 local GAMES = {
     [123974602339071] = "Games/StealABrainrot.lua",
-    -- [9876543210]   = "Games/GameLain.lua",
 }
 
 local currentPath = GAMES[game.PlaceId]
 local supported = currentPath ~= nil
 
--- ── HELPER: FETCH INFO & ICON (ANTI-NULL) ──
+-- ── HELPER: FETCH INFO & ICON (FIX PP) ──
 local infoCache = {}
 local function getGameInfo(placeId)
     if infoCache[placeId] then return infoCache[placeId] end
@@ -37,7 +35,7 @@ local function getGameInfo(placeId)
     return nil
 end
 
--- ── FONTS MODERN ──
+-- ── FONTS ──
 local function tryFont(name, fallback)
     local ok, f = pcall(function() return Enum.Font[name] end)
     return (ok and f) or fallback
@@ -50,25 +48,24 @@ local F = {
     Code   = tryFont("RobotoMono",            Enum.Font.Code),
 }
 
--- ── PALET ──
+-- ── PALET PREMIUM ──
 local C = {
-    Bg        = Color3.fromRGB(6, 6, 10),
-    BgSoft    = Color3.fromRGB(12, 12, 18),
-    SidebarBg = Color3.fromRGB(10, 10, 15),
-    CardBg    = Color3.fromRGB(18, 18, 26),
-    CardHover = Color3.fromRGB(24, 24, 36),
-    Border    = Color3.fromRGB(45, 45, 65),
-    Text      = Color3.fromRGB(240, 240, 250),
-    TextSub   = Color3.fromRGB(130, 130, 150),
-    Accent    = Color3.fromRGB(110, 155, 255),
-    Success   = Color3.fromRGB(68, 200, 100),
-    Danger    = Color3.fromRGB(220, 70, 70),
+    Bg        = Color3.fromRGB(10, 10, 14),
+    BgSoft    = Color3.fromRGB(16, 16, 24),
+    CardBg    = Color3.fromRGB(22, 22, 32),
+    CardHover = Color3.fromRGB(30, 30, 44),
+    Border    = Color3.fromRGB(55, 55, 75),
+    Text      = Color3.fromRGB(245, 245, 255),
+    TextSub   = Color3.fromRGB(140, 140, 160),
+    Accent    = Color3.fromRGB(120, 160, 255),
+    Success   = Color3.fromRGB(70, 210, 100),
+    Danger    = Color3.fromRGB(230, 75, 75),
 }
 
 -- ── HELPERS ──
 local function corner(parent, r)
     local c = Instance.new("UICorner")
-    c.CornerRadius = UDim.new(0, r or 10)
+    c.CornerRadius = UDim.new(0, r or 12)
     c.Parent = parent
     return c
 end
@@ -85,7 +82,7 @@ local function tw(obj, props, dur, style, dir)
     TS:Create(obj, TweenInfo.new(dur or 0.3, style or Enum.EasingStyle.Quart, dir or Enum.EasingDirection.Out), props):Play()
 end
 
--- ── PARENT & GUI ──
+-- ── PARENT & GUI (TANPA BACKDROP) ──
 local parent = (gethui and gethui()) or game:GetService("CoreGui")
 local old = parent:FindFirstChild("KreinLoader")
 if old then old:Destroy() end
@@ -97,19 +94,10 @@ gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 gui.DisplayOrder = 999
 gui.Parent = parent
 
-local backdrop = Instance.new("Frame")
-backdrop.Size = UDim2.new(1, 0, 1, 0)
-backdrop.BackgroundColor3 = Color3.new(0, 0, 0)
-backdrop.BackgroundTransparency = 1
-backdrop.BorderSizePixel = 0
-backdrop.ZIndex = 1
-backdrop.Parent = gui
-tw(backdrop, {BackgroundTransparency = 0.55}, 0.4)
-
 local rgbRunning = true
 
 -- ═══════════════════════════════════════════════════════════════
---  LOAD LIBRARY FUNCTION
+--  CORE FUNCTIONS
 -- ═══════════════════════════════════════════════════════════════
 local function loadLibrary(fromGUI, callback)
     task.spawn(function()
@@ -155,18 +143,17 @@ local function loadLibrary(fromGUI, callback)
     end)
 end
 
-local function fadeOutLoader()
+local function fadeOutAndDestroy()
     rgbRunning = false
-    tw(backdrop, {BackgroundTransparency = 1}, 0.35)
     for _, c in ipairs(gui:GetDescendants()) do
         if c:IsA("Frame") or c:IsA("TextButton") or c:IsA("ImageLabel") then
-            pcall(function() tw(c, {BackgroundTransparency = 1}, 0.3) end)
+            pcall(function() tw(c, {BackgroundTransparency = 1, Size = UDim2.new(0,0,0,0)}, 0.3, Enum.EasingStyle.Back, Enum.EasingDirection.In) end)
         end
         if c:IsA("TextLabel") or c:IsA("TextBox") then
-            pcall(function() tw(c, {TextTransparency = 1}, 0.3) end)
+            pcall(function() tw(c, {TextTransparency = 1}, 0.2) end)
         end
         if c:IsA("UIStroke") then
-            pcall(function() tw(c, {Transparency = 1}, 0.3) end)
+            pcall(function() tw(c, {Transparency = 1}, 0.2) end)
         end
     end
     task.delay(0.4, function()
@@ -174,8 +161,43 @@ local function fadeOutLoader()
     end)
 end
 
+-- UI Animasi Klik Tombol
+local function animateClick(btn)
+    local origSize = btn.Size
+    tw(btn, {Size = origSize - UDim2.new(0, 4, 0, 4)}, 0.05)
+    task.delay(0.05, function() tw(btn, {Size = origSize}, 0.1, Enum.EasingStyle.Back) end)
+end
+
+-- Tombol Close Universal
+local function createCloseBtn(parentFrame)
+    local CloseBtn = Instance.new("TextButton")
+    CloseBtn.Size = UDim2.new(0, 28, 0, 28)
+    CloseBtn.Position = UDim2.new(1, -38, 0, 10)
+    CloseBtn.BackgroundColor3 = C.CardBg
+    CloseBtn.BackgroundTransparency = 0.5
+    CloseBtn.BorderSizePixel = 0
+    CloseBtn.Text = "✕"
+    CloseBtn.TextColor3 = C.TextSub
+    CloseBtn.Font = F.Header
+    CloseBtn.TextSize = 14
+    CloseBtn.AutoButtonColor = false
+    CloseBtn.Parent = parentFrame
+    corner(CloseBtn, 8)
+    
+    CloseBtn.MouseEnter:Connect(function()
+        tw(CloseBtn, {BackgroundColor3 = C.Danger, BackgroundTransparency = 0, TextColor3 = Color3.new(1,1,1)}, 0.15)
+    end)
+    CloseBtn.MouseLeave:Connect(function()
+        tw(CloseBtn, {BackgroundColor3 = C.CardBg, BackgroundTransparency = 0.5, TextColor3 = C.TextSub}, 0.15)
+    end)
+    CloseBtn.MouseButton1Click:Connect(function()
+        fadeOutAndDestroy()
+    end)
+    return CloseBtn
+end
+
 -- ═══════════════════════════════════════════════════════════════
---  MODE A: GAME SUPPORTED → Small "Load Now" Card
+--  MODE A: GAME SUPPORTED → Small Card
 -- ═══════════════════════════════════════════════════════════════
 local function buildSupportedCard()
     local info = getGameInfo(game.PlaceId)
@@ -194,17 +216,17 @@ local function buildSupportedCard()
     corner(Card, 16)
 
     local s1 = stroke(Card, C.Accent, 1.5, 0.4)
-    local s2 = stroke(Card, C.Accent, 6, 0.8)
+    local s2 = stroke(Card, C.Accent, 8, 0.8)
 
     local Pad = Instance.new("UIPadding")
-    Pad.PaddingTop    = UDim.new(0, 26)
-    Pad.PaddingBottom = UDim.new(0, 26)
+    Pad.PaddingTop    = UDim.new(0, 30)
+    Pad.PaddingBottom = UDim.new(0, 30)
     Pad.PaddingLeft   = UDim.new(0, 26)
     Pad.PaddingRight  = UDim.new(0, 26)
     Pad.Parent = Card
 
     local Layout = Instance.new("UIListLayout")
-    Layout.Padding = UDim.new(0, 12)
+    Layout.Padding = UDim.new(0, 14)
     Layout.SortOrder = Enum.SortOrder.LayoutOrder
     Layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
     Layout.Parent = Card
@@ -214,7 +236,7 @@ local function buildSupportedCard()
     Title.BackgroundTransparency = 1
     Title.Text = "KreinLoad"
     Title.Font = F.Title
-    Title.TextSize = 34
+    Title.TextSize = 36
     Title.TextColor3 = Color3.new(1,1,1)
     Title.TextTransparency = 1
     Title.LayoutOrder = 1
@@ -232,57 +254,59 @@ local function buildSupportedCard()
     TitleGrad.Parent = Title
 
     local Sub = Instance.new("TextLabel")
-    Sub.Size = UDim2.new(1, 0, 0, 16)
+    Sub.Size = UDim2.new(1, 0, 0, 18)
     Sub.BackgroundTransparency = 1
     Sub.Text = "Detected: " .. gameName
     Sub.TextColor3 = C.TextSub
-    Sub.Font = F.Reg
-    Sub.TextSize = 12
+    Sub.Font = F.Body
+    Sub.TextSize = 13
     Sub.TextTransparency = 1
     Sub.LayoutOrder = 2
     Sub.ZIndex = 3
     Sub.Parent = Card
 
     local Btn = Instance.new("TextButton")
-    Btn.Size = UDim2.new(1, 0, 0, 46)
+    Btn.Size = UDim2.new(1, 0, 0, 48)
     Btn.BackgroundColor3 = C.CardBg
     Btn.BackgroundTransparency = 1
     Btn.BorderSizePixel = 0
     Btn.Text = "Load Now!"
     Btn.TextColor3 = Color3.new(1,1,1)
     Btn.Font = F.Header
-    Btn.TextSize = 15
+    Btn.TextSize = 16
     Btn.TextTransparency = 1
     Btn.AutoButtonColor = false
     Btn.LayoutOrder = 3
     Btn.ZIndex = 3
     Btn.Parent = Card
-    corner(Btn, 10)
-    local sBtn = stroke(Btn, C.Accent, 1.5, 0.2)
+    corner(Btn, 12)
+    local sBtn = stroke(Btn, C.Accent, 2, 0.2)
 
     local CardScale = Instance.new("UIScale")
-    CardScale.Scale = 0.85
+    CardScale.Scale = 0.8
     CardScale.Parent = Card
 
+    -- Animasi RGB Border Loop
     task.spawn(function()
         local hue, gradOff, pulse = 0, 0, 0
         while rgbRunning and Card.Parent do
-            hue = (hue + 0.008) % 1
-            gradOff = (gradOff + 0.004) % 1
-            pulse = (pulse + 0.05) % (math.pi * 2)
-            local col = Color3.fromHSV(hue, 0.85, 1)
+            hue = (hue + 0.01) % 1
+            gradOff = (gradOff + 0.005) % 1
+            pulse = (pulse + 0.06) % (math.pi * 2)
+            local col = Color3.fromHSV(hue, 0.9, 1)
             s1.Color = col; s2.Color = col; sBtn.Color = col
-            s2.Transparency = 0.72 + (math.sin(pulse) * 0.5 + 0.5) * 0.15
+            s2.Transparency = 0.65 + (math.sin(pulse) * 0.5 + 0.5) * 0.2
             TitleGrad.Offset = Vector2.new(gradOff, 0)
             task.wait(0.03)
         end
     end)
 
-    tw(Card, {BackgroundTransparency = 0.02}, 0.5, Enum.EasingStyle.Back)
-    tw(CardScale, {Scale = 1}, 0.5, Enum.EasingStyle.Back)
-    task.delay(0.25, function()
+    -- Fade In
+    tw(Card, {BackgroundTransparency = 0}, 0.5, Enum.EasingStyle.Back)
+    tw(CardScale, {Scale = 1}, 0.6, Enum.EasingStyle.Back)
+    task.delay(0.2, function()
         for _, el in ipairs({Title, Sub, Btn}) do
-            if el and el.Parent then tw(el, {TextTransparency = 0}, 0.35) end
+            if el and el.Parent then tw(el, {TextTransparency = 0}, 0.4) end
         end
     end)
 
@@ -297,15 +321,18 @@ local function buildSupportedCard()
 
     Btn.MouseButton1Click:Connect(function()
         if Btn.Text == "Loading..." then return end
+        animateClick(Btn)
         Btn.Text = "Loading..."
         loadLibrary(Btn, function(KreinHub)
-            task.wait(0.2)
-            fadeOutLoader()
-            task.delay(0.6, function()
+            task.wait(0.1)
+            fadeOutAndDestroy()
+            task.delay(0.5, function()
                 KreinHub:Notify("Krein Hub", "Berhasil dimuat!", 3, "success")
             end)
         end)
     end)
+
+    createCloseBtn(Card)
 end
 
 -- ═══════════════════════════════════════════════════════════════
@@ -314,7 +341,7 @@ end
 local function buildMenuWindow()
     local W = Instance.new("Frame")
     W.Name = "KreinMenu"
-    W.Size = UDim2.new(0, 720, 0, 500)
+    W.Size = UDim2.new(0, 740, 0, 520)
     W.AnchorPoint = Vector2.new(0.5, 0.5)
     W.Position = UDim2.new(0.5, 0, 0.5, 0)
     W.BackgroundColor3 = C.Bg
@@ -327,29 +354,34 @@ local function buildMenuWindow()
 
     if UIS.TouchEnabled and not UIS.KeyboardEnabled then
         local vp = workspace.CurrentCamera.ViewportSize
-        if vp.X < 720 then W.Size = UDim2.new(1, -20, 1, -120) end
+        if vp.X < 740 then W.Size = UDim2.new(1, -20, 1, -120) end
     end
 
     local s1 = stroke(W, C.Accent, 1.5, 0.4)
-    local s2 = stroke(W, C.Accent, 6, 0.8)
+    local s2 = stroke(W, C.Accent, 8, 0.8)
 
     local hue = 0
     task.spawn(function()
         while rgbRunning and W.Parent do
-            hue = (hue + 0.008) % 1
-            local col = Color3.fromHSV(hue, 0.85, 1)
+            hue = (hue + 0.01) % 1
+            local col = Color3.fromHSV(hue, 0.9, 1)
             s1.Color = col; s2.Color = col
-            s2.Transparency = 0.72 + (math.sin(tick() * 2) * 0.5 + 0.5) * 0.15
+            s2.Transparency = 0.65 + (math.sin(tick() * 2) * 0.5 + 0.5) * 0.2
             task.wait(0.03)
         end
     end)
 
-    tw(W, {BackgroundTransparency = 0.04}, 0.4)
+    local WScale = Instance.new("UIScale")
+    WScale.Scale = 0.9
+    WScale.Parent = W
+
+    tw(W, {BackgroundTransparency = 0}, 0.4, Enum.EasingStyle.Back)
+    tw(WScale, {Scale = 1}, 0.5, Enum.EasingStyle.Back)
 
     -- ── SIDEBAR ──
     local SB = Instance.new("Frame")
-    SB.Size = UDim2.new(0, 180, 1, 0)
-    SB.BackgroundColor3 = C.SidebarBg
+    SB.Size = UDim2.new(0, 190, 1, 0)
+    SB.BackgroundColor3 = C.BgSoft
     SB.BackgroundTransparency = 0.02
     SB.BorderSizePixel = 0
     SB.Parent = W
@@ -358,25 +390,25 @@ local function buildMenuWindow()
     local SBCover = Instance.new("Frame")
     SBCover.Size = UDim2.new(0, 12, 1, 0)
     SBCover.Position = UDim2.new(1, -12, 0, 0)
-    SBCover.BackgroundColor3 = C.SidebarBg
+    SBCover.BackgroundColor3 = C.BgSoft
     SBCover.BackgroundTransparency = 0.02
     SBCover.BorderSizePixel = 0
     SBCover.Parent = SB
 
     local SBSep = Instance.new("Frame")
-    SBSep.Size = UDim2.new(0, 1, 1, -30)
-    SBSep.Position = UDim2.new(1, 0, 0, 15)
+    SBSep.Size = UDim2.new(0, 1, 1, -40)
+    SBSep.Position = UDim2.new(1, 0, 0, 20)
     SBSep.BackgroundColor3 = C.Border
-    SBSep.BackgroundTransparency = 0.6
+    SBSep.BackgroundTransparency = 0.5
     SBSep.BorderSizePixel = 0
     SBSep.Parent = SB
 
     local Title = Instance.new("TextLabel")
-    Title.Size = UDim2.new(1, 0, 0, 60)
+    Title.Size = UDim2.new(1, 0, 0, 70)
     Title.BackgroundTransparency = 1
     Title.Text = "KreinLoad"
     Title.Font = F.Title
-    Title.TextSize = 24
+    Title.TextSize = 26
     Title.TextColor3 = Color3.new(1,1,1)
     Title.Parent = SB
 
@@ -393,41 +425,40 @@ local function buildMenuWindow()
     task.spawn(function()
         local o = 0
         while rgbRunning and Title.Parent do
-            o = (o + 0.004) % 1
+            o = (o + 0.005) % 1
             TGrad.Offset = Vector2.new(o, 0)
             task.wait(0.03)
         end
     end)
 
     local Menu = Instance.new("Frame")
-    Menu.Size = UDim2.new(1, -16, 1, -140)
-    Menu.Position = UDim2.new(0, 8, 0, 60)
+    Menu.Size = UDim2.new(1, -20, 1, -150)
+    Menu.Position = UDim2.new(0, 10, 0, 70)
     Menu.BackgroundTransparency = 1
     Menu.Parent = SB
 
     local MenuL = Instance.new("UIListLayout")
-    MenuL.Padding = UDim.new(0, 6)
+    MenuL.Padding = UDim.new(0, 8)
     MenuL.SortOrder = Enum.SortOrder.LayoutOrder
     MenuL.Parent = Menu
 
     local OpenBtn = Instance.new("TextButton")
-    OpenBtn.Size = UDim2.new(1, -16, 0, 40)
-    OpenBtn.Position = UDim2.new(0, 8, 1, -50)
+    OpenBtn.Size = UDim2.new(1, -20, 0, 44)
+    OpenBtn.Position = UDim2.new(0, 10, 1, -54)
     OpenBtn.BackgroundColor3 = C.CardBg
-    OpenBtn.BackgroundTransparency = 0.05
     OpenBtn.BorderSizePixel = 0
     OpenBtn.Text = "🚀  Open Library"
     OpenBtn.TextColor3 = C.Text
     OpenBtn.Font = F.Header
-    OpenBtn.TextSize = 12
+    OpenBtn.TextSize = 13
     OpenBtn.AutoButtonColor = false
     OpenBtn.Parent = SB
     corner(OpenBtn, 10)
     stroke(OpenBtn, C.Success, 1.5, 0.4)
 
     local Content = Instance.new("Frame")
-    Content.Size = UDim2.new(1, -180, 1, 0)
-    Content.Position = UDim2.new(0, 180, 0, 0)
+    Content.Size = UDim2.new(1, -190, 1, 0)
+    Content.Position = UDim2.new(0, 190, 0, 0)
     Content.BackgroundTransparency = 1
     Content.ClipsDescendants = true
     Content.Parent = W
@@ -442,7 +473,7 @@ local function buildMenuWindow()
     GamesPage.Size = UDim2.new(1, 0, 1, 0)
     GamesPage.BackgroundTransparency = 1
     GamesPage.BorderSizePixel = 0
-    GamesPage.ScrollBarThickness = 2
+    GamesPage.ScrollBarThickness = 3
     GamesPage.ScrollBarImageColor3 = C.Border
     GamesPage.ScrollingDirection = Enum.ScrollingDirection.Y
     GamesPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
@@ -451,42 +482,42 @@ local function buildMenuWindow()
     GamesPage.Parent = Pages
 
     local GL = Instance.new("UIListLayout")
-    GL.Padding = UDim.new(0, 10)
+    GL.Padding = UDim.new(0, 12)
     GL.SortOrder = Enum.SortOrder.LayoutOrder
     GL.HorizontalAlignment = Enum.HorizontalAlignment.Center
     GL.Parent = GamesPage
 
     local GPad = Instance.new("UIPadding")
-    GPad.PaddingTop = UDim.new(0, 20)
-    GPad.PaddingBottom = UDim.new(0, 20)
+    GPad.PaddingTop = UDim.new(0, 24)
+    GPad.PaddingBottom = UDim.new(0, 24)
     GPad.Parent = GamesPage
 
     local GHeader = Instance.new("TextLabel")
-    GHeader.Size = UDim2.new(1, -40, 0, 34)
+    GHeader.Size = UDim2.new(1, -60, 0, 34)
     GHeader.BackgroundTransparency = 1
     GHeader.Text = "🎮 Game List"
     GHeader.TextColor3 = C.Text
     GHeader.Font = F.Title
-    GHeader.TextSize = 22
+    GHeader.TextSize = 24
     GHeader.TextXAlignment = Enum.TextXAlignment.Left
     GHeader.LayoutOrder = 0
     GHeader.Parent = GamesPage
 
     local GSub = Instance.new("TextLabel")
-    GSub.Size = UDim2.new(1, -40, 0, 22)
+    GSub.Size = UDim2.new(1, -60, 0, 22)
     GSub.BackgroundTransparency = 1
-    GSub.Text = "Daftar game yang tersedia di Krein Hub."
+    GSub.Text = "Daftar game yang didukung oleh Krein Hub."
     GSub.TextColor3 = C.TextSub
-    GSub.Font = F.Reg
-    GSub.TextSize = 12
+    GSub.Font = F.Body
+    GSub.TextSize = 13
     GSub.TextXAlignment = Enum.TextXAlignment.Left
     GSub.LayoutOrder = 1
     GSub.Parent = GamesPage
 
-    -- Game card renderer (TANPA TOMBOL TELEPORT)
-    local function makeGameCard(placeId, path, order)
+    -- Game card renderer (Tanpa Path & Animasi Hover)
+    local function makeGameCard(placeId, order)
         local Card = Instance.new("Frame")
-        Card.Size = UDim2.new(1, -40, 0, 92)
+        Card.Size = UDim2.new(1, -60, 0, 90)
         Card.BackgroundColor3 = C.CardBg
         Card.BackgroundTransparency = 0.05
         Card.BorderSizePixel = 0
@@ -496,8 +527,8 @@ local function buildMenuWindow()
         local cStk = stroke(Card, C.Border, 1, 0.5)
 
         local IconF = Instance.new("Frame")
-        IconF.Size = UDim2.new(0, 68, 0, 68)
-        IconF.Position = UDim2.new(0, 12, 0.5, -34)
+        IconF.Size = UDim2.new(0, 66, 0, 66)
+        IconF.Position = UDim2.new(0, 12, 0.5, -33)
         IconF.BackgroundColor3 = C.BgSoft
         IconF.BorderSizePixel = 0
         IconF.ClipsDescendants = true
@@ -508,90 +539,72 @@ local function buildMenuWindow()
         local Icon = Instance.new("ImageLabel")
         Icon.Size = UDim2.new(1, 0, 1, 0)
         Icon.BackgroundTransparency = 1
+        Icon.Image = "" -- Set nanti
         Icon.Parent = IconF
-
-        -- Fetch Info & Icon (Gunakan UniverseId untuk icon)
-        local info = getGameInfo(placeId)
-        if info then
-            local uniId = info.UniverseId or placeId
-            Icon.Image = "rbxthumb://type=GameIcon&id=" .. tostring(uniId) .. "&w=150&h=150"
-        else
-            Icon.Image = "rbxthumb://type=GameIcon&id=" .. tostring(placeId) .. "&w=150&h=150"
-        end
 
         local Name = Instance.new("TextLabel")
         Name.Size = UDim2.new(1, -100, 0, 22)
         Name.Position = UDim2.new(0, 92, 0, 22)
         Name.BackgroundTransparency = 1
-        Name.Text = info and info.Name or "Loading..."
+        Name.Text = "Loading..."
         Name.TextColor3 = C.Text
         Name.Font = F.Header
-        Name.TextSize = 15
+        Name.TextSize = 16
         Name.TextXAlignment = Enum.TextXAlignment.Left
         Name.TextTruncate = Enum.TextTruncate.AtEnd
         Name.Parent = Card
 
-        -- Kalau info belum ada, fetch di background
-        if not info then
-            task.spawn(function()
-                local success, fetched = pcall(function() return MPS:GetProductInfo(placeId) end)
-                if success and fetched then
-                    if Name.Parent then Name.Text = fetched.Name end
-                    if Icon.Parent then 
-                        local uId = fetched.UniverseId or placeId
-                        Icon.Image = "rbxthumb://type=GameIcon&id=" .. tostring(uId) .. "&w=150&h=150" 
-                    end
-                end
-            end)
-        end
-
         local Id = Instance.new("TextLabel")
         Id.Size = UDim2.new(1, -100, 0, 16)
-        Id.Position = UDim2.new(0, 92, 0, 46)
+        Id.Position = UDim2.new(0, 92, 0, 48)
         Id.BackgroundTransparency = 1
-        Id.Text = "PlaceId: " .. placeId
+        Id.Text = "ID: " .. placeId
         Id.TextColor3 = C.TextSub
         Id.Font = F.Code
         Id.TextSize = 11
         Id.TextXAlignment = Enum.TextXAlignment.Left
         Id.Parent = Card
         
-        local PathLbl = Instance.new("TextLabel")
-        PathLbl.Size = UDim2.new(1, -100, 0, 16)
-        PathLbl.Position = UDim2.new(0, 92, 0, 62)
-        PathLbl.BackgroundTransparency = 1
-        PathLbl.Text = path
-        PathLbl.TextColor3 = C.Accent
-        PathLbl.Font = F.Code
-        PathLbl.TextSize = 10
-        PathLbl.TextXAlignment = Enum.TextXAlignment.Left
-        PathLbl.Parent = Card
+        -- Fetch Info & Icon
+        task.spawn(function()
+            local info = getGameInfo(placeId)
+            if info then
+                if Name.Parent then Name.Text = info.Name end
+                local uId = info.UniverseId or placeId
+                if Icon.Parent then 
+                    Icon.Image = "rbxthumb://type=GameIcon&id=" .. tostring(uId) .. "&w=150&h=150"
+                end
+            else
+                if Name.Parent then Name.Text = "Unknown Game" end
+            end
+        end)
 
+        -- Animasi Card Hover
         Card.MouseEnter:Connect(function()
-            tw(Card, {BackgroundColor3 = C.CardHover, BackgroundTransparency = 0.02}, 0.15)
-            tw(cStk, {Transparency = 0.2}, 0.15)
+            tw(Card, {BackgroundColor3 = C.CardHover, BackgroundTransparency = 0, Size = UDim2.new(1, -56, 0, 94)}, 0.15)
+            tw(cStk, {Transparency = 0.2, Color = C.Accent}, 0.15)
         end)
         Card.MouseLeave:Connect(function()
-            tw(Card, {BackgroundColor3 = C.CardBg, BackgroundTransparency = 0.05}, 0.15)
-            tw(cStk, {Transparency = 0.5}, 0.15)
+            tw(Card, {BackgroundColor3 = C.CardBg, BackgroundTransparency = 0.05, Size = UDim2.new(1, -60, 0, 90)}, 0.15)
+            tw(cStk, {Transparency = 0.5, Color = C.Border}, 0.15)
         end)
     end
 
     local idx = 2
-    for pid, path in pairs(GAMES) do
-        makeGameCard(pid, path, idx)
+    for pid, _ in pairs(GAMES) do
+        makeGameCard(pid, idx)
         idx = idx + 1
     end
 
     if idx == 2 then
         local Empty = Instance.new("TextLabel")
-        Empty.Size = UDim2.new(1, -40, 0, 80)
+        Empty.Size = UDim2.new(1, -60, 0, 80)
         Empty.BackgroundColor3 = C.CardBg
         Empty.BackgroundTransparency = 0.5
         Empty.Text = "Belum ada game terdaftar di registry."
         Empty.TextColor3 = C.TextSub
         Empty.Font = F.Reg
-        Empty.TextSize = 12
+        Empty.TextSize = 13
         Empty.LayoutOrder = 2
         Empty.Parent = GamesPage
         corner(Empty, 10)
@@ -606,12 +619,12 @@ local function buildMenuWindow()
 
     local IPad = Instance.new("UIPadding")
     IPad.PaddingTop = UDim.new(0, 24)
-    IPad.PaddingLeft = UDim.new(0, 30)
-    IPad.PaddingRight = UDim.new(0, 30)
+    IPad.PaddingLeft = UDim.new(0, 40)
+    IPad.PaddingRight = UDim.new(0, 40)
     IPad.Parent = InfoPage
 
     local IL = Instance.new("UIListLayout")
-    IL.Padding = UDim.new(0, 12)
+    IL.Padding = UDim.new(0, 14)
     IL.Parent = InfoPage
 
     local IHeader = Instance.new("TextLabel")
@@ -620,7 +633,7 @@ local function buildMenuWindow()
     IHeader.Text = "ℹ️ Krein GUI Library"
     IHeader.TextColor3 = C.Text
     IHeader.Font = F.Title
-    IHeader.TextSize = 22
+    IHeader.TextSize = 24
     IHeader.TextXAlignment = Enum.TextXAlignment.Left
     IHeader.LayoutOrder = 0
     IHeader.Parent = InfoPage
@@ -637,7 +650,7 @@ local function buildMenuWindow()
         l.Text = label
         l.TextColor3 = C.TextSub
         l.Font = F.Reg
-        l.TextSize = 12
+        l.TextSize = 13
         l.TextXAlignment = Enum.TextXAlignment.Left
         l.Parent = row
         local v = Instance.new("TextLabel")
@@ -647,7 +660,7 @@ local function buildMenuWindow()
         v.Text = value
         v.TextColor3 = color or C.Text
         v.Font = F.Header
-        v.TextSize = 12
+        v.TextSize = 13
         v.TextXAlignment = Enum.TextXAlignment.Left
         v.Parent = row
     end
@@ -666,7 +679,7 @@ local function buildMenuWindow()
     Desc.Text = "Krein GUI Library adalah UI library premium untuk Roblox dengan animasi halus, 12+ komponen interaktif, dan sistem notifikasi modern. Dibuat dari nol menggunakan Roblox Lua API murni."
     Desc.TextColor3 = C.TextSub
     Desc.Font = F.Reg
-    Desc.TextSize = 12
+    Desc.TextSize = 13
     Desc.TextXAlignment = Enum.TextXAlignment.Left
     Desc.TextYAlignment = Enum.TextYAlignment.Top
     Desc.TextWrapped = true
@@ -685,12 +698,12 @@ local function buildMenuWindow()
 
     local stTitle = Instance.new("TextLabel")
     stTitle.Size = UDim2.new(1, -20, 0, 18)
-    stTitle.Position = UDim2.new(0, 10, 0, 8)
+    stTitle.Position = UDim2.new(0, 12, 0, 10)
     stTitle.BackgroundTransparency = 1
     stTitle.Text = "⚠ Game saat ini tidak didukung"
     stTitle.TextColor3 = C.Danger
     stTitle.Font = F.Header
-    stTitle.TextSize = 12
+    stTitle.TextSize = 13
     stTitle.TextXAlignment = Enum.TextXAlignment.Left
     stTitle.Parent = StatusF
 
@@ -699,23 +712,23 @@ local function buildMenuWindow()
 
     local stName = Instance.new("TextLabel")
     stName.Size = UDim2.new(1, -20, 0, 18)
-    stName.Position = UDim2.new(0, 10, 0, 30)
+    stName.Position = UDim2.new(0, 12, 0, 32)
     stName.BackgroundTransparency = 1
     stName.Text = "Game: " .. cName
     stName.TextColor3 = C.Text
-    stName.Font = F.Header
-    stName.TextSize = 11
+    stName.Font = F.Body
+    stName.TextSize = 12
     stName.TextXAlignment = Enum.TextXAlignment.Left
     stName.Parent = StatusF
 
     local stId = Instance.new("TextLabel")
     stId.Size = UDim2.new(1, -20, 0, 16)
-    stId.Position = UDim2.new(0, 10, 0, 52)
+    stId.Position = UDim2.new(0, 12, 0, 52)
     stId.BackgroundTransparency = 1
     stId.Text = "PlaceId: " .. tostring(game.PlaceId)
     stId.TextColor3 = C.TextSub
     stId.Font = F.Code
-    stId.TextSize = 10
+    stId.TextSize = 11
     stId.TextXAlignment = Enum.TextXAlignment.Left
     stId.Parent = StatusF
 
@@ -727,7 +740,7 @@ local function buildMenuWindow()
         currentPage = name
         for n, b in pairs(menuBtns) do
             local active = (n == name)
-            tw(b, {BackgroundColor3 = active and C.CardBg or C.SidebarBg, BackgroundTransparency = active and 0.02 or 1}, 0.2)
+            tw(b, {BackgroundColor3 = active and C.CardBg or C.BgSoft, BackgroundTransparency = active and 0.02 or 1}, 0.2)
             local txt = b:FindFirstChild("TextLabel")
             if txt then tw(txt, {TextColor3 = active and C.Text or C.TextSub}, 0.2) end
             local ind = b:FindFirstChild("Indicator")
@@ -739,8 +752,8 @@ local function buildMenuWindow()
 
     local function createMenuBtn(name, label, icon, order)
         local B = Instance.new("TextButton")
-        B.Size = UDim2.new(1, 0, 0, 42)
-        B.BackgroundColor3 = name == "games" and C.CardBg or C.SidebarBg
+        B.Size = UDim2.new(1, 0, 0, 44)
+        B.BackgroundColor3 = name == "games" and C.CardBg or C.BgSoft
         B.BackgroundTransparency = name == "games" and 0.02 or 1
         B.BorderSizePixel = 0
         B.Text = ""
@@ -751,20 +764,20 @@ local function buildMenuWindow()
 
         local T = Instance.new("TextLabel")
         T.Name = "TextLabel"
-        T.Size = UDim2.new(1, -20, 1, 0)
-        T.Position = UDim2.new(0, 14, 0, 0)
+        T.Size = UDim2.new(1, -24, 1, 0)
+        T.Position = UDim2.new(0, 18, 0, 0)
         T.BackgroundTransparency = 1
         T.Text = icon .. "  " .. label
         T.TextColor3 = name == "games" and C.Text or C.TextSub
         T.Font = F.Header
-        T.TextSize = 13
+        T.TextSize = 14
         T.TextXAlignment = Enum.TextXAlignment.Left
         T.Parent = B
 
         local Ind = Instance.new("Frame")
         Ind.Name = "Indicator"
-        Ind.Size = UDim2.new(0, 3, 0, 22)
-        Ind.Position = UDim2.new(0, 0, 0.5, -11)
+        Ind.Size = UDim2.new(0, 4, 0, 24)
+        Ind.Position = UDim2.new(0, 0, 0.5, -12)
         Ind.BackgroundColor3 = C.Accent
         Ind.BackgroundTransparency = name == "games" and 0 or 1
         Ind.BorderSizePixel = 0
@@ -779,7 +792,7 @@ local function buildMenuWindow()
         end)
         B.MouseLeave:Connect(function()
             if currentPage ~= name then
-                tw(B, {BackgroundColor3 = C.SidebarBg, BackgroundTransparency = 1}, 0.15)
+                tw(B, {BackgroundColor3 = C.BgSoft, BackgroundTransparency = 1}, 0.15)
                 tw(T, {TextColor3 = C.TextSub}, 0.15)
             end
         end)
@@ -800,15 +813,18 @@ local function buildMenuWindow()
     end)
     OpenBtn.MouseButton1Click:Connect(function()
         if OpenBtn.Text == "Loading..." then return end
+        animateClick(OpenBtn)
         OpenBtn.Text = "Loading..."
         loadLibrary(OpenBtn, function(KreinHub)
-            task.wait(0.2)
-            fadeOutLoader()
-            task.delay(0.6, function()
+            task.wait(0.1)
+            fadeOutAndDestroy()
+            task.delay(0.5, function()
                 KreinHub:Notify("Krein Hub", "Library dibuka tanpa fitur game.", 3, "info")
             end)
         end)
     end)
+
+    createCloseBtn(W)
 end
 
 -- ═══════════════════════════════════════════════════════════════
