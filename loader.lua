@@ -1,9 +1,6 @@
 -- ═══════════════════════════════════════════════════════════════
---  KREIN LOADER v2.1 — Modern RGB + Game Browser (Fix Teleport)
+--  KREIN LOADER v2.2 — Fixed Re-execution
 -- ═══════════════════════════════════════════════════════════════
-if _G.__KreinLoaded then return end
-_G.__KreinLoaded = true
-
 repeat task.wait() until game:IsLoaded()
 
 local UIS = game:GetService("UserInputService")
@@ -18,10 +15,9 @@ local BASE    = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs
 local VERSION = "1.2.0"
 local CREATOR = "liptz341"
 
--- ✏️ TAMBAH GAME DI SINI SAJA — GUI otomatis render
+-- ✏️ TAMBAH GAME DI SINI SAJA
 local GAMES = {
     [123974602339071] = { Name = "Steal a Brainrot", Path = "Games/StealABrainrot.lua" },
-    -- [1234567890] = { Name = "Game Lain", Path = "Games/GameLain.lua" },
 }
 
 local entry = GAMES[game.PlaceId]
@@ -78,6 +74,8 @@ end
 
 -- ── PARENT & GUI ──
 local parent = (gethui and gethui()) or game:GetService("CoreGui")
+
+-- Hapus loader lama jika ada (biar ga dobel kalau di-execute 2x pas card masih muncul)
 local old = parent:FindFirstChild("KreinLoader")
 if old then old:Destroy() end
 
@@ -560,7 +558,7 @@ local function buildMenuWindow()
         end)
 
         -- ═══════════════════════════════════════════════════════════════
-        --  FIX TELEPORT (MENGGUNAKAN GuiService:OpenUrl)
+        --  TELEPORT (MENGGUNAKAN GuiService:OpenUrl)
         -- ═══════════════════════════════════════════════════════════════
         Tp.MouseButton1Click:Connect(function()
             if placeId == game.PlaceId then
@@ -572,20 +570,16 @@ local function buildMenuWindow()
             Tp.Text = "Teleporting..."
             Tp.TextColor3 = C.TextSub
 
-            -- 1. Coba pakai OpenUrl (Bypass Verify Teleports 100%)
+            -- 1. Coba pakai OpenUrl (Bypass Verify Teleports)
             local successOpenUrl = pcall(function()
                 GS:OpenUrl("roblox://experiences/start?placeId=" .. tostring(placeId))
             end)
 
             if not successOpenUrl then
                 -- 2. Fallback ke TeleportService kalau OpenUrl gagal
-                local successTeleport = pcall(function()
+                pcall(function()
                     TPS:Teleport(placeId, Players.LocalPlayer)
                 end)
-                
-                if not successTeleport then
-                    Tp.Text = "Failed :("
-                end
             end
 
             task.delay(3, function()
@@ -604,7 +598,6 @@ local function buildMenuWindow()
     end
 
     if idx == 2 then
-        -- No games registered
         local Empty = Instance.new("TextLabel")
         Empty.Size = UDim2.new(1, -40, 0, 80)
         Empty.BackgroundColor3 = C.CardBg
