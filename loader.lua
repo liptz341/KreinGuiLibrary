@@ -20,7 +20,7 @@ local CREATOR = "liptz341"
 
 -- ✏️ TAMBAH GAME DI SINI SAJA — GUI otomatis render
 local GAMES = {
-    [109983668079237] = { Name = "Steal a Brainrot", Path = "Games/StealABrainrot.lua" },
+    [123974602339071] = { Name = "Steal a Brainrot", Path = "Games/StealABrainrot.lua" },
     -- [1234567890] = { Name = "Game Lain", Path = "Games/GameLain.lua" },
 }
 
