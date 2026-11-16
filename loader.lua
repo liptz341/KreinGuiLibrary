@@ -1,28 +1,41 @@
 -- ═══════════════════════════════════════════════════════════════
---  KREIN LOADER v2.4 — Back to Original PlaceId
+--  KREIN LOADER v2.5 — Clean Game List, Auto-Name & No Teleport
 -- ═══════════════════════════════════════════════════════════════
 repeat task.wait() until game:IsLoaded()
 
 local UIS = game:GetService("UserInputService")
 local TS  = game:GetService("TweenService")
 local MPS = game:GetService("MarketplaceService")
-local TPS = game:GetService("TeleportService")
-local GS  = game:GetService("GuiService")
 local Players = game:GetService("Players")
 
 -- ── KONFIG ──
 local BASE    = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs/heads/main/"
-local VERSION = "1.2.2"
+local VERSION = "1.3.0"
 local CREATOR = "liptz341"
 
--- ✏️ PAKAI PLACE ID DARI KAMU
+-- ✏️ CARA NAMBAH GAME BARU:
+-- [PlaceId] = "Path/File.lua"
 local GAMES = {
-    [123974602339071] = { Name = "Steal a Brainrot", Path = "Games/StealABrainrot.lua" },
-    -- [1234567890] = { Name = "Game Lain", Path = "Games/GameLain.lua" },
+    [123974602339071] = "Games/StealABrainrot.lua",
+    -- [9876543210]   = "Games/GameLain.lua",
 }
 
-local entry = GAMES[game.PlaceId]
-local supported = entry ~= nil
+local currentPath = GAMES[game.PlaceId]
+local supported = currentPath ~= nil
+
+-- ── HELPER: FETCH INFO & ICON (ANTI-NULL) ──
+local infoCache = {}
+local function getGameInfo(placeId)
+    if infoCache[placeId] then return infoCache[placeId] end
+    local success, info = pcall(function()
+        return MPS:GetProductInfo(placeId)
+    end)
+    if success and info then
+        infoCache[placeId] = info
+        return info
+    end
+    return nil
+end
 
 -- ── FONTS MODERN ──
 local function tryFont(name, fallback)
@@ -47,7 +60,6 @@ local C = {
     Border    = Color3.fromRGB(45, 45, 65),
     Text      = Color3.fromRGB(240, 240, 250),
     TextSub   = Color3.fromRGB(130, 130, 150),
-    TextDim   = Color3.fromRGB(80, 80, 100),
     Accent    = Color3.fromRGB(110, 155, 255),
     Success   = Color3.fromRGB(68, 200, 100),
     Danger    = Color3.fromRGB(220, 70, 70),
@@ -113,9 +125,13 @@ local function loadLibrary(fromGUI, callback)
             if fromGUI then fromGUI.Text = "Failed"; fromGUI.TextColor3 = C.Danger end
             return
         end
+        
+        local info = getGameInfo(game.PlaceId)
+        local gameName = info and info.Name or "Universal"
+
         local Window = KreinHub:CreateWindow({
             Title    = "Krein Hub",
-            Subtitle = supported and entry.Name or "Universal",
+            Subtitle = supported and gameName or "Universal",
             Size     = UDim2.new(0, 680, 0, 460),
         })
         if getgenv then
@@ -128,9 +144,9 @@ local function loadLibrary(fromGUI, callback)
         if supported then
             task.wait(0.1)
             local ok2, err = pcall(function()
-                local src = game:HttpGet(BASE .. entry.Path)
+                local src = game:HttpGet(BASE .. currentPath)
                 local fn = loadstring(src)
-                if not fn then error("Syntax error di " .. entry.Path) end
+                if not fn then error("Syntax error di " .. currentPath) end
                 fn()
             end)
             if not ok2 then warn("[Krein] Game script error: " .. tostring(err)) end
@@ -162,6 +178,9 @@ end
 --  MODE A: GAME SUPPORTED → Small "Load Now" Card
 -- ═══════════════════════════════════════════════════════════════
 local function buildSupportedCard()
+    local info = getGameInfo(game.PlaceId)
+    local gameName = info and info.Name or "Detected Game"
+
     local Card = Instance.new("Frame")
     Card.Size = UDim2.new(0, 340, 0, 0)
     Card.AutomaticSize = Enum.AutomaticSize.Y
@@ -215,7 +234,7 @@ local function buildSupportedCard()
     local Sub = Instance.new("TextLabel")
     Sub.Size = UDim2.new(1, 0, 0, 16)
     Sub.BackgroundTransparency = 1
-    Sub.Text = "Detected: " .. entry.Name
+    Sub.Text = "Detected: " .. gameName
     Sub.TextColor3 = C.TextSub
     Sub.Font = F.Reg
     Sub.TextSize = 12
@@ -456,7 +475,7 @@ local function buildMenuWindow()
     local GSub = Instance.new("TextLabel")
     GSub.Size = UDim2.new(1, -40, 0, 22)
     GSub.BackgroundTransparency = 1
-    GSub.Text = "Pilih game untuk teleport. Game saat ini tidak didukung."
+    GSub.Text = "Daftar game yang tersedia di Krein Hub."
     GSub.TextColor3 = C.TextSub
     GSub.Font = F.Reg
     GSub.TextSize = 12
@@ -464,7 +483,8 @@ local function buildMenuWindow()
     GSub.LayoutOrder = 1
     GSub.Parent = GamesPage
 
-    local function makeGameCard(placeId, data, order)
+    -- Game card renderer (TANPA TOMBOL TELEPORT)
+    local function makeGameCard(placeId, path, order)
         local Card = Instance.new("Frame")
         Card.Size = UDim2.new(1, -40, 0, 92)
         Card.BackgroundColor3 = C.CardBg
@@ -488,14 +508,22 @@ local function buildMenuWindow()
         local Icon = Instance.new("ImageLabel")
         Icon.Size = UDim2.new(1, 0, 1, 0)
         Icon.BackgroundTransparency = 1
-        Icon.Image = "rbxthumb://type=GameIcon&id=" .. placeId .. "&w=150&h=150"
         Icon.Parent = IconF
 
+        -- Fetch Info & Icon (Gunakan UniverseId untuk icon)
+        local info = getGameInfo(placeId)
+        if info then
+            local uniId = info.UniverseId or placeId
+            Icon.Image = "rbxthumb://type=GameIcon&id=" .. tostring(uniId) .. "&w=150&h=150"
+        else
+            Icon.Image = "rbxthumb://type=GameIcon&id=" .. tostring(placeId) .. "&w=150&h=150"
+        end
+
         local Name = Instance.new("TextLabel")
-        Name.Size = UDim2.new(1, -240, 0, 22)
+        Name.Size = UDim2.new(1, -100, 0, 22)
         Name.Position = UDim2.new(0, 92, 0, 22)
         Name.BackgroundTransparency = 1
-        Name.Text = data.Name
+        Name.Text = info and info.Name or "Loading..."
         Name.TextColor3 = C.Text
         Name.Font = F.Header
         Name.TextSize = 15
@@ -503,8 +531,22 @@ local function buildMenuWindow()
         Name.TextTruncate = Enum.TextTruncate.AtEnd
         Name.Parent = Card
 
+        -- Kalau info belum ada, fetch di background
+        if not info then
+            task.spawn(function()
+                local success, fetched = pcall(function() return MPS:GetProductInfo(placeId) end)
+                if success and fetched then
+                    if Name.Parent then Name.Text = fetched.Name end
+                    if Icon.Parent then 
+                        local uId = fetched.UniverseId or placeId
+                        Icon.Image = "rbxthumb://type=GameIcon&id=" .. tostring(uId) .. "&w=150&h=150" 
+                    end
+                end
+            end)
+        end
+
         local Id = Instance.new("TextLabel")
-        Id.Size = UDim2.new(1, -240, 0, 16)
+        Id.Size = UDim2.new(1, -100, 0, 16)
         Id.Position = UDim2.new(0, 92, 0, 46)
         Id.BackgroundTransparency = 1
         Id.Text = "PlaceId: " .. placeId
@@ -513,20 +555,17 @@ local function buildMenuWindow()
         Id.TextSize = 11
         Id.TextXAlignment = Enum.TextXAlignment.Left
         Id.Parent = Card
-
-        local Tp = Instance.new("TextButton")
-        Tp.Size = UDim2.new(0, 110, 0, 38)
-        Tp.Position = UDim2.new(1, -122, 0.5, -19)
-        Tp.BackgroundColor3 = C.CardBg
-        Tp.BorderSizePixel = 0
-        Tp.Text = "→  Teleport"
-        Tp.TextColor3 = C.Text
-        Tp.Font = F.Header
-        Tp.TextSize = 12
-        Tp.AutoButtonColor = false
-        Tp.Parent = Card
-        corner(Tp, 9)
-        local tStk = stroke(Tp, C.Accent, 1.5, 0.2)
+        
+        local PathLbl = Instance.new("TextLabel")
+        PathLbl.Size = UDim2.new(1, -100, 0, 16)
+        PathLbl.Position = UDim2.new(0, 92, 0, 62)
+        PathLbl.BackgroundTransparency = 1
+        PathLbl.Text = path
+        PathLbl.TextColor3 = C.Accent
+        PathLbl.Font = F.Code
+        PathLbl.TextSize = 10
+        PathLbl.TextXAlignment = Enum.TextXAlignment.Left
+        PathLbl.Parent = Card
 
         Card.MouseEnter:Connect(function()
             tw(Card, {BackgroundColor3 = C.CardHover, BackgroundTransparency = 0.02}, 0.15)
@@ -536,49 +575,11 @@ local function buildMenuWindow()
             tw(Card, {BackgroundColor3 = C.CardBg, BackgroundTransparency = 0.05}, 0.15)
             tw(cStk, {Transparency = 0.5}, 0.15)
         end)
-        Tp.MouseEnter:Connect(function()
-            tw(Tp, {BackgroundColor3 = C.Accent}, 0.15)
-            tw(tStk, {Transparency = 0}, 0.15)
-        end)
-        Tp.MouseLeave:Connect(function()
-            tw(Tp, {BackgroundColor3 = C.CardBg}, 0.15)
-            tw(tStk, {Transparency = 0.2}, 0.15)
-        end)
-
-        Tp.MouseButton1Click:Connect(function()
-            if placeId == game.PlaceId then
-                Tp.Text = "Same Game!"
-                task.delay(1.5, function() if Tp and Tp.Parent then Tp.Text = "→  Teleport" end end)
-                return
-            end
-            
-            Tp.Text = "Membuka Roblox..."
-            Tp.TextColor3 = C.TextSub
-
-            local url = "roblox://experiences/start?placeId=" .. tostring(placeId)
-            
-            local successOpen = pcall(function()
-                GS:OpenUrl(url)
-            end)
-
-            if not successOpen then
-                pcall(function()
-                    TPS:Teleport(placeId, Players.LocalPlayer)
-                end)
-            end
-
-            task.delay(3, function()
-                if Tp and Tp.Parent then 
-                    Tp.Text = "→  Teleport"; 
-                    Tp.TextColor3 = C.Text 
-                end
-            end)
-        end)
     end
 
     local idx = 2
-    for pid, gdata in pairs(GAMES) do
-        makeGameCard(pid, gdata, idx)
+    for pid, path in pairs(GAMES) do
+        makeGameCard(pid, path, idx)
         idx = idx + 1
     end
 
@@ -693,17 +694,14 @@ local function buildMenuWindow()
     stTitle.TextXAlignment = Enum.TextXAlignment.Left
     stTitle.Parent = StatusF
 
-    local gameName = "Unknown"
-    pcall(function()
-        local ok, info = pcall(function() return MPS:GetProductInfo(game.PlaceId) end)
-        if ok and info and info.Name then gameName = info.Name end
-    end)
+    local cInfo = getGameInfo(game.PlaceId)
+    local cName = cInfo and cInfo.Name or "Unknown"
 
     local stName = Instance.new("TextLabel")
     stName.Size = UDim2.new(1, -20, 0, 18)
     stName.Position = UDim2.new(0, 10, 0, 30)
     stName.BackgroundTransparency = 1
-    stName.Text = "Game: " .. gameName
+    stName.Text = "Game: " .. cName
     stName.TextColor3 = C.Text
     stName.Font = F.Header
     stName.TextSize = 11
