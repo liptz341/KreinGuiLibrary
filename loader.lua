@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
---  KREIN LOADER v4.0 — Search, Fade, Game Stats & Mobile Opt
+--  KREIN LOADER v4.1 — Perfect Scale Size
 -- ═══════════════════════════════════════════════════════════════
 repeat task.wait() until game:IsLoaded()
 
@@ -11,7 +11,7 @@ local HttpService = game:GetService("HttpService")
 
 -- ── KONFIG ──
 local BASE    = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs/heads/main/"
-local VERSION = "1.5.0"
+local VERSION = "1.5.1"
 local CREATOR = "liptz341"
 
 -- ✏️ TAMBAH GAME DI SINI (PlaceId = "Path/File.lua")
@@ -118,6 +118,7 @@ gui.DisplayOrder = 999
 gui.Parent = parent
 
 local rgbRunning = true
+local isMobile = UIS.TouchEnabled and not UIS.KeyboardEnabled
 
 -- ═══════════════════════════════════════════════════════════════
 --  CORE FUNCTIONS
@@ -312,13 +313,10 @@ local function buildSupportedCard()
     corner(Btn, 10)
     local sBtn = stroke(Btn, C.Accent, 2, 0.2)
 
-    -- Mobile Optimization Scale
+    -- Perfect Scale
     local CardScale = Instance.new("UIScale")
-    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
-        CardScale.Scale = 0.55
-    else
-        CardScale.Scale = 0.6
-    end
+    local targetScale = isMobile and 0.85 or 0.9
+    CardScale.Scale = 0.6
     CardScale.Parent = Card
 
     task.spawn(function()
@@ -336,11 +334,7 @@ local function buildSupportedCard()
     end)
 
     tw(Card, {BackgroundTransparency = 0}, 0.5, Enum.EasingStyle.Back)
-    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
-        tw(CardScale, {Scale = 0.55}, 0.6, Enum.EasingStyle.Back)
-    else
-        tw(CardScale, {Scale = 0.7}, 0.6, Enum.EasingStyle.Back)
-    end
+    tw(CardScale, {Scale = targetScale}, 0.6, Enum.EasingStyle.Back)
     
     task.delay(0.2, function()
         for _, el in ipairs({Title, Sub, Btn}) do
@@ -402,23 +396,19 @@ local function buildMenuWindow()
         end
     end)
 
-    -- Mobile Optimization Scale
+    -- Perfect Scale
     local WScale = Instance.new("UIScale")
-    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
-        WScale.Scale = 0.55
+    local targetScale = isMobile and 0.75 or 0.9
+    WScale.Scale = 0.6
+    WScale.Parent = W
+    
+    if isMobile then
         local vp = workspace.CurrentCamera.ViewportSize
         if vp.X < 740 then W.Size = UDim2.new(1, -20, 1, -120) end
-    else
-        WScale.Scale = 0.7
     end
-    WScale.Parent = W
 
     tw(W, {BackgroundTransparency = 0}, 0.4, Enum.EasingStyle.Back)
-    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
-        tw(WScale, {Scale = 0.55}, 0.5, Enum.EasingStyle.Back)
-    else
-        tw(WScale, {Scale = 0.7}, 0.5, Enum.EasingStyle.Back)
-    end
+    tw(WScale, {Scale = targetScale}, 0.5, Enum.EasingStyle.Back)
 
     createCloseBtn(W)
 
@@ -648,7 +638,6 @@ local function buildMenuWindow()
         Name.TextTruncate = Enum.TextTruncate.AtEnd
         Name.Parent = Card
 
-        -- Stats: Creator & Playing
         local Stats = Instance.new("TextLabel")
         Stats.Size = UDim2.new(1, -150, 0, 16)
         Stats.Position = UDim2.new(0, 84, 0, 42)
@@ -669,7 +658,6 @@ local function buildMenuWindow()
                 local uId = info.UniverseId
                 local playingTxt = "0"
                 
-                -- Fetch Playing Count
                 local ok, json = pcall(function()
                     return HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games?universeIds=" .. tostring(uId)))
                 end)
@@ -687,7 +675,6 @@ local function buildMenuWindow()
             end
         end)
 
-        -- Masukkan ke table buat Search Bar
         table.insert(GameCards, {Frame = Card, Name = Name})
 
         Card.MouseEnter:Connect(function()
@@ -706,7 +693,6 @@ local function buildMenuWindow()
         idx = idx + 1
     end
 
-    -- Fitur Search Bar
     SearchBox:GetPropertyChangedSignal("Text"):Connect(function()
         local query = SearchBox.Text:lower()
         for _, data in ipairs(GameCards) do
@@ -889,12 +875,10 @@ local function buildMenuWindow()
     local menuBtns = {}
     local currentPage = "games"
 
-    -- Fitur Fade Animation pada Switch Page
     local function switchPage(name)
         if currentPage == name or TabFader.Visible then return end
         currentPage = name
         
-        -- Fade Out (Hitam)
         TabFader.Visible = true
         tw(TabFader, {BackgroundTransparency = 0}, 0.15)
         
@@ -912,7 +896,6 @@ local function buildMenuWindow()
         GamesPage.Visible = (name == "games")
         InfoPage.Visible  = (name == "info")
         
-        -- Fade In (Transparan)
         tw(TabFader, {BackgroundTransparency = 1}, 0.15)
         task.delay(0.15, function() TabFader.Visible = false end)
     end
