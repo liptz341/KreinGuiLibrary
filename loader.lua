@@ -13,9 +13,8 @@ local TS  = game:GetService("TweenService")
 -- ── KONFIG ──────────────────────────────────────────────────────
 local BASE = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs/heads/main/"
 local GAMES = {
-    [87039211657390] = { Name = "Steal a Brainrot", Path = "Games/GameA.lua" },
-    [1234567890]     = { Name = "Blox Fruits",      Path = "Games/GameB.lua" },
-    -- tambah PlaceId lain di sini
+    [109983668079237] = { Name = "Steal a Brainrot", Path = "Games/StealABrainrot.lua" },
+
 }
 local entry = GAMES[game.PlaceId]
 local supported = entry ~= nil
