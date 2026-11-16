@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
---  KREIN LOADER v2.0 — Modern RGB + Game Browser
+--  KREIN LOADER v2.1 — Modern RGB + Game Browser (Fix Teleport)
 -- ═══════════════════════════════════════════════════════════════
 if _G.__KreinLoaded then return end
 _G.__KreinLoaded = true
@@ -15,7 +15,7 @@ local Players = game:GetService("Players")
 
 -- ── KONFIG ──
 local BASE    = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs/heads/main/"
-local VERSION = "1.1.0"
+local VERSION = "1.2.0"
 local CREATOR = "liptz341"
 
 -- ✏️ TAMBAH GAME DI SINI SAJA — GUI otomatis render
@@ -559,21 +559,40 @@ local function buildMenuWindow()
             tw(tStk, {Transparency = 0.2}, 0.15)
         end)
 
+        -- ═══════════════════════════════════════════════════════════════
+        --  FIX TELEPORT (MENGGUNAKAN GuiService:OpenUrl)
+        -- ═══════════════════════════════════════════════════════════════
         Tp.MouseButton1Click:Connect(function()
             if placeId == game.PlaceId then
                 Tp.Text = "Same Game!"
                 task.delay(1.5, function() if Tp and Tp.Parent then Tp.Text = "→  Teleport" end end)
                 return
             end
+            
             Tp.Text = "Teleporting..."
             Tp.TextColor3 = C.TextSub
-            local ok = pcall(function() TPS:Teleport(placeId, Players.LocalPlayer) end)
-            if not ok then
-                pcall(function() GS:OpenUrl("roblox://placeId=" .. placeId) end)
-                Tp.Text = "Opening..."
+
+            -- 1. Coba pakai OpenUrl (Bypass Verify Teleports 100%)
+            local successOpenUrl = pcall(function()
+                GS:OpenUrl("roblox://experiences/start?placeId=" .. tostring(placeId))
+            end)
+
+            if not successOpenUrl then
+                -- 2. Fallback ke TeleportService kalau OpenUrl gagal
+                local successTeleport = pcall(function()
+                    TPS:Teleport(placeId, Players.LocalPlayer)
+                end)
+                
+                if not successTeleport then
+                    Tp.Text = "Failed :("
+                end
             end
+
             task.delay(3, function()
-                if Tp and Tp.Parent then Tp.Text = "→  Teleport"; Tp.TextColor3 = C.Text end
+                if Tp and Tp.Parent then 
+                    Tp.Text = "→  Teleport"; 
+                    Tp.TextColor3 = C.Text 
+                end
             end)
         end)
     end
