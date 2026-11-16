@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
---  KREIN LOADER v3.1 — Premium Animated UI, Small Size & Fixed Icons
+--  KREIN LOADER v3.2 — Final Polish (Topbar, No Scroll Header, Copy ID)
 -- ═══════════════════════════════════════════════════════════════
 repeat task.wait() until game:IsLoaded()
 
@@ -10,7 +10,7 @@ local Players = game:GetService("Players")
 
 -- ── KONFIG ──
 local BASE    = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs/heads/main/"
-local VERSION = "1.4.1"
+local VERSION = "1.4.2"
 local CREATOR = "liptz341"
 
 -- ✏️ TAMBAH GAME DI SINI (PlaceId = "Path/File.lua")
@@ -26,7 +26,7 @@ local GAMES = {
 local currentPath = GAMES[game.PlaceId]
 local supported = currentPath ~= nil
 
--- ── HELPER: FETCH INFO & ICON (ANTI GAGAL) ──
+-- ── HELPER: FETCH INFO & ICON ──
 local infoCache = {}
 local function getGameInfo(placeId)
     if infoCache[placeId] then return infoCache[placeId] end
@@ -43,14 +43,12 @@ end
 local function getGameIcon(placeId)
     local info = getGameInfo(placeId)
     if info then
-        -- Metode 1: Pakai Asset ID langsung (100% muncul)
         if info.IconImageAssetId and info.IconImageAssetId ~= 0 then
             return "rbxassetid://" .. tostring(info.IconImageAssetId)
         end
-        -- Metode 2: Fallback ke rbxthumb
         return "rbxthumb://type=GameIcon&id=" .. tostring(info.UniverseId or placeId) .. "&w=150&h=150"
     end
-    return "rbxassetid://0" -- Placeholder kosong
+    return "rbxassetid://0"
 end
 
 -- ── FONTS ──
@@ -100,7 +98,7 @@ local function tw(obj, props, dur, style, dir)
     TS:Create(obj, TweenInfo.new(dur or 0.3, style or Enum.EasingStyle.Quart, dir or Enum.EasingDirection.Out), props):Play()
 end
 
--- ── PARENT & GUI (TANPA BACKDROP) ──
+-- ── PARENT & GUI ──
 local parent = (gethui and gethui()) or game:GetService("CoreGui")
 local old = parent:FindFirstChild("KreinLoader")
 if old then old:Destroy() end
@@ -188,7 +186,7 @@ end
 local function createCloseBtn(parentFrame)
     local CloseBtn = Instance.new("TextButton")
     CloseBtn.Size = UDim2.new(0, 26, 0, 26)
-    CloseBtn.Position = UDim2.new(1, -34, 0, 10)
+    CloseBtn.Position = UDim2.new(1, -34, 0, 12)
     CloseBtn.BackgroundColor3 = C.CardBg
     CloseBtn.BackgroundTransparency = 0.5
     CloseBtn.BorderSizePixel = 0
@@ -235,18 +233,27 @@ local function buildSupportedCard()
     local s1 = stroke(Card, C.Accent, 1.5, 0.4)
     local s2 = stroke(Card, C.Accent, 8, 0.8)
 
+    -- Close Button (Fixed absolute position at top right)
+    createCloseBtn(Card)
+
+    local Content = Instance.new("Frame")
+    Content.Size = UDim2.new(1, 0, 1, 0)
+    Content.AutomaticSize = Enum.AutomaticSize.Y
+    Content.BackgroundTransparency = 1
+    Content.Parent = Card
+
     local Pad = Instance.new("UIPadding")
     Pad.PaddingTop    = UDim.new(0, 24)
     Pad.PaddingBottom = UDim.new(0, 24)
     Pad.PaddingLeft   = UDim.new(0, 20)
     Pad.PaddingRight  = UDim.new(0, 20)
-    Pad.Parent = Card
+    Pad.Parent = Content
 
     local Layout = Instance.new("UIListLayout")
     Layout.Padding = UDim.new(0, 12)
     Layout.SortOrder = Enum.SortOrder.LayoutOrder
     Layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-    Layout.Parent = Card
+    Layout.Parent = Content
 
     local Title = Instance.new("TextLabel")
     Title.Size = UDim2.new(1, 0, 0, 38)
@@ -258,7 +265,7 @@ local function buildSupportedCard()
     Title.TextTransparency = 1
     Title.LayoutOrder = 1
     Title.ZIndex = 3
-    Title.Parent = Card
+    Title.Parent = Content
 
     local TitleGrad = Instance.new("UIGradient")
     TitleGrad.Color = ColorSequence.new({
@@ -280,7 +287,7 @@ local function buildSupportedCard()
     Sub.TextTransparency = 1
     Sub.LayoutOrder = 2
     Sub.ZIndex = 3
-    Sub.Parent = Card
+    Sub.Parent = Content
 
     local Btn = Instance.new("TextButton")
     Btn.Size = UDim2.new(1, 0, 0, 40)
@@ -295,7 +302,7 @@ local function buildSupportedCard()
     Btn.AutoButtonColor = false
     Btn.LayoutOrder = 3
     Btn.ZIndex = 3
-    Btn.Parent = Card
+    Btn.Parent = Content
     corner(Btn, 10)
     local sBtn = stroke(Btn, C.Accent, 2, 0.2)
 
@@ -347,8 +354,6 @@ local function buildSupportedCard()
             end)
         end)
     end)
-
-    createCloseBtn(Card)
 end
 
 -- ═══════════════════════════════════════════════════════════════
@@ -394,6 +399,9 @@ local function buildMenuWindow()
 
     tw(W, {BackgroundTransparency = 0}, 0.4, Enum.EasingStyle.Back)
     tw(WScale, {Scale = 0.7}, 0.5, Enum.EasingStyle.Back)
+
+    -- Tombol Close (Fixed di Kanan Atas)
+    createCloseBtn(W)
 
     -- ── SIDEBAR ──
     local SB = Instance.new("Frame")
@@ -459,6 +467,18 @@ local function buildMenuWindow()
     MenuL.SortOrder = Enum.SortOrder.LayoutOrder
     MenuL.Parent = Menu
 
+    -- Teks Game Not Supported
+    local NotSupportedLbl = Instance.new("TextLabel")
+    NotSupportedLbl.Size = UDim2.new(1, -20, 0, 20)
+    NotSupportedLbl.Position = UDim2.new(0, 10, 1, -80)
+    NotSupportedLbl.BackgroundTransparency = 1
+    NotSupportedLbl.Text = "⚠ Game Not Supported"
+    NotSupportedLbl.TextColor3 = C.Danger
+    NotSupportedLbl.Font = F.Header
+    NotSupportedLbl.TextSize = 12
+    NotSupportedLbl.TextXAlignment = Enum.TextXAlignment.Center
+    NotSupportedLbl.Parent = SB
+
     local OpenBtn = Instance.new("TextButton")
     OpenBtn.Size = UDim2.new(1, -20, 0, 44)
     OpenBtn.Position = UDim2.new(0, 10, 1, -54)
@@ -486,52 +506,64 @@ local function buildMenuWindow()
     Pages.Parent = Content
 
     -- ── PAGE: GAMES ──
-    local GamesPage = Instance.new("ScrollingFrame")
+    local GamesPage = Instance.new("Frame")
     GamesPage.Size = UDim2.new(1, 0, 1, 0)
     GamesPage.BackgroundTransparency = 1
-    GamesPage.BorderSizePixel = 0
-    GamesPage.ScrollBarThickness = 3
-    GamesPage.ScrollBarImageColor3 = C.Border
-    GamesPage.ScrollingDirection = Enum.ScrollingDirection.Y
-    GamesPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
-    GamesPage.CanvasSize = UDim2.new(0, 0, 0, 0)
-    GamesPage.Selectable = false
     GamesPage.Parent = Pages
 
-    local GL = Instance.new("UIListLayout")
-    GL.Padding = UDim.new(0, 12)
-    GL.SortOrder = Enum.SortOrder.LayoutOrder
-    GL.HorizontalAlignment = Enum.HorizontalAlignment.Center
-    GL.Parent = GamesPage
-
-    local GPad = Instance.new("UIPadding")
-    GPad.PaddingTop = UDim.new(0, 24)
-    GPad.PaddingBottom = UDim.new(0, 24)
-    GPad.Parent = GamesPage
+    -- Header & Sub (Fixed di luar Scroll)
+    local HeaderFrame = Instance.new("Frame")
+    HeaderFrame.Size = UDim2.new(1, -60, 0, 70)
+    HeaderFrame.Position = UDim2.new(0, 30, 0, 24)
+    HeaderFrame.BackgroundTransparency = 1
+    HeaderFrame.Parent = GamesPage
 
     local GHeader = Instance.new("TextLabel")
-    GHeader.Size = UDim2.new(1, -60, 0, 34)
+    GHeader.Size = UDim2.new(1, 0, 0, 34)
     GHeader.BackgroundTransparency = 1
     GHeader.Text = "🎮 Game List"
     GHeader.TextColor3 = C.Text
     GHeader.Font = F.Title
     GHeader.TextSize = 24
     GHeader.TextXAlignment = Enum.TextXAlignment.Left
-    GHeader.LayoutOrder = 0
-    GHeader.Parent = GamesPage
+    GHeader.Parent = HeaderFrame
 
     local GSub = Instance.new("TextLabel")
-    GSub.Size = UDim2.new(1, -60, 0, 22)
+    GSub.Size = UDim2.new(1, 0, 0, 22)
+    GSub.Position = UDim2.new(0, 0, 0, 36)
     GSub.BackgroundTransparency = 1
     GSub.Text = "Daftar game yang didukung oleh Krein Hub."
     GSub.TextColor3 = C.TextSub
     GSub.Font = F.Body
     GSub.TextSize = 13
     GSub.TextXAlignment = Enum.TextXAlignment.Left
-    GSub.LayoutOrder = 1
-    GSub.Parent = GamesPage
+    GSub.Parent = HeaderFrame
 
-    -- Game card renderer
+    -- Scroll hanya untuk list game
+    local ScrollGames = Instance.new("ScrollingFrame")
+    ScrollGames.Size = UDim2.new(1, 0, 1, -94)
+    ScrollGames.Position = UDim2.new(0, 0, 0, 94)
+    ScrollGames.BackgroundTransparency = 1
+    ScrollGames.BorderSizePixel = 0
+    ScrollGames.ScrollBarThickness = 3
+    ScrollGames.ScrollBarImageColor3 = C.Border
+    ScrollGames.ScrollingDirection = Enum.ScrollingDirection.Y
+    ScrollGames.AutomaticCanvasSize = Enum.AutomaticSize.Y
+    ScrollGames.CanvasSize = UDim2.new(0, 0, 0, 0)
+    ScrollGames.Selectable = false
+    ScrollGames.Parent = GamesPage
+
+    local GL = Instance.new("UIListLayout")
+    GL.Padding = UDim.new(0, 12)
+    GL.SortOrder = Enum.SortOrder.LayoutOrder
+    GL.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    GL.Parent = ScrollGames
+
+    local GPad = Instance.new("UIPadding")
+    GPad.PaddingTop = UDim.new(0, 0)
+    GPad.PaddingBottom = UDim.new(0, 24)
+    GPad.Parent = ScrollGames
+
     local function makeGameCard(placeId, order)
         local Card = Instance.new("Frame")
         Card.Size = UDim2.new(1, -60, 0, 80)
@@ -539,7 +571,7 @@ local function buildMenuWindow()
         Card.BackgroundTransparency = 0.05
         Card.BorderSizePixel = 0
         Card.LayoutOrder = order
-        Card.Parent = GamesPage
+        Card.Parent = ScrollGames
         corner(Card, 12)
         local cStk = stroke(Card, C.Border, 1, 0.5)
 
@@ -582,7 +614,6 @@ local function buildMenuWindow()
         Id.TextXAlignment = Enum.TextXAlignment.Left
         Id.Parent = Card
         
-        -- Fetch Nama secara Async
         task.spawn(function()
             local info = getGameInfo(placeId)
             if info and Name.Parent then
@@ -618,7 +649,7 @@ local function buildMenuWindow()
         Empty.Font = F.Reg
         Empty.TextSize = 13
         Empty.LayoutOrder = 2
-        Empty.Parent = GamesPage
+        Empty.Parent = ScrollGames
         corner(Empty, 10)
     end
 
@@ -699,7 +730,7 @@ local function buildMenuWindow()
     Desc.Parent = InfoPage
 
     local StatusF = Instance.new("Frame")
-    StatusF.Size = UDim2.new(1, 0, 0, 80)
+    StatusF.Size = UDim2.new(1, 0, 0, 90)
     StatusF.BackgroundColor3 = C.CardBg
     StatusF.BackgroundTransparency = 0.05
     StatusF.BorderSizePixel = 0
@@ -734,8 +765,8 @@ local function buildMenuWindow()
     stName.Parent = StatusF
 
     local stId = Instance.new("TextLabel")
-    stId.Size = UDim2.new(1, -20, 0, 16)
-    stId.Position = UDim2.new(0, 12, 0, 52)
+    stId.Size = UDim2.new(1, -100, 0, 16)
+    stId.Position = UDim2.new(0, 12, 0, 56)
     stId.BackgroundTransparency = 1
     stId.Text = "PlaceId: " .. tostring(game.PlaceId)
     stId.TextColor3 = C.TextSub
@@ -743,6 +774,42 @@ local function buildMenuWindow()
     stId.TextSize = 11
     stId.TextXAlignment = Enum.TextXAlignment.Left
     stId.Parent = StatusF
+
+    -- Tombol Copy PlaceId
+    local CopyBtn = Instance.new("TextButton")
+    CopyBtn.Size = UDim2.new(0, 70, 0, 26)
+    CopyBtn.Position = UDim2.new(1, -82, 0, 52)
+    CopyBtn.BackgroundColor3 = C.BgSoft
+    CopyBtn.BorderSizePixel = 0
+    CopyBtn.Text = "Copy ID"
+    CopyBtn.TextColor3 = C.Text
+    CopyBtn.Font = F.Header
+    CopyBtn.TextSize = 11
+    CopyBtn.AutoButtonColor = false
+    CopyBtn.Parent = StatusF
+    corner(CopyBtn, 6)
+    stroke(CopyBtn, C.Border, 1, 0.4)
+
+    CopyBtn.MouseEnter:Connect(function()
+        tw(CopyBtn, {BackgroundColor3 = C.Accent}, 0.15)
+    end)
+    CopyBtn.MouseLeave:Connect(function()
+        tw(CopyBtn, {BackgroundColor3 = C.BgSoft}, 0.15)
+    end)
+    CopyBtn.MouseButton1Click:Connect(function()
+        animateClick(CopyBtn)
+        if setclipboard then
+            setclipboard(tostring(game.PlaceId))
+            CopyBtn.Text = "Copied!"
+            CopyBtn.TextColor3 = C.Success
+            task.delay(1.5, function()
+                if CopyBtn and CopyBtn.Parent then
+                    CopyBtn.Text = "Copy ID"
+                    CopyBtn.TextColor3 = C.Text
+                end
+            end)
+        end
+    end)
 
     local menuBtns = {}
     local currentPage = "games"
@@ -835,8 +902,6 @@ local function buildMenuWindow()
             end)
         end)
     end)
-
-    createCloseBtn(W)
 end
 
 -- ═══════════════════════════════════════════════════════════════
