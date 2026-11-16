@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
---  KREIN LOADER v3.0 — Premium Animated UI & Clean Look
+--  KREIN LOADER v3.1 — Premium Animated UI, Small Size & Fixed Icons
 -- ═══════════════════════════════════════════════════════════════
 repeat task.wait() until game:IsLoaded()
 
@@ -10,18 +10,23 @@ local Players = game:GetService("Players")
 
 -- ── KONFIG ──
 local BASE    = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs/heads/main/"
-local VERSION = "1.4.0"
+local VERSION = "1.4.1"
 local CREATOR = "liptz341"
 
--- ✏️ CARA NAMBAH GAME BARU: [PlaceId] = "Path/File.lua"
+-- ✏️ TAMBAH GAME DI SINI (PlaceId = "Path/File.lua")
 local GAMES = {
     [123974602339071] = "Games/StealABrainrot.lua",
+    [2753915549]      = "Games/BloxFruits.lua",
+    [920587237]       = "Games/AdoptMe.lua",
+    [6516141723]      = "Games/Doors.lua",
+    [286090429]       = "Games/Arsenal.lua",
+    [3260590327]      = "Games/PetSim99.lua",
 }
 
 local currentPath = GAMES[game.PlaceId]
 local supported = currentPath ~= nil
 
--- ── HELPER: FETCH INFO & ICON (FIX PP) ──
+-- ── HELPER: FETCH INFO & ICON (ANTI GAGAL) ──
 local infoCache = {}
 local function getGameInfo(placeId)
     if infoCache[placeId] then return infoCache[placeId] end
@@ -33,6 +38,19 @@ local function getGameInfo(placeId)
         return info
     end
     return nil
+end
+
+local function getGameIcon(placeId)
+    local info = getGameInfo(placeId)
+    if info then
+        -- Metode 1: Pakai Asset ID langsung (100% muncul)
+        if info.IconImageAssetId and info.IconImageAssetId ~= 0 then
+            return "rbxassetid://" .. tostring(info.IconImageAssetId)
+        end
+        -- Metode 2: Fallback ke rbxthumb
+        return "rbxthumb://type=GameIcon&id=" .. tostring(info.UniverseId or placeId) .. "&w=150&h=150"
+    end
+    return "rbxassetid://0" -- Placeholder kosong
 end
 
 -- ── FONTS ──
@@ -161,26 +179,25 @@ local function fadeOutAndDestroy()
     end)
 end
 
--- UI Animasi Klik Tombol
 local function animateClick(btn)
     local origSize = btn.Size
     tw(btn, {Size = origSize - UDim2.new(0, 4, 0, 4)}, 0.05)
     task.delay(0.05, function() tw(btn, {Size = origSize}, 0.1, Enum.EasingStyle.Back) end)
 end
 
--- Tombol Close Universal
 local function createCloseBtn(parentFrame)
     local CloseBtn = Instance.new("TextButton")
-    CloseBtn.Size = UDim2.new(0, 28, 0, 28)
-    CloseBtn.Position = UDim2.new(1, -38, 0, 10)
+    CloseBtn.Size = UDim2.new(0, 26, 0, 26)
+    CloseBtn.Position = UDim2.new(1, -34, 0, 10)
     CloseBtn.BackgroundColor3 = C.CardBg
     CloseBtn.BackgroundTransparency = 0.5
     CloseBtn.BorderSizePixel = 0
     CloseBtn.Text = "✕"
     CloseBtn.TextColor3 = C.TextSub
     CloseBtn.Font = F.Header
-    CloseBtn.TextSize = 14
+    CloseBtn.TextSize = 13
     CloseBtn.AutoButtonColor = false
+    CloseBtn.ZIndex = 10
     CloseBtn.Parent = parentFrame
     corner(CloseBtn, 8)
     
@@ -204,7 +221,7 @@ local function buildSupportedCard()
     local gameName = info and info.Name or "Detected Game"
 
     local Card = Instance.new("Frame")
-    Card.Size = UDim2.new(0, 340, 0, 0)
+    Card.Size = UDim2.new(0, 280, 0, 0)
     Card.AutomaticSize = Enum.AutomaticSize.Y
     Card.AnchorPoint = Vector2.new(0.5, 0.5)
     Card.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -213,30 +230,30 @@ local function buildSupportedCard()
     Card.BorderSizePixel = 0
     Card.ZIndex = 2
     Card.Parent = gui
-    corner(Card, 16)
+    corner(Card, 14)
 
     local s1 = stroke(Card, C.Accent, 1.5, 0.4)
     local s2 = stroke(Card, C.Accent, 8, 0.8)
 
     local Pad = Instance.new("UIPadding")
-    Pad.PaddingTop    = UDim.new(0, 30)
-    Pad.PaddingBottom = UDim.new(0, 30)
-    Pad.PaddingLeft   = UDim.new(0, 26)
-    Pad.PaddingRight  = UDim.new(0, 26)
+    Pad.PaddingTop    = UDim.new(0, 24)
+    Pad.PaddingBottom = UDim.new(0, 24)
+    Pad.PaddingLeft   = UDim.new(0, 20)
+    Pad.PaddingRight  = UDim.new(0, 20)
     Pad.Parent = Card
 
     local Layout = Instance.new("UIListLayout")
-    Layout.Padding = UDim.new(0, 14)
+    Layout.Padding = UDim.new(0, 12)
     Layout.SortOrder = Enum.SortOrder.LayoutOrder
     Layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
     Layout.Parent = Card
 
     local Title = Instance.new("TextLabel")
-    Title.Size = UDim2.new(1, 0, 0, 44)
+    Title.Size = UDim2.new(1, 0, 0, 38)
     Title.BackgroundTransparency = 1
     Title.Text = "KreinLoad"
     Title.Font = F.Title
-    Title.TextSize = 36
+    Title.TextSize = 30
     Title.TextColor3 = Color3.new(1,1,1)
     Title.TextTransparency = 1
     Title.LayoutOrder = 1
@@ -254,39 +271,39 @@ local function buildSupportedCard()
     TitleGrad.Parent = Title
 
     local Sub = Instance.new("TextLabel")
-    Sub.Size = UDim2.new(1, 0, 0, 18)
+    Sub.Size = UDim2.new(1, 0, 0, 16)
     Sub.BackgroundTransparency = 1
     Sub.Text = "Detected: " .. gameName
     Sub.TextColor3 = C.TextSub
     Sub.Font = F.Body
-    Sub.TextSize = 13
+    Sub.TextSize = 11
     Sub.TextTransparency = 1
     Sub.LayoutOrder = 2
     Sub.ZIndex = 3
     Sub.Parent = Card
 
     local Btn = Instance.new("TextButton")
-    Btn.Size = UDim2.new(1, 0, 0, 48)
+    Btn.Size = UDim2.new(1, 0, 0, 40)
     Btn.BackgroundColor3 = C.CardBg
     Btn.BackgroundTransparency = 1
     Btn.BorderSizePixel = 0
     Btn.Text = "Load Now!"
     Btn.TextColor3 = Color3.new(1,1,1)
     Btn.Font = F.Header
-    Btn.TextSize = 16
+    Btn.TextSize = 14
     Btn.TextTransparency = 1
     Btn.AutoButtonColor = false
     Btn.LayoutOrder = 3
     Btn.ZIndex = 3
     Btn.Parent = Card
-    corner(Btn, 12)
+    corner(Btn, 10)
     local sBtn = stroke(Btn, C.Accent, 2, 0.2)
 
+    -- Scale GUI 30% lebih kecil (0.7)
     local CardScale = Instance.new("UIScale")
-    CardScale.Scale = 0.8
+    CardScale.Scale = 0.6
     CardScale.Parent = Card
 
-    -- Animasi RGB Border Loop
     task.spawn(function()
         local hue, gradOff, pulse = 0, 0, 0
         while rgbRunning and Card.Parent do
@@ -301,9 +318,8 @@ local function buildSupportedCard()
         end
     end)
 
-    -- Fade In
     tw(Card, {BackgroundTransparency = 0}, 0.5, Enum.EasingStyle.Back)
-    tw(CardScale, {Scale = 1}, 0.6, Enum.EasingStyle.Back)
+    tw(CardScale, {Scale = 0.7}, 0.6, Enum.EasingStyle.Back)
     task.delay(0.2, function()
         for _, el in ipairs({Title, Sub, Btn}) do
             if el and el.Parent then tw(el, {TextTransparency = 0}, 0.4) end
@@ -371,12 +387,13 @@ local function buildMenuWindow()
         end
     end)
 
+    -- Scale GUI 30% lebih kecil (0.7)
     local WScale = Instance.new("UIScale")
-    WScale.Scale = 0.9
+    WScale.Scale = 0.7
     WScale.Parent = W
 
     tw(W, {BackgroundTransparency = 0}, 0.4, Enum.EasingStyle.Back)
-    tw(WScale, {Scale = 1}, 0.5, Enum.EasingStyle.Back)
+    tw(WScale, {Scale = 0.7}, 0.5, Enum.EasingStyle.Back)
 
     -- ── SIDEBAR ──
     local SB = Instance.new("Frame")
@@ -514,10 +531,10 @@ local function buildMenuWindow()
     GSub.LayoutOrder = 1
     GSub.Parent = GamesPage
 
-    -- Game card renderer (Tanpa Path & Animasi Hover)
+    -- Game card renderer
     local function makeGameCard(placeId, order)
         local Card = Instance.new("Frame")
-        Card.Size = UDim2.new(1, -60, 0, 90)
+        Card.Size = UDim2.new(1, -60, 0, 80)
         Card.BackgroundColor3 = C.CardBg
         Card.BackgroundTransparency = 0.05
         Card.BorderSizePixel = 0
@@ -527,8 +544,8 @@ local function buildMenuWindow()
         local cStk = stroke(Card, C.Border, 1, 0.5)
 
         local IconF = Instance.new("Frame")
-        IconF.Size = UDim2.new(0, 66, 0, 66)
-        IconF.Position = UDim2.new(0, 12, 0.5, -33)
+        IconF.Size = UDim2.new(0, 58, 0, 58)
+        IconF.Position = UDim2.new(0, 12, 0.5, -29)
         IconF.BackgroundColor3 = C.BgSoft
         IconF.BorderSizePixel = 0
         IconF.ClipsDescendants = true
@@ -539,24 +556,24 @@ local function buildMenuWindow()
         local Icon = Instance.new("ImageLabel")
         Icon.Size = UDim2.new(1, 0, 1, 0)
         Icon.BackgroundTransparency = 1
-        Icon.Image = "" -- Set nanti
+        Icon.Image = getGameIcon(placeId)
         Icon.Parent = IconF
 
         local Name = Instance.new("TextLabel")
         Name.Size = UDim2.new(1, -100, 0, 22)
-        Name.Position = UDim2.new(0, 92, 0, 22)
+        Name.Position = UDim2.new(0, 84, 0, 20)
         Name.BackgroundTransparency = 1
         Name.Text = "Loading..."
         Name.TextColor3 = C.Text
         Name.Font = F.Header
-        Name.TextSize = 16
+        Name.TextSize = 15
         Name.TextXAlignment = Enum.TextXAlignment.Left
         Name.TextTruncate = Enum.TextTruncate.AtEnd
         Name.Parent = Card
 
         local Id = Instance.new("TextLabel")
         Id.Size = UDim2.new(1, -100, 0, 16)
-        Id.Position = UDim2.new(0, 92, 0, 48)
+        Id.Position = UDim2.new(0, 84, 0, 44)
         Id.BackgroundTransparency = 1
         Id.Text = "ID: " .. placeId
         Id.TextColor3 = C.TextSub
@@ -565,27 +582,22 @@ local function buildMenuWindow()
         Id.TextXAlignment = Enum.TextXAlignment.Left
         Id.Parent = Card
         
-        -- Fetch Info & Icon
+        -- Fetch Nama secara Async
         task.spawn(function()
             local info = getGameInfo(placeId)
-            if info then
-                if Name.Parent then Name.Text = info.Name end
-                local uId = info.UniverseId or placeId
-                if Icon.Parent then 
-                    Icon.Image = "rbxthumb://type=GameIcon&id=" .. tostring(uId) .. "&w=150&h=150"
-                end
-            else
-                if Name.Parent then Name.Text = "Unknown Game" end
+            if info and Name.Parent then
+                Name.Text = info.Name
+            elseif Name.Parent then
+                Name.Text = "Unknown Game"
             end
         end)
 
-        -- Animasi Card Hover
         Card.MouseEnter:Connect(function()
-            tw(Card, {BackgroundColor3 = C.CardHover, BackgroundTransparency = 0, Size = UDim2.new(1, -56, 0, 94)}, 0.15)
+            tw(Card, {BackgroundColor3 = C.CardHover, BackgroundTransparency = 0, Size = UDim2.new(1, -56, 0, 84)}, 0.15)
             tw(cStk, {Transparency = 0.2, Color = C.Accent}, 0.15)
         end)
         Card.MouseLeave:Connect(function()
-            tw(Card, {BackgroundColor3 = C.CardBg, BackgroundTransparency = 0.05, Size = UDim2.new(1, -60, 0, 90)}, 0.15)
+            tw(Card, {BackgroundColor3 = C.CardBg, BackgroundTransparency = 0.05, Size = UDim2.new(1, -60, 0, 80)}, 0.15)
             tw(cStk, {Transparency = 0.5, Color = C.Border}, 0.15)
         end)
     end
