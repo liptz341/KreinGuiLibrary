@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
---  KREIN LOADER v3.2 — Final Polish (Topbar, No Scroll Header, Copy ID)
+--  KREIN LOADER v4.0 — Search, Fade, Game Stats & Mobile Opt
 -- ═══════════════════════════════════════════════════════════════
 repeat task.wait() until game:IsLoaded()
 
@@ -7,10 +7,11 @@ local UIS = game:GetService("UserInputService")
 local TS  = game:GetService("TweenService")
 local MPS = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
 
 -- ── KONFIG ──
 local BASE    = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs/heads/main/"
-local VERSION = "1.4.2"
+local VERSION = "1.5.0"
 local CREATOR = "liptz341"
 
 -- ✏️ TAMBAH GAME DI SINI (PlaceId = "Path/File.lua")
@@ -26,7 +27,7 @@ local GAMES = {
 local currentPath = GAMES[game.PlaceId]
 local supported = currentPath ~= nil
 
--- ── HELPER: FETCH INFO & ICON ──
+-- ── HELPER: FETCH INFO & ICON & STATS ──
 local infoCache = {}
 local function getGameInfo(placeId)
     if infoCache[placeId] then return infoCache[placeId] end
@@ -49,6 +50,12 @@ local function getGameIcon(placeId)
         return "rbxthumb://type=GameIcon&id=" .. tostring(info.UniverseId or placeId) .. "&w=150&h=150"
     end
     return "rbxassetid://0"
+end
+
+local function formatNumber(n)
+    if n >= 1000000 then return string.format("%.1fM", n / 1000000)
+    elseif n >= 1000 then return string.format("%.1fK", n / 1000)
+    else return tostring(n) end
 end
 
 -- ── FONTS ──
@@ -233,7 +240,6 @@ local function buildSupportedCard()
     local s1 = stroke(Card, C.Accent, 1.5, 0.4)
     local s2 = stroke(Card, C.Accent, 8, 0.8)
 
-    -- Close Button (Fixed absolute position at top right)
     createCloseBtn(Card)
 
     local Content = Instance.new("Frame")
@@ -306,9 +312,13 @@ local function buildSupportedCard()
     corner(Btn, 10)
     local sBtn = stroke(Btn, C.Accent, 2, 0.2)
 
-    -- Scale GUI 30% lebih kecil (0.7)
+    -- Mobile Optimization Scale
     local CardScale = Instance.new("UIScale")
-    CardScale.Scale = 0.6
+    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
+        CardScale.Scale = 0.55
+    else
+        CardScale.Scale = 0.6
+    end
     CardScale.Parent = Card
 
     task.spawn(function()
@@ -326,7 +336,12 @@ local function buildSupportedCard()
     end)
 
     tw(Card, {BackgroundTransparency = 0}, 0.5, Enum.EasingStyle.Back)
-    tw(CardScale, {Scale = 0.7}, 0.6, Enum.EasingStyle.Back)
+    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
+        tw(CardScale, {Scale = 0.55}, 0.6, Enum.EasingStyle.Back)
+    else
+        tw(CardScale, {Scale = 0.7}, 0.6, Enum.EasingStyle.Back)
+    end
+    
     task.delay(0.2, function()
         for _, el in ipairs({Title, Sub, Btn}) do
             if el and el.Parent then tw(el, {TextTransparency = 0}, 0.4) end
@@ -373,11 +388,6 @@ local function buildMenuWindow()
     W.Parent = gui
     corner(W, 16)
 
-    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
-        local vp = workspace.CurrentCamera.ViewportSize
-        if vp.X < 740 then W.Size = UDim2.new(1, -20, 1, -120) end
-    end
-
     local s1 = stroke(W, C.Accent, 1.5, 0.4)
     local s2 = stroke(W, C.Accent, 8, 0.8)
 
@@ -392,15 +402,24 @@ local function buildMenuWindow()
         end
     end)
 
-    -- Scale GUI 30% lebih kecil (0.7)
+    -- Mobile Optimization Scale
     local WScale = Instance.new("UIScale")
-    WScale.Scale = 0.7
+    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
+        WScale.Scale = 0.55
+        local vp = workspace.CurrentCamera.ViewportSize
+        if vp.X < 740 then W.Size = UDim2.new(1, -20, 1, -120) end
+    else
+        WScale.Scale = 0.7
+    end
     WScale.Parent = W
 
     tw(W, {BackgroundTransparency = 0}, 0.4, Enum.EasingStyle.Back)
-    tw(WScale, {Scale = 0.7}, 0.5, Enum.EasingStyle.Back)
+    if UIS.TouchEnabled and not UIS.KeyboardEnabled then
+        tw(WScale, {Scale = 0.55}, 0.5, Enum.EasingStyle.Back)
+    else
+        tw(WScale, {Scale = 0.7}, 0.5, Enum.EasingStyle.Back)
+    end
 
-    -- Tombol Close (Fixed di Kanan Atas)
     createCloseBtn(W)
 
     -- ── SIDEBAR ──
@@ -467,7 +486,6 @@ local function buildMenuWindow()
     MenuL.SortOrder = Enum.SortOrder.LayoutOrder
     MenuL.Parent = Menu
 
-    -- Teks Game Not Supported
     local NotSupportedLbl = Instance.new("TextLabel")
     NotSupportedLbl.Size = UDim2.new(1, -20, 0, 20)
     NotSupportedLbl.Position = UDim2.new(0, 10, 1, -80)
@@ -500,6 +518,16 @@ local function buildMenuWindow()
     Content.ClipsDescendants = true
     Content.Parent = W
 
+    -- Fader untuk animasi tab
+    local TabFader = Instance.new("Frame")
+    TabFader.Size = UDim2.new(1, 0, 1, 0)
+    TabFader.BackgroundColor3 = C.Bg
+    TabFader.BackgroundTransparency = 1
+    TabFader.BorderSizePixel = 0
+    TabFader.ZIndex = 50
+    TabFader.Visible = false
+    TabFader.Parent = Content
+
     local Pages = Instance.new("Frame")
     Pages.Size = UDim2.new(1, 0, 1, 0)
     Pages.BackgroundTransparency = 1
@@ -511,7 +539,6 @@ local function buildMenuWindow()
     GamesPage.BackgroundTransparency = 1
     GamesPage.Parent = Pages
 
-    -- Header & Sub (Fixed di luar Scroll)
     local HeaderFrame = Instance.new("Frame")
     HeaderFrame.Size = UDim2.new(1, -60, 0, 70)
     HeaderFrame.Position = UDim2.new(0, 30, 0, 24)
@@ -539,7 +566,23 @@ local function buildMenuWindow()
     GSub.TextXAlignment = Enum.TextXAlignment.Left
     GSub.Parent = HeaderFrame
 
-    -- Scroll hanya untuk list game
+    -- SEARCH BAR
+    local SearchBox = Instance.new("TextBox")
+    SearchBox.Size = UDim2.new(0, 150, 0, 28)
+    SearchBox.Position = UDim2.new(1, -150, 0, 4)
+    SearchBox.BackgroundColor3 = C.BgSoft
+    SearchBox.BorderSizePixel = 0
+    SearchBox.Text = ""
+    SearchBox.PlaceholderText = "Search game..."
+    SearchBox.PlaceholderColor3 = C.TextSub
+    SearchBox.TextColor3 = C.Text
+    SearchBox.Font = F.Body
+    SearchBox.TextSize = 12
+    SearchBox.ClearTextOnFocus = false
+    SearchBox.Parent = HeaderFrame
+    corner(SearchBox, 8)
+    stroke(SearchBox, C.Border, 1, 0.5)
+
     local ScrollGames = Instance.new("ScrollingFrame")
     ScrollGames.Size = UDim2.new(1, 0, 1, -94)
     ScrollGames.Position = UDim2.new(0, 0, 0, 94)
@@ -563,6 +606,8 @@ local function buildMenuWindow()
     GPad.PaddingTop = UDim.new(0, 0)
     GPad.PaddingBottom = UDim.new(0, 24)
     GPad.Parent = ScrollGames
+
+    local GameCards = {}
 
     local function makeGameCard(placeId, order)
         local Card = Instance.new("Frame")
@@ -592,8 +637,8 @@ local function buildMenuWindow()
         Icon.Parent = IconF
 
         local Name = Instance.new("TextLabel")
-        Name.Size = UDim2.new(1, -100, 0, 22)
-        Name.Position = UDim2.new(0, 84, 0, 20)
+        Name.Size = UDim2.new(1, -150, 0, 20)
+        Name.Position = UDim2.new(0, 84, 0, 18)
         Name.BackgroundTransparency = 1
         Name.Text = "Loading..."
         Name.TextColor3 = C.Text
@@ -603,25 +648,47 @@ local function buildMenuWindow()
         Name.TextTruncate = Enum.TextTruncate.AtEnd
         Name.Parent = Card
 
-        local Id = Instance.new("TextLabel")
-        Id.Size = UDim2.new(1, -100, 0, 16)
-        Id.Position = UDim2.new(0, 84, 0, 44)
-        Id.BackgroundTransparency = 1
-        Id.Text = "ID: " .. placeId
-        Id.TextColor3 = C.TextSub
-        Id.Font = F.Code
-        Id.TextSize = 11
-        Id.TextXAlignment = Enum.TextXAlignment.Left
-        Id.Parent = Card
+        -- Stats: Creator & Playing
+        local Stats = Instance.new("TextLabel")
+        Stats.Size = UDim2.new(1, -150, 0, 16)
+        Stats.Position = UDim2.new(0, 84, 0, 42)
+        Stats.BackgroundTransparency = 1
+        Stats.Text = "Loading stats..."
+        Stats.TextColor3 = C.TextSub
+        Stats.Font = F.Reg
+        Stats.TextSize = 11
+        Stats.TextXAlignment = Enum.TextXAlignment.Left
+        Stats.Parent = Card
         
         task.spawn(function()
             local info = getGameInfo(placeId)
-            if info and Name.Parent then
-                Name.Text = info.Name
-            elseif Name.Parent then
-                Name.Text = "Unknown Game"
+            if info then
+                if Name.Parent then Name.Text = info.Name end
+                
+                local creatorName = info.Creator and info.Creator.Name or "Unknown"
+                local uId = info.UniverseId
+                local playingTxt = "0"
+                
+                -- Fetch Playing Count
+                local ok, json = pcall(function()
+                    return HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games?universeIds=" .. tostring(uId)))
+                end)
+                
+                if ok and json and json.data and json.data[1] then
+                    playingTxt = formatNumber(json.data[1].playing)
+                end
+                
+                if Stats.Parent then
+                    Stats.Text = "By: " .. creatorName .. "  •  👥 " .. playingTxt
+                end
+            else
+                if Name.Parent then Name.Text = "Unknown Game" end
+                if Stats.Parent then Stats.Text = "By: Unknown  •  👥 0" end
             end
         end)
+
+        -- Masukkan ke table buat Search Bar
+        table.insert(GameCards, {Frame = Card, Name = Name})
 
         Card.MouseEnter:Connect(function()
             tw(Card, {BackgroundColor3 = C.CardHover, BackgroundTransparency = 0, Size = UDim2.new(1, -56, 0, 84)}, 0.15)
@@ -638,6 +705,15 @@ local function buildMenuWindow()
         makeGameCard(pid, idx)
         idx = idx + 1
     end
+
+    -- Fitur Search Bar
+    SearchBox:GetPropertyChangedSignal("Text"):Connect(function()
+        local query = SearchBox.Text:lower()
+        for _, data in ipairs(GameCards) do
+            local match = data.Name.Text:lower():find(query, 1, true) ~= nil
+            data.Frame.Visible = match
+        end
+    end)
 
     if idx == 2 then
         local Empty = Instance.new("TextLabel")
@@ -775,7 +851,6 @@ local function buildMenuWindow()
     stId.TextXAlignment = Enum.TextXAlignment.Left
     stId.Parent = StatusF
 
-    -- Tombol Copy PlaceId
     local CopyBtn = Instance.new("TextButton")
     CopyBtn.Size = UDim2.new(0, 70, 0, 26)
     CopyBtn.Position = UDim2.new(1, -82, 0, 52)
@@ -814,9 +889,17 @@ local function buildMenuWindow()
     local menuBtns = {}
     local currentPage = "games"
 
+    -- Fitur Fade Animation pada Switch Page
     local function switchPage(name)
-        if currentPage == name then return end
+        if currentPage == name or TabFader.Visible then return end
         currentPage = name
+        
+        -- Fade Out (Hitam)
+        TabFader.Visible = true
+        tw(TabFader, {BackgroundTransparency = 0}, 0.15)
+        
+        task.wait(0.15)
+        
         for n, b in pairs(menuBtns) do
             local active = (n == name)
             tw(b, {BackgroundColor3 = active and C.CardBg or C.BgSoft, BackgroundTransparency = active and 0.02 or 1}, 0.2)
@@ -825,8 +908,13 @@ local function buildMenuWindow()
             local ind = b:FindFirstChild("Indicator")
             if ind then tw(ind, {BackgroundTransparency = active and 0 or 1}, 0.2) end
         end
+        
         GamesPage.Visible = (name == "games")
         InfoPage.Visible  = (name == "info")
+        
+        -- Fade In (Transparan)
+        tw(TabFader, {BackgroundTransparency = 1}, 0.15)
+        task.delay(0.15, function() TabFader.Visible = false end)
     end
 
     local function createMenuBtn(name, label, icon, order)
