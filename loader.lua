@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
---  KREIN LOADER v2.2 — Fixed Re-execution
+--  KREIN LOADER v2.4 — Back to Original PlaceId
 -- ═══════════════════════════════════════════════════════════════
 repeat task.wait() until game:IsLoaded()
 
@@ -12,12 +12,13 @@ local Players = game:GetService("Players")
 
 -- ── KONFIG ──
 local BASE    = "https://raw.githubusercontent.com/liptz341/KreinGuiLibrary/refs/heads/main/"
-local VERSION = "1.2.0"
+local VERSION = "1.2.2"
 local CREATOR = "liptz341"
 
--- ✏️ TAMBAH GAME DI SINI SAJA
+-- ✏️ PAKAI PLACE ID DARI KAMU
 local GAMES = {
     [123974602339071] = { Name = "Steal a Brainrot", Path = "Games/StealABrainrot.lua" },
+    -- [1234567890] = { Name = "Game Lain", Path = "Games/GameLain.lua" },
 }
 
 local entry = GAMES[game.PlaceId]
@@ -74,8 +75,6 @@ end
 
 -- ── PARENT & GUI ──
 local parent = (gethui and gethui()) or game:GetService("CoreGui")
-
--- Hapus loader lama jika ada (biar ga dobel kalau di-execute 2x pas card masih muncul)
 local old = parent:FindFirstChild("KreinLoader")
 if old then old:Destroy() end
 
@@ -246,7 +245,6 @@ local function buildSupportedCard()
     CardScale.Scale = 0.85
     CardScale.Parent = Card
 
-    -- RGB loop
     task.spawn(function()
         local hue, gradOff, pulse = 0, 0, 0
         while rgbRunning and Card.Parent do
@@ -261,7 +259,6 @@ local function buildSupportedCard()
         end
     end)
 
-    -- Fade in
     tw(Card, {BackgroundTransparency = 0.02}, 0.5, Enum.EasingStyle.Back)
     tw(CardScale, {Scale = 1}, 0.5, Enum.EasingStyle.Back)
     task.delay(0.25, function()
@@ -355,7 +352,6 @@ local function buildMenuWindow()
     SBSep.BorderSizePixel = 0
     SBSep.Parent = SB
 
-    -- Title (gradient RGB)
     local Title = Instance.new("TextLabel")
     Title.Size = UDim2.new(1, 0, 0, 60)
     Title.BackgroundTransparency = 1
@@ -384,7 +380,6 @@ local function buildMenuWindow()
         end
     end)
 
-    -- Menu buttons holder
     local Menu = Instance.new("Frame")
     Menu.Size = UDim2.new(1, -16, 1, -140)
     Menu.Position = UDim2.new(0, 8, 0, 60)
@@ -396,7 +391,6 @@ local function buildMenuWindow()
     MenuL.SortOrder = Enum.SortOrder.LayoutOrder
     MenuL.Parent = Menu
 
-    -- Bottom "Open Library" button
     local OpenBtn = Instance.new("TextButton")
     OpenBtn.Size = UDim2.new(1, -16, 0, 40)
     OpenBtn.Position = UDim2.new(0, 8, 1, -50)
@@ -412,7 +406,6 @@ local function buildMenuWindow()
     corner(OpenBtn, 10)
     stroke(OpenBtn, C.Success, 1.5, 0.4)
 
-    -- ── CONTENT ──
     local Content = Instance.new("Frame")
     Content.Size = UDim2.new(1, -180, 1, 0)
     Content.Position = UDim2.new(0, 180, 0, 0)
@@ -471,7 +464,6 @@ local function buildMenuWindow()
     GSub.LayoutOrder = 1
     GSub.Parent = GamesPage
 
-    -- Game card renderer
     local function makeGameCard(placeId, data, order)
         local Card = Instance.new("Frame")
         Card.Size = UDim2.new(1, -40, 0, 92)
@@ -483,7 +475,6 @@ local function buildMenuWindow()
         corner(Card, 12)
         local cStk = stroke(Card, C.Border, 1, 0.5)
 
-        -- Icon
         local IconF = Instance.new("Frame")
         IconF.Size = UDim2.new(0, 68, 0, 68)
         IconF.Position = UDim2.new(0, 12, 0.5, -34)
@@ -492,7 +483,7 @@ local function buildMenuWindow()
         IconF.ClipsDescendants = true
         IconF.Parent = Card
         corner(IconF, 10)
-        local IconStk = stroke(IconF, C.Border, 1, 0.3)
+        stroke(IconF, C.Border, 1, 0.3)
 
         local Icon = Instance.new("ImageLabel")
         Icon.Size = UDim2.new(1, 0, 1, 0)
@@ -500,7 +491,6 @@ local function buildMenuWindow()
         Icon.Image = "rbxthumb://type=GameIcon&id=" .. placeId .. "&w=150&h=150"
         Icon.Parent = IconF
 
-        -- Name
         local Name = Instance.new("TextLabel")
         Name.Size = UDim2.new(1, -240, 0, 22)
         Name.Position = UDim2.new(0, 92, 0, 22)
@@ -513,7 +503,6 @@ local function buildMenuWindow()
         Name.TextTruncate = Enum.TextTruncate.AtEnd
         Name.Parent = Card
 
-        -- PlaceId
         local Id = Instance.new("TextLabel")
         Id.Size = UDim2.new(1, -240, 0, 16)
         Id.Position = UDim2.new(0, 92, 0, 46)
@@ -525,7 +514,6 @@ local function buildMenuWindow()
         Id.TextXAlignment = Enum.TextXAlignment.Left
         Id.Parent = Card
 
-        -- Teleport button
         local Tp = Instance.new("TextButton")
         Tp.Size = UDim2.new(0, 110, 0, 38)
         Tp.Position = UDim2.new(1, -122, 0.5, -19)
@@ -557,9 +545,6 @@ local function buildMenuWindow()
             tw(tStk, {Transparency = 0.2}, 0.15)
         end)
 
-        -- ═══════════════════════════════════════════════════════════════
-        --  TELEPORT (MENGGUNAKAN GuiService:OpenUrl)
-        -- ═══════════════════════════════════════════════════════════════
         Tp.MouseButton1Click:Connect(function()
             if placeId == game.PlaceId then
                 Tp.Text = "Same Game!"
@@ -567,16 +552,16 @@ local function buildMenuWindow()
                 return
             end
             
-            Tp.Text = "Teleporting..."
+            Tp.Text = "Membuka Roblox..."
             Tp.TextColor3 = C.TextSub
 
-            -- 1. Coba pakai OpenUrl (Bypass Verify Teleports)
-            local successOpenUrl = pcall(function()
-                GS:OpenUrl("roblox://experiences/start?placeId=" .. tostring(placeId))
+            local url = "roblox://experiences/start?placeId=" .. tostring(placeId)
+            
+            local successOpen = pcall(function()
+                GS:OpenUrl(url)
             end)
 
-            if not successOpenUrl then
-                -- 2. Fallback ke TeleportService kalau OpenUrl gagal
+            if not successOpen then
                 pcall(function()
                     TPS:Teleport(placeId, Players.LocalPlayer)
                 end)
@@ -687,7 +672,6 @@ local function buildMenuWindow()
     Desc.LayoutOrder = 5
     Desc.Parent = InfoPage
 
-    -- Current game status
     local StatusF = Instance.new("Frame")
     StatusF.Size = UDim2.new(1, 0, 0, 80)
     StatusF.BackgroundColor3 = C.CardBg
@@ -737,7 +721,6 @@ local function buildMenuWindow()
     stId.TextXAlignment = Enum.TextXAlignment.Left
     stId.Parent = StatusF
 
-    -- ── MENU SWITCHER ──
     local menuBtns = {}
     local currentPage = "games"
 
@@ -811,7 +794,6 @@ local function buildMenuWindow()
     createMenuBtn("games", "Games", "🎮", 1)
     createMenuBtn("info",  "Info",  "ℹ️", 2)
 
-    -- Open Library button behavior
     OpenBtn.MouseEnter:Connect(function()
         tw(OpenBtn, {BackgroundColor3 = C.CardHover}, 0.15)
     end)
